@@ -1,0 +1,867 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Preposizioni di luogo — домашняя работа A1</title>
+  <style>
+    :root {
+      --ink: #20322f;
+      --muted: #66736f;
+      --paper: #fbf8f1;
+      --card: #fffdf9;
+      --line: #ded8cb;
+      --blue: #1d6d78;
+      --blue-soft: #e7f1f1;
+      --ochre: #c68b2c;
+      --ochre-soft: #fbf0d7;
+      --green: #3f765d;
+      --green-soft: #e8f3ec;
+      --plum: #76596d;
+      --plum-soft: #f1e9ef;
+      --wrong: #9a5b35;
+      --wrong-soft: #f7e8df;
+      --shadow: 0 14px 36px rgba(41, 52, 47, .08);
+      --radius: 22px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 2%, rgba(198,139,44,.10), transparent 24rem),
+        linear-gradient(180deg, #f4efe5 0, var(--paper) 22rem);
+      font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+
+    button, select { font: inherit; }
+    button { -webkit-tap-highlight-color: transparent; }
+
+    .page { width: min(100% - 28px, 960px); margin: 0 auto 72px; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      margin: 18px 0 20px;
+      padding: 32px 24px 28px;
+      color: #fff;
+      background: var(--blue);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "A · IN · DA · DI · PER";
+      position: absolute;
+      right: -22px;
+      bottom: -10px;
+      color: rgba(255,255,255,.09);
+      font-size: clamp(34px, 8vw, 74px);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      white-space: nowrap;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: #d8ecea;
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { position: relative; z-index: 1; max-width: 660px; margin-bottom: 10px; font-size: clamp(2rem, 7vw, 4rem); line-height: .98; letter-spacing: -.045em; }
+    .hero p:last-child { position: relative; z-index: 1; max-width: 620px; margin: 0; color: #edf6f5; }
+
+    .progress-wrap {
+      position: sticky;
+      top: 8px;
+      z-index: 20;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px 14px;
+      align-items: center;
+      margin: 0 0 18px;
+      padding: 13px 16px;
+      background: rgba(255,253,249,.94);
+      border: 1px solid rgba(222,216,203,.86);
+      border-radius: 18px;
+      box-shadow: 0 8px 22px rgba(41,52,47,.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .progress-label { font-size: .88rem; font-weight: 800; }
+    .progress-track { grid-column: 1 / -1; overflow: hidden; height: 7px; background: #ebe5d9; border-radius: 99px; }
+    .progress-bar { width: 0; height: 100%; background: linear-gradient(90deg, var(--ochre), var(--green)); border-radius: inherit; transition: width .35s ease; }
+
+    .jump-nav { display: flex; gap: 8px; overflow-x: auto; padding: 2px 0 18px; scrollbar-width: none; }
+    .jump-nav::-webkit-scrollbar { display: none; }
+    .jump-nav a { flex: 0 0 auto; padding: 9px 13px; color: var(--blue); background: var(--blue-soft); border-radius: 999px; font-size: .84rem; font-weight: 800; text-decoration: none; }
+
+    .section-title { margin: 44px 0 16px; }
+    .section-title .kicker { margin-bottom: 5px; color: var(--ochre); font-size: .78rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+    .section-title h2 { margin-bottom: 8px; font-size: clamp(1.55rem, 5vw, 2.4rem); line-height: 1.08; letter-spacing: -.035em; }
+    .section-title p { max-width: 700px; margin-bottom: 0; color: var(--muted); }
+
+    .rules-grid { display: grid; gap: 12px; }
+    .rule-card, .exercise, .note, .oral-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .rule-card { padding: 20px; }
+    .rule-card h3 { margin-bottom: 8px; font-size: 1.35rem; }
+    .rule-card p { margin-bottom: 8px; color: var(--muted); }
+    .rule-card p:last-child { margin-bottom: 0; }
+    .prep { display: inline-grid; place-items: center; min-width: 32px; min-height: 32px; padding: 3px 9px; color: #fff; background: var(--blue); border-radius: 10px; font-weight: 900; }
+    .example { color: var(--ink) !important; font-weight: 700; }
+    .rule-lead { color: var(--ink) !important; font-weight: 800; }
+    .rule-points { display: grid; gap: 7px; margin: 12px 0 14px; padding: 0; list-style: none; }
+    .rule-points li { position: relative; padding-left: 18px; color: var(--muted); }
+    .rule-points li::before { content: "•"; position: absolute; left: 2px; color: var(--ochre); font-weight: 900; }
+    .rule-card .mistake { margin-top: 12px; padding: 9px 11px; color: var(--wrong); background: var(--wrong-soft); border-radius: 11px; font-size: .9rem; font-weight: 800; }
+
+    .logic-map { display: grid; gap: 8px; margin: 0 0 16px; padding: 18px; background: var(--blue-soft); border: 1px solid #c8dedd; border-radius: var(--radius); }
+    .logic-map h3 { margin-bottom: 5px; }
+    .logic-row { display: grid; grid-template-columns: minmax(76px, auto) 1fr; gap: 10px; align-items: start; padding: 10px 12px; background: rgba(255,255,255,.72); border-radius: 12px; }
+    .logic-question { color: var(--blue); font-weight: 900; }
+    .logic-answer { color: var(--muted); }
+    .logic-answer strong { color: var(--ink); }
+
+    .pronoun-box { margin-top: 14px; padding: 18px; background: var(--plum-soft); border: 1px solid #dac8d5; border-radius: var(--radius); }
+    .pronoun-box h3 { margin-bottom: 7px; }
+    .pronoun-box > p { color: var(--muted); }
+    .pronoun-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 7px; margin: 13px 0; }
+    .pronoun-grid div { padding: 9px 8px; background: rgba(255,255,255,.72); border-radius: 10px; text-align: center; }
+    .pronoun-grid strong { color: var(--plum); }
+
+    .task-helper { margin-top: 14px; padding: 20px; background: var(--green-soft); border: 1px solid #c7dfd0; border-radius: var(--radius); }
+    .task-helper h3 { margin-bottom: 8px; }
+    .task-helper > p { color: var(--muted); }
+    .helper-list { display: grid; gap: 8px; margin-top: 13px; }
+    .helper-list div { display: grid; grid-template-columns: minmax(92px, auto) 1fr; gap: 9px; padding: 10px 12px; background: rgba(255,255,255,.7); border-radius: 11px; }
+    .helper-list strong { color: var(--green); }
+    .future-note { margin-top: 12px; color: var(--muted); font-size: .9rem; }
+
+    .note { margin-top: 14px; padding: 20px; background: var(--ochre-soft); border-color: #ead09b; }
+    .note strong { color: #835b19; }
+    .contrast { display: grid; gap: 8px; margin-top: 13px; }
+    .contrast div { padding: 11px 13px; background: rgba(255,255,255,.65); border-radius: 13px; }
+
+    .exercise { margin: 16px 0; padding: 22px 18px; scroll-margin-top: 100px; }
+    .exercise-head { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+    .number { flex: 0 0 auto; display: grid; place-items: center; width: 38px; height: 38px; color: #fff; background: var(--ochre); border-radius: 12px; font-weight: 900; }
+    .exercise h3 { margin-bottom: 4px; font-size: 1.18rem; line-height: 1.25; }
+    .instruction { margin: 0; color: var(--muted); font-size: .94rem; }
+
+    .question-list { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; counter-reset: item; }
+    .question-list > li { counter-increment: item; padding: 13px 14px; background: #f7f4ed; border: 1px solid transparent; border-radius: 15px; }
+    .question-list > li::before { content: counter(item) ". "; color: var(--blue); font-weight: 900; }
+
+    select {
+      max-width: 100%;
+      min-height: 42px;
+      margin: 4px 3px;
+      padding: 7px 34px 7px 10px;
+      color: var(--ink);
+      background: #fff;
+      border: 1.5px solid #b9c5c2;
+      border-radius: 11px;
+      font-weight: 800;
+    }
+    select.correct { background: var(--green-soft); border-color: var(--green); }
+    select.wrong { background: var(--wrong-soft); border-color: var(--wrong); }
+
+    .feedback-inline { display: none; margin: 5px 0 0; color: var(--wrong); font-size: .86rem; font-weight: 800; }
+    .feedback-inline.show { display: block; }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 18px; }
+    .btn { min-height: 44px; padding: 10px 15px; border: 0; border-radius: 13px; cursor: pointer; font-weight: 900; }
+    .btn-primary { color: #fff; background: var(--blue); }
+    .btn-secondary { color: var(--blue); background: var(--blue-soft); }
+    .btn-ghost { color: var(--muted); background: #efebe2; }
+    .btn:focus-visible, select:focus-visible, .choice:focus-visible { outline: 3px solid rgba(29,109,120,.28); outline-offset: 2px; }
+
+    .result { display: none; margin-top: 13px; padding: 12px 14px; border-radius: 13px; font-weight: 800; }
+    .result.show { display: block; }
+    .result.good { color: #285b45; background: var(--green-soft); }
+    .result.more { color: #7e4a2c; background: var(--wrong-soft); }
+
+    .reading {
+      margin: 12px 0 16px;
+      padding: 18px;
+      background: #edf4f3;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 16px 16px 0;
+      font-size: 1.02rem;
+    }
+    .reading p:last-child { margin-bottom: 0; }
+
+    .choice-group { margin: 13px 0 17px; padding: 14px; background: #f7f4ed; border-radius: 15px; }
+    .choice-group p { margin-bottom: 9px; font-weight: 800; }
+    .choices { display: flex; flex-wrap: wrap; gap: 8px; }
+    .choice { min-height: 42px; padding: 8px 12px; color: var(--ink); background: #fff; border: 1.5px solid #c9c3b7; border-radius: 11px; cursor: pointer; font-weight: 750; }
+    .choice.selected { color: #fff; background: var(--plum); border-color: var(--plum); }
+    .choice.correct { color: #285b45; background: var(--green-soft); border-color: var(--green); }
+    .choice.wrong { color: #7e4a2c; background: var(--wrong-soft); border-color: var(--wrong); }
+
+    .oral-card { margin: 16px 0; padding: 22px 18px; background: var(--plum-soft); border-color: #dac8d5; }
+    .oral-badge { display: inline-flex; align-items: center; gap: 7px; margin-bottom: 10px; padding: 6px 10px; color: #fff; background: var(--plum); border-radius: 999px; font-size: .78rem; font-weight: 900; letter-spacing: .04em; text-transform: uppercase; }
+    .oral-card h3 { margin-bottom: 8px; }
+    .speech-frame { margin: 14px 0; padding: 15px; background: rgba(255,255,255,.72); border-radius: 15px; }
+    .speech-frame p { margin: 5px 0; }
+    .checklist { display: grid; gap: 8px; margin-top: 14px; }
+    .tick { display: flex; gap: 9px; align-items: flex-start; color: var(--muted); }
+    .tick::before { content: "□"; color: var(--plum); font-size: 1.15rem; font-weight: 900; line-height: 1.2; }
+
+    .message-box { padding: 18px; background: #f4f5f1; border: 1px solid #d6dbd3; border-radius: 16px; }
+    .message-top { margin: -18px -18px 16px; padding: 10px 15px; color: #fff; background: var(--blue); border-radius: 15px 15px 0 0; font-weight: 900; }
+    .message-box p:last-child { margin-bottom: 0; }
+
+    .suffix-grid { display: grid; gap: 10px; margin: 15px 0; }
+    .suffix-card { padding: 15px; background: #f7f4ed; border-radius: 15px; }
+    .suffix-card strong { display: block; margin-bottom: 4px; color: var(--blue); font-size: 1.05rem; }
+    .suffix-card span { color: var(--muted); }
+
+    .quote { position: relative; margin: 14px 0 16px; padding: 22px 18px 18px; background: #fff8e9; border: 1px solid #ead6aa; border-radius: 18px; }
+    .quote::before { content: "“"; position: absolute; top: -17px; left: 12px; color: var(--ochre); font-family: Georgia, serif; font-size: 4.5rem; line-height: 1; }
+    .quote p { position: relative; margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: 1.06rem; }
+    .glossary { display: grid; grid-template-columns: 1fr; gap: 6px; margin: 14px 0; }
+    .glossary div { padding: 9px 11px; background: var(--blue-soft); border-radius: 11px; font-size: .9rem; }
+    .glossary strong { color: var(--blue); }
+
+    .final-card { margin-top: 30px; padding: 24px 20px; color: #fff; background: var(--green); border-radius: 24px; box-shadow: var(--shadow); }
+    .final-card h2 { margin-bottom: 8px; }
+    .final-card p { color: #e6f2eb; }
+    .final-card .btn { color: var(--green); background: #fff; }
+    .copy-status { min-height: 1.4em; margin: 10px 0 0 !important; color: #fff !important; font-weight: 800; }
+
+    footer { margin-top: 24px; color: var(--muted); text-align: center; font-size: .82rem; }
+
+    @media (min-width: 720px) {
+      .page { width: min(100% - 52px, 960px); }
+      .hero { margin-top: 28px; padding: 48px 44px 42px; }
+      .rules-grid { grid-template-columns: repeat(2, 1fr); }
+      .rule-card:last-child { grid-column: 1 / -1; }
+      .pronoun-grid { grid-template-columns: repeat(6, 1fr); }
+      .exercise, .oral-card { padding: 28px; }
+      .suffix-grid { grid-template-columns: repeat(2, 1fr); }
+      .glossary { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { width: 100%; margin: 0; }
+      .progress-wrap, .jump-nav, .actions, .final-card { display: none !important; }
+      .hero, .exercise, .rule-card, .oral-card { box-shadow: none; break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">Домашняя работа · уровень A1</p>
+      <h1>Preposizioni di luogo</h1>
+      <p>Повтори правило, выполни задания и в конце надиктуй преподавателю короткое голосовое сообщение.</p>
+    </header>
+
+    <div class="progress-wrap" aria-live="polite">
+      <span class="progress-label">Прогресс</span>
+      <strong id="progressText">0 из 7 блоков проверено</strong>
+      <div class="progress-track" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>
+    </div>
+
+    <nav class="jump-nav" aria-label="Навигация по домашней работе">
+      <a href="#regole">Правило</a>
+      <a href="#esercizio-1">Грамматика</a>
+      <a href="#lettura">Чтение</a>
+      <a href="#parlato">Голосовое</a>
+      <a href="#esercizio-5">Упражнение 5</a>
+      <a href="#suffissi">Суффиксы</a>
+    </nav>
+
+    <section id="regole">
+      <div class="section-title">
+        <p class="kicker">Promemoria</p>
+        <h2>Сначала вспомни правило</h2>
+        <p>Смотри не только на место, но и на смысл: <strong>куда?</strong>, <strong>откуда?</strong>, <strong>у кого?</strong> или <strong>где?</strong></p>
+      </div>
+
+      <div class="logic-map">
+        <h3>Сначала задай вопрос</h3>
+        <div class="logic-row"><span class="logic-question">Где? Куда?</span><span class="logic-answer"><strong>a</strong> + город · <strong>in</strong> + страна, регион, континент</span></div>
+        <div class="logic-row"><span class="logic-question">Откуда?</span><span class="logic-answer"><strong>da</strong> + место: <em>Vengo da Roma</em></span></div>
+        <div class="logic-row"><span class="logic-question">К кому? У кого?</span><span class="logic-answer"><strong>da</strong> + человек: <em>Vado da Marta. Sono da Luca.</em></span></div>
+        <div class="logic-row"><span class="logic-question">Откуда родом?</span><span class="logic-answer"><strong>essere di</strong>: <em>Sono di Bari</em></span></div>
+        <div class="logic-row"><span class="logic-question">Через? Направление?</span><span class="logic-answer"><strong>per</strong> с <em>passare</em> и <em>partire</em></span></div>
+      </div>
+
+      <div class="rules-grid">
+        <article class="rule-card">
+          <h3><span class="prep">A</span> город, небольшой остров</h3>
+          <p class="rule-lead">Используем и в ответе «где?», и в ответе «куда?».</p>
+          <ul class="rule-points">
+            <li>с городами: <strong>Roma, Milano, Palermo, Monza</strong>;</li>
+            <li>с небольшими островами: <strong>Capri, Ischia</strong>;</li>
+            <li>после <strong>essere, abitare, vivere, andare, arrivare, tornare</strong>, если дальше стоит город.</li>
+          </ul>
+          <p class="example">Abito <strong>a Pisa</strong>. · Sono <strong>a Palermo</strong>. · Vado <strong>a Capri</strong>. · Torno <strong>a Roma</strong>.</p>
+          <p class="mistake">Не: <s>abito in Roma</s> → <strong>abito a Roma</strong></p>
+        </article>
+
+        <article class="rule-card">
+          <h3><span class="prep">IN</span> страна, регион, континент</h3>
+          <p class="rule-lead">Тоже отвечает и на «где?», и на «куда?».</p>
+          <ul class="rule-points">
+            <li>страны: <strong>in Italia, in Francia, in Germania</strong>;</li>
+            <li>регионы: <strong>in Toscana, in Lombardia, in Calabria</strong>;</li>
+            <li>континенты: <strong>in Europa, in Africa</strong>;</li>
+            <li>крупные острова: <strong>in Sicilia, in Sardegna, in Corsica</strong>.</li>
+          </ul>
+          <p class="example">Vivo <strong>in Italia</strong>. · Vado <strong>in Toscana</strong>. · Sono <strong>in Sicilia</strong>.</p>
+          <p class="mistake">Не: <s>vado a Francia</s> → <strong>vado in Francia</strong></p>
+        </article>
+
+        <article class="rule-card">
+          <h3><span class="prep">DA</span> откуда? к кому? у кого?</h3>
+          <p class="rule-lead">У <strong>da</strong> здесь два главных значения.</p>
+          <ul class="rule-points">
+            <li><strong>движение из места:</strong> <em>Vengo da Roma. Torno da Firenze.</em></li>
+            <li><strong>к человеку / у человека:</strong> <em>Vado da Marco. Sono da Anna.</em></li>
+            <li><strong>начальная точка маршрута:</strong> <em>Parto da Milano per Napoli.</em></li>
+          </ul>
+          <p class="example">Veniamo <strong>da Pisa</strong>. · Ceniamo <strong>da me</strong>. · Andiamo <strong>da loro</strong>.</p>
+          <p class="mistake">Не: <s>vado a Marco</s> → <strong>vado da Marco</strong></p>
+        </article>
+
+        <article class="rule-card">
+          <h3><span class="prep">PER</span> направление, через</h3>
+          <p class="rule-lead">Чаще всего запоминаем вместе с двумя глаголами.</p>
+          <ul class="rule-points">
+            <li><strong>partire per</strong> = отправляться в направлении: <em>Parto per Vienna.</em></li>
+            <li><strong>passare per</strong> = проезжать / проходить через: <em>Passo per Genova.</em></li>
+            <li>в полном маршруте: <strong>da</strong> = откуда, <strong>per</strong> = куда.</li>
+          </ul>
+          <p class="example">Parto <strong>da Monza</strong> <strong>per Roma</strong>. · Il treno passa <strong>per Bologna</strong>.</p>
+          <p class="mistake">С <strong>andare</strong>: <em>vado a Roma</em>, но с <strong>partire</strong>: <em>parto per Roma</em>.</p>
+        </article>
+
+        <article class="rule-card">
+          <h3><span class="prep">DI</span> происхождение</h3>
+          <p class="rule-lead"><strong>Essere di</strong> говорит, откуда человек родом или с каким местом он связан.</p>
+          <ul class="rule-points">
+            <li><strong>Sono di Bari.</strong> = Я родом из Бари.</li>
+            <li><strong>Lui è di Livorno.</strong> = Он из Ливорно.</li>
+            <li><strong>le persone di Pisa</strong> = люди из Пизы.</li>
+          </ul>
+          <p class="example">Marta è <strong>di Pisa</strong>. · Paolo è <strong>di Napoli</strong>.</p>
+          <p class="mistake"><strong>di</strong> = происхождение, а <strong>da</strong> = реальное движение из места.</p>
+        </article>
+      </div>
+
+      <div class="pronoun-box">
+        <h3>Da + человек: формы, которые нужно запомнить</h3>
+        <p>После <strong>da</strong> говорим не <em>io, tu</em>, а <strong>me, te…</strong> По-русски это часто переводится как «у меня / к тебе / у них».</p>
+        <div class="pronoun-grid">
+          <div>da <strong>me</strong></div>
+          <div>da <strong>te</strong></div>
+          <div>da <strong>lui / lei</strong></div>
+          <div>da <strong>noi</strong></div>
+          <div>da <strong>voi</strong></div>
+          <div>da <strong>loro</strong></div>
+        </div>
+        <p class="example">Vieni <strong>da me</strong>? · Mangiamo <strong>da loro</strong>. · Oggi siamo <strong>da lei</strong>.</p>
+      </div>
+
+      <aside class="note">
+        <strong>Три похожие фразы — три разных смысла:</strong>
+        <div class="contrast">
+          <div><strong>Sono di Roma</strong> = я родом из Рима.</div>
+          <div><strong>Vengo da Roma</strong> = я сейчас приезжаю / иду из Рима.</div>
+          <div><strong>Vado a Roma</strong> = я еду в Рим.</div>
+        </div>
+      </aside>
+
+      <aside class="note">
+        <strong>Обрати внимание на направление:</strong>
+        <div class="contrast">
+          <div><strong>Torno a Roma</strong> = возвращаюсь <strong>в Рим</strong>.</div>
+          <div><strong>Torno da Roma</strong> = возвращаюсь <strong>из Рима</strong>.</div>
+          <div><strong>Torno da Marta</strong> = возвращаюсь <strong>от Марты / из гостей</strong>.</div>
+        </div>
+      </aside>
+
+      <aside class="note">
+        <strong>Запомни готовыми сочетаниями:</strong>
+        <div class="contrast">
+          <div><strong>vicino a</strong> = рядом с: <em>Vivo vicino a Roma.</em></div>
+          <div><strong>lontano da</strong> = далеко от: <em>Abito lontano da Milano.</em></div>
+          <div><strong>venire / tornare da</strong> = приехать / вернуться откуда-то: <em>Torno da Pisa.</em></div>
+        </div>
+      </aside>
+
+      <div class="task-helper">
+        <h3>Подсказка специально для упражнения 5</h3>
+        <p>В длинном тексте не выбирай предлог «на слух». Сначала найди конструкцию:</p>
+        <div class="helper-list">
+          <div><strong>abitare + город</strong><span><em>abitano a Livorno, abitiamo a Pisa</em></span></div>
+          <div><strong>lontano + da</strong><span><em>lontano da casa mia</em></span></div>
+          <div><strong>у нас / к ним</strong><span><em>da noi, da loro, da me</em></span></div>
+          <div><strong>essere di</strong><span><em>è di Livorno</em></span></div>
+          <div><strong>люди из города</strong><span><em>le persone di Pisa</em></span></div>
+        </div>
+        <p class="future-note">В этой домашней мы выбираем базовые формы. С артиклем предлоги могут объединяться: <em>a + il = al, da + il = dal, in + il = nel</em>. Это отдельный следующий шаг.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <p class="kicker">Allenamento</p>
+        <h2>Грамматика в контексте</h2>
+        <p>Выбирай ответ, затем нажимай «Проверить». Если ошиблась, прочитай правильный вариант вслух целиком.</p>
+      </div>
+
+      <article class="exercise scored" id="esercizio-1" data-title="1. A, in, da, di или per">
+        <div class="exercise-head">
+          <span class="number">1</span>
+          <div>
+            <h3>Выбери подходящий предлог</h3>
+            <p class="instruction">Вставь <strong>a, in, da, di</strong> или <strong>per</strong>.</p>
+          </div>
+        </div>
+        <ol class="question-list">
+          <li>Abito <select id="q1-1" class="answer-select" data-answer="a" aria-label="Abito ... Bologna"><option value="">—</option><option>a</option><option>in</option><option>da</option><option>di</option><option>per</option></select> Bologna.<span class="feedback-inline"></span></li>
+          <li>Mia sorella vive <select id="q1-2" class="answer-select" data-answer="in" aria-label="vive ... Sicilia"><option value="">—</option><option>a</option><option>in</option><option>da</option><option>di</option><option>per</option></select> Sicilia.<span class="feedback-inline"></span></li>
+          <li>Domani andiamo <select id="q1-3" class="answer-select" data-answer="da" aria-label="andiamo ... Chiara"><option value="">—</option><option>a</option><option>in</option><option>da</option><option>di</option><option>per</option></select> Chiara.<span class="feedback-inline"></span></li>
+          <li>Luca è <select id="q1-4" class="answer-select" data-answer="di" aria-label="è ... Napoli"><option value="">—</option><option>a</option><option>in</option><option>da</option><option>di</option><option>per</option></select> Napoli.<span class="feedback-inline"></span></li>
+          <li>Sabato parto <select id="q1-5" class="answer-select" data-answer="per" aria-label="parto ... Venezia"><option value="">—</option><option>a</option><option>in</option><option>da</option><option>di</option><option>per</option></select> Venezia.<span class="feedback-inline"></span></li>
+          <li>Il treno passa <select id="q1-6" class="answer-select" data-answer="per" aria-label="passa ... Parma"><option value="">—</option><option>a</option><option>in</option><option>da</option><option>di</option><option>per</option></select> Parma.<span class="feedback-inline"></span></li>
+          <li>Domenica torno <select id="q1-7" class="answer-select" data-answer="da" aria-label="torno ... Roma"><option value="">—</option><option>a</option><option>in</option><option>da</option><option>di</option><option>per</option></select> Roma.<span class="feedback-inline"></span></li>
+          <li>A luglio vado <select id="q1-8" class="answer-select" data-answer="in" aria-label="vado ... Francia"><option value="">—</option><option>a</option><option>in</option><option>da</option><option>di</option><option>per</option></select> Francia.<span class="feedback-inline"></span></li>
+        </ol>
+        <div class="actions"><button class="btn btn-primary check-btn" type="button">Проверить</button><button class="btn btn-ghost reset-btn" type="button">Сбросить</button></div>
+        <div class="result" aria-live="polite"></div>
+      </article>
+
+      <article class="exercise scored" id="esercizio-2" data-title="2. A или in">
+        <div class="exercise-head">
+          <span class="number">2</span>
+          <div>
+            <h3>Город, остров, регион или страна?</h3>
+            <p class="instruction">Выбери только <strong>a</strong> или <strong>in</strong>.</p>
+          </div>
+        </div>
+        <ol class="question-list">
+          <li>Andiamo <select id="q2-1" class="answer-select" data-answer="a"><option value="">—</option><option>a</option><option>in</option></select> Torino.<span class="feedback-inline"></span></li>
+          <li>Passiamo l'estate <select id="q2-2" class="answer-select" data-answer="in"><option value="">—</option><option>a</option><option>in</option></select> Sardegna.<span class="feedback-inline"></span></li>
+          <li>Giulia studia <select id="q2-3" class="answer-select" data-answer="in"><option value="">—</option><option>a</option><option>in</option></select> Portogallo.<span class="feedback-inline"></span></li>
+          <li>Oggi siamo <select id="q2-4" class="answer-select" data-answer="a"><option value="">—</option><option>a</option><option>in</option></select> Capri.<span class="feedback-inline"></span></li>
+          <li>Mio zio lavora <select id="q2-5" class="answer-select" data-answer="in"><option value="">—</option><option>a</option><option>in</option></select> Africa.<span class="feedback-inline"></span></li>
+          <li>La nonna vive <select id="q2-6" class="answer-select" data-answer="in"><option value="">—</option><option>a</option><option>in</option></select> Toscana.<span class="feedback-inline"></span></li>
+        </ol>
+        <div class="actions"><button class="btn btn-primary check-btn" type="button">Проверить</button><button class="btn btn-ghost reset-btn" type="button">Сбросить</button></div>
+        <div class="result" aria-live="polite"></div>
+      </article>
+
+      <article class="exercise scored" id="lettura" data-title="3. Чтение">
+        <div class="exercise-head">
+          <span class="number">3</span>
+          <div>
+            <h3>Прочитай сообщение Мартины</h3>
+            <p class="instruction">Сначала прочитай весь текст, не переводя каждое слово. Затем ответь на вопросы.</p>
+          </div>
+        </div>
+        <div class="reading">
+          <p><strong>Ciao Giulia!</strong> Sono di Torino, ma adesso vivo in Toscana, a Siena. Domani parto per Napoli. Il treno passa per Roma e arriva a Napoli alle 18. Sabato vado da mia cugina Elena, che abita a Ischia. Domenica torno da Ischia e lunedì rientro in Toscana.</p>
+          <p>A presto!<br>Martina</p>
+        </div>
+        <div class="glossary">
+          <div><strong>mia cugina</strong> — моя двоюродная сестра</div>
+          <div><strong>rientro</strong> — возвращаюсь</div>
+        </div>
+
+        <div class="choice-group" data-answer="a Siena">
+          <p>1. Dove vive Martina adesso?</p>
+          <div class="choices"><button class="choice" type="button" data-value="a Torino">a Torino</button><button class="choice" type="button" data-value="a Siena">a Siena</button><button class="choice" type="button" data-value="a Napoli">a Napoli</button></div>
+        </div>
+        <div class="choice-group" data-answer="di Torino">
+          <p>2. Di dov'è Martina?</p>
+          <div class="choices"><button class="choice" type="button" data-value="di Torino">di Torino</button><button class="choice" type="button" data-value="di Siena">di Siena</button><button class="choice" type="button" data-value="di Roma">di Roma</button></div>
+        </div>
+        <div class="choice-group" data-answer="per Roma">
+          <p>3. Per quale città passa il treno?</p>
+          <div class="choices"><button class="choice" type="button" data-value="per Napoli">per Napoli</button><button class="choice" type="button" data-value="per Torino">per Torino</button><button class="choice" type="button" data-value="per Roma">per Roma</button></div>
+        </div>
+        <div class="choice-group" data-answer="da Elena">
+          <p>4. Da chi va Martina sabato?</p>
+          <div class="choices"><button class="choice" type="button" data-value="da Giulia">da Giulia</button><button class="choice" type="button" data-value="da Elena">da Elena</button><button class="choice" type="button" data-value="da Martina">da Martina</button></div>
+        </div>
+        <div class="actions"><button class="btn btn-primary check-btn" type="button">Проверить</button><button class="btn btn-ghost reset-btn" type="button">Сбросить</button></div>
+        <div class="result" aria-live="polite"></div>
+      </article>
+
+      <article class="exercise scored" id="esercizio-4" data-title="4. Диалог">
+        <div class="exercise-head">
+          <span class="number">4</span>
+          <div>
+            <h3>Закончи телефонный разговор</h3>
+            <p class="instruction">Выбери предлоги, затем прочитай диалог вслух два раза.</p>
+          </div>
+        </div>
+        <div class="reading">
+          <p><strong>Anna:</strong> Ciao Sara, dove sei?</p>
+          <p><strong>Sara:</strong> Sono <select id="q4-1" class="answer-select" data-answer="a"><option value="">—</option><option>a</option><option>in</option><option>da</option><option>di</option><option>per</option></select> Firenze, ma abito <select id="q4-2" class="answer-select" data-answer="in"><option value="">—</option><option>a</option><option>in</option><option>da</option><option>di</option><option>per</option></select> Umbria.</p>
+          <p><strong>Anna:</strong> Quando torni <select id="q4-3" class="answer-select" data-answer="da"><option value="">—</option><option>a</option><option>in</option><option>da</option><option>di</option><option>per</option></select> Firenze?</p>
+          <p><strong>Sara:</strong> Domani. Il treno passa <select id="q4-4" class="answer-select" data-answer="per"><option value="">—</option><option>a</option><option>in</option><option>da</option><option>di</option><option>per</option></select> Arezzo.</p>
+          <p><strong>Anna:</strong> Sabato vieni <select id="q4-5" class="answer-select" data-answer="da"><option value="">—</option><option>a</option><option>in</option><option>da</option><option>di</option><option>per</option></select> me?</p>
+          <p><strong>Sara:</strong> Volentieri!</p>
+        </div>
+        <div class="actions"><button class="btn btn-primary check-btn" type="button">Проверить</button><button class="btn btn-ghost reset-btn" type="button">Сбросить</button></div>
+        <div class="result" aria-live="polite"></div>
+      </article>
+
+      <article class="oral-card" id="parlato">
+        <span class="oral-badge">🎙 Надиктуй преподавателю</span>
+        <h3>Голосовое сообщение: мой маршрут</h3>
+        <p>Запиши голосовое на <strong>40–60 секунд</strong>. Расскажи о себе и о небольшой поездке — реальной или выдуманной.</p>
+        <div class="speech-frame" id="speechPrompt">
+          <p><strong>Sono di</strong> …</p>
+          <p><strong>Adesso vivo a</strong> …, <strong>in</strong> …</p>
+          <p><strong>Questo fine settimana vado / parto per</strong> …</p>
+          <p><strong>Passo per</strong> …</p>
+          <p><strong>Vado da</strong> …</p>
+          <p><strong>Torno da</strong> … domenica.</p>
+        </div>
+        <div class="checklist">
+          <div class="tick">Используй минимум 5 предложений.</div>
+          <div class="tick">Хотя бы один раз скажи <strong>a</strong>, <strong>in</strong>, <strong>da</strong> и <strong>per</strong>.</div>
+          <div class="tick">Не читай готовый текст: сначала посмотри на подсказки, потом говори своими словами.</div>
+        </div>
+        <div class="actions"><button class="btn btn-secondary" id="copyPrompt" type="button">Скопировать подсказки</button></div>
+      </article>
+
+      <article class="exercise scored" id="esercizio-5" data-title="5. Письмо Анны">
+        <div class="exercise-head">
+          <span class="number">5</span>
+          <div>
+            <h3>Completa con le preposizioni</h3>
+            <p class="instruction">Упражнение 5 оставлено без изменений.</p>
+          </div>
+        </div>
+        <div class="message-box">
+          <div class="message-top">Nuovo messaggio</div>
+          <p>Cara Anna,</p>
+          <p>ho un problema. Mia figlia Pia è sposata e ha due bambini. Lei e il marito abitano
+            <select id="q5-1" class="answer-select" data-answer="a"><option value="">—</option><option>a</option><option>in</option><option>da</option><option>di</option><option>per</option></select>
+            Livorno, non molto lontano
+            <select id="q5-2" class="answer-select" data-answer="da"><option value="">—</option><option>a</option><option>in</option><option>da</option><option>di</option><option>per</option></select>
+            casa mia, visto che io e mio marito abitiamo
+            <select id="q5-3" class="answer-select" data-answer="a"><option value="">—</option><option>a</option><option>in</option><option>da</option><option>di</option><option>per</option></select>
+            Pisa. Il problema è che quando vengono a pranzo o a cena
+            <select id="q5-4" class="answer-select" data-answer="da"><option value="">—</option><option>a</option><option>in</option><option>da</option><option>di</option><option>per</option></select>
+            noi, o quando noi andiamo
+            <select id="q5-5" class="answer-select" data-answer="da"><option value="">—</option><option>a</option><option>in</option><option>da</option><option>di</option><option>per</option></select>
+            loro e mangiamo insieme, io non sopporto il marito di mia figlia! Lui mangia come un maiale! Non ha educazione a tavola, fa rumori mentre mangia e parla con la bocca piena. Anche i figli stanno diventando come lui. Mia figlia dice che io sono esagerata e che lui non mi piace perché è
+            <select id="q5-6" class="answer-select" data-answer="di"><option value="">—</option><option>a</option><option>in</option><option>da</option><option>di</option><option>per</option></select>
+            Livorno. È vero che preferisco le persone
+            <select id="q5-7" class="answer-select" data-answer="di"><option value="">—</option><option>a</option><option>in</option><option>da</option><option>di</option><option>per</option></select>
+            Pisa, ma io non sopporto più di avere quell’uomo qui
+            <select id="q5-8" class="answer-select" data-answer="da"><option value="">—</option><option>a</option><option>in</option><option>da</option><option>di</option><option>per</option></select>
+            me. Che devo fare?!</p>
+        </div>
+        <div class="actions"><button class="btn btn-primary check-btn" type="button">Проверить</button><button class="btn btn-ghost reset-btn" type="button">Сбросить</button></div>
+        <div class="result" aria-live="polite"></div>
+      </article>
+    </section>
+
+    <section id="suffissi">
+      <div class="section-title">
+        <p class="kicker">Parole alterate</p>
+        <h2>Маленькая домашка по суффиксам</h2>
+        <p>Суффикс меняет не только размер предмета, но и отношение говорящего.</p>
+      </div>
+
+      <div class="suffix-grid">
+        <div class="suffix-card"><strong>-ino / -ina</strong><span>маленький, милый: <em>gattino, casina</em></span></div>
+        <div class="suffix-card"><strong>-uccio / -uccia</strong><span>маленький, простой; часто с лаской или жалостью: <em>casuccia, poveruccio</em></span></div>
+        <div class="suffix-card"><strong>-accio / -accia</strong><span>плохой, неприятный: <em>ragazzaccio, parolaccia</em></span></div>
+        <div class="suffix-card"><strong>-one / -ona</strong><span>большой, сильный: <em>gattone, ragazzone</em></span></div>
+      </div>
+
+      <aside class="note"><strong>Важно:</strong> это оттенок слова, а не точная информация. <em>Ragazzone</em> звучит как «большой, высокий парень», но суффикс не сообщает его точный возраст.</aside>
+
+      <article class="exercise scored" id="esercizio-6" data-title="6. Суффиксы">
+        <div class="exercise-head">
+          <span class="number">6</span>
+          <div>
+            <h3>Какое слово подходит к ситуации?</h3>
+            <p class="instruction">Выбери форму с нужным оттенком.</p>
+          </div>
+        </div>
+        <ol class="question-list">
+          <li>Un gatto piccolo e carino: <select id="q6-1" class="answer-select" data-answer="gattino"><option value="">—</option><option>gattino</option><option>gattaccio</option><option>gattone</option></select><span class="feedback-inline"></span></li>
+          <li>Una parola brutta o volgare: <select id="q6-2" class="answer-select" data-answer="parolaccia"><option value="">—</option><option>parolina</option><option>parolaccia</option><option>parolona</option></select><span class="feedback-inline"></span></li>
+          <li>Un ragazzo grande e alto: <select id="q6-3" class="answer-select" data-answer="ragazzone"><option value="">—</option><option>ragazzino</option><option>ragazzaccio</option><option>ragazzone</option></select><span class="feedback-inline"></span></li>
+          <li>Una casa piccola, semplice, ma cara: <select id="q6-4" class="answer-select" data-answer="casuccia"><option value="">—</option><option>casuccia</option><option>casaccia</option><option>casa</option></select><span class="feedback-inline"></span></li>
+          <li>Un ragazzo cattivo o maleducato: <select id="q6-5" class="answer-select" data-answer="ragazzaccio"><option value="">—</option><option>ragazzino</option><option>ragazzaccio</option><option>ragazzone</option></select><span class="feedback-inline"></span></li>
+          <li>Una giornata molto brutta e difficile: <select id="q6-6" class="answer-select" data-answer="giornataccia"><option value="">—</option><option>giornatina</option><option>giornataccia</option><option>giornatona</option></select><span class="feedback-inline"></span></li>
+        </ol>
+        <div class="actions"><button class="btn btn-primary check-btn" type="button">Проверить</button><button class="btn btn-ghost reset-btn" type="button">Сбросить</button></div>
+        <div class="result" aria-live="polite"></div>
+      </article>
+
+      <article class="exercise scored" id="cipollino" data-title="7. Чиполлино">
+        <div class="exercise-head">
+          <span class="number">7</span>
+          <div>
+            <h3>Кто старший, а кто младший?</h3>
+            <p class="instruction">Прочитай отрывок и опирайся на <strong>семейную информацию</strong> и на форму имён.</p>
+          </div>
+        </div>
+
+        <div class="quote"><p>«Cipollino era figlio di Cipollone e aveva sette fratelli: Cipolletto, Cipollotto, Cipolluccio e così di seguito, tutti nomi adatti ad una famiglia di cipolle. Gente per bene, bisogna dirlo subito, però piuttosto sfortunata.»</p></div>
+
+        <div class="glossary">
+          <div><strong>figlio di</strong> — сын</div>
+          <div><strong>fratelli</strong> — братья</div>
+          <div><strong>e così di seguito</strong> — и так далее</div>
+          <div><strong>nomi adatti</strong> — подходящие имена</div>
+          <div><strong>gente per bene</strong> — порядочные люди</div>
+          <div><strong>piuttosto sfortunata</strong> — довольно невезучая</div>
+        </div>
+
+        <ol class="question-list">
+          <li>Cipollone è <select id="q7-1" class="answer-select" data-answer="il padre"><option value="">—</option><option>il padre</option><option>il figlio</option><option>un fratello</option></select>.<span class="feedback-inline"></span></li>
+          <li>Cipollino è <select id="q7-2" class="answer-select" data-answer="il figlio"><option value="">—</option><option>il padre</option><option>il figlio</option><option>il nonno</option></select>.<span class="feedback-inline"></span></li>
+          <li>По тексту старшее поколение — <select id="q7-3" class="answer-select" data-answer="Cipollone"><option value="">—</option><option>Cipollone</option><option>Cipollino</option><option>Cipolluccio</option></select>.<span class="feedback-inline"></span></li>
+          <li>Форма имени со значением «большой» — <select id="q7-4" class="answer-select" data-answer="Cipollone"><option value="">—</option><option>Cipollino</option><option>Cipollone</option><option>Cipolluccio</option></select>.<span class="feedback-inline"></span></li>
+          <li>Имена с изученными суффиксами «маленький / ласковый» — <select id="q7-5" class="answer-select" data-answer="Cipollino e Cipolluccio"><option value="">—</option><option>Cipollino e Cipolluccio</option><option>Cipollone e Cipollotto</option><option>Cipollone e Cipolletto</option></select>.<span class="feedback-inline"></span></li>
+          <li>Можно ли по суффиксу точно понять, кто из братьев родился раньше? <select id="q7-6" class="answer-select" data-answer="No"><option value="">—</option><option>Sì</option><option>No</option></select><span class="feedback-inline"></span></li>
+        </ol>
+
+        <aside class="note"><strong>Ещё два имени из сказки:</strong> <em>-etto</em> и <em>-otto</em> тоже могут создавать уменьшительный или ласковый оттенок. Но кто из братьев старше на самом деле, из этих имён узнать нельзя.</aside>
+
+        <div class="actions"><button class="btn btn-primary check-btn" type="button">Проверить</button><button class="btn btn-ghost reset-btn" type="button">Сбросить</button></div>
+        <div class="result" aria-live="polite"></div>
+      </article>
+
+      <article class="oral-card">
+        <span class="oral-badge">🎙 Мини-финал</span>
+        <h3>Скажи вслух 3 фразы</h3>
+        <p><strong>Cipollone è il padre, quindi è della generazione più grande. Cipollino è il figlio. I suffissi cambiano il significato, ma non indicano l’età esatta.</strong></p>
+        <p class="instruction">Прослушай себя и отправь преподавателю вместе с первым голосовым.</p>
+      </article>
+    </section>
+
+    <section class="final-card">
+      <h2>Homework завершён?</h2>
+      <p>Проверь все семь интерактивных блоков, запиши два голосовых и отправь преподавателю результат.</p>
+      <button class="btn" id="copyResult" type="button">Скопировать результат</button>
+      <p class="copy-status" id="copyStatus" aria-live="polite"></p>
+    </section>
+
+    <footer>Preposizioni di luogo · A1 · Домашняя работа</footer>
+  </main>
+
+  <script>
+    (() => {
+      const STORAGE_KEY = 'compiti-preposizioni-a1-v1';
+      const exercises = [...document.querySelectorAll('.exercise.scored')];
+      const state = { checked: {}, selects: {}, choices: {} };
+
+      function loadState() {
+        try {
+          const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+          Object.assign(state.checked, saved.checked || {});
+          Object.assign(state.selects, saved.selects || {});
+          Object.assign(state.choices, saved.choices || {});
+        } catch (_) {}
+      }
+
+      function saveState() {
+        try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch (_) {}
+      }
+
+      function evaluate(card, paint = true) {
+        let correct = 0;
+        let total = 0;
+        let answered = 0;
+
+        card.querySelectorAll('.answer-select').forEach(select => {
+          total += 1;
+          const ok = select.value === select.dataset.answer;
+          if (select.value) answered += 1;
+          if (ok) correct += 1;
+          if (paint) {
+            select.classList.toggle('correct', ok);
+            select.classList.toggle('wrong', Boolean(select.value) && !ok);
+            const feedback = select.closest('li')?.querySelector('.feedback-inline');
+            if (feedback) {
+              feedback.textContent = select.value && !ok ? `Правильный ответ: ${select.dataset.answer}` : '';
+              feedback.classList.toggle('show', Boolean(select.value) && !ok);
+            }
+          }
+        });
+
+        card.querySelectorAll('.choice-group').forEach(group => {
+          total += 1;
+          const selected = group.querySelector('.choice.selected');
+          if (selected) answered += 1;
+          const ok = selected?.dataset.value === group.dataset.answer;
+          if (ok) correct += 1;
+          if (paint) {
+            group.querySelectorAll('.choice').forEach(btn => {
+              btn.classList.toggle('correct', btn.dataset.value === group.dataset.answer);
+              btn.classList.toggle('wrong', btn === selected && !ok);
+            });
+          }
+        });
+
+        return { correct, total, answered };
+      }
+
+      function showResult(card) {
+        const score = evaluate(card, true);
+        const result = card.querySelector('.result');
+        const missing = score.total - score.answered;
+        result.className = 'result show ' + (score.correct === score.total ? 'good' : 'more');
+        if (score.correct === score.total) {
+          result.textContent = `Отлично: ${score.correct} из ${score.total}. Прочитай правильные фразы вслух.`;
+        } else if (missing) {
+          result.textContent = `Заполнено ${score.answered} из ${score.total}. Правильных ответов: ${score.correct}. Закончи все пункты.`;
+        } else {
+          result.textContent = `Правильных ответов: ${score.correct} из ${score.total}. Посмотри на подсказки и повтори ошибочные фразы.`;
+        }
+        state.checked[card.id] = true;
+        saveState();
+        updateProgress();
+      }
+
+      function resetCard(card) {
+        card.querySelectorAll('.answer-select').forEach(select => {
+          select.value = '';
+          select.classList.remove('correct', 'wrong');
+          delete state.selects[select.id];
+          const feedback = select.closest('li')?.querySelector('.feedback-inline');
+          if (feedback) { feedback.textContent = ''; feedback.classList.remove('show'); }
+        });
+        card.querySelectorAll('.choice-group').forEach((group, index) => {
+          group.querySelectorAll('.choice').forEach(btn => btn.classList.remove('selected', 'correct', 'wrong'));
+          delete state.choices[`${card.id}-${index}`];
+        });
+        card.querySelector('.result').className = 'result';
+        delete state.checked[card.id];
+        saveState();
+        updateProgress();
+      }
+
+      function updateProgress() {
+        const done = exercises.filter(card => state.checked[card.id]).length;
+        const percent = exercises.length ? Math.round(done / exercises.length * 100) : 0;
+        document.getElementById('progressText').textContent = `${done} из ${exercises.length} блоков проверено`;
+        document.getElementById('progressBar').style.width = `${percent}%`;
+      }
+
+      function invalidateCard(card) {
+        if (!card) return;
+        delete state.checked[card.id];
+        const result = card.querySelector('.result');
+        if (result) result.className = 'result';
+        updateProgress();
+      }
+
+      function restore() {
+        document.querySelectorAll('.answer-select[id]').forEach(select => {
+          if (state.selects[select.id] !== undefined) select.value = state.selects[select.id];
+        });
+        exercises.forEach(card => {
+          card.querySelectorAll('.choice-group').forEach((group, index) => {
+            const value = state.choices[`${card.id}-${index}`];
+            if (value !== undefined) {
+              group.querySelectorAll('.choice').forEach(btn => btn.classList.toggle('selected', btn.dataset.value === value));
+            }
+          });
+          if (state.checked[card.id]) showResult(card);
+        });
+        updateProgress();
+      }
+
+      document.querySelectorAll('.answer-select[id]').forEach(select => {
+        select.addEventListener('change', () => {
+          state.selects[select.id] = select.value;
+          select.classList.remove('correct', 'wrong');
+          const feedback = select.closest('li')?.querySelector('.feedback-inline');
+          if (feedback) feedback.classList.remove('show');
+          invalidateCard(select.closest('.exercise'));
+          saveState();
+        });
+      });
+
+      document.querySelectorAll('.choice-group').forEach(group => {
+        const card = group.closest('.exercise');
+        const index = [...card.querySelectorAll('.choice-group')].indexOf(group);
+        group.querySelectorAll('.choice').forEach(button => {
+          button.addEventListener('click', () => {
+            group.querySelectorAll('.choice').forEach(btn => btn.classList.remove('selected', 'correct', 'wrong'));
+            button.classList.add('selected');
+            state.choices[`${card.id}-${index}`] = button.dataset.value;
+            invalidateCard(card);
+            saveState();
+          });
+        });
+      });
+
+      document.querySelectorAll('.check-btn').forEach(button => button.addEventListener('click', () => showResult(button.closest('.exercise'))));
+      document.querySelectorAll('.reset-btn').forEach(button => button.addEventListener('click', () => resetCard(button.closest('.exercise'))));
+
+      async function copyText(text, statusNode, successText) {
+        try {
+          await navigator.clipboard.writeText(text);
+          statusNode.textContent = successText;
+        } catch (_) {
+          const area = document.createElement('textarea');
+          area.value = text;
+          area.style.position = 'fixed';
+          area.style.opacity = '0';
+          document.body.appendChild(area);
+          area.select();
+          document.execCommand('copy');
+          area.remove();
+          statusNode.textContent = successText;
+        }
+      }
+
+      document.getElementById('copyPrompt').addEventListener('click', () => {
+        const text = `Голосовое «Мой маршрут»:\nSono di…\nAdesso vivo a…, in…\nQuesto fine settimana vado / parto per…\nPasso per…\nVado da…\nTorno da… domenica.`;
+        const button = document.getElementById('copyPrompt');
+        copyText(text, button, 'Подсказки скопированы ✓');
+        setTimeout(() => { button.textContent = 'Скопировать подсказки'; }, 2200);
+      });
+
+      document.getElementById('copyResult').addEventListener('click', () => {
+        const lines = ['Домашняя работа: Preposizioni di luogo · A1'];
+        exercises.forEach(card => {
+          const score = evaluate(card, false);
+          const status = state.checked[card.id] ? `${score.correct}/${score.total}` : 'не проверено';
+          lines.push(`${card.dataset.title}: ${status}`);
+        });
+        lines.push('Голосовое «Мой маршрут»: отправляю отдельно.');
+        lines.push('Мини-финал о Чиполлино: отправляю отдельно.');
+        copyText(lines.join('\n'), document.getElementById('copyStatus'), 'Результат скопирован — отправь его преподавателю вместе с голосовыми ✓');
+      });
+
+      loadState();
+      restore();
+    })();
+  </script>
+</body>
+</html>
