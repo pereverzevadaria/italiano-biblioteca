@@ -14,7 +14,7 @@
         <a href="#levels">Уровни</a>
         <a href="#materials">Материалы</a>
       </nav>
-      <button class="sign-in" type="button">Войти</button>
+      <button class="sign-in" id="auth-button" type="button">Войти</button>
     </header>
 
     <main>
@@ -55,5 +55,19 @@
       </section>
     </main>
     <footer>Дарья Kuzno <span>Monza · Italia</span><span>© 2026</span></footer>
+
+    <dialog class="auth-dialog" id="auth-dialog" aria-labelledby="auth-title">
+      <button class="dialog-close" id="close-auth" type="button" aria-label="Закрыть">×</button>
+      <p class="eyebrow">ЛИЧНЫЙ КАБИНЕТ</p>
+      <h2 id="auth-title">Продолжим<br />с того места.</h2>
+      <p>Введите e-mail — пришлём ссылку для входа. Пароль придумывать не нужно.</p>
+      <form id="auth-form">
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" autocomplete="email" required placeholder="nome@email.com" />
+        <button type="submit">ПОЛУЧИТЬ ССЫЛКУ →</button>
+      </form>
+      <p class="auth-message" id="auth-message" aria-live="polite"></p>
+    </dialog>
+    <script type="module" src="app.js"></script>
   </body>
 </html>
