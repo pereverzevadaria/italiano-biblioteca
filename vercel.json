@@ -19,6 +19,10 @@
 
     { "source": "/giu-m5t7", "destination": "/students/giu-m5t7/index.html" },
     { "source": "/giu-m5t7/", "destination": "/students/giu-m5t7/index.html" },
-    { "source": "/giu-m5t7/:path*", "destination": "/students/giu-m5t7/:path*" }
+    { "source": "/giu-m5t7/:path*", "destination": "/students/giu-m5t7/:path*" },
+
+    { "source": "/ekt-u3n6", "destination": "/students/ekt-u3n6/index.html" },
+    { "source": "/ekt-u3n6/", "destination": "/students/ekt-u3n6/index.html" },
+    { "source": "/ekt-u3n6/:path*", "destination": "/students/ekt-u3n6/:path*" }
   ]
 }
