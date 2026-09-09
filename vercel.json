@@ -15,6 +15,10 @@
 
     { "source": "/ntl-v6q2", "destination": "/students/ntl-v6q2/index.html" },
     { "source": "/ntl-v6q2/", "destination": "/students/ntl-v6q2/index.html" },
-    { "source": "/ntl-v6q2/:path*", "destination": "/students/ntl-v6q2/:path*" }
+    { "source": "/ntl-v6q2/:path*", "destination": "/students/ntl-v6q2/:path*" },
+
+    { "source": "/giu-m5t7", "destination": "/students/giu-m5t7/index.html" },
+    { "source": "/giu-m5t7/", "destination": "/students/giu-m5t7/index.html" },
+    { "source": "/giu-m5t7/:path*", "destination": "/students/giu-m5t7/:path*" }
   ]
 }
