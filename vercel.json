@@ -1,0 +1,11 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    { "source": "/ans-p7r4", "destination": "/students/ans-p7r4/" },
+    { "source": "/ans-p7r4/:path*", "destination": "/students/ans-p7r4/:path*" },
+    { "source": "/dmt-r8k5", "destination": "/students/dmt-r8k5/" },
+    { "source": "/dmt-r8k5/:path*", "destination": "/students/dmt-r8k5/:path*" },
+    { "source": "/pln-k4m8", "destination": "/students/pln-k4m8/" },
+    { "source": "/pln-k4m8/:path*", "destination": "/students/pln-k4m8/:path*" }
+  ]
+}
