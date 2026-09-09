@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Natalia · Homework · Fondazione Prada</title>
+<style>
+:root{
+ --bg:#f4f0e8;--paper:#fffdf9;--ink:#24343a;--muted:#6b777c;--line:#ddd8ce;
+ --deep:#273f46;--green:#526b5c;--green2:#e7eee8;--blue:#5d7f8c;--blue2:#e8f0f3;
+ --sand:#d1b58a;--sand2:#f6ecda;--gold:#b88b31;--gold2:#f5e8bf;--ok:#477257;
+ --shadow:0 16px 44px rgba(36,52,58,.08);--r:24px
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+ margin:0;background:
+ radial-gradient(circle at 3% 0,rgba(209,181,138,.28),transparent 27rem),
+ radial-gradient(circle at 100% 16%,rgba(93,127,140,.13),transparent 29rem),
+ var(--bg);
+ color:var(--ink);font-family:Inter,Onest,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.56
+}
+button,textarea{font:inherit}
+.wrap{width:min(1060px,calc(100% - 24px));margin:auto}
+.hero{padding:62px 0 38px;background:linear-gradient(135deg,#243b42,#536c72);color:#fff;border-radius:0 0 34px 34px;box-shadow:var(--shadow)}
+.hero-inner{width:min(1060px,calc(100% - 30px));margin:auto}
+.eyebrow{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:900;color:#ead6ae;margin-bottom:11px}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:500}
+h1{font-size:clamp(2.7rem,7vw,5.3rem);line-height:.96;letter-spacing:-.04em;max-width:800px;margin:0 0 14px}
+.hero p{max-width:760px;color:rgba(255,255,255,.87);font-size:1.07rem;margin:0}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:18px}
+.tag{padding:7px 10px;border:1px solid rgba(255,255,255,.2);border-radius:999px;background:rgba(255,255,255,.08);font-size:.82rem;font-weight:800}
+main{padding:18px 0 70px}
+.card{background:var(--paper);border:1px solid rgba(36,52,58,.09);border-radius:var(--r);padding:clamp(19px,4vw,34px);margin:18px 0;box-shadow:0 8px 28px rgba(36,52,58,.045)}
+.head{display:grid;grid-template-columns:auto 1fr;gap:13px;align-items:start;margin-bottom:16px}
+.num{width:42px;height:42px;border-radius:13px;background:var(--deep);color:#fff;display:grid;place-items:center;font-weight:900}
+.kicker{font-size:.72rem;letter-spacing:.11em;text-transform:uppercase;font-weight:900;color:var(--blue);margin-bottom:4px}
+h2{font-size:clamp(1.6rem,4vw,2.45rem);line-height:1.08;color:var(--deep);margin:0}
+.lead{margin:7px 0 0;color:var(--muted)}
+.note{padding:14px 16px;border-radius:15px;background:var(--sand2);border-left:4px solid var(--sand);margin:14px 0}
+.note.blue{background:var(--blue2);border-left-color:var(--blue)}
+.note.green{background:var(--green2);border-left-color:var(--green)}
+.message-grid{display:grid;grid-template-columns:.78fr 1.22fr;gap:14px}
+.phone{border:1px solid var(--line);border-radius:24px;background:#f5f7f5;padding:14px}
+.bubble{max-width:89%;padding:11px 13px;border-radius:16px;margin:8px 0;font-size:.94rem}
+.them{background:#fff;border:1px solid var(--line)}
+.me{background:#dfece4;margin-left:auto}
+.answerbox{border:1px solid var(--line);border-radius:20px;background:#fff;padding:16px}
+.answerbox textarea,.free textarea{width:100%;min-height:145px;border:1px solid #ccd5d3;border-radius:14px;padding:13px;resize:vertical;background:#fff;font-size:1rem}
+.support{display:flex;gap:7px;flex-wrap:wrap;margin:11px 0}
+.chip{border:1px solid var(--line);border-radius:999px;background:#fff;padding:7px 10px;font-size:.82rem;font-weight:800;cursor:pointer}
+.chip:hover{background:var(--green2)}
+.checklist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:12px}
+.check{border:1px solid var(--line);background:#fff;border-radius:12px;padding:9px 11px;text-align:left;font-weight:800;cursor:pointer}
+.check.done{background:var(--green2);border-color:var(--green);text-decoration:line-through;opacity:.75}
+.photo-block{display:grid;grid-template-columns:1.05fr .95fr;gap:14px;align-items:start}
+.photo{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff}
+.photo img{width:100%;height:auto;display:block;background:#e9ece9}
+.photo .fallback{display:none;padding:24px;background:var(--blue2);font-weight:800}
+.photo-caption{padding:11px 14px;color:var(--muted);font-size:.8rem}
+.fact{border:1px solid var(--line);border-radius:18px;background:#fff;padding:15px;margin-bottom:10px}
+.fact b{display:block;color:var(--deep);margin-bottom:4px}
+.fact p{margin:0;color:#4d5b60;font-size:.92rem}
+.material-groups{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px;margin-top:14px}
+.matgroup{border:1px solid var(--line);border-radius:18px;background:#fff;padding:14px}
+.matgroup h3{font-size:1.05rem;color:var(--deep);margin:0 0 8px}
+.material{display:flex;justify-content:space-between;gap:8px;padding:7px 0;border-top:1px solid #eee9e1}
+.material:first-of-type{border-top:0}
+.material b{color:var(--deep)}
+.material span{color:var(--muted);font-size:.84rem;text-align:right}
+.patterns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}
+.pattern{border:1px solid var(--line);border-radius:16px;background:#fff;padding:13px}
+.pattern b{display:block;color:var(--deep);margin-bottom:4px}
+.pattern p{margin:0;color:var(--muted);font-size:.9rem}
+.material-select{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.material-select button{border:1px solid #cfd6d4;background:#fff;border-radius:999px;padding:8px 10px;font-size:.82rem;font-weight:800;cursor:pointer}
+.material-select button.selected{background:var(--blue);border-color:var(--blue);color:#fff}
+.selected-out{margin-top:10px;padding:10px 12px;border-radius:12px;background:var(--blue2);min-height:42px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:14px}
+.describe-card{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#fff}
+.describe-card img{width:100%;height:310px;object-fit:cover;display:block;background:#e9ece9}
+.describe-body{padding:14px}
+.describe-body h3{margin:0 0 6px;color:var(--deep);font-size:1.08rem}
+.prompt-list{margin:8px 0 0;padding-left:19px}
+.prompt-list li{margin:6px 0}
+.free{margin-top:13px}
+.free label{display:block;font-weight:850;color:var(--deep);margin-bottom:7px}
+.fact-reveal{border:1px solid var(--line);border-radius:18px;background:#fff;padding:14px;margin-top:14px}
+.fact-reveal button{border:0;background:var(--gold2);color:#674c14;border-radius:11px;padding:9px 12px;font-weight:850;cursor:pointer}
+.hiddenfact{display:none;margin-top:10px;color:#4c5b60}
+.hiddenfact.show{display:block}
+.speak{margin-top:15px;border-radius:20px;background:linear-gradient(135deg,#223b41,#506c72);color:#fff;padding:18px}
+.speak h3{margin:0 0 6px;font-size:1.08rem}
+.speak p{margin:5px 0;color:rgba(255,255,255,.85)}
+.pills{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}
+.pill{padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.17);font-size:.82rem;font-weight:790}
+.final{background:linear-gradient(145deg,#f7edda,#e6eee8)}
+@media(max-width:840px){.message-grid,.photo-block,.duo{grid-template-columns:1fr}.material-groups{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.wrap{width:min(100% - 16px,1060px)}.hero-inner{width:min(100% - 22px,1060px)}.card{padding:17px}.material-groups,.patterns,.checklist{grid-template-columns:1fr}.describe-card img{height:auto;max-height:430px}}
+</style>
+</head>
+<body>
+<header class="hero">
+ <div class="hero-inner">
+  <div class="eyebrow">Homework · Natalia · A1/A1+</div>
+  <h1>Vecchio, nuovo, oro e cemento</h1>
+  <p>В этот раз мы не возвращаемся в Villa Necchi. Едем в <b>Fondazione Prada</b>: отвечаем на сообщение, учим основные материалы, описываем архитектуру и снова используем предлоги внутри реальной речи.</p>
+  <div class="tags"><span class="tag">materiali</span><span class="tag">descrizione</span><span class="tag">preposizioni</span><span class="tag">passato prossimo</span><span class="tag">messaggio reale</span></div>
+ </div>
+</header>
+<main class="wrap">
+<section class="card">
+ <div class="head"><div class="num">1</div><div><div class="kicker">Messaggio</div><h2>Rispondi a Sara</h2><p class="lead">Начинаем с коммуникации, а не с упражнения.</p></div></div>
+ <div class="message-grid">
+  <div class="phone">
+   <div class="bubble them"><b>Sara</b><br>Ciao! La villa dell’altra volta mi è piaciuta molto, ma stavolta vorrei vedere qualcosa di completamente diverso.</div>
+   <div class="bubble them">Qualcosa di contemporaneo, un po’ strano, con architettura e arte. E magari dopo prendiamo un caffè. Hai un’idea?</div>
+   <div class="bubble me">Certo. Ti porto…</div>
+  </div>
+  <div class="answerbox">
+   <b>Scrivi la tua risposta — 4–6 frasi.</b>
+   <div class="support">
+    <button class="chip" data-insert="Ti porto alla Fondazione Prada. ">Ti porto alla…</button>
+    <button class="chip" data-insert="È in Largo Isarco, nella zona sud di Milano. ">È in…</button>
+    <button class="chip" data-insert="Ci sono edifici vecchi e nuovi. ">Ci sono…</button>
+    <button class="chip" data-insert="Dopo possiamo passare da Bar Luce. ">Dopo possiamo passare da…</button>
+    <button class="chip" data-insert="Secondo me ti piacerà perché è molto particolare. ">Secondo me…</button>
+   </div>
+   <textarea id="messageAnswer" placeholder="Ciao Sara! ..."></textarea>
+   <div class="checklist">
+    <button class="check">назвала место</button>
+    <button class="check">сказала, где оно находится</button>
+    <button class="check">предложила, что делать после</button>
+    <button class="check">объяснила, почему место подходит</button>
+   </div>
+  </div>
+ </div>
+</section>
+<section class="card">
+ <div class="head"><div class="num">2</div><div><div class="kicker">Scopri il posto</div><h2>Fondazione Prada</h2><p class="lead">Посмотри на пространство. Сначала опиши, что видишь, затем прочитай короткие факты.</p></div></div>
+ <div class="photo-block">
+  <div class="photo">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Fondazione_prada%2C_milano%2C_cortile_01.JPG/1280px-Fondazione_prada%2C_milano%2C_cortile_01.JPG" alt="Cortile della Fondazione Prada" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+   <div class="fallback">Фото не загрузилось. Открой файл при подключении к интернету.</div>
+   <div class="photo-caption">Fondazione Prada, Milano · cortile</div>
+  </div>
+  <div>
+   <div class="fact"><b>Una vecchia distilleria</b><p>Il complesso nasce dalla trasformazione di una distilleria degli anni Dieci del Novecento.</p></div>
+   <div class="fact"><b>Vecchio + nuovo</b><p>Il progetto di OMA unisce sette edifici preesistenti e tre nuove costruzioni: Podium, Cinema e Torre.</p></div>
+   <div class="fact"><b>19.000 m²</b><p>Il complesso si trova in Largo Isarco, nella zona sud di Milano.</p></div>
+   <div class="fact"><b>La Torre</b><p>È alta 60 metri e combina superfici di vetro e cemento bianco a vista.</p></div>
+  </div>
+ </div>
+ <div class="speak"><h3>Prima impressione · 30 secondi</h3><p><i>Vedo… / A destra c’è… / A sinistra… / In fondo… / Mi sembra… / Mi colpisce…</i></p></div>
+</section>
+<section class="card">
+ <div class="head"><div class="num">3</div><div><div class="kicker">Lessico fondamentale</div><h2>I materiali</h2><p class="lead">Не нужно учить всё как список. Выбери сначала 8–10 слов, которые реально пригодятся тебе для описания интерьеров и архитектуры.</p></div></div>
+ <div class="material-groups">
+  <div class="matgroup"><h3>Struttura</h3><div class="material"><b>il cemento</b><span>бетон</span></div><div class="material"><b>l’acciaio</b><span>сталь</span></div><div class="material"><b>l’alluminio</b><span>алюминий</span></div><div class="material"><b>i mattoni</b><span>кирпич</span></div><div class="material"><b>la pietra</b><span>камень</span></div></div>
+  <div class="matgroup"><h3>Superfici</h3><div class="material"><b>il vetro</b><span>стекло</span></div><div class="material"><b>il marmo</b><span>мрамор</span></div><div class="material"><b>la ceramica</b><span>керамика</span></div><div class="material"><b>la resina</b><span>смола / resin</span></div><div class="material"><b>la plastica</b><span>пластик</span></div></div>
+  <div class="matgroup"><h3>Interni & dettagli</h3><div class="material"><b>il legno</b><span>дерево</span></div><div class="material"><b>il tessuto</b><span>ткань</span></div><div class="material"><b>la pelle</b><span>кожа</span></div><div class="material"><b>l’ottone</b><span>латунь</span></div><div class="material"><b>il rame</b><span>медь</span></div><div class="material"><b>l’oro</b><span>золото</span></div></div>
+ </div>
+ <div class="patterns">
+  <div class="pattern"><b>È di + materiale</b><p><i>un tavolo di legno · una parete di vetro · un pavimento di marmo</i></p></div>
+  <div class="pattern"><b>È in + materiale</b><p>Очень часто в архитектуре: <i>una struttura in acciaio · una torre in cemento</i></p></div>
+ </div>
+ <div class="note blue"><b>Полезные прилагательные для материала:</b> <i>lucido</i> — глянцевый, <i>opaco</i> — матовый, <i>ruvido</i> — шероховатый, <i>liscio</i> — гладкий, <i>trasparente</i> — прозрачный, <i>riflettente</i> — отражающий.</div>
+ <h3 style="color:var(--deep);margin:21px 0 7px">Выбери свой активный набор</h3>
+ <p class="lead">Нажми на 8–10 материалов, которые хочешь использовать дальше.</p>
+ <div class="material-select" id="materialSelect"><button>cemento</button><button>acciaio</button><button>alluminio</button><button>mattoni</button><button>pietra</button><button>vetro</button><button>marmo</button><button>ceramica</button><button>resina</button><button>plastica</button><button>legno</button><button>tessuto</button><button>pelle</button><button>ottone</button><button>rame</button><button>oro</button></div>
+ <div class="selected-out" id="selectedMaterials">Пока ничего не выбрано.</div>
+</section>
+<section class="card">
+ <div class="head"><div class="num">4</div><div><div class="kicker">Descrizione 1</div><h2>Oro contro cemento</h2><p class="lead">Сейчас материалы нужны для реального описания, а предлоги — чтобы показать, где что находится.</p></div></div>
+ <div class="duo">
+  <div class="describe-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Fondazione_PRADA%2C_Via_Ripamonti_-_Largo_Isarco_area%2C_Golden_Tower_Rem_Koolhass_design.jpg/1280px-Fondazione_PRADA%2C_Via_Ripamonti_-_Largo_Isarco_area%2C_Golden_Tower_Rem_Koolhass_design.jpg" alt="Haunted House dorata alla Fondazione Prada" onerror="this.style.display='none'"><div class="describe-body"><h3>La Haunted House</h3><ul class="prompt-list"><li>Что находится <b>davanti / dietro / vicino</b>?</li><li>Какого цвета фасад?</li><li>Какой материал кажется главным?</li><li>Какой контраст ты видишь?</li></ul></div></div>
+  <div class="describe-card"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Fondazione_prada%2C_milano%2C_cortile_01.JPG/1280px-Fondazione_prada%2C_milano%2C_cortile_01.JPG" alt="Cortile della Fondazione Prada" onerror="this.style.display='none'"><div class="describe-body"><h3>Il cortile</h3><ul class="prompt-list"><li>Что находится <b>a destra / a sinistra / in fondo</b>?</li><li>Какие материалы ты видишь?</li><li>Пространство кажется <b>freddo, caldo, essenziale, industriale…</b>?</li><li>Что тебя цепляет?</li></ul></div></div>
+ </div>
+ <div class="free"><label for="desc1">Напиши 6–8 простых предложений про одну фотографию.</label><textarea id="desc1" placeholder="Nella foto vedo... A destra c’è... L’edificio è in... La facciata è... Mi colpisce..."></textarea></div>
+ <div class="note green"><b>Минимум:</b> 3 предлога места + 3 материала + 2 прилагательных + 1 личная реакция.</div>
+ <div class="fact-reveal"><button id="goldFactBtn">Scopri il fatto</button><div class="hiddenfact" id="goldFact"><b>Fatto:</b> la superficie esterna della Haunted House è stata rivestita con uno strato di <b>foglia d’oro</b>. То есть золотой эффект — не краска.</div></div>
+</section>
+<section class="card">
+ <div class="head"><div class="num">5</div><div><div class="kicker">Descrizione 2</div><h2>Bar Luce: cambia completamente atmosfera</h2><p class="lead">После холодного индустриального пространства — интерьер, который работает совсем иначе.</p></div></div>
+ <div class="photo-block">
+  <div class="photo"><img src="https://upload.wikimedia.org/wikipedia/commons/a/aa/Fondazione_PRADA%2C_Via_Ripamonti_-_Largo_Isarco_area%2C_Bar_Luce%2C_50s_lifestyle_Milano_design_by_Wes_Anderson.jpg" alt="Bar Luce alla Fondazione Prada" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="fallback">Фото Bar Luce не загрузилось.</div><div class="photo-caption">Bar Luce · Fondazione Prada</div></div>
+  <div><div class="fact"><b>Wes Anderson, 2015</b><p>Bar Luce è stato progettato dal regista Wes Anderson.</p></div><div class="fact"><b>Milano anni ’50–’60</b><p>I colori, gli arredi in formica, il pavimento e i pannelli di legno ricordano l’estetica italiana di quel periodo.</p></div><div class="fact"><b>Non è solo un set</b><p>Anderson voleva creare un luogo da vivere: per bere, parlare, leggere e mangiare.</p></div></div>
+ </div>
+ <div class="free"><label for="desc2">Опиши Bar Luce — 5–6 предложений.</label><textarea id="desc2" placeholder="Nel bar vedo... Sul bancone... Dietro... Ci sono... I materiali sono... L’atmosfera mi sembra..."></textarea></div>
+ <div class="speak"><h3>Confronta · 45 secondi</h3><p><b>Fondazione Prada fuori ↔ Bar Luce dentro.</b> Что более тёплое, более индустриальное, более уютное, более сценографичное? Используй <i>invece / ma / per me</i>.</p></div>
+</section>
+<section class="card final">
+ <div class="head"><div class="num">6</div><div><div class="kicker">Compito finale</div><h2>Un vocale dopo la visita</h2><p class="lead">Финал связывает сообщение, предлоги, материалы, описание и passato prossimo.</p></div></div>
+ <div class="speak"><h3>1–2 минуты</h3><p>Представь, что вы уже сходили. Расскажи: <b>куда вы пошли, где находится место, что увидели, из каких материалов пространство, что было рядом/внутри, куда пошли после и что тебе понравилось</b>.</p><div class="pills"><span class="pill">Siamo andate alla…</span><span class="pill">È in…</span><span class="pill">Nella… / sul… / vicino a…</span><span class="pill">È in cemento / di vetro…</span><span class="pill">Poi siamo passate da…</span><span class="pill">Mi ha colpito…</span></div></div>
+ <div class="checklist"><button class="check">1 ответ на сообщение</button><button class="check">6–8 фраз описания</button><button class="check">минимум 5 материалов</button><button class="check">минимум 4 предлога</button><button class="check">3 passato prossimo</button><button class="check">голосовое 1–2 минуты</button></div>
+ <div class="note"><b>Не нужно использовать все слова из списка.</b> Лучше 5–8 материалов уверенно и в реальных фразах, чем 16 слов отдельно.</div>
+</section>
+<div style="font-size:.78rem;color:#6b777c;margin:22px 0 50px">Факты: Fondazione Prada / OMA. Фотографии: Wikimedia Commons (Sailko; DesignerToparchitect).</div>
+</main>
+<script>
+document.querySelectorAll('[data-insert]').forEach(btn=>{btn.addEventListener('click',()=>{const ta=document.getElementById('messageAnswer');ta.value += btn.dataset.insert;ta.focus();});});
+document.querySelectorAll('.check').forEach(btn=>{btn.addEventListener('click',()=>btn.classList.toggle('done'));});
+const matOut=document.getElementById('selectedMaterials');
+document.querySelectorAll('#materialSelect button').forEach(btn=>{btn.addEventListener('click',()=>{btn.classList.toggle('selected');const chosen=[...document.querySelectorAll('#materialSelect button.selected')].map(x=>x.textContent.trim());matOut.textContent=chosen.length?'Il mio lessico attivo: '+chosen.join(' · '):'Пока ничего не выбрано.';});});
+document.getElementById('goldFactBtn').addEventListener('click',()=>{const box=document.getElementById('goldFact');box.classList.toggle('show');document.getElementById('goldFactBtn').textContent=box.classList.contains('show')?'Nascondi il fatto':'Scopri il fatto';});
+</script>
+</body>
+</html>
