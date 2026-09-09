@@ -11,6 +11,10 @@
 
     { "source": "/pln-k4m8", "destination": "/students/pln-k4m8/index.html" },
     { "source": "/pln-k4m8/", "destination": "/students/pln-k4m8/index.html" },
-    { "source": "/pln-k4m8/:path*", "destination": "/students/pln-k4m8/:path*" }
+    { "source": "/pln-k4m8/:path*", "destination": "/students/pln-k4m8/:path*" },
+
+    { "source": "/ntl-v6q2", "destination": "/students/ntl-v6q2/index.html" },
+    { "source": "/ntl-v6q2/", "destination": "/students/ntl-v6q2/index.html" },
+    { "source": "/ntl-v6q2/:path*", "destination": "/students/ntl-v6q2/:path*" }
   ]
 }
