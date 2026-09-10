@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Giulia · Condizionale · Viaggi & California</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Onest:wght@400;500;600;700;800&display=swap');
+:root{
+  --bg:#f4f1eb;--paper:#fffdf9;--ink:#26302d;--muted:#6e756f;--line:#ddd5c9;
+  --sage:#5f786d;--sage2:#edf3ef;--sand:#d3b88c;--sand2:#f8f1e5;
+  --blue:#728895;--blue2:#eef3f5;--rose:#b88779;--shadow:0 15px 38px rgba(42,51,47,.08)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(180deg,#f7f4ee,#f1eee8);color:var(--ink);font-family:"Onest",system-ui,-apple-system,sans-serif;line-height:1.6}
+h1,h2,h3{font-family:"Lora",Georgia,serif;line-height:1.12}
+.hero{position:relative;min-height:460px;display:flex;align-items:flex-end;overflow:hidden;background:#33413c}
+.hero:before{content:"";position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1785430913988-657b6a658ee5?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=80&w=1800") center 58%/cover no-repeat;transform:scale(1.015)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,28,26,.06),rgba(22,28,26,.76))}
+.hero-inner{position:relative;z-index:2;width:min(1040px,calc(100% - 30px));margin:auto;padding:54px 0 40px;color:white}
+.kicker{font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;font-weight:800;opacity:.9}
+.hero h1{font-size:clamp(2.5rem,7vw,5rem);margin:8px 0 12px;max-width:900px}
+.hero p{max-width:760px;margin:0;color:#f4f3ee;font-size:1.05rem}
+.credit{font-size:.73rem;margin-top:14px;opacity:.72}
+.wrap{width:min(1040px,calc(100% - 24px));margin:22px auto 60px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:24px;margin:15px 0}
+.sage{background:#f7faf8} .sand{background:#fcf8ef} .blue{background:#f7fafb}
+.num{display:inline-flex;width:36px;height:36px;border-radius:11px;background:var(--ink);color:white;align-items:center;justify-content:center;font-weight:900;margin-bottom:9px}
+h2{font-size:clamp(1.65rem,4vw,2.3rem);margin:0 0 10px}
+h3{font-size:1.22rem;margin:18px 0 9px}
+.task{border-left:5px solid var(--sage);background:#f6faf7;padding:13px 15px;border-radius:0 14px 14px 0;margin:14px 0}
+.timeline{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:15px 0}
+.time{border:1px solid var(--line);background:white;border-radius:18px;padding:18px}
+.time .label{display:inline-block;border-radius:999px;padding:6px 10px;font-size:.75rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase;background:var(--sage2);color:#415b50}
+.bigform{font-family:"Lora",Georgia,serif;font-size:1.55rem;margin:10px 0 7px}
+.example{padding:10px 12px;background:#faf9f5;border-radius:12px;margin:7px 0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.mini{background:white;border:1px solid var(--line);border-radius:16px;padding:15px}
+.forms{width:100%;border-collapse:collapse;margin-top:10px}
+.forms th,.forms td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left}
+.forms th{font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.drill{display:grid;gap:9px;margin-top:10px}
+.line{background:white;border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.answer{display:none;margin-top:8px;padding-top:8px;border-top:1px dashed var(--line);font-weight:700}
+button{border:0;border-radius:999px;background:var(--sage);color:white;padding:8px 12px;font-weight:800;cursor:pointer}
+.pills{display:flex;gap:8px;flex-wrap:wrap;margin:11px 0}
+.pill{border:1px solid var(--line);background:white;border-radius:999px;padding:7px 11px;font-weight:750}
+.dialogue{display:grid;gap:10px}
+.speech{padding:13px 15px;border-radius:17px;max-width:88%}
+.teacher{background:#eef3f0;border:1px solid #d8e3dd}
+.student{background:#f7f0e5;border:1px solid #eadcc5;margin-left:auto}
+.structure{display:grid;gap:9px}
+.structure div{background:white;border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.note{font-size:.9rem;color:var(--muted)}
+footer{font-size:.84rem;color:var(--muted);padding:8px 2px 20px}
+@media(max-width:760px){.timeline,.grid{grid-template-columns:1fr}.card{padding:18px}.hero{min-height:390px}.speech{max-width:100%}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+<div class="hero-inner">
+<div class="kicker">Giulia · B1 · Lezione</div>
+<h1>Un viaggio che rifaresti.<br>E uno che avresti fatto diversamente.</h1>
+<p>Condizionale semplice e composto — через путешествия, воспоминания и воображаемую Калифорнию, без тяжёлой экзаменационной рамки.</p>
+<div class="credit">Foto: Napa, California · Alex Reynolds / Unsplash</div>
+</div>
+</header>
+
+<main class="wrap">
+
+<section class="card sage">
+<div class="num">1</div>
+<h2>Partiamo da te</h2>
+<div class="task"><strong>Говорим без правил:</strong> отвечай быстро, не пытаясь быть идеальной. Сначала нам важно услышать, какие формы уже выходят автоматически.</div>
+<div class="grid">
+<div class="mini">Qual è un viaggio che <strong>rifaresti</strong> domani?</div>
+<div class="mini">Dove <strong>andresti</strong> se avessi una settimana completamente libera?</div>
+<div class="mini">C’è un posto dove <strong>saresti rimasta</strong> più a lungo?</div>
+<div class="mini">C’è qualcosa che <strong>avresti organizzato</strong> diversamente?</div>
+</div>
+</section>
+
+<section class="card">
+<div class="num">2</div>
+<h2>La differenza fondamentale</h2>
+<p>Не учим два времени как две таблицы. Сначала видим <strong>две перспективы</strong>.</p>
+
+<div class="timeline">
+<div class="time">
+<span class="label">ADESSO / FUTURO</span>
+<div class="bigform">condizionale semplice</div>
+<p><strong>Что бы я сделала сейчас / потом?</strong></p>
+<div class="example">Andrei in Giappone.</div>
+<div class="example">Resterei due settimane.</div>
+<div class="example">Ti consiglierei Napa Valley.</div>
+</div>
+
+<div class="time">
+<span class="label">PASSATO CHIUSO</span>
+<div class="bigform">condizionale composto</div>
+<p><strong>Что я бы сделала тогда — но момент уже прошёл?</strong></p>
+<div class="example">Sarei rimasta più a lungo.</div>
+<div class="example">Avrei scelto un altro hotel.</div>
+<div class="example">Non avrei viaggiato in agosto.</div>
+</div>
+</div>
+
+<div class="task"><strong>Вопрос-проверка:</strong> <em>Posso ancora cambiare questa situazione?</em><br>
+Если речь о выборе сейчас / будущем → обычно <strong>semplice</strong>.<br>
+Если речь о прошлом, которое уже нельзя изменить → <strong>composto</strong>.</div>
+<p class="note">В учебнике <strong>Grammatica pratica della lingua italiana</strong> condizionale composto описывается, в частности, как способ выражать <strong>una situazione non realizzata</strong>. Именно это значение мы сегодня автоматизируем.</p>
+</section>
+
+<section class="card sand">
+<div class="num">3</div>
+<h2>Come si forma?</h2>
+<div class="grid">
+<div class="mini">
+<h3>Condizionale semplice</h3>
+<table class="forms">
+<tr><th>persona</th><th>andare</th><th>fare</th></tr>
+<tr><td>io</td><td>andrei</td><td>farei</td></tr>
+<tr><td>tu</td><td>andresti</td><td>faresti</td></tr>
+<tr><td>lui/lei</td><td>andrebbe</td><td>farebbe</td></tr>
+<tr><td>noi</td><td>andremmo</td><td>faremmo</td></tr>
+<tr><td>voi</td><td>andreste</td><td>fareste</td></tr>
+<tr><td>loro</td><td>andrebbero</td><td>farebbero</td></tr>
+</table>
+</div>
+
+<div class="mini">
+<h3>Condizionale composto</h3>
+<p><strong>condizionale di avere / essere + participio passato</strong></p>
+<div class="example">avrei + prenotato → <strong>avrei prenotato</strong></div>
+<div class="example">sarei + andata → <strong>sarei andata</strong></div>
+<div class="example">avremmo + scelto → <strong>avremmo scelto</strong></div>
+<p class="note">С <strong>essere</strong> participio согласуется: sarei andat<strong>a</strong>, saremmo rimast<strong>e</strong>.</p>
+</div>
+</div>
+
+<h3>Una costruzione molto utile</h3>
+<div class="pills">
+<span class="pill">avrei voluto + infinito</span>
+<span class="pill">sarei voluta + infinito</span>
+<span class="pill">avrei preferito + infinito</span>
+</div>
+<div class="example"><strong>Avrei voluto vedere Yosemite.</strong></div>
+<div class="example"><strong>Sarei voluta restare qualche giorno in più.</strong></div>
+</section>
+
+<section class="card blue">
+<div class="num">4</div>
+<h2>Drill · adesso o passato?</h2>
+<div class="task"><strong>Что сделать:</strong> сначала скажи только <strong>semplice</strong> или <strong>composto</strong>. Потом дай полную фразу.</div>
+<div class="drill">
+<div class="line">1. Hai una settimana libera il mese prossimo. Dove ______? (andare)<br><button onclick="toggle(this)">Проверить</button><div class="answer"><strong>andresti</strong> · condizionale semplice</div></div>
+<div class="line">2. L’anno scorso sei rimasta solo due giorni a Roma. Con il senno di poi, ______ più a lungo. (restare)<br><button onclick="toggle(this)">Проверить</button><div class="answer"><strong>saresti rimasta</strong> · condizionale composto</div></div>
+<div class="line">3. Stai scegliendo un hotel adesso. Io ______ quello più piccolo. (scegliere)<br><button onclick="toggle(this)">Проверить</button><div class="answer"><strong>sceglierei</strong> · condizionale semplice</div></div>
+<div class="line">4. L’hotel dell’anno scorso era terribile. Io ______ un’altra struttura. (prenotare)<br><button onclick="toggle(this)">Проверить</button><div class="answer"><strong>avrei prenotato</strong> · condizionale composto</div></div>
+<div class="line">5. Se potessi partire domani, ______ al mare. (andare)<br><button onclick="toggle(this)">Проверить</button><div class="answer"><strong>andrei</strong> · condizionale semplice</div></div>
+<div class="line">6. Non hai visto il tramonto perché sei partita troppo presto. ______ fino a sera? (restare)<br><button onclick="toggle(this)">Проверить</button><div class="answer"><strong>saresti rimasta</strong> · condizionale composto</div></div>
+</div>
+</section>
+
+<section class="card sage">
+<div class="num">5</div>
+<h2>Se venissi a trovarti in California…</h2>
+<p>Я приезжаю к тебе на неделю. Калифорнию почти не знаю и не хочу провести семь дней только в туристических местах.</p>
+<div class="task"><strong>Твоя задача:</strong> организуй мне поездку. Говори со мной, а не составляй туристическую презентацию.</div>
+
+<div class="dialogue">
+<div class="speech teacher"><strong>Daria:</strong> Ho sette giorni. Da dove cominceresti?</div>
+<div class="speech student"><strong>Giulia:</strong> Ti porterei… / Comincerei da…</div>
+<div class="speech teacher"><strong>Daria:</strong> Vorrei vedere qualcosa di bello, ma senza correre tutto il giorno.</div>
+<div class="speech student"><strong>Giulia:</strong> Allora ti consiglierei… / Eviterei… / Resterei…</div>
+<div class="speech teacher"><strong>Daria:</strong> E se volessi passare una giornata nella Napa Valley?</div>
+<div class="speech student"><strong>Giulia:</strong> Potremmo… / Io sceglierei… / Ti farei vedere…</div>
+</div>
+
+<h3>Chunks da usare</h3>
+<div class="pills">
+<span class="pill">ti porterei…</span>
+<span class="pill">ti consiglierei…</span>
+<span class="pill">eviterei…</span>
+<span class="pill">passerei almeno…</span>
+<span class="pill">sceglierei…</span>
+<span class="pill">potremmo…</span>
+<span class="pill">non andrei… perché…</span>
+</div>
+</section>
+
+<section class="card sand">
+<div class="num">6</div>
+<h2>Cambio di prospettiva</h2>
+<p>Та же поездка уже закончилась. Я вернулась в Италию. Теперь меняем только <strong>временную перспективу</strong>.</p>
+
+<div class="dialogue">
+<div class="speech teacher"><strong>Daria:</strong> Peccato, non sono stata a Yosemite.</div>
+<div class="speech student"><strong>Giulia:</strong> Ah, allora ti <strong>avrei portata</strong> lì.</div>
+<div class="speech teacher"><strong>Daria:</strong> Ho passato troppo tempo a Los Angeles.</div>
+<div class="speech student"><strong>Giulia:</strong> Io ti <strong>avrei consigliato</strong> di…</div>
+<div class="speech teacher"><strong>Daria:</strong> A Napa sono rimasta solo poche ore.</div>
+<div class="speech student"><strong>Giulia:</strong> Io <strong>sarei rimasta</strong>… / Avrei passato…</div>
+</div>
+
+<div class="task"><strong>Drill:</strong> повтори 4–5 советов из предыдущего блока, но теперь говори о поездке, которая <strong>уже закончилась</strong>.</div>
+</section>
+
+<section class="card">
+<div class="num">7</div>
+<h2>Un viaggio che rifaresti</h2>
+<p>Выбери реальное путешествие. Не обязательно «лучшее». Важно, чтобы о нём хотелось поговорить.</p>
+
+<div class="structure">
+<div><strong>DOVE / QUANDO</strong><br><span class="note">Dove sei stata? Quando? Con chi?</span></div>
+<div><strong>COSA RIFARESTI</strong><br><span class="note">Ci tornerei… / Rifarei… / Sceglierei di nuovo…</span></div>
+<div><strong>COSA AVRESTI CAMBIATO</strong><br><span class="note">Avrei prenotato… / Sarei rimasta… / Non avrei…</span></div>
+<div><strong>PERCHÉ</strong><br><span class="note">Spiega il motivo con un esempio concreto.</span></div>
+</div>
+
+<h3>Con il senno di poi…</h3>
+<p><strong>Con il senno di poi</strong> = оглядываясь назад, зная то, что знаешь сейчас.</p>
+<div class="example">Con il senno di poi, <strong>sarei rimasta</strong> qualche giorno in più.</div>
+<div class="example">Con il senno di poi, <strong>non avrei scelto</strong> agosto.</div>
+</section>
+
+<section class="card blue">
+<div class="num">8</div>
+<h2>Scelte veloci</h2>
+<div class="task"><strong>Не готовь длинный ответ.</strong> На каждую ситуацию — 2–3 фразы максимум.</div>
+<div class="grid">
+<div class="mini">Un posto molto famoso che non <strong>visiteresti</strong> di nuovo.</div>
+<div class="mini">Un viaggio che <strong>avresti fatto prima</strong>, se ne avessi avuto la possibilità.</div>
+<div class="mini">Una vacanza che oggi <strong>organizzeresti</strong> in modo diverso.</div>
+<div class="mini">Un luogo dove <strong>avresti voluto restare</strong> più a lungo.</div>
+<div class="mini">Un posto dove <strong>porteresti</strong> una persona che ami.</div>
+<div class="mini">Una cosa che <strong>non avresti prenotato</strong> sapendo quello che sai adesso.</div>
+</div>
+</section>
+
+<section class="card sage">
+<h2>Alla fine della lezione</h2>
+<p>Без таблицы попробуй закончить четыре фразы:</p>
+<div class="drill">
+<div class="line"><strong>Domani, se potessi, io…</strong></div>
+<div class="line"><strong>Nel mio prossimo viaggio, io…</strong></div>
+<div class="line"><strong>Con il senno di poi, avrei…</strong></div>
+<div class="line"><strong>Se tornassi indietro, sarei… / avrei…</strong></div>
+</div>
+<p class="note">Цель урока: не «знать правило», а быстро чувствовать разницу между <strong>farei</strong> и <strong>avrei fatto</strong>.</p>
+</section>
+
+<footer>Giulia · 10.09.2026 · Condizionale semplice & composto · Lezione</footer>
+</main>
+
+<script>
+function toggle(btn){
+  const a=btn.nextElementSibling;
+  a.style.display=a.style.display==='block'?'none':'block';
+  btn.textContent=a.style.display==='block'?'Скрыть':'Проверить';
+}
+</script>
+</body>
+</html>
