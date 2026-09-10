@@ -1,0 +1,7 @@
+{
+  "name": "italiano-biblioteca",
+  "private": true,
+  "dependencies": {
+    "fflate": "^0.8.2"
+  }
+}
