@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>CELI 2 Prova 1 parte scritta</title>
+<style>
+:root{
+  --bg:#f4f6f5;--paper:#fff;--ink:#26343c;--muted:#68747b;--line:#d7dfdc;
+  --sage:#526f65;--sage2:#e8efec;--blue:#607987;--blue2:#edf2f4;
+  --sand:#a88a61;--sand2:#f5f0e8;--shadow:0 10px 28px rgba(38,52,60,.065)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:linear-gradient(180deg,#fafbfa 0,#f4f6f5 270px);
+  color:var(--ink);font-family:Aptos,Inter,"Segoe UI Variable","Segoe UI","Helvetica Neue",Arial,sans-serif;
+  font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased
+}
+.hero{
+  padding:38px 20px 30px;border-top:5px solid var(--sage);border-bottom:1px solid var(--line);
+  background:radial-gradient(circle at 92% 8%,rgba(82,111,101,.12),transparent 30%),linear-gradient(135deg,#fbfcfa,#eef2f0)
+}
+.wrap,.tabs,main,footer{width:min(1080px,calc(100% - 32px));margin:auto}
+.kicker{color:var(--sage);font-size:.77rem;font-weight:850;letter-spacing:.16em;text-transform:uppercase}
+h1{margin:8px 0 8px;font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.06;letter-spacing:-.04em}
+.hero p{max-width:820px;margin:0;color:#53616a}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.meta span{padding:7px 10px;border:1px solid #cfd8d4;border-radius:9px;background:#fff;color:#465850;font-size:.84rem;font-weight:760}
+.tabbar{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.tabs{display:flex;gap:7px;overflow-x:auto;padding:10px 0;scrollbar-width:thin}
+.tab{flex:0 0 auto;min-height:42px;padding:8px 12px;border:1px solid #cfd7d3;border-radius:10px;background:#fff;color:#4b5a62;font:inherit;font-size:.88rem;font-weight:790;cursor:pointer}
+.tab:hover{background:#f3f6f4}.tab.active{background:var(--sage);border-color:var(--sage);color:#fff;box-shadow:0 4px 12px rgba(82,111,101,.18)}
+main{padding:27px 0 76px}.panel[hidden]{display:none}
+.intro,.card,.task,.writing{border:1px solid var(--line);border-radius:16px;background:var(--paper);box-shadow:var(--shadow)}
+.intro{padding:22px 24px;border-left:5px solid var(--sage);margin-bottom:16px}
+.intro h2{margin:0 0 6px;font-size:1.52rem;letter-spacing:-.02em}.intro p{margin:0;color:var(--muted)}
+.card,.writing{padding:22px 23px;margin-top:15px}
+.card h3,.writing h3{margin:0 0 10px;font-size:1.15rem;letter-spacing:-.015em}
+.instructions{padding:13px 15px;border-radius:11px;background:var(--sage2);color:#3b5149;margin-bottom:15px}
+.note{padding:12px 14px;border-radius:10px;background:var(--sand2);color:#625640;margin:12px 0}
+.text{margin:0 0 13px;max-width:88ch}
+.question{font-weight:800;margin:14px 0 8px}
+.options{display:grid;gap:7px}
+.opt{padding:10px 12px;border:1px solid #dde4e1;border-radius:10px;background:#fbfcfb}
+.opt b{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:7px;background:var(--sage2);color:var(--sage);margin-right:8px}
+.task{padding:18px 20px;margin:12px 0}
+.task-num{display:inline-grid;place-items:center;width:31px;height:31px;border-radius:8px;background:var(--sage);color:#fff;font-weight:850;margin-right:8px}
+.statement{font-weight:700}
+.twocol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.choice-table{width:100%;border-collapse:collapse;margin-top:10px}
+.choice-table th,.choice-table td{padding:10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.choice-table th{background:#eef2f0;color:#40524b;font-size:.86rem;text-transform:uppercase;letter-spacing:.04em}
+.cloze{font-size:1.02rem;line-height:1.9;padding:15px 16px;border-radius:12px;background:#fafbfa;border:1px solid var(--line)}
+.blank{display:inline-block;min-width:62px;border-bottom:2px solid #8da097;text-align:center;color:var(--sage);font-weight:800}
+.bullets{margin:9px 0 0;padding-left:22px}.bullets li{margin:7px 0}
+.annuncio{padding:17px;border:1px solid #d6dfdb;border-radius:13px;background:#f9fbfa;margin:14px 0}
+.wordlimit{display:inline-block;margin-top:8px;padding:6px 9px;border-radius:8px;background:var(--blue2);color:#49616e;font-size:.85rem;font-weight:800}
+.notebook{margin-top:16px;padding:13px 15px;border-left:5px solid var(--blue);border-radius:10px;background:var(--blue2);color:#405965;font-weight:700}
+footer{margin-bottom:34px;padding-top:16px;border-top:1px solid var(--line);color:#707a7f;font-size:.84rem}
+@media(max-width:760px){body{font-size:16px}.hero{padding:30px 16px 24px}.wrap,.tabs,main,footer{width:min(100% - 24px,1080px)}.twocol{grid-template-columns:1fr}.card,.writing,.intro{padding:18px}.opt{padding:9px 10px}}
+@media print{.tabbar{display:none}.panel{display:block!important}.hero{padding:20px 0}.card,.writing,.intro,.task{box-shadow:none;break-inside:avoid}body{background:#fff}}
+</style>
+</head>
+<body>
+<header class="hero">
+<div class="wrap">
+<div class="kicker">CELI 2 · Livello B1</div>
+<h1>Prova 1 · Parte scritta</h1>
+<p>Sessione primaverile 2018 · Comprensione della lettura + Produzione di testi scritti.</p>
+<div class="meta"><span>Parte A · 40 punti</span><span>Parte B · 40 punti</span><span>Tempo totale · 2 ore</span></div>
+</div>
+</header>
+
+<nav class="tabbar"><div class="tabs">
+<button class="tab active" data-tab="a1">A.1</button>
+<button class="tab" data-tab="a2">A.2</button>
+<button class="tab" data-tab="a3">A.3</button>
+<button class="tab" data-tab="a4">A.4</button>
+<button class="tab" data-tab="a5">A.5</button>
+<button class="tab" data-tab="b1">B.1</button>
+<button class="tab" data-tab="b2">B.2</button>
+<button class="tab" data-tab="b3">B.3</button>
+</div></nav>
+
+<main>
+
+<section class="panel" data-panel="a1">
+<div class="intro"><h2>A.1 · Comprensione della lettura</h2><p>Leggere i testi da 1 a 7. Per ogni testo scegliere una sola risposta: A, B o C.</p></div>
+
+<div class="card"><h3>1 · Progetto Educativo Axé</h3>
+<p class="text">Da marzo a maggio dieci ragazzi e ballerini brasiliani del Progetto Educativo Axé accompagneranno la cantante Fiorella Mannoia sul palco dei suoi nuovi concerti in giro per l’Italia. I ragazzi di Axé, provenienti da quartieri poveri del Brasile, sono diventati artisti di talento grazie all’aiuto ricevuto da alcuni insegnanti volontari. Le loro esibizioni rappresentano una grande occasione per presentare questo Progetto Educativo all’Italia e alle associazioni che operano in situazioni di difficoltà giovanile.</p>
+<div class="question">I ragazzi di Axé</div><div class="options"><div class="opt"><b>A</b> aiuteranno un’associazione di volontari</div><div class="opt"><b>B</b> incontreranno ragazzi italiani in difficoltà</div><div class="opt"><b>C</b> faranno conoscere il loro Progetto Educativo</div></div></div>
+
+<div class="card"><h3>2 · Linguevive</h3>
+<p class="text">“Linguevive” è la prima scuola di lingue a proporre le lezioni di inglese a domicilio: offriamo corsi di inglese per bambini e adulti con un professore madrelingua inglese che andrà direttamente nelle loro abitazioni. La nostra offerta è molto ampia: consultate il nostro catalogo online con tutte le indicazioni e i prezzi. Inoltre come scuola di lingue organizziamo anche vacanze-studio intensive in Inghilterra.</p>
+<div class="question">La scuola “Linguevive”</div><div class="options"><div class="opt"><b>A</b> offre la possibilità di studiare all’estero</div><div class="opt"><b>B</b> mette a disposizione corsi di inglese online</div><div class="opt"><b>C</b> permette di imparare l’inglese a casa degli insegnanti</div></div></div>
+
+<div class="card"><h3>3 · Lavaggio a gettoni per cani</h3>
+<p class="text">Lavare il cane senza allagare il bagno: da oggi è possibile grazie al primo lavaggio a gettoni per cani. I padroni possono portare a passeggio il proprio cane e utilizzare un nuovo servizio di salute e bellezza per il loro animale. Nelle casette preparate per il lavaggio basta mettere un gettone e premere un pulsante. I padroni hanno a disposizione guanti, grembiule, saponi e spazzole necessari per la pulizia del cane: tutti i prodotti sono consigliati dall’Associazione dei veterinari e rispettano la pelle e il pelo dell’animale.</p>
+<div class="question">Con questo nuovo servizio i proprietari di cani possono</div><div class="options"><div class="opt"><b>A</b> andare a passeggio mentre il cane fa il bagno nel lavaggio a gettoni</div><div class="opt"><b>B</b> occuparsi dell’igiene del loro animale in modo comodo e pratico</div><div class="opt"><b>C</b> consultare i medici veterinari sul benessere del loro animale</div></div></div>
+
+<div class="card"><h3>4 · Cotto e mangiato!</h3>
+<p class="text">Tutti possiamo diventare bravi cuochi: per chi ama cucinare in modo semplice è molto utile il libro “Cotto e mangiato!”, nato dalla trasmissione televisiva di Benedetta Parodi, famosa presentatrice del programma e autrice del libro. Questa trasmissione ha fatto conoscere il libro al pubblico e lo ha portato al successo. È un libro che presenta, per ognuna delle 243 ricette, commento, consigli e suggerimenti dell’autrice per personalizzare e variare il piatto proposto, ma non ha foto delle varie portate.</p>
+<div class="question">Il libro “Cotto e mangiato!” ha avuto successo perché</div><div class="options"><div class="opt"><b>A</b> la scrittrice lo ha presentato e pubblicizzato in televisione</div><div class="opt"><b>B</b> insieme alle ricette ci sono delle belle immagini</div><div class="opt"><b>C</b> offre commenti e consigli di cuochi famosi</div></div></div>
+
+<div class="card"><h3>5 · Fantacity Festival</h3>
+<p class="text">Torna a Perugia per il quinto anno il “Fantacity Festival”: tre giornate di eventi e spettacoli dedicati alla creatività e alla fantasia, pensati per il divertimento di bambini, ragazzi e famiglie. Laboratori, proiezioni di film, musica, danza, pittura e magia che quest’anno si svolgeranno in diversi punti della città. La partecipazione è aperta a tutti ed è gratuita. Anche quest’anno Giunti Editore parteciperà con numerosi eventi dedicati ai più piccoli, con letture di libri e incontri culturali.</p>
+<div class="question">“Fantacity Festival” è rivolto</div><div class="options"><div class="opt"><b>A</b> a ogni persona interessata agli eventi proposti</div><div class="opt"><b>B</b> alle case editrici che presentano i loro libri</div><div class="opt"><b>C</b> a chi vuole conoscere la città di Perugia</div></div></div>
+
+<div class="card"><h3>6 · Tre eventi</h3>
+<div class="twocol">
+<div class="annuncio"><strong>SAGRA DI PRIMAVERA</strong><p>La sagra si svolge a Pieve Corleto, in provincia di Ravenna, nel campo sportivo dove si esibiscono orchestre, ballerini, attrazioni per i più piccoli e dove si trova uno stand gastronomico per gustare le specialità dell’agricoltura locale.</p></div>
+<div class="annuncio"><strong>LA FESTA DELLE ERBE</strong><p>A Cascina Torrine, vicino a Biella, presenteremo erbe e fiori primaverili per la cucina. Da aprile tutti i sabati fino a giugno vi è la possibilità di riscoprire le erbe e i fiori di campo che crescono nei nostri prati, utilizzate in cucina e in medicina.</p></div>
+</div>
+<div class="annuncio"><strong>MONTECASTRILLI IN FESTA</strong><p>A Montecastrilli, vicino a Terni, puoi gustare specialità come il vino e l’olio umbri, provenienti dalle colline che circondano il vecchio borgo. Oltre alla mostra-mercato delle macchine e delle attrezzature agricole, potrete assistere a spettacoli di vario tipo.</p></div>
+<div class="question">Chi vuole ammirare macchinari usati in agricoltura deve partecipare all’evento</div><div class="options"><div class="opt"><b>A</b> Sagra di Primavera</div><div class="opt"><b>B</b> La festa delle erbe</div><div class="opt"><b>C</b> Montecastrilli in festa</div></div></div>
+
+<div class="card"><h3>7 · Bambini, fisica e matematica</h3>
+<p class="text">Uno studio dell’Università del Missouri ha scoperto che i bimbi già all’età di due mesi “capiscono” i primi principi della fisica e della matematica: sanno che un oggetto può cadere e che una cosa nascosta, in realtà, non scompare. Già a 10 mesi, poi, distinguono lo stato liquido dal solido.</p>
+<div class="question">Questo studio universitario ha evidenziato che</div><div class="options"><div class="opt"><b>A</b> si può scoprire se un bambino sarà bravo in fisica</div><div class="opt"><b>B</b> i bambini piccoli comprendono fenomeni complessi</div><div class="opt"><b>C</b> le reazioni dei bambini sono imprevedibili</div></div></div>
+
+<div class="notebook">Segna le risposte 1–7 sul quaderno o sul Foglio delle Risposte.</div>
+</section>
+
+<section class="panel" data-panel="a2" hidden>
+<div class="intro"><h2>A.2 · VI PRESENTO IL MIO OLIO</h2><p>Leggere il testo e indicare Sì o No per le affermazioni 8–17.</p></div>
+<div class="card">
+<p class="text">Luigi Corneli è un giovane imprenditore che produce olio extravergine di oliva. Dopo l'università e delle esperienze lavorative a Milano è tornato nella sua Umbria per seguire l'azienda di famiglia.</p>
+<p class="text">“Il nostro primo mulino per l’olio, il frantoio, è stato costruito nel 1778, ma una volta producevamo l’olio solo per la nostra famiglia. Per la sua bontà però, i nostri operai agricoli lo chiedevano in cambio del loro lavoro, al posto del denaro. Così è nata l’idea, molti anni dopo, di venderlo. Anche a casa della mia nonna materna, fino a qualche anno fa, c’era un grosso frantoio che lei utilizzava, dove con mio fratello andavamo a giocare. Insomma, l'olio extravergine di oliva fa parte del nostro DNA!” racconta Luigi.</p>
+<p class="text">“Io consiglio di provare il mio olio su zuppe, carni alla griglia e insalate. Ma l'abbinamento migliore è la bruschetta, cioè il pane con l’olio tipico della nostra regione, un piatto che piace tanto a me e a mio fratello”.</p>
+<p class="text">L'olio Corneli è in vendita in Internet, dove hanno creato un loro sito, e presso alcuni locali della regione. Dunque questa diventerà l'attività principale di Luigi?</p>
+<p class="text">“Per adesso voglio continuare a dedicarmi a questa attività solo nel tempo libero” afferma Luigi “anche se le idee sono tante. Con l'aiuto della mia ragazza e della mia mamma Pina stiamo lavorando ad un progetto per la produzione di zuppe pronte, realizzate con legumi biologici che coltiviamo nella nostra azienda. Il nome, in onore di mia madre, sarà: Le Pinotte!”.</p>
+</div>
+<div class="card">
+<table class="choice-table"><thead><tr><th>N.</th><th>Affermazione</th><th>Risposta</th></tr></thead><tbody>
+<tr><td>8</td><td>Luigi è originario dell'Umbria.</td><td>Sì / No</td></tr>
+<tr><td>9</td><td>Luigi ha creato un’azienda.</td><td>Sì / No</td></tr>
+<tr><td>10</td><td>La sua famiglia vende olio dal 1778.</td><td>Sì / No</td></tr>
+<tr><td>11</td><td>Gli operai dell'azienda volevano essere pagati con l’olio.</td><td>Sì / No</td></tr>
+<tr><td>12</td><td>La nonna materna produceva olio.</td><td>Sì / No</td></tr>
+<tr><td>13</td><td>Luigi e suo fratello cucinano insieme.</td><td>Sì / No</td></tr>
+<tr><td>14</td><td>L'olio si può ordinare online.</td><td>Sì / No</td></tr>
+<tr><td>15</td><td>Luigi lavora nell'azienda a tempo pieno.</td><td>Sì / No</td></tr>
+<tr><td>16</td><td>La fidanzata di Luigi ha avuto un’idea.</td><td>Sì / No</td></tr>
+<tr><td>17</td><td>Il nome delle zuppe è stato scelto dalla mamma di Luigi.</td><td>Sì / No</td></tr>
+</tbody></table>
+</div>
+<div class="notebook">Segna Sì o No per le risposte 8–17.</div>
+</section>
+
+<section class="panel" data-panel="a3" hidden>
+<div class="intro"><h2>A.3 · Completare le frasi</h2><p>Completare le frasi 18–22 con la parola opportuna. Una sola scelta è possibile.</p></div>
+<div class="card">
+<div class="task"><span class="task-num">18</span><span class="statement">Studio francese da poche settimane, ___ non lo parlo ancora bene.</span><div class="options"><div class="opt"><b>A</b>sennò</div><div class="opt"><b>B</b>anche</div><div class="opt"><b>C</b>prima</div><div class="opt"><b>D</b>quindi</div></div></div>
+<div class="task"><span class="task-num">19</span><span class="statement">Carlo è rimasto a casa, ___ Maria è andata al cinema.</span><div class="options"><div class="opt"><b>A</b>anzi</div><div class="opt"><b>B</b>invece</div><div class="opt"><b>C</b>oppure</div><div class="opt"><b>D</b>se</div></div></div>
+<div class="task"><span class="task-num">20</span><span class="statement">Ti chiamo ___ arrivo a casa.</span><div class="options"><div class="opt"><b>A</b>appena</div><div class="opt"><b>B</b>subito</div><div class="opt"><b>C</b>presto</div><div class="opt"><b>D</b>dopo</div></div></div>
+<div class="task"><span class="task-num">21</span><span class="statement">___ sei arrivata in ritardo, non possiamo più andare a teatro.</span><div class="options"><div class="opt"><b>A</b>Comunque</div><div class="opt"><b>B</b>Siccome</div><div class="opt"><b>C</b>Quando</div><div class="opt"><b>D</b>Come</div></div></div>
+<div class="task"><span class="task-num">22</span><span class="statement">Ieri ho cominciato ___ lavorare ad un nuovo progetto.</span><div class="options"><div class="opt"><b>A</b>da</div><div class="opt"><b>B</b>per</div><div class="opt"><b>C</b>a</div><div class="opt"><b>D</b>di</div></div></div>
+</div>
+<div class="notebook">Segna A, B, C o D per le risposte 18–22.</div>
+</section>
+
+<section class="panel" data-panel="a4" hidden>
+<div class="intro"><h2>A.4 · GLI ITALIANI E IL CELLULARE</h2><p>Completare il testo scegliendo la parola opportuna tra le tre proposte 23–32.</p></div>
+<div class="card">
+<div class="cloze">In Italia ci sono oltre 26 milioni di telefoni cellulari. I primi cellulari, nel 1990, erano molto <span class="blank">(23)</span> dai modelli di oggi. Erano apparecchi grandi come citofoni, molto pesanti. Verso la metà degli anni novanta sono <span class="blank">(24)</span> più piccoli e leggeri. All'inizio erano per pochi, ora, invece, ce li hanno proprio tutti! Siamo addirittura <span class="blank">(25)</span> terzo posto nel mondo dopo gli Stati Uniti ed il Giappone. Gli italiani usano i cellulari quasi ovunque, anche dove non si dovrebbe, al cinema, al teatro, nei musei. Non è però segno di buona <span class="blank">(26)</span> costringere gli altri ad ascoltare le nostre comunicazioni. Ognuno <span class="blank">(27)</span> fare meno telefonate e più brevi. E che dire poi di come gli italiani usano il cellulare in vacanza? Sono inseparabili dal loro oggetto preferito ed i loro <span class="blank">(28)</span> sono impossibili senza il telefonino! In Europa sono chiamati “quelli col telefonino” e gli italiani sono riconosciuti in tutto il mondo proprio per <span class="blank">(29)</span> motivo. Se qualcuno vede un signore che parla da solo per strada, tiene una mano sull'orecchio e fa gesti strani <span class="blank">(30)</span> la mano sinistra, non ha dubbi: è un italiano. <span class="blank">(31)</span> aeroporti, subito dopo l'atterraggio, iniziano a sentirsi squilli e melodie di tutti i tipi: i passeggeri italiani accendono subito il cellulare e parlano, parlano, parlano ma... Cosa dicono? Una cosa è certa: nessuno al mondo è così bravo nell'usare il <span class="blank">(32)</span> cellulare!</div>
+<div class="scroll"><table class="choice-table"><thead><tr><th>N.</th><th>A</th><th>B</th><th>C</th></tr></thead><tbody>
+<tr><td>23</td><td>opposti</td><td>contrari</td><td>diversi</td></tr>
+<tr><td>24</td><td>diventati</td><td>cambiati</td><td>trasformati</td></tr>
+<tr><td>25</td><td>al</td><td>nel</td><td>sul</td></tr>
+<tr><td>26</td><td>regola</td><td>educazione</td><td>istruzione</td></tr>
+<tr><td>27</td><td>sarebbe</td><td>bisognerebbe</td><td>dovrebbe</td></tr>
+<tr><td>28</td><td>escursioni</td><td>viaggi</td><td>cammini</td></tr>
+<tr><td>29</td><td>questo</td><td>quel</td><td>quello</td></tr>
+<tr><td>30</td><td>con</td><td>tra</td><td>per</td></tr>
+<tr><td>31</td><td>Sugli</td><td>Degli</td><td>Negli</td></tr>
+<tr><td>32</td><td>nostro</td><td>proprio</td><td>loro</td></tr>
+</tbody></table></div>
+</div>
+<div class="notebook">Segna A, B o C per le risposte 23–32.</div>
+</section>
+
+<section class="panel" data-panel="a5" hidden>
+<div class="intro"><h2>A.5 · Pronomi</h2><p>Completare le frasi 33–37 con i pronomi opportuni.</p></div>
+<div class="card">
+<div class="task"><span class="task-num">33</span> La tua torta era così buona che <span class="blank">______</span> ho mangiate due fette!</div>
+<div class="task"><span class="task-num">34</span> Quanti panini le servono? <span class="blank">______</span> prende tutti integrali?</div>
+<div class="task"><span class="task-num">35</span> Mi hai riportato il CD che <span class="blank">______</span> ho prestato la settimana scorsa?</div>
+<div class="task"><span class="task-num">36</span> Questi orecchini sono nuovi. <span class="blank">______</span> ha regalati il mio fidanzato.</div>
+<div class="task"><span class="task-num">37</span> Paolo sta aspettando la tua e-mail. Spero che <span class="blank">______</span> hai spedita.</div>
+</div>
+<div class="notebook">Scrivi i pronomi 33–37 sul quaderno o sul Foglio delle Risposte.</div>
+</section>
+
+<section class="panel" data-panel="b1" hidden>
+<div class="intro"><h2>B.1 · Questionario</h2><p>Rispondere alle domande 1–9. Le risposte devono essere brevi ma complete.</p></div>
+<div class="writing">
+<div class="instructions">Lei ha trascorso una vacanza in una località turistica italiana. Alla fine del soggiorno l'Ufficio Turismo di questa località Le chiede di riempire il seguente questionario.</div>
+<ol class="bullets">
+<li>Come è venuto a conoscenza di questa località?</li>
+<li>Con quale mezzo è arrivato?</li>
+<li>Quanto tempo ha trascorso qui?</li>
+<li>Perché ha scelto questa località?</li>
+<li>Quando ha prenotato questa vacanza? Perché?</li>
+<li>Come Le sono sembrati i prezzi degli alberghi e dei ristoranti?</li>
+<li>Quante volte all'anno va in vacanza, di solito?</li>
+<li>Pensa di ritornare qui per le prossime vacanze? Perché?</li>
+<li>Consiglierebbe questa località ai Suoi amici? Perché?</li>
+</ol>
+<div class="notebook">Scrivi le risposte sul quaderno, numerandole da 1 a 9.</div>
+</div>
+</section>
+
+<section class="panel" data-panel="b2" hidden>
+<div class="intro"><h2>B.2 · Rispondere ad un annuncio</h2><p>Usare circa 50 parole.</p></div>
+<div class="writing">
+<p>Lei è appassionato di sport. Ha trovato un annuncio interessante su Internet e ha deciso di rispondere.</p>
+<div class="annuncio"><strong>Ciao, mi chiamo Mario,</strong><br>sto organizzando il viaggio per andare a vedere i campionati mondiali di nuoto che si terranno a Barcellona il prossimo novembre.<br><br>Cerco persone avventurose e sportive per condividere con me questa esperienza e le spese del viaggio.<br><br>Se siete interessati scrivetemi al seguente indirizzo e-mail: mario@...</div>
+<p><strong>Nella risposta Lei:</strong></p>
+<ul class="bullets">
+<li>si presenta brevemente e parla dei Suoi interessi sportivi;</li>
+<li>spiega i motivi per cui vorrebbe partire;</li>
+<li>chiede informazioni sul viaggio (mezzo di trasporto, luogo di partenza, costi previsti);</li>
+<li>dà indicazioni su come contattarla.</li>
+</ul>
+<div class="wordlimit">Circa 50 parole</div>
+<div class="notebook">Scrivi la risposta sul quaderno.</div>
+</div>
+</section>
+
+<section class="panel" data-panel="b3" hidden>
+<div class="intro"><h2>B.3 · Scrivere una lettera</h2><p>Da un minimo di 90 a un massimo di 100 parole.</p></div>
+<div class="writing">
+<p>Lei si è iscritto ad un famoso concorso di fotografia. Ha vinto il primo premio e ha partecipato alla cerimonia di premiazione dove ha conosciuto molte persone, alcune anche famose. Scrive ad un Suo amico che abita in Italia.</p>
+<p><strong>Nell’e-mail:</strong></p>
+<ul class="bullets">
+<li>racconta del concorso e di come è andata la cerimonia di premiazione;</li>
+<li>descrive la Sua fotografia;</li>
+<li>consiglia al Suo amico di partecipare al concorso il prossimo anno.</li>
+</ul>
+<div class="wordlimit">90–100 parole</div>
+<div class="notebook">Scrivi la lettera sul quaderno e controlla che tutti e tre i punti siano sviluppati.</div>
+</div>
+</section>
+
+</main>
+<footer>CELI 2 · Sessione primaverile 2018 · Prova A + B trascritta dal fascicolo originale.</footer>
+<script>
+(()=>{const tabs=[...document.querySelectorAll(".tab")],panels=[...document.querySelectorAll(".panel")];
+function openTab(name){tabs.forEach(t=>t.classList.toggle("active",t.dataset.tab===name));panels.forEach(p=>p.hidden=p.dataset.panel!==name);window.scrollTo({top:0,behavior:"smooth"})}
+tabs.forEach(t=>t.addEventListener("click",()=>openTab(t.dataset.tab)))})();
+</script>
+</body></html>
