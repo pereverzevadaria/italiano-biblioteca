@@ -23,6 +23,10 @@
 
     { "source": "/ekt-u3n6", "destination": "/students/ekt-u3n6/index.html" },
     { "source": "/ekt-u3n6/", "destination": "/students/ekt-u3n6/index.html" },
-    { "source": "/ekt-u3n6/:path*", "destination": "/students/ekt-u3n6/:path*" }
+    { "source": "/ekt-u3n6/:path*", "destination": "/students/ekt-u3n6/:path*" },
+
+    { "source": "/rel-k2m7", "destination": "/students/rel-k2m7/index.html" },
+    { "source": "/rel-k2m7/", "destination": "/students/rel-k2m7/index.html" },
+    { "source": "/rel-k2m7/:path*", "destination": "/students/rel-k2m7/:path*" }
   ]
 }
