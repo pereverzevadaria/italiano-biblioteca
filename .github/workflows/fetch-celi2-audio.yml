@@ -1,0 +1,27 @@
+name: Fetch CELI2 official audio
+
+on:
+  push:
+    paths:
+      - '.github/workflows/fetch-celi2-audio.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download official CELI 2 sample
+        run: |
+          set -euxo pipefail
+          curl -fL --retry 3 'https://www.unistrapg.it/sites/default/files/docs/certificazioni/celi-2-prove-esame.zip' -o /tmp/celi2.zip
+          unzip -l /tmp/celi2.zip
+          rm -rf /tmp/celi2 && mkdir -p /tmp/celi2
+          unzip -q /tmp/celi2.zip -d /tmp/celi2
+          echo '--- AUDIO FILES ---'
+          find /tmp/celi2 -type f \( -iname '*.mp3' -o -iname '*.wav' -o -iname '*.m4a' \) -printf '%p %s bytes\n' | sort
+          echo '--- PDF FILES ---'
+          find /tmp/celi2 -type f -iname '*.pdf' -printf '%p %s bytes\n' | sort
