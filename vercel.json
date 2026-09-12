@@ -27,6 +27,10 @@
 
     { "source": "/rel-k2m7", "destination": "/students/rel-k2m7/index.html" },
     { "source": "/rel-k2m7/", "destination": "/students/rel-k2m7/index.html" },
-    { "source": "/rel-k2m7/:path*", "destination": "/students/rel-k2m7/:path*" }
+    { "source": "/rel-k2m7/:path*", "destination": "/students/rel-k2m7/:path*" },
+
+    { "source": "/rmn-n4s6", "destination": "/students/rmn-n4s6/index.html" },
+    { "source": "/rmn-n4s6/", "destination": "/students/rmn-n4s6/index.html" },
+    { "source": "/rmn-n4s6/:path*", "destination": "/students/rmn-n4s6/:path*" }
   ]
 }
