@@ -21,9 +21,9 @@
     { "source": "/giu-m5t7/", "destination": "/students/giu-m5t7/index.html" },
     { "source": "/giu-m5t7/:path*", "destination": "/students/giu-m5t7/:path*" },
 
-    { "source": "/gmc-h3v9", "destination": "/students/gmc-h3v9/index.html" },
-    { "source": "/gmc-h3v9/", "destination": "/students/gmc-h3v9/index.html" },
-    { "source": "/gmc-h3v9/:path*", "destination": "/students/gmc-h3v9/:path*" },
+    { "source": "/ntg-c2l8", "destination": "/students/ntg-c2l8/index.html" },
+    { "source": "/ntg-c2l8/", "destination": "/students/ntg-c2l8/index.html" },
+    { "source": "/ntg-c2l8/:path*", "destination": "/students/ntg-c2l8/:path*" },
 
     { "source": "/ekt-u3n6", "destination": "/students/ekt-u3n6/index.html" },
     { "source": "/ekt-u3n6/", "destination": "/students/ekt-u3n6/index.html" },
