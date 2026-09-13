@@ -35,6 +35,10 @@
 
     { "source": "/rmn-n4s6", "destination": "/students/rmn-n4s6/index.html" },
     { "source": "/rmn-n4s6/", "destination": "/students/rmn-n4s6/index.html" },
-    { "source": "/rmn-n4s6/:path*", "destination": "/students/rmn-n4s6/:path*" }
+    { "source": "/rmn-n4s6/:path*", "destination": "/students/rmn-n4s6/:path*" },
+
+    { "source": "/eduard", "destination": "/students/eduard/index.html" },
+    { "source": "/eduard/", "destination": "/students/eduard/index.html" },
+    { "source": "/eduard/:path*", "destination": "/students/eduard/:path*" }
   ]
 }
