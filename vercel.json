@@ -1,44 +1,137 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
-    { "source": "/ans-p7r4", "destination": "/students/ans-p7r4/index.html" },
-    { "source": "/ans-p7r4/", "destination": "/students/ans-p7r4/index.html" },
-    { "source": "/ans-p7r4/:path*", "destination": "/students/ans-p7r4/:path*" },
-
-    { "source": "/dmt-r8k5", "destination": "/students/dmt-r8k5/index.html" },
-    { "source": "/dmt-r8k5/", "destination": "/students/dmt-r8k5/index.html" },
-    { "source": "/dmt-r8k5/:path*", "destination": "/students/dmt-r8k5/:path*" },
-
-    { "source": "/pln-k4m8", "destination": "/students/pln-k4m8/index.html" },
-    { "source": "/pln-k4m8/", "destination": "/students/pln-k4m8/index.html" },
-    { "source": "/pln-k4m8/:path*", "destination": "/students/pln-k4m8/:path*" },
-
-    { "source": "/ntl-v6q2", "destination": "/students/ntl-v6q2/index.html" },
-    { "source": "/ntl-v6q2/", "destination": "/students/ntl-v6q2/index.html" },
-    { "source": "/ntl-v6q2/:path*", "destination": "/students/ntl-v6q2/:path*" },
-
-    { "source": "/giu-m5t7", "destination": "/students/giu-m5t7/index.html" },
-    { "source": "/giu-m5t7/", "destination": "/students/giu-m5t7/index.html" },
-    { "source": "/giu-m5t7/:path*", "destination": "/students/giu-m5t7/:path*" },
-
-    { "source": "/ntg-c2l8", "destination": "/students/ntg-c2l8/index.html" },
-    { "source": "/ntg-c2l8/", "destination": "/students/ntg-c2l8/index.html" },
-    { "source": "/ntg-c2l8/:path*", "destination": "/students/ntg-c2l8/:path*" },
-
-    { "source": "/ekt-u3n6", "destination": "/students/ekt-u3n6/index.html" },
-    { "source": "/ekt-u3n6/", "destination": "/students/ekt-u3n6/index.html" },
-    { "source": "/ekt-u3n6/:path*", "destination": "/students/ekt-u3n6/:path*" },
-
-    { "source": "/rel-k2m7", "destination": "/students/rel-k2m7/index.html" },
-    { "source": "/rel-k2m7/", "destination": "/students/rel-k2m7/index.html" },
-    { "source": "/rel-k2m7/:path*", "destination": "/students/rel-k2m7/:path*" },
-
-    { "source": "/rmn-n4s6", "destination": "/students/rmn-n4s6/index.html" },
-    { "source": "/rmn-n4s6/", "destination": "/students/rmn-n4s6/index.html" },
-    { "source": "/rmn-n4s6/:path*", "destination": "/students/rmn-n4s6/:path*" },
-
-    { "source": "/eduard", "destination": "/students/eduard/index.html" },
-    { "source": "/eduard/", "destination": "/students/eduard/index.html" },
-    { "source": "/eduard/:path*", "destination": "/students/eduard/:path*" }
+    {
+      "source": "/ans-p7r4",
+      "destination": "/students/ans-p7r4/index.html"
+    },
+    {
+      "source": "/ans-p7r4/",
+      "destination": "/students/ans-p7r4/index.html"
+    },
+    {
+      "source": "/ans-p7r4/:path*",
+      "destination": "/students/ans-p7r4/:path*"
+    },
+    {
+      "source": "/dmt-r8k5",
+      "destination": "/students/dmt-r8k5/index.html"
+    },
+    {
+      "source": "/dmt-r8k5/",
+      "destination": "/students/dmt-r8k5/index.html"
+    },
+    {
+      "source": "/dmt-r8k5/:path*",
+      "destination": "/students/dmt-r8k5/:path*"
+    },
+    {
+      "source": "/pln-k4m8",
+      "destination": "/students/pln-k4m8/index.html"
+    },
+    {
+      "source": "/pln-k4m8/",
+      "destination": "/students/pln-k4m8/index.html"
+    },
+    {
+      "source": "/pln-k4m8/:path*",
+      "destination": "/students/pln-k4m8/:path*"
+    },
+    {
+      "source": "/ntl-v6q2",
+      "destination": "/students/ntl-v6q2/index.html"
+    },
+    {
+      "source": "/ntl-v6q2/",
+      "destination": "/students/ntl-v6q2/index.html"
+    },
+    {
+      "source": "/ntl-v6q2/:path*",
+      "destination": "/students/ntl-v6q2/:path*"
+    },
+    {
+      "source": "/giu-m5t7",
+      "destination": "/students/giu-m5t7/index.html"
+    },
+    {
+      "source": "/giu-m5t7/",
+      "destination": "/students/giu-m5t7/index.html"
+    },
+    {
+      "source": "/giu-m5t7/:path*",
+      "destination": "/students/giu-m5t7/:path*"
+    },
+    {
+      "source": "/ntg-c2l8",
+      "destination": "/students/ntg-c2l8/index.html"
+    },
+    {
+      "source": "/ntg-c2l8/",
+      "destination": "/students/ntg-c2l8/index.html"
+    },
+    {
+      "source": "/ntg-c2l8/:path*",
+      "destination": "/students/ntg-c2l8/:path*"
+    },
+    {
+      "source": "/ekt-u3n6",
+      "destination": "/students/ekt-u3n6/index.html"
+    },
+    {
+      "source": "/ekt-u3n6/",
+      "destination": "/students/ekt-u3n6/index.html"
+    },
+    {
+      "source": "/ekt-u3n6/:path*",
+      "destination": "/students/ekt-u3n6/:path*"
+    },
+    {
+      "source": "/rel-k2m7",
+      "destination": "/students/rel-k2m7/index.html"
+    },
+    {
+      "source": "/rel-k2m7/",
+      "destination": "/students/rel-k2m7/index.html"
+    },
+    {
+      "source": "/rel-k2m7/:path*",
+      "destination": "/students/rel-k2m7/:path*"
+    },
+    {
+      "source": "/rmn-n4s6",
+      "destination": "/students/rmn-n4s6/index.html"
+    },
+    {
+      "source": "/rmn-n4s6/",
+      "destination": "/students/rmn-n4s6/index.html"
+    },
+    {
+      "source": "/rmn-n4s6/:path*",
+      "destination": "/students/rmn-n4s6/:path*"
+    },
+    {
+      "source": "/eduard",
+      "destination": "/students/eduard/index.html"
+    },
+    {
+      "source": "/eduard/",
+      "destination": "/students/eduard/index.html"
+    },
+    {
+      "source": "/eduard/:path*",
+      "destination": "/students/eduard/:path*"
+    },
+    {
+      "source": "/ntk-q5m9",
+      "destination": "/students/ntk-q5m9/index.html"
+    },
+    {
+      "source": "/ntk-q5m9/",
+      "destination": "/students/ntk-q5m9/index.html"
+    },
+    {
+      "source": "/ntk-q5m9/:path*",
+      "destination": "/students/ntk-q5m9/:path*"
+    }
   ]
 }
