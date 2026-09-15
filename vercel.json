@@ -132,6 +132,18 @@
     {
       "source": "/ntk-q5m9/:path*",
       "destination": "/students/ntk-q5m9/:path*"
+    },
+    {
+      "source": "/ayg-t6p3",
+      "destination": "/students/ayg-t6p3/index.html"
+    },
+    {
+      "source": "/ayg-t6p3/",
+      "destination": "/students/ayg-t6p3/index.html"
+    },
+    {
+      "source": "/ayg-t6p3/:path*",
+      "destination": "/students/ayg-t6p3/:path*"
     }
   ]
 }
