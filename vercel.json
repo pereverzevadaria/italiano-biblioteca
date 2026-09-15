@@ -144,6 +144,18 @@
     {
       "source": "/ayg-t6p3/:path*",
       "destination": "/students/ayg-t6p3/:path*"
+    },
+    {
+      "source": "/mra-f7k2",
+      "destination": "/students/mra-f7k2/index.html"
+    },
+    {
+      "source": "/mra-f7k2/",
+      "destination": "/students/mra-f7k2/index.html"
+    },
+    {
+      "source": "/mra-f7k2/:path*",
+      "destination": "/students/mra-f7k2/:path*"
     }
   ]
 }
