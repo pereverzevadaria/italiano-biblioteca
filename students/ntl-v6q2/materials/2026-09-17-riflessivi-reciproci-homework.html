@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Natalia · Homework · Riflessivi e reciproci</title>
+<style>
+:root{
+ --bg:#f3efe8; --paper:#fffdf9; --ink:#2b3431; --muted:#6b746f; --line:#ddd5c9;
+ --deep:#273c37; --sage:#dfe9df; --sand:#efe3cf; --terr:#b86c4c; --blue:#e7edf0;
+ --rose:#efe1dc; --gold:#ead5a4; --shadow:0 16px 40px rgba(39,54,49,.07);
+}
+*{box-sizing:border-box}
+body{margin:0;color:var(--ink);background:var(--bg);font-family:Inter,Onest,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.58}
+.wrap{width:min(1040px,calc(100% - 24px));margin:auto;padding:14px 0 60px}
+.hero{background:linear-gradient(135deg,#253b36 0%,#405f56 55%,#a9674d 100%);color:#fff;border-radius:30px;padding:32px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-80px;top:-100px;width:330px;height:330px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 68%)}
+.eyebrow{display:inline-block;padding:8px 11px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);font-size:.76rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:500}
+h1{font-size:clamp(2.6rem,7vw,5rem);line-height:.96;letter-spacing:-.04em;margin:16px 0 12px}
+.hero p{max-width:720px;color:rgba(255,255,255,.88);font-size:1.05rem}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.tag{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:7px 10px;font-size:.82rem;font-weight:800}
+.card{background:var(--paper);border:1px solid rgba(39,54,49,.08);border-radius:24px;padding:clamp(18px,4vw,30px);margin-top:18px;box-shadow:0 7px 24px rgba(39,54,49,.04)}
+.head{display:grid;grid-template-columns:46px 1fr;gap:13px;align-items:start;margin-bottom:16px}
+.num{width:46px;height:46px;border-radius:15px;background:var(--deep);color:#fff;display:grid;place-items:center;font-weight:900}
+.kicker{font-size:.73rem;text-transform:uppercase;letter-spacing:.11em;font-weight:900;color:#75817d;margin-bottom:4px}
+h2{margin:0;color:var(--deep);font-size:clamp(1.7rem,4vw,2.5rem);line-height:1.07}
+.lead{margin:7px 0 0;color:var(--muted)}
+.instruction{background:var(--sand);border-left:4px solid #b78f45;padding:14px 16px;border-radius:16px;margin:14px 0}
+.instruction b{color:#66501c}
+.note{padding:14px 16px;border-radius:16px;background:var(--sage);border-left:4px solid #6c8a79;margin-top:14px}
+.note.blue{background:var(--blue);border-left-color:#6e8b97}
+.note.rose{background:var(--rose);border-left-color:#b46e58}
+.note.gold{background:#f7edcf;border-left-color:#c99d43}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{background:#fff;border:1px solid var(--line);border-radius:18px;padding:15px}
+.box h3{margin:0 0 8px;font-size:1.07rem;color:var(--deep)}
+.examples{display:grid;gap:8px}
+.ex{background:#faf9f6;border:1px solid var(--line);border-radius:13px;padding:10px 11px}
+.wordbank{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.word{background:#eee9df;border-radius:999px;padding:8px 10px;font-weight:800;font-size:.86rem}
+.situations{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin-top:12px}
+.sit{background:#fff;border:1px solid var(--line);border-radius:17px;padding:13px}
+.sit b{display:block;color:var(--deep);margin-bottom:6px}
+.support{font-size:.86rem;color:var(--muted)}
+.prep{background:#fff2c8;color:#674b16;padding:.08rem .35rem;border-radius:999px;font-weight:900}
+.recip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:12px}
+.r{background:#fff;border:1px solid var(--line);border-radius:15px;padding:11px;text-align:center}
+.r b{display:block;color:var(--deep);margin-bottom:3px}
+.r span{font-size:.8rem;color:var(--muted)}
+.choice{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:12px}
+.ch{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px}
+.ch b{display:block;color:var(--deep)}
+.checklist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:12px}
+.ck{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 12px}
+textarea{width:100%;min-height:130px;border:1px solid #cbd3cf;border-radius:16px;padding:13px;font:inherit;resize:vertical;background:#fff}
+.footer{text-align:center;color:#7c8480;font-size:.8rem;margin:22px 0 0}
+@media(max-width:760px){.grid2,.situations,.choice{grid-template-columns:1fr}.recip{grid-template-columns:repeat(2,minmax(0,1fr))}.checklist{grid-template-columns:1fr}.hero{padding:22px}.card{padding:18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section class="hero">
+  <span class="eyebrow">Natalia · Homework · A1</span>
+  <h1>Come reagisci?</h1>
+  <p>Цель этой домашки — не «узнать форму», а начать <b>говорить</b>: быстро выдавать <i>mi rilasso, mi arrabbio, mi sento…</i> и использовать reciproci вроде <i>ci vediamo, ci sentiamo, ci abbracciamo</i> в реальных ситуациях.</p>
+  <div class="tags">
+    <span class="tag">riflessivi</span>
+    <span class="tag">reciproci</span>
+    <span class="tag">ci = туда / друг друга</span>
+    <span class="tag">mini preposizioni</span>
+    <span class="tag">parlare</span>
+  </div>
+</section>
+
+<section class="card">
+  <div class="head"><div class="num">1</div><div><div class="kicker">Bocca veloce</div><h2>IO → TU → NOI</h2><p class="lead">Сначала запускаем формы в речь.</p></div></div>
+  <div class="instruction"><b>Как делать:</b> не пиши. Проговори каждую цепочку <b>2 раза вслух</b>. Потом выбери 4 глагола и скажи с ними по одной своей короткой фразе.</div>
+  <div class="grid2">
+    <div class="box">
+      <div class="examples">
+        <div class="ex">mi rilasso → ti rilassi → ci rilassiamo</div>
+        <div class="ex">mi arrabbio → ti arrabbi → ci arrabbiamo</div>
+        <div class="ex">mi diverto → ti diverti → ci divertiamo</div>
+        <div class="ex">mi sento → ti senti → ci sentiamo</div>
+        <div class="ex">mi preparo → ti prepari → ci prepariamo</div>
+        <div class="ex">mi fermo → ti fermi → ci fermiamo</div>
+      </div>
+    </div>
+    <div class="box">
+      <h3>Теперь про себя</h3>
+      <p><b>Mi rilasso con…</b><br><b>Mi arrabbio quando…</b><br><b>Mi sento…</b><br><b>Mi preparo per…</b></p>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <div class="head"><div class="num">2</div><div><div class="kicker">Reazioni</div><h2>Che cosa fai quando…?</h2><p class="lead">Теперь выбирай реакцию сама.</p></div></div>
+  <div class="instruction"><b>Как делать:</b> прочитай ситуацию. Выбери <b>1–2 глагола</b> из банка и скажи <b>1–2 фразы вслух</b>. Писать не нужно. Постарайся добавить <i>perché / quando / poi</i>.</div>
+  <div class="wordbank">
+    <span class="word">rilassarsi</span><span class="word">calmarsi</span><span class="word">annoiarsi</span><span class="word">arrabbiarsi</span><span class="word">divertirsi</span><span class="word">sentirsi</span><span class="word">fermarsi</span><span class="word">prepararsi</span><span class="word">ricordarsi di</span><span class="word">dimenticarsi di</span>
+  </div>
+  <div class="situations">
+    <div class="sit"><b>Hai lavorato tutto il giorno e finalmente hai un’ora libera.</b><div class="support">Опора: Mi rilasso… / Mi fermo…</div></div>
+    <div class="sit"><b>Aspetti una persona da 30 minuti.</b><div class="support">Опора: Mi annoio… / Mi arrabbio…</div></div>
+    <div class="sit"><b>Domani hai un appuntamento importante.</b><div class="support">Опора: Mi preparo… / Mi sento…</div></div>
+    <div class="sit"><b>Sei in un posto molto rumoroso.</b><div class="support">Опора: Mi arrabbio… / Mi calmo…</div></div>
+    <div class="sit"><b>Hai una serata libera con amici.</b><div class="support">Опора: Mi diverto… / Mi rilasso…</div></div>
+    <div class="sit"><b>Hai dimenticato qualcosa di importante.</b><div class="support">Опора: Mi arrabbio con me stessa… / Mi ricordo di…</div></div>
+  </div>
+  <div class="note gold"><b>Пример:</b> <i>Aspetto una persona da 30 minuti. Mi annoio e poi mi arrabbio un po’.</i></div>
+</section>
+
+<section class="card">
+  <div class="head"><div class="num">3</div><div><div class="kicker">E tu?</div><h2>Ответь про себя</h2><p class="lead">Здесь уже не выбираем из вариантов — строим собственные ответы.</p></div></div>
+  <div class="instruction"><b>Как делать:</b> ответь <b>устно</b> на каждый вопрос. На каждый — 1–3 короткие фразы. Если можешь, добавь <i>perché / quando / con chi</i>.</div>
+  <div class="situations">
+    <div class="sit"><b>Quando ti rilassi?</b><div class="support">Mi rilasso quando…</div></div>
+    <div class="sit"><b>Quando ti arrabbi?</b><div class="support">Mi arrabbio quando…</div></div>
+    <div class="sit"><b>Ti annoi facilmente?</b><div class="support">Sì, mi annoio… / No, di solito…</div></div>
+    <div class="sit"><b>Come ti senti dopo il lavoro?</b><div class="support">Mi sento…</div></div>
+    <div class="sit"><b>Come ti diverti nel weekend?</b><div class="support">Mi diverto quando / con…</div></div>
+    <div class="sit"><b>Di che cosa ti dimentichi spesso?</b><div class="support">Mi dimentico di…</div></div>
+  </div>
+</section>
+
+<section class="card">
+  <div class="head"><div class="num">4</div><div><div class="kicker">Reciproci</div><h2>Io e una persona reale</h2><p class="lead">Теперь действие происходит между людьми: друг друга / друг с другом.</p></div></div>
+  <div class="recip">
+    <div class="r"><b>ci vediamo</b><span>видимся</span></div>
+    <div class="r"><b>ci sentiamo</b><span>созваниваемся / на связи</span></div>
+    <div class="r"><b>ci scriviamo</b><span>пишем друг другу</span></div>
+    <div class="r"><b>ci aiutiamo</b><span>помогаем друг другу</span></div>
+    <div class="r"><b>ci incontriamo</b><span>встречаемся</span></div>
+    <div class="r"><b>ci salutiamo</b><span>здороваемся / прощаемся</span></div>
+    <div class="r"><b>ci abbracciamo</b><span>обнимаемся</span></div>
+    <div class="r"><b>ci baciamo</b><span>целуемся</span></div>
+    <div class="r"><b>ci diamo del tu</b><span>обращаемся на tu</span></div>
+  </div>
+  <div class="instruction"><b>Как делать:</b> выбери <b>одного реального человека</b>: подругу, коллегу, мужа, знакомого. Закончи <b>минимум 6 фраз</b> про ваши отношения. Пиши коротко, потом обязательно прочитай вслух.</div>
+  <div class="box">
+    <p><b>Ci vediamo…</b><br><b>Ci sentiamo…</b><br><b>Ci scriviamo…</b><br><b>Ci aiutiamo quando…</b><br><b>Ci abbracciamo quando…</b><br><b>Ci baciamo…</b><br><b>Ci diamo del tu / del Lei.</b></p>
+  </div>
+  <div class="note blue"><b>Мини-ситуации:</b> pensa a <i>un’amica stretta / un collega / una persona che conosci poco</i>. Con chi ti abbracci? Con chi ti dai del tu? Con chi ti dai del Lei?</div>
+</section>
+
+<section class="card">
+  <div class="head"><div class="num">5</div><div><div class="kicker">CI</div><h2>“Туда” или “друг друга”?</h2><p class="lead">У CI теперь два знакомых тебе значения.</p></div></div>
+  <div class="instruction"><b>Как делать:</b> прочитай фразу и рядом поставь <b>A</b> или <b>B</b>.<br><b>A = туда / там</b> · <b>B = друг друга / друг с другом</b></div>
+  <div class="grid2">
+    <div class="box"><ol>
+      <li>A Brera <b>ci</b> vado spesso. ___</li>
+      <li>Con Anna <b>ci</b> vediamo spesso. ___</li>
+      <li>In quel bar <b>ci</b> andiamo sabato. ___</li>
+    </ol></div>
+    <div class="box"><ol start="4">
+      <li><b>Ci</b> sentiamo domani. ___</li>
+      <li>Alla mostra <b>ci</b> vado con un’amica. ___</li>
+      <li>Io e Luca <b>ci</b> scriviamo ogni giorno. ___</li>
+    </ol></div>
+  </div>
+</section>
+
+<section class="card">
+  <div class="head"><div class="num">6</div><div><div class="kicker">Mini preposizioni</div><h2>Связки, которые нужно унести в речь</h2><p class="lead">Не учим правило — запоминаем целые куски.</p></div></div>
+  <div class="wordbank">
+    <span class="word">con un’amica</span><span class="word">dopo il lavoro</span><span class="word">al bar</span><span class="word">in centro</span><span class="word">per uscire</span><span class="word">con calma</span>
+  </div>
+  <div class="instruction"><b>Как делать:</b> выбери <b>4 связки</b> и сделай 4 свои фразы. Используй riflessivi или reciproci.</div>
+  <div class="examples">
+    <div class="ex">Mi rilasso <span class="prep">dopo il lavoro</span>.</div>
+    <div class="ex">Ci vediamo <span class="prep">in centro</span>.</div>
+    <div class="ex">Mi preparo <span class="prep">con calma</span>.</div>
+  </div>
+</section>
+
+<section class="card">
+  <div class="head"><div class="num">7</div><div><div class="kicker">Registro</div><h2>Mi arrabbio o mi incazzo?</h2><p class="lead">Одно нейтральное, второе разговорное и грубее.</p></div></div>
+  <div class="instruction"><b>Как делать:</b> в каждой ситуации выбери, что звучит естественнее: <b>mi arrabbio</b> или <b>mi incazzo</b>. Потом объясни устно почему.</div>
+  <div class="choice">
+    <div class="ch"><b>Con un cliente che conosco poco.</b><span class="support">Что выберешь?</span></div>
+    <div class="ch"><b>Con una mia amica stretta.</b><span class="support">Что выберешь?</span></div>
+    <div class="ch"><b>Parlo con una persona anziana.</b><span class="support">Что выберешь?</span></div>
+    <div class="ch"><b>Racconto a mio marito una cosa assurda successa oggi.</b><span class="support">Что выберешь?</span></div>
+  </div>
+  <div class="note rose"><b>Напоминание:</b> <i>mi arrabbio</i> — нейтрально. <i>mi incazzo</i> — разговорно, эмоционально, грубее.</div>
+</section>
+
+<section class="card">
+  <div class="head"><div class="num">8</div><div><div class="kicker">Finale</div><h2>Mini-dialogo: выбирай ситуацию</h2><p class="lead">Главная цель — собрать всё в настоящую речь.</p></div></div>
+  <div class="instruction"><b>Как делать:</b> выбери <b>одну</b> ситуацию. Сначала выпиши только 5–6 опорных слов, не полный текст. Потом <b>надиктуй диалог 45–60 секунд</b> или разыграй его на уроке.</div>
+  <div class="grid2">
+    <div class="box">
+      <h3>A. Dopo una giornata pesante</h3>
+      <p>Ты устала и немного раздражена. Подруга предлагает встретиться. Объясни, как ты себя чувствуешь, что делаешь, чтобы успокоиться, и договорись о встрече.</p>
+      <p class="support">Опоры: <i>mi sento… / mi arrabbio… / mi calmo… / ci vediamo… / ci sentiamo…</i></p>
+    </div>
+    <div class="box">
+      <h3>B. Una persona che non vedi da tanto</h3>
+      <p>Ты встречаешь человека, которого давно не видела. Вы рады встрече, разговариваете и договариваетесь снова увидеться.</p>
+      <p class="support">Опоры: <i>ci vediamo / ci abbracciamo / ci sentiamo / ci scriviamo / ci diamo del tu</i></p>
+    </div>
+  </div>
+  <div class="note gold"><b>Обязательно в диалоге:</b><br>• минимум <b>3 riflessivi</b><br>• минимум <b>2 reciproci</b><br>• минимум <b>2 связки с предлогами</b></div>
+  <div style="margin-top:14px">
+    <label for="notes" style="font-weight:900;color:var(--deep);display:block;margin-bottom:7px">Только опорные слова:</label>
+    <textarea id="notes" placeholder="mi sento… / mi calmo… / ci vediamo… / in centro…"></textarea>
+  </div>
+</section>
+
+<section class="card">
+  <div class="head"><div class="num">✓</div><div><div class="kicker">Checklist</div><h2>Что отправить преподавателю</h2><p class="lead">Чтобы не было непонятно, что именно сдавать.</p></div></div>
+  <div class="checklist">
+    <div class="ck">□ 6 фраз из блока <b>Io e una persona reale</b></div>
+    <div class="ck">□ ответы A/B из блока про <b>CI</b></div>
+    <div class="ck">□ 4 свои фразы с предлогами</div>
+    <div class="ck">□ 1 финальное голосовое 45–60 секунд</div>
+  </div>
+  <div class="note"><b>Не нужно:</b> переписывать все устные упражнения. Их задача — проговорить формы несколько раз, чтобы они начали выходить автоматически.</div>
+</section>
+
+<p class="footer">Natalia · riflessivi e reciproci · homework · 17.09.2026</p>
+</div>
+</body>
+</html>
