@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Homework · Campanilismo · Sergio</title>
+<style>
+:root{--bg:#f5efe5;--paper:#fffdf9;--ink:#26352d;--muted:#6d756f;--line:#ddd5c8;--green:#3f624b;--green2:#e5eee5;--rust:#9b4c32;--gold:#b68642;--gold2:#f5e9d3;--blue2:#e8eff5}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.58 system-ui,-apple-system,sans-serif}h1,h2,h3{font-family:Georgia,serif;line-height:1.12;margin:0}
+.hero{padding:54px 20px 46px;background:linear-gradient(135deg,#294637,#5f4c43);color:white}.hero>div{max-width:980px;margin:auto}.eyebrow{font-size:12px;letter-spacing:1.8px;font-weight:800;text-transform:uppercase}
+h1{font-size:clamp(42px,7vw,76px);margin:10px 0}.hero p{max-width:720px;font-size:20px;color:#f4f1eb}.meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.meta span{border:1px solid #ffffff55;background:#ffffff17;border-radius:999px;padding:7px 10px;font-size:13px}
+main{max-width:980px;margin:auto;padding:26px 16px 70px}section{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:26px;margin-bottom:20px;box-shadow:0 10px 28px rgba(36,53,45,.07)}
+.no{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;font-weight:800;color:var(--rust);margin-bottom:7px}h2{font-size:clamp(29px,5vw,42px);margin-bottom:12px}h3{font-size:24px;margin:20px 0 10px}
+.task{background:#f2eee6;border-left:4px solid var(--gold);border-radius:13px;padding:15px 17px;margin:15px 0}.q,.chat{background:white;border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
+.opts{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.opt,.chip,.btn{font:inherit}.opt{border:1px solid #cdc5b8;background:white;border-radius:10px;padding:9px 12px;cursor:pointer}.opt.ok{background:#e1ecd9;border-color:#728667}.opt.bad{background:#f4e3df;border-color:#9d6a60}.opt.lock{pointer-events:none}
+.fb{display:none;margin-top:10px;border-radius:10px;padding:10px 12px;background:var(--blue2)}.fb.show{display:block}.grid{display:grid;gap:14px}@media(min-width:720px){.two{grid-template-columns:1fr 1fr}}.card{background:white;border:1px solid var(--line);border-radius:15px;padding:15px}
+.clue{font-family:Georgia,serif;font-size:20px}.badge{display:inline-block;padding:5px 8px;border-radius:999px;font-size:11px;font-weight:800;background:#f5e5de;color:#7c402d;text-transform:uppercase}.rule{background:var(--gold2);border-radius:14px;padding:15px;margin:14px 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{border:1px solid var(--line);background:white;border-radius:999px;padding:8px 12px;cursor:pointer}.chip.on{background:var(--green2);border-color:var(--green)}.speech{background:var(--green2);border-radius:14px;padding:15px;margin-top:14px}.small{font-size:14px;color:var(--muted)}.btn{border:0;background:var(--green);color:white;border-radius:10px;padding:10px 14px;font-weight:750;cursor:pointer;margin-top:10px}.progress{position:sticky;bottom:10px;z-index:20;margin:0 auto 12px;width:max-content;background:#26352ddd;color:white;padding:8px 13px;border-radius:999px}
+</style></head>
+<body>
+<header class="hero"><div><div class="eyebrow">DARIA KUZNO · SERGIO · HOMEWORK</div><h1>Campanilismo: fuori le prove</h1><p>Una piccola missione tra Bergamo, Brescia, rivalità, comparativi e Toscana. Niente tema lungo: solo scelte, indizi e 5 frasi finali.</p><div class="meta"><span>20–25 min</span><span>comparativi</span><span>preposizioni</span><span>campanilismo</span></div></div></header>
+<div class="progress">Completato: <span id="p">0</span>/5</div><main>
+
+<section data-b="1"><div class="no">01 · Detective</div><h2>Fatto, opinione o campanilismo?</h2><div class="task"><b>Что делать:</b> нажми на правильную категорию. Ничего писать не нужно.</div>
+<div class="q"><b>“Brescia è in Lombardia.”</b><div class="opts"><button class="opt" data-ok="1">fatto</button><button class="opt" data-ok="0">opinione</button><button class="opt" data-ok="0">campanilismo</button></div><div class="fb">✅ Fatto.</div></div>
+<div class="q"><b>“Bergamo è più bella di Brescia.”</b><div class="opts"><button class="opt" data-ok="0">fatto</button><button class="opt" data-ok="0">opinione neutra</button><button class="opt" data-ok="1">campanilismo</button></div><div class="fb">😏 Campanilismo classico.</div></div>
+<div class="q"><b>“La Franciacorta è vicino a Brescia.”</b><div class="opts"><button class="opt" data-ok="1">fatto</button><button class="opt" data-ok="0">campanilismo</button></div><div class="fb">✅ Fatto.</div></div>
+<div class="q"><b>“I bergamaschi sono tutti più seri.”</b><div class="opts"><button class="opt" data-ok="0">fatto</button><button class="opt" data-ok="1">stereotipo</button></div><div class="fb">✅ Stereotipo.</div></div><button class="btn done">Fatto ✓</button></section>
+
+<section data-b="2"><div class="no">02 · Mini-indizi</div><h2>Bergamo o Brescia?</h2><div class="task"><b>Что делать:</b> прочитай подсказку и выбери город.</div>
+<div class="q"><span class="badge">Indizio 1</span><div class="clue">Brixia · Capitolium · Leonessa d’Italia</div><div class="opts"><button class="opt" data-ok="0">Bergamo</button><button class="opt" data-ok="1">Brescia</button></div><div class="fb">✅ Brescia.</div></div>
+<div class="q"><span class="badge">Indizio 2</span><div class="clue">Mura Veneziane · Città Alta · Città dei Mille</div><div class="opts"><button class="opt" data-ok="1">Bergamo</button><button class="opt" data-ok="0">Brescia</button></div><div class="fb">✅ Bergamo.</div></div>
+<div class="q"><span class="badge">Indizio 3</span><div class="clue">casoncelli · burro · salvia · pancetta</div><div class="opts"><button class="opt" data-ok="1">Bergamo</button><button class="opt" data-ok="0">Brescia</button></div><div class="fb">✅ Bergamo.</div></div>
+<div class="q"><span class="badge">Indizio 4</span><div class="clue">Franciacorta · vigneti · metodo classico</div><div class="opts"><button class="opt" data-ok="0">Bergamo</button><button class="opt" data-ok="1">Brescia e territorio</button></div><div class="fb">✅ Brescia e territorio.</div></div><button class="btn done">Fatto ✓</button></section>
+
+<section data-b="3"><div class="no">03 · Grammatica senza noia</div><h2>Completa il litigio</h2><div class="rule"><b>Ricorda:</b> più + aggettivo + <b>di</b> · a Bergamo · a Brescia · in Lombardia · da Bergamo a Brescia</div>
+<div class="chat"><b>A:</b> Secondo me Bergamo è ___ elegante ___ Brescia.<div class="opts"><button class="opt" data-ok="1">più / di</button><button class="opt" data-ok="0">più / che</button></div><div class="fb">✅ più elegante di</div></div>
+<div class="chat"><b>B:</b> Va bene, ma Brescia è ___ dinamica!<div class="opts"><button class="opt" data-ok="1">più</button><button class="opt" data-ok="0">di</button></div><div class="fb">✅ più dinamica</div></div>
+<div class="q"><b>Vivo ___ Lombardia.</b><div class="opts"><button class="opt" data-ok="1">in</button><button class="opt" data-ok="0">a</button></div><div class="fb">✅ in Lombardia</div></div>
+<div class="q"><b>Domani vado ___ Brescia.</b><div class="opts"><button class="opt" data-ok="1">a</button><button class="opt" data-ok="0">in</button></div><div class="fb">✅ a Brescia</div></div>
+<div class="q"><b>Ieri siamo andati ___ Bergamo ___ Brescia.</b><div class="opts"><button class="opt" data-ok="1">da / a</button><button class="opt" data-ok="0">in / in</button></div><div class="fb">✅ da Bergamo a Brescia</div></div><button class="btn done">Fatto ✓</button></section>
+
+<section data-b="4"><div class="no">04 · Toscana bonus</div><h2>Capisci il tono</h2>
+<div class="q"><b>“Pisa merda” è…</b><div class="opts"><button class="opt" data-ok="1">uno slogan campanilistico offensivo</button><button class="opt" data-ok="0">un modo elegante di parlare</button></div><div class="fb">✅ Esatto.</div></div>
+<div class="q"><b>“Maremma maiala!” è…</b><div class="opts"><button class="opt" data-ok="0">solo un luogo geografico</button><button class="opt" data-ok="1">un’esclamazione regionale colorita</button></div><div class="fb">✅ Esatto.</div></div>
+<div class="task"><b>Мини-задание:</b> выбери, что безопаснее использовать самому.</div><div class="chips single"><button class="chip">prendere in giro</button><button class="chip">sfottere</button><button class="chip">Pisa merda</button><button class="chip">Maremma maiala!</button></div><div class="small">Не всё, что полезно понимать, обязательно стоит самому говорить.</div><button class="btn done">Fatto ✓</button></section>
+
+<section data-b="5"><div class="no">05 · Finale</div><h2>Difendi una città per 30 secondi</h2><div class="task"><b>Что делать:</b> выбери Bergamo или Brescia и скажи <b>ровно 5 фраз</b>. Можно смотреть на опоры. Ничего писать не нужно.</div>
+<div class="grid two"><div class="card"><h3>Bergamo</h3><div class="chips multi"><button class="chip">Città Alta</button><button class="chip">Mura Veneziane</button><button class="chip">Città dei Mille</button><button class="chip">casoncelli</button></div></div>
+<div class="card"><h3>Brescia</h3><div class="chips multi"><button class="chip">Brixia</button><button class="chip">Leonessa d’Italia</button><button class="chip">Mille Miglia</button><button class="chip">Franciacorta</button></div></div></div>
+<div class="speech"><b>5 готовых начал:</b><br>1. Io scelgo…<br>2. Mi piace perché…<br>3. Ha…<br>4. Secondo me è più… di…<br>5. Però l’altra città…</div>
+<div class="small" style="margin-top:10px"><b>Отправить преподавателю:</b> ничего. Просто быть готовым сказать эти 5 фраз на следующем уроке.</div><button class="btn done">Fatto ✓</button></section>
+
+</main><script>
+const done=new Set(),p=document.getElementById('p');document.querySelectorAll('.done').forEach(b=>b.onclick=()=>{const n=b.closest('[data-b]').dataset.b;if(done.has(n)){done.delete(n);b.textContent='Fatto ✓'}else{done.add(n);b.textContent='Completato ✓'}p.textContent=done.size});
+document.querySelectorAll('.q,.chat').forEach(q=>q.querySelectorAll('.opt').forEach(o=>o.onclick=()=>{q.querySelectorAll('.opt').forEach(x=>x.classList.add('lock'));if(o.dataset.ok==='1')o.classList.add('ok');else{o.classList.add('bad');const c=q.querySelector('[data-ok="1"]');if(c)c.classList.add('ok')}const f=q.querySelector('.fb');if(f)f.classList.add('show')}));
+document.querySelectorAll('.chips.single').forEach(g=>g.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{g.querySelectorAll('.chip').forEach(x=>x.classList.remove('on'));c.classList.add('on')}));
+document.querySelectorAll('.chips.multi').forEach(g=>g.querySelectorAll('.chip').forEach(c=>c.onclick=()=>c.classList.toggle('on')));
+</script></body></html>
