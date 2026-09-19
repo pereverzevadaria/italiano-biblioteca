@@ -8,7 +8,15 @@
 h1{font-size:clamp(42px,7vw,76px);margin:10px 0}.hero p{max-width:720px;font-size:20px;color:#f4f1eb}.meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.meta span{border:1px solid #ffffff55;background:#ffffff17;border-radius:999px;padding:7px 10px;font-size:13px}
 main{max-width:980px;margin:auto;padding:26px 16px 70px}section{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:26px;margin-bottom:20px;box-shadow:0 10px 28px rgba(36,53,45,.07)}
 .no{font-size:12px;letter-spacing:1.5px;text-transform:uppercase;font-weight:800;color:var(--rust);margin-bottom:7px}h2{font-size:clamp(29px,5vw,42px);margin-bottom:12px}h3{font-size:24px;margin:20px 0 10px}
-.task{background:#f2eee6;border-left:4px solid var(--gold);border-radius:13px;padding:15px 17px;margin:15px 0}.q,.chat{background:white;border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
+.task{background:#f2eee6;border-left:4px solid var(--gold);border-radius:13px;padding:15px 17px;margin:15px 0}
+.reminder{background:linear-gradient(135deg,#eef3ed,#fbf8f1);border:1px solid var(--line);border-radius:16px;padding:18px;margin:14px 0}
+.reminder ul{margin:8px 0 0;padding-left:20px}.reminder li{margin:7px 0}
+.photo-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:14px 0}
+.photo-card{overflow:hidden;border:1px solid var(--line);border-radius:15px;background:#fff}
+.photo-card img{display:block;width:100%;height:210px;object-fit:cover}
+.photo-card .cap{padding:10px 12px;color:var(--muted);font-size:14px}
+@media(max-width:650px){.photo-grid{grid-template-columns:1fr}}
+.q,.chat{background:white;border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
 .opts{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.opt,.chip,.btn{font:inherit}.opt{border:1px solid #cdc5b8;background:white;border-radius:10px;padding:9px 12px;cursor:pointer}.opt.ok{background:#e1ecd9;border-color:#728667}.opt.bad{background:#f4e3df;border-color:#9d6a60}.opt.lock{pointer-events:none}
 .fb{display:none;margin-top:10px;border-radius:10px;padding:10px 12px;background:var(--blue2)}.fb.show{display:block}.grid{display:grid;gap:14px}@media(min-width:720px){.two{grid-template-columns:1fr 1fr}}.card{background:white;border:1px solid var(--line);border-radius:15px;padding:15px}
 .clue{font-family:Georgia,serif;font-size:20px}.badge{display:inline-block;padding:5px 8px;border-radius:999px;font-size:11px;font-weight:800;background:#f5e5de;color:#7c402d;text-transform:uppercase}.rule{background:var(--gold2);border-radius:14px;padding:15px;margin:14px 0}
@@ -16,15 +24,33 @@ main{max-width:980px;margin:auto;padding:26px 16px 70px}section{background:var(-
 </style></head>
 <body>
 <header class="hero"><div><div class="eyebrow">DARIA KUZNO · SERGIO · HOMEWORK</div><h1>Campanilismo: fuori le prove</h1><p>Una piccola missione tra Bergamo, Brescia, rivalità, comparativi e Toscana. Niente tema lungo: solo scelte, indizi e 5 frasi finali.</p><div class="meta"><span>20–25 min</span><span>comparativi</span><span>preposizioni</span><span>campanilismo</span></div></div></header>
-<div class="progress">Completato: <span id="p">0</span>/5</div><main>
+<div class="progress">Completato: <span id="p">0</span>/6</div><main>
 
+
+<section data-b="0"><div class="no">00 · Prima di iniziare</div><h2>Ricorda dalla lezione</h2>
+<div class="reminder"><b>5 cose da tenere in testa:</b><ul>
+<li><b>campanilismo</b> = forte legame con il proprio luogo, spesso con rivalità verso i vicini;</li>
+<li><b>più… di / meno… di</b> → Bergamo è più piccola di Brescia;</li>
+<li><b>a</b> Bergamo · <b>a</b> Brescia · <b>in</b> Lombardia · <b>da</b> Bergamo <b>a</b> Brescia;</li>
+<li><b>Bergamo</b>: Città Alta · Mura Veneziane · Città dei Mille · casoncelli;</li>
+<li><b>Brescia</b>: Brixia romana · Leonessa d’Italia · Mille Miglia · Franciacorta.</li>
+</ul></div>
+<div class="photo-grid">
+<div class="photo-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bergamo_alta_city_walls.jpg?width=900" alt="Bergamo"><div class="cap"><b>Bergamo</b> · Mura Veneziane e Città Alta.</div></div>
+<div class="photo-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Capitolium-brescia01.jpg?width=900" alt="Brescia"><div class="cap"><b>Brescia</b> · Capitolium, la Brixia romana.</div></div>
+</div>
+<button class="btn done">Ripassato ✓</button></section>
 <section data-b="1"><div class="no">01 · Detective</div><h2>Fatto, opinione o campanilismo?</h2><div class="task"><b>Что делать:</b> нажми на правильную категорию. Ничего писать не нужно.</div>
 <div class="q"><b>“Brescia è in Lombardia.”</b><div class="opts"><button class="opt" data-ok="1">fatto</button><button class="opt" data-ok="0">opinione</button><button class="opt" data-ok="0">campanilismo</button></div><div class="fb">✅ Fatto.</div></div>
 <div class="q"><b>“Bergamo è più bella di Brescia.”</b><div class="opts"><button class="opt" data-ok="0">fatto</button><button class="opt" data-ok="0">opinione neutra</button><button class="opt" data-ok="1">campanilismo</button></div><div class="fb">😏 Campanilismo classico.</div></div>
 <div class="q"><b>“La Franciacorta è vicino a Brescia.”</b><div class="opts"><button class="opt" data-ok="1">fatto</button><button class="opt" data-ok="0">campanilismo</button></div><div class="fb">✅ Fatto.</div></div>
 <div class="q"><b>“I bergamaschi sono tutti più seri.”</b><div class="opts"><button class="opt" data-ok="0">fatto</button><button class="opt" data-ok="1">stereotipo</button></div><div class="fb">✅ Stereotipo.</div></div><button class="btn done">Fatto ✓</button></section>
 
-<section data-b="2"><div class="no">02 · Mini-indizi</div><h2>Bergamo o Brescia?</h2><div class="task"><b>Что делать:</b> прочитай подсказку и выбери город.</div>
+<section data-b="2"><div class="no">02 · Mini-indizi</div><h2>Bergamo o Brescia?</h2><div class="task"><b>Что делать:</b> сначала посмотри на фото, потом прочитай подсказки и выбери город.</div>
+<div class="photo-grid">
+<div class="photo-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Bergamo_casoncelli.jpg?width=900" alt="Casoncelli"><div class="cap"><b>Casoncelli</b> · indizio bergamasco.</div></div>
+<div class="photo-card"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Un_tipico_vi%C3%B1edo_en_Franciacorta.jpg?width=900" alt="Franciacorta"><div class="cap"><b>Franciacorta</b> · vigneti del territorio bresciano.</div></div>
+</div>
 <div class="q"><span class="badge">Indizio 1</span><div class="clue">Brixia · Capitolium · Leonessa d’Italia</div><div class="opts"><button class="opt" data-ok="0">Bergamo</button><button class="opt" data-ok="1">Brescia</button></div><div class="fb">✅ Brescia.</div></div>
 <div class="q"><span class="badge">Indizio 2</span><div class="clue">Mura Veneziane · Città Alta · Città dei Mille</div><div class="opts"><button class="opt" data-ok="1">Bergamo</button><button class="opt" data-ok="0">Brescia</button></div><div class="fb">✅ Bergamo.</div></div>
 <div class="q"><span class="badge">Indizio 3</span><div class="clue">casoncelli · burro · salvia · pancetta</div><div class="opts"><button class="opt" data-ok="1">Bergamo</button><button class="opt" data-ok="0">Brescia</button></div><div class="fb">✅ Bergamo.</div></div>
@@ -40,7 +66,7 @@ main{max-width:980px;margin:auto;padding:26px 16px 70px}section{background:var(-
 <section data-b="4"><div class="no">04 · Toscana bonus</div><h2>Capisci il tono</h2>
 <div class="q"><b>“Pisa merda” è…</b><div class="opts"><button class="opt" data-ok="1">uno slogan campanilistico offensivo</button><button class="opt" data-ok="0">un modo elegante di parlare</button></div><div class="fb">✅ Esatto.</div></div>
 <div class="q"><b>“Maremma maiala!” è…</b><div class="opts"><button class="opt" data-ok="0">solo un luogo geografico</button><button class="opt" data-ok="1">un’esclamazione regionale colorita</button></div><div class="fb">✅ Esatto.</div></div>
-<div class="task"><b>Мини-задание:</b> выбери, что безопаснее использовать самому.</div><div class="chips single"><button class="chip">prendere in giro</button><button class="chip">sfottere</button><button class="chip">Pisa merda</button><button class="chip">Maremma maiala!</button></div><div class="small">Не всё, что полезно понимать, обязательно стоит самому говорить.</div><button class="btn done">Fatto ✓</button></section>
+<div class="task"><b>Мини-задание:</b> выбери, что безопаснее использовать самому.</div><div class="chips single"><button class="chip">prendere in giro</button><button class="chip">sfottere</button><button class="chip">Pisa merda</button><button class="chip">Maremma maiala!</button></div><div class="small">Не всё, что полезно понимать, обязательно стоит самому говорить.<br><b>Напоминалка с урока:</b> <i>prendere in giro</i> — нейтральнее; <i>sfottere</i> — разговорнее и сильнее.</div><button class="btn done">Fatto ✓</button></section>
 
 <section data-b="5"><div class="no">05 · Finale</div><h2>Difendi una città per 30 secondi</h2><div class="task"><b>Что делать:</b> выбери Bergamo или Brescia и скажи <b>ровно 5 фраз</b>. Можно смотреть на опоры. Ничего писать не нужно.</div>
 <div class="grid two"><div class="card"><h3>Bergamo</h3><div class="chips multi"><button class="chip">Città Alta</button><button class="chip">Mura Veneziane</button><button class="chip">Città dei Mille</button><button class="chip">casoncelli</button></div></div>
