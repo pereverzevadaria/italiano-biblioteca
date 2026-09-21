@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Una libreria impossibile del Novecento · Homework</title>
+<style>
+:root{
+ --bg:#f4efe7;--paper:#fffdf8;--ink:#252822;--muted:#6c6a63;--line:#d9cfbf;
+ --green:#27453d;--brick:#a65d43;--gold:#d4ad59;--rose:#d7a79a;--sage:#aebdac;--blue:#a9bac8;
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(180deg,#eee6da 0,#f7f3ec 24rem,#f4efe7 100%);color:var(--ink);font-family:Arial,sans-serif;line-height:1.6}
+.wrap{max-width:980px;margin:auto;padding:20px 16px 64px}
+.hero{position:relative;overflow:hidden;min-height:480px;border-radius:30px;padding:38px;color:#fff;background:linear-gradient(135deg,#16221f 0%,#29443b 48%,#755247 100%);box-shadow:0 22px 55px rgba(40,30,20,.15);display:flex;flex-direction:column;justify-content:space-between}
+.hero:after{content:"Aa";position:absolute;right:28px;bottom:-32px;font:700 12rem Georgia,serif;color:rgba(255,255,255,.06)}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.76rem;font-weight:800;color:#f0dca9}
+h1,h2,h3{font-family:Georgia,serif;line-height:1.08}
+h1{font-size:clamp(3rem,8vw,6.6rem);margin:.18em 0;max-width:760px}
+.hero p{max-width:670px;font-size:1.1rem;color:#f2eee8}
+.hero-bottom{display:flex;flex-wrap:wrap;gap:8px;position:relative;z-index:2}
+.pill{padding:7px 11px;border-radius:999px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.07);font-size:.82rem}
+section{margin-top:22px;background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:0 10px 32px rgba(55,42,25,.04)}
+.step{font-weight:900;font-size:.76rem;letter-spacing:.13em;text-transform:uppercase;color:var(--brick)}
+h2{font-size:clamp(2rem,4vw,3rem);margin:7px 0 12px}
+h3{font-size:1.35rem;margin:8px 0}
+.lead{font-size:1.08rem;color:#4e504a}
+.instruction{margin:18px 0;padding:16px 18px;border-radius:16px;background:#edf2ef;border-left:4px solid var(--green)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{border:1px solid var(--line);border-radius:18px;padding:18px;background:#fffefa}
+.book{min-height:250px;border-radius:16px;padding:20px;color:#fff;display:flex;flex-direction:column;justify-content:space-between;box-shadow:inset 0 0 0 1px rgba(255,255,255,.14),0 10px 20px rgba(35,30,25,.08)}
+.book.a{background:linear-gradient(150deg,#283f38,#557669)}
+.book.b{background:linear-gradient(150deg,#774e42,#bf7a56)}
+.book.c{background:linear-gradient(150deg,#586575,#95a9b8)}
+.book.d{background:linear-gradient(150deg,#6d6042,#c0a45d)}
+.book.e{background:linear-gradient(150deg,#5b475c,#a87c96)}
+.book .icon{font-size:2.5rem}.book .micro{font-size:.9rem;opacity:.88}.book .mystery{font:700 1.45rem Georgia,serif}
+.options{margin:12px 0 0;padding-left:20px}
+button{border:0;border-radius:999px;padding:10px 14px;font-weight:800;cursor:pointer;background:var(--green);color:#fff}
+button.secondary{background:#ede1cf;color:var(--ink);border:1px solid var(--line)}
+.answer{display:none;margin-top:12px;padding:13px 15px;border-radius:13px;background:#f4e9dc}
+.answer.open{display:block}
+.wordbank{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+.word{padding:7px 10px;border-radius:999px;background:#efe6d7;font-weight:700}
+.line{border-bottom:1px solid #bcb4a8;min-height:34px;margin:8px 0}
+.choice{display:block;padding:12px;border:1px solid var(--line);border-radius:13px;margin:9px 0;background:#fff;cursor:pointer}
+.choice input{margin-right:9px}
+.callout{padding:18px;border-radius:18px;background:#f8eddc;border:1px solid #e7d4b9}
+.voice{background:var(--green);color:#fff}
+.voice h2,.voice h3{color:#fff}.voice .instruction{background:rgba(255,255,255,.09);border-left-color:var(--gold)}
+.small{font-size:.9rem;color:var(--muted)}
+.score{display:flex;gap:10px;flex-wrap:wrap}
+.score span{padding:8px 10px;border-radius:10px;background:#f0e6d8}
+footer{text-align:center;color:var(--muted);font-size:.83rem;margin-top:24px}
+@media(max-width:760px){.hero{min-height:400px;padding:26px}.grid,.grid3{grid-template-columns:1fr}section{padding:20px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<header class="hero">
+  <div>
+    <div class="eyebrow">HOMEWORK · LETTERATURA ITALIANA</div>
+    <h1>Una libreria impossibile del Novecento</h1>
+    <p>Не нужно запоминать весь XX век. Твоя задача — научиться узнавать его голоса, говорить о книгах точнее и выбрать то, что тебе действительно хочется читать.</p>
+  </div>
+  <div class="hero-bottom">
+    <span class="pill">20–30 min</span><span class="pill">без эссе</span><span class="pill">можно пользоваться уроком</span><span class="pill">в конце — audio 2–3 min</span>
+  </div>
+</header>
+
+<section>
+  <div class="step">01 · Orientamento</div>
+  <h2>Il secolo in cinque mosse</h2>
+  <p class="lead">Сначала восстанови общую логику века. Не даты ради дат — только идея.</p>
+  <div class="instruction"><b>Что сделать:</b> соедини каждый период с его главной задачей. Сначала ответь сама, потом открой проверку.</div>
+  <div class="grid">
+    <div class="card">
+      <b>A.</b> Futurismo<br>
+      <b>B.</b> Svevo / Pirandello<br>
+      <b>C.</b> Dopoguerra<br>
+      <b>D.</b> Anni Sessanta<br>
+      <b>E.</b> Eco / postmoderno
+    </div>
+    <div class="card">
+      <b>1.</b> mettere in crisi l’identità<br>
+      <b>2.</b> giocare con testi e generi<br>
+      <b>3.</b> rompere con la tradizione<br>
+      <b>4.</b> testimoniare e raccontare una nuova realtà<br>
+      <b>5.</b> sperimentare con il linguaggio
+    </div>
+  </div>
+  <p><button onclick="toggle('sol1')">Проверить</button></p>
+  <div class="answer" id="sol1"><b>A–3 · B–1 · C–4 · D–5 · E–2.</b></div>
+</section>
+
+<section>
+  <div class="step">02 · Blind date con un libro</div>
+  <h2>Не смотри на автора. Сначала выбери книгу по характеру.</h2>
+  <p class="lead">Перед тобой пять «книг вслепую». Прочитай описание и угадай название.</p>
+  <div class="instruction"><b>Что сделать:</b> для каждой карточки выбери одно название из списка. Запиши ответы A–E. Потом открой ключ.</div>
+
+  <div class="wordbank">
+    <span class="word">La coscienza di Zeno</span><span class="word">Uno, nessuno e centomila</span><span class="word">Lessico famigliare</span><span class="word">Le cosmicomiche</span><span class="word">Il nome della rosa</span>
+  </div>
+
+  <div class="grid">
+    <div class="book a"><span class="icon">🚬</span><div><div class="micro">LIBRO A</div><div class="mystery">«Questa è davvero l’ultima.»</div><p>Un uomo analizza continuamente se stesso, promette di cambiare e riesce sempre a trovare una spiegazione per le proprie contraddizioni.</p></div></div>
+    <div class="book b"><span class="icon">🪞</span><div><div class="micro">LIBRO B</div><div class="mystery">Chi sono, se ognuno vede una persona diversa?</div><p>Una piccola osservazione sul proprio aspetto manda in crisi l’idea di avere un’identità unica e stabile.</p></div></div>
+    <div class="book c"><span class="icon">🗣️</span><div><div class="micro">LIBRO C</div><div class="mystery">Una famiglia si riconosce dalle sue frasi.</div><p>Soprannomi, battute, formule ripetute: la memoria privata diventa anche memoria di un’epoca.</p></div></div>
+    <div class="book d"><span class="icon">🌌</span><div><div class="micro">LIBRO D</div><div class="mystery">L’universo raccontato come se fosse un ricordo di famiglia.</div><p>Scienza, fantasia, ironia e un narratore impossibile: la letteratura gioca con il cosmo.</p></div></div>
+    <div class="book e"><span class="icon">🕯️</span><div><div class="micro">LIBRO E</div><div class="mystery">Una biblioteca, un mistero, troppi libri.</div><p>Un romanzo storico che è anche giallo, gioco intellettuale e riflessione sull’interpretazione.</p></div></div>
+  </div>
+
+  <p><button onclick="toggle('sol2')">Открыть ответы</button></p>
+  <div class="answer" id="sol2">
+    <b>A</b> — <i>La coscienza di Zeno</i>, Italo Svevo<br>
+    <b>B</b> — <i>Uno, nessuno e centomila</i>, Luigi Pirandello<br>
+    <b>C</b> — <i>Lessico famigliare</i>, Natalia Ginzburg<br>
+    <b>D</b> — <i>Le cosmicomiche</i>, Italo Calvino (1965) — маленький бонус вне основной линии урока.<br>
+    <b>E</b> — <i>Il nome della rosa</i>, Umberto Eco
+  </div>
+
+  <div class="callout" style="margin-top:18px">
+    <b>Выбери одну:</b> какую из пяти ты бы открыла первой, если бы ничего не знала об авторе? Напиши <b>2 предложения</b>: <i>Mi incuriosisce perché… / Mi aspetto che…</i>
+  </div>
+</section>
+
+<section>
+  <div class="step">03 · Cameo sardo</div>
+  <h2>Una deviazione in Sardegna: Grazia Deledda</h2>
+  <p>Сегодня мы случайно вышли на Сардинию — поэтому оставим здесь одну красивую точку. <b>Grazia Deledda</b>, nata a Nuoro, è una delle figure centrali della letteratura italiana del primo Novecento e riceve il Premio Nobel per la Letteratura per il 1926.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Canne al vento</h3>
+      <p><b>1913.</b> Sardegna, comunità, famiglia, destino, paesaggio. Il mondo locale non è uno sfondo decorativo: entra nella lingua, nei valori e nei conflitti dei personaggi.</p>
+    </div>
+    <div class="card">
+      <h3>Domanda</h3>
+      <p>Secondo te, quando un libro è molto legato a una regione, diventa <b>più locale</b> o può diventare proprio per questo <b>più universale</b>?</p>
+    </div>
+  </div>
+  <div class="instruction"><b>Что сделать:</b> ответь устно или письменно в 3–4 фразах. Постарайся использовать <i>da una parte… dall’altra…</i>.</div>
+</section>
+
+<section>
+  <div class="step">04 · Lessico da critica, ma umano</div>
+  <h2>Как говорить о литературе точнее</h2>
+  <div class="grid">
+    <div class="card">
+      <p><b>affrontare un tema</b> — затрагивать тему</p>
+      <p><b>ruotare attorno a</b> — строиться вокруг</p>
+      <p><b>mettere in discussione</b> — ставить под сомнение</p>
+      <p><b>dare voce a</b> — давать голос</p>
+    </div>
+    <div class="card">
+      <p><b>risentire di</b> — испытывать влияние</p>
+      <p><b>rielaborare</b> — переосмысливать</p>
+      <p><b>distinguersi per</b> — выделяться благодаря</p>
+      <p><b>collocarsi tra… e…</b> — находиться между… и…</p>
+    </div>
+  </div>
+
+  <div class="instruction"><b>Что сделать:</b> вставь подходящее выражение. Одно выражение может потребовать изменить форму глагола.</div>
+  <ol>
+    <li><i>Uno, nessuno e centomila</i> __________ l’idea di un’identità stabile.</li>
+    <li><i>Lessico famigliare</i> __________ memoria privata e storia collettiva.</li>
+    <li>Pasolini cerca di __________ mondi periferici e culture popolari.</li>
+    <li><i>Il nome della rosa</i> __________ la tradizione del romanzo storico e del giallo.</li>
+    <li><i>La coscienza di Zeno</i> __________ soprattutto all’autoanalisi e alle contraddizioni del protagonista.</li>
+  </ol>
+  <p><button onclick="toggle('sol4')">Проверить варианты</button></p>
+  <div class="answer" id="sol4">
+    1. <b>mette in discussione</b><br>
+    2. <b>si colloca tra</b><br>
+    3. <b>dare voce a</b><br>
+    4. <b>rielabora</b><br>
+    5. <b>ruota attorno</b><br>
+    <span class="small">В реальном разговоре возможны и другие логичные варианты: важнее уметь обосновать выбор.</span>
+  </div>
+</section>
+
+<section>
+  <div class="step">05 · Curatrice per un giorno</div>
+  <h2>Ты открываешь маленькую выставку о Novecento</h2>
+  <p class="lead">Место есть только для трёх книг. Не выбирай «самые великие» — выбирай те, через которые ты бы хотела объяснить XX век человеку, который его совсем не знает.</p>
+  <div class="instruction"><b>Что сделать:</b> выбери <b>3 книги</b>. Для каждой напиши по <b>2 короткие фразы</b>: почему она нужна на выставке и кому она могла бы понравиться.</div>
+
+  <div class="score">
+    <span>La coscienza di Zeno</span><span>Uno, nessuno e centomila</span><span>Canne al vento</span><span>Lessico famigliare</span><span>Le cosmicomiche</span><span>Il nome della rosa</span><span>Va’ dove ti porta il cuore</span>
+  </div>
+
+  <div class="card" style="margin-top:14px">
+    <b>Шаблон:</b><br>
+    <i>Sceglierei __________ perché…</i><br>
+    <i>Lo consiglierei a chi…</i>
+  </div>
+</section>
+
+<section>
+  <div class="step">06 · Gioco finale</div>
+  <h2>Rinominare il Novecento nel 2026</h2>
+  <p>Выбери <b>один</b> заголовок и придумай ему современную версию. Это не перевод, а литературная шутка.</p>
+  <div class="grid3">
+    <div class="card"><h3>Uno, nessuno e centomila</h3><p class="small">Esempio: <i>Uno, nessuno e quattordici profili</i></p></div>
+    <div class="card"><h3>La coscienza di Zeno</h3><p class="small">Что стало бы современной «последней сигаретой»?</p></div>
+    <div class="card"><h3>Lessico famigliare</h3><p class="small">Какие слова описали бы семью сегодня?</p></div>
+  </div>
+  <div class="instruction"><b>Что отправить:</b> новый заголовок + <b>1–2 предложения</b>, почему он работает.</div>
+</section>
+
+<section class="voice">
+  <div class="step" style="color:#f0dca9">07 · Audio</div>
+  <h2>Il libro che porterei con me</h2>
+  <div class="instruction"><b>Финальное задание:</b> запиши аудио на <b>2–3 минуты</b>. Не пиши полный текст заранее. Можно иметь перед глазами только названия книг и 5 опорных слов.</div>
+  <p>Расскажи:</p>
+  <ol>
+    <li>quale libro del Novecento ti incuriosisce di più;</li>
+    <li>che cosa ti aspetti da questo libro;</li>
+    <li>che cosa ti interessa del periodo in cui è stato scritto;</li>
+    <li>a chi lo consiglieresti;</li>
+    <li>se c’è un altro autore del Novecento che vorresti scoprire.</li>
+  </ol>
+  <p><b>Постарайся использовать минимум 3 выражения:</b><br>
+  <i>mettere in discussione · ruotare attorno a · dare voce a · rielaborare · distinguersi per · mi aspetto che…</i></p>
+</section>
+
+<section>
+  <div class="step">Bonus · solo se ti va</div>
+  <h2>Una domanda senza risposta giusta</h2>
+  <div class="callout">
+    Se dovessi spiegare il Novecento italiano con una sola parola, quale sceglieresti?<br><br>
+    <b>rottura · identità · memoria · trasformazione · lingua · gioco · un’altra parola?</b>
+  </div>
+  <p class="small">Ответ можно просто принести на следующий урок. Одной фразы достаточно.</p>
+</section>
+
+<footer>DARIA KUZNO · ITALIANO · Homework 21.09.2026</footer>
+</main>
+<script>
+function toggle(id){document.getElementById(id).classList.toggle('open')}
+</script>
+</body></html>
