@@ -180,6 +180,18 @@
     {
       "source": "/srg-b4m2/:path*",
       "destination": "/students/srg-b4m2/:path*"
+    },
+    {
+      "source": "/ann-t9c4",
+      "destination": "/students/ann-t9c4/index.html"
+    },
+    {
+      "source": "/ann-t9c4/",
+      "destination": "/students/ann-t9c4/index.html"
+    },
+    {
+      "source": "/ann-t9c4/:path*",
+      "destination": "/students/ann-t9c4/:path*"
     }
   ]
 }
