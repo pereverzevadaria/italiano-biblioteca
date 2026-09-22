@@ -192,6 +192,18 @@
     {
       "source": "/ann-t9c4/:path*",
       "destination": "/students/ann-t9c4/:path*"
+    },
+    {
+      "source": "/ekt-u7r3",
+      "destination": "/students/ekt-u7r3/index.html"
+    },
+    {
+      "source": "/ekt-u7r3/",
+      "destination": "/students/ekt-u7r3/index.html"
+    },
+    {
+      "source": "/ekt-u7r3/:path*",
+      "destination": "/students/ekt-u7r3/:path*"
     }
   ]
 }
