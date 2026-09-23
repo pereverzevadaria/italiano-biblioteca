@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Homework — Peggy Guggenheim</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --bg:#f3efe8;--paper:#fffdf9;--ink:#272824;--muted:#6a6e68;
+ --petrol:#485f5b;--petrol-soft:#e2e9e6;--wine:#7b4846;--wine-soft:#efe0dd;
+ --gold:#b48a4f;--gold-soft:#f3ead9;--blue:#526b80;--blue-soft:#e8eef2;--line:#dcd7cf
+}
+*{box-sizing:border-box}
+body{margin:0;background:
+radial-gradient(circle at 8% 0%,rgba(180,138,79,.12),transparent 28%),
+radial-gradient(circle at 100% 12%,rgba(72,95,91,.10),transparent 34%),
+var(--bg);color:var(--ink);font-family:Onest,system-ui,sans-serif;line-height:1.58}
+main{max-width:1000px;margin:auto;padding:24px 18px 72px}
+.hero{min-height:500px;border-radius:30px;padding:38px;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;position:relative;overflow:hidden;
+background:linear-gradient(90deg,rgba(18,26,25,.81),rgba(31,45,43,.50) 56%,rgba(31,45,43,.08)),url("https://cdn.finestresullarte.info/rivista/immagini/2019/1148/peggy-guggenheim-cani-anni-50.jpg") center 42%/cover no-repeat}
+.hero>*{position:relative;z-index:1}
+.kicker{width:max-content;padding:7px 12px;border:1px solid #ffffff55;border-radius:999px;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+h1,h2,h3{font-family:Lora,Georgia,serif}
+h1{font-size:clamp(2.35rem,6vw,4.5rem);line-height:1.01;margin:14px 0 12px;max-width:800px}
+h2{font-size:1.6rem;line-height:1.2;margin:2px 0 6px}
+h3{font-size:1.12rem;margin:0 0 7px}
+.hero p{max-width:730px;margin:0;color:#ffffffe9}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.pill{padding:7px 11px;border:1px solid #ffffff33;background:#ffffff18;border-radius:999px;font-size:.87rem}
+
+.route{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0 25px}
+.route div{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px}
+.route b{display:block;color:var(--petrol);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+.route span{font-size:.9rem;color:var(--muted)}
+
+.card{background:var(--paper);border:1px solid var(--line);border-radius:23px;padding:28px;margin:18px 0;box-shadow:0 8px 24px rgba(39,40,36,.035)}
+.top{display:flex;gap:14px;align-items:flex-start}
+.num{flex:0 0 42px;height:42px;border-radius:14px;display:grid;place-items:center;background:var(--petrol-soft);color:var(--petrol);font-weight:800}
+.lead{margin:0;color:var(--muted)}
+.mode{display:inline-block;margin-top:16px;padding:8px 11px;border:1px solid var(--line);border-radius:11px;background:#f2efe9;font-size:.92rem}
+.task{margin-top:17px;padding:13px 15px;background:var(--blue-soft);border-left:4px solid var(--blue);border-radius:12px;font-weight:600}
+.note{margin:16px 0;padding:13px 15px;background:var(--gold-soft);border-radius:12px;color:#5c4a33}
+.italian{font-family:Lora,Georgia,serif;font-size:1.05rem}
+.words{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.word{padding:7px 10px;border-radius:999px;background:var(--petrol-soft);color:#40514e;font-size:.9rem;font-weight:650}
+
+.drill{counter-reset:q;list-style:none;padding:0;margin:16px 0 0}
+.drill li{position:relative;padding:10px 12px 10px 44px;margin:8px 0;border:1px solid var(--line);border-radius:13px;background:#fff}
+.drill li:before{counter-increment:q;content:counter(q);position:absolute;left:11px;top:10px;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--petrol);color:#fff;font-weight:700;font-size:.8rem}
+
+.factgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+.fact{padding:14px 15px;border:1px solid var(--line);border-radius:15px;background:#fbfaf6}
+.fact b{color:var(--wine)}
+
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.year{padding:14px;border:1px solid var(--line);border-radius:15px;background:#fbfaf6}
+.year strong{display:block;font-family:Lora,Georgia,serif;color:var(--wine);font-size:1.15rem;margin-bottom:5px}
+
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+.photo{overflow:hidden;border:1px solid var(--line);border-radius:17px;background:#fff}
+.photo img{width:100%;height:265px;object-fit:cover;display:block;background:#eee}
+.photo div{padding:13px 14px}
+.photo b{display:block;font-family:Lora,Georgia,serif;margin-bottom:5px}
+.photo p{margin:0;color:var(--muted);font-size:.9rem}
+
+.relationship{display:grid;grid-template-columns:.8fr 1.2fr;gap:16px;margin-top:18px;align-items:stretch}
+.relationship img{width:100%;height:100%;min-height:330px;object-fit:cover;border-radius:17px;border:1px solid var(--line);filter:grayscale(100%)}
+.relationship-copy{padding:18px;border:1px solid var(--line);border-radius:17px;background:#faf8f3}
+.relationship-copy p{margin:0 0 12px}
+.relationship-copy p:last-child{margin-bottom:0}
+
+.curator{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+.slot{padding:14px;border:1px dashed #bcae9c;border-radius:15px;background:#faf8f3}
+.slot b{display:block;color:var(--wine);margin-bottom:4px}
+
+.challenge{background:linear-gradient(135deg,#263735,#516963);color:#fff;border:none}
+.challenge .num{background:#ffffff18;color:#fff}
+.challenge .lead{color:#ffffffbd}
+.challenge .task{background:#ffffff12;border-left-color:#d8bb82}
+.challenge .word{background:#ffffff18;color:#fff}
+.challenge .note{background:#ffffff12;color:#fff}
+.footer{text-align:center;color:var(--muted);font-size:.82rem;margin-top:24px}
+
+@media(max-width:760px){
+ main{padding:14px 12px 50px}
+ .hero{min-height:430px;border-radius:22px;padding:24px 20px}
+ .route,.factgrid,.timeline,.gallery,.curator,.relationship{grid-template-columns:1fr}
+ .card{padding:22px 18px}
+ .photo img{height:300px}
+ .relationship img{min-height:280px;height:300px}
+}
+</style>
+</head>
+<body><main>
+
+<header class="hero">
+  <span class="kicker">Homework · Peggy Guggenheim</span>
+  <h1>Una vita che è diventata museo</h1>
+  <p>Личная история Peggy, неожиданные детали, искусство и <b>passato prossimo</b> в живом рассказе.</p>
+  <div class="meta"><span class="pill">A1 → A2</span><span class="pill">45–55 минут</span><span class="pill">тетрадь + голосовое</span></div>
+</header>
+
+<section class="route">
+  <div><b>Письменно</b><span>грамматика + культурные факты + мини-реакции</span></div>
+  <div><b>Новые факты</b><span>Max Ernst · Beckett · Pollock · серьги · Venezia</span></div>
+  <div><b>Финал</b><span>реальный культурный опыт — голосом</span></div>
+</section>
+
+<section class="card">
+  <div class="top"><div class="num">1</div><div><h2>Passato prossimo: rimetti in moto i verbi</h2><p class="lead">Короткая разминка по истории Peggy.</p></div></div>
+  <div class="mode">✍️ <b>Как делать:</b> письменно в тетради.</div>
+  <div class="task">Поставь глаголы в passato prossimo.</div>
+  <ol class="drill italian">
+    <li>Peggy <b>(nascere)</b> __________ a New York nel 1898.</li>
+    <li>Da giovane <b>(andare)</b> __________ in Europa.</li>
+    <li>A Parigi <b>(conoscere)</b> __________ molti artisti.</li>
+    <li>Nel 1938 <b>(aprire)</b> __________ una galleria a Londra.</li>
+    <li>A New York <b>(sostenere)</b> __________ Jackson Pollock.</li>
+    <li>Nel 1948 <b>(presentare)</b> __________ la sua collezione alla Biennale.</li>
+    <li>Nel 1949 <b>(comprare)</b> __________ Palazzo Venier dei Leoni.</li>
+    <li>Venezia <b>(diventare)</b> __________ la sua casa.</li>
+  </ol>
+</section>
+
+<section class="card">
+  <div class="top"><div class="num">2</div><div><h2>Non solo collezionista: 7 fatti sulla sua vita</h2><p class="lead">Несколько неожиданных фактов из жизни Peggy.</p></div></div>
+  <div class="mode">✍️ <b>Как делать:</b> прочитай и отметь три факта, которые тебя удивили.</div>
+
+  <div class="factgrid italian">
+    <div class="fact"><b>Titanic.</b> Suo padre Benjamin Guggenheim è morto nel naufragio del Titanic quando Peggy aveva tredici anni.</div>
+    <div class="fact"><b>Samuel Beckett.</b> A Parigi Beckett le ha consigliato di dedicarsi all’arte contemporanea, perché per lui era “una cosa viva”.</div>
+    <div class="fact"><b>Un quadro al giorno.</b> Nel 1939–40 Peggy ha deciso di comprare quasi “un quadro al giorno” per costruire rapidamente la sua collezione.</div>
+    <div class="fact"><b>Pollock.</b> Nel 1943 gli ha organizzato la prima mostra personale, gli ha dato uno stipendio e gli ha commissionato il grande <i>Mural</i>.</div>
+    <div class="fact"><b>Due orecchini diversi.</b> All’apertura di Art of This Century ha indossato un orecchino di Yves Tanguy e uno di Alexander Calder: uno per il Surrealismo, uno per l’arte astratta.</div>
+    <div class="fact"><b>Venezia.</b> Nel 1962 la città le ha dato la cittadinanza onoraria.</div>
+    <div class="fact"><b>Il giardino.</b> Dopo la sua morte nel 1979, le sue ceneri sono state collocate nel giardino del museo.</div>
+  </div>
+
+  <div class="task">Про три выбранных факта напиши по одной реакции: <span class="italian"><b>Non lo sapevo. / Mi ha sorpreso che… / Trovo interessante che…</b></span></div>
+</section>
+
+<section class="card">
+  <div class="top"><div class="num">3</div><div><h2>Peggy e Max Ernst</h2><p class="lead">Короткая история их отношений и их связи с искусством.</p></div></div>
+
+  <div class="relationship">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Max_Ernst_1968.jpg" alt="Max Ernst">
+    <div class="relationship-copy italian">
+      <p>Nel 1941 Peggy ha aiutato <b>Max Ernst</b> a lasciare l’Europa. Sono arrivati negli Stati Uniti insieme e poco dopo si sono sposati.</p>
+      <p>Il matrimonio è durato poco: nel 1943 erano già divorziati. In quegli anni vivevano però al centro della scena artistica di New York e frequentavano artisti, scrittori e musicisti.</p>
+      <p>Max Ernst era molto interessato all’arte africana e oceanica. Anche Peggy ha iniziato a collezionare questo tipo di oggetti, e il museo collega questo interesse proprio agli anni della loro relazione.</p>
+      <p>Un altro dettaglio interessante: in <i>The Antipope</i> di Ernst, dipinto tra il 1941 e il 1942, il museo legge anche elementi autobiografici legati al loro rapporto e a Leonora Carrington.</p>
+    </div>
+  </div>
+
+  <div class="task">Ответь письменно на 3 вопроса.</div>
+  <ol class="drill italian">
+    <li>Che cosa ha fatto Peggy per Max Ernst nel 1941?</li>
+    <li>Quanto è durato il loro matrimonio?</li>
+    <li>Che cosa ha scoperto o iniziato a collezionare anche grazie a lui?</li>
+  </ol>
+</section>
+
+<section class="card">
+  <div class="top"><div class="num">4</div><div><h2>Una mini-biografia senza testo</h2><p class="lead">Собираем историю по опорным датам.</p></div></div>
+  <div class="mode">✍️ <b>Как делать:</b> напиши по одной полной фразе на каждую дату.</div>
+  <div class="timeline">
+    <div class="year"><strong>1921</strong><span>Europa</span></div>
+    <div class="year"><strong>1938</strong><span>Londra · galleria</span></div>
+    <div class="year"><strong>1941</strong><span>USA · Max Ernst</span></div>
+    <div class="year"><strong>1943</strong><span>Pollock · prima mostra</span></div>
+    <div class="year"><strong>1948</strong><span>Biennale di Venezia</span></div>
+    <div class="year"><strong>1949</strong><span>Palazzo Venier dei Leoni</span></div>
+  </div>
+  <div class="task">Потом добавь связки: <b>prima · poi · dopo · più tardi · alla fine</b>.</div>
+</section>
+
+<section class="card">
+  <div class="top"><div class="num">5</div><div><h2>Tre immagini della sua Venezia</h2><p class="lead">Посмотри на фотографии и выбери одну для короткого рассказа.</p></div></div>
+
+  <div class="gallery">
+    <article class="photo">
+      <img src="https://cdn.finestresullarte.info/rivista/immagini/2019/1148/peggy-guggenheim-cani-anni-50.jpg" alt="Peggy Guggenheim with her dogs in Venice">
+      <div><b>Peggy a Venezia</b><p>Che impressione ti fa questa foto? Quali 3 aggettivi useresti?</p></div>
+    </article>
+    <article class="photo">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Palazzo%20Venier%20dei%20Leoni%20%28Peggy%20Guggenheim%20Collection%29%2C%20Venice%20%2837100733803%29.jpg" alt="Palazzo Venier dei Leoni">
+      <div><b>Palazzo Venier dei Leoni</b><p>Ti piacerebbe vivere in una casa così? Perché?</p></div>
+    </article>
+    <article class="photo">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Changing%20Place%20%284849733892%29.jpg" alt="Sculpture garden">
+      <div><b>Il giardino</b><p>Immagina di essere lì: che cosa hai visto? che atmosfera c’era?</p></div>
+    </article>
+  </div>
+
+  <div class="task">Выбери одну фотографию и напиши 4 фразы, используя минимум 2 формы passato prossimo.</div>
+</section>
+
+<section class="card">
+  <div class="top"><div class="num">6</div><div><h2>Tre opere, tre reazioni</h2><p class="lead">Искусство — не декорация, а повод говорить.</p></div></div>
+  <div class="mode">✍️ <b>Как делать:</b> выбери любые 2 работы и напиши по 3 фразы про каждую.</div>
+
+  <div class="gallery">
+    <article class="photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Fernand%20l%C3%A9ger%2C%20studio%20di%20nudo%2C%201912-13.jpg" alt="Fernand Léger"><div><b>Fernand Léger</b><p><i>Studio di nudo</i>. geometrico · moderno · forte · freddo · dinamico</p></div></article>
+    <article class="photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Yves%20tanguy%2C%20orecchini%20per%20peggy%20guggenheim%2C%201938%20ca.%2002.jpg" alt="Yves Tanguy earrings"><div><b>Yves Tanguy</b><p>Orecchini per Peggy. originale · strano · elegante · surreale · creativo</p></div></article>
+    <article class="photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Umberto%20boccioni%2C%20dinamismo%20di%20un%20cavallo%20in%20corsa%2Bcase%2C%201915%2C%2002.jpg" alt="Umberto Boccioni"><div><b>Umberto Boccioni</b><p><i>Dinamismo di un cavallo in corsa + case</i>. intenso · energico · caotico · originale · difficile</p></div></article>
+  </div>
+
+  <div class="words italian">
+    <span class="word">Ho guardato…</span><span class="word">Mi ha colpito…</span><span class="word">L’ho trovato/a…</span><span class="word">Mi è sembrato/a…</span><span class="word">Mi è piaciuto/a perché…</span>
+  </div>
+</section>
+
+<section class="card">
+  <div class="top"><div class="num">7</div><div><h2>Per un giorno sei la curatrice</h2><p class="lead">Представь, что ты сама собираешь маленькую экспозицию.</p></div></div>
+  <div class="mode">✍️ <b>Как делать:</b> выбери, куда поставить каждую из трёх работ из задания 6.</div>
+  <div class="curator italian">
+    <div class="slot"><b>All’ingresso</b> Quale opera metti qui? Perché?</div>
+    <div class="slot"><b>Nel salotto</b> Quale opera metti qui? Perché?</div>
+    <div class="slot"><b>Nel giardino</b> Quale opera metti qui? Perché?</div>
+  </div>
+</section>
+
+<section class="card">
+  <div class="top"><div class="num">8</div><div><h2>Da Peggy a te</h2><p class="lead">Теперь используем те же конструкции, чтобы рассказать о своём опыте.</p></div></div>
+  <div class="mode">✍️ <b>Как делать:</b> выбери 4 вопроса и ответь письменно по 2–3 фразы.</div>
+  <ol class="drill italian">
+    <li>Hai mai <b>conosciuto</b> una persona che ti ha fatto scoprire qualcosa di nuovo?</li>
+    <li>Hai mai <b>deciso di</b> iniziare qualcosa dopo un incontro o un viaggio?</li>
+    <li>Hai mai <b>comprato</b> un oggetto perché ti ricordava un museo o una città?</li>
+    <li>Hai mai <b>visitato</b> una casa-museo?</li>
+    <li>Quale museo ti <b>ha colpito</b> di più?</li>
+    <li>Quale città <b>è diventata</b> importante per te?</li>
+  </ol>
+</section>
+
+<section class="card challenge">
+  <div class="top"><div class="num">9</div><div><h2>Un museo che ricordo davvero</h2><p class="lead">Финальный рассказ — о твоём собственном культурном опыте.</p></div></div>
+  <div class="task">🎙 <b>Как делать:</b> закрой тетрадь и запиши голосовое на <b>1–2 минуты</b>.</div>
+  <p>Расскажи про реальный музей, выставку, галерею или дом-музей, где ты была.</p>
+  <div class="words italian">
+    <span class="word">quando sei andata</span><span class="word">con chi</span><span class="word">che cosa hai visto</span><span class="word">che cosa ti ha colpito</span><span class="word">che cosa hai scoperto</span><span class="word">che cosa ti è piaciuto di più</span>
+  </div>
+  <div class="note"><b>Минимум:</b> 7 форм passato prossimo + 3 связки времени.<br><span class="italian">prima · poi · dopo · alla fine</span><br><br><b>Важно:</b> не читать готовый текст. Можно заранее выписать только 5–6 ключевых слов.</div>
+</section>
+
+<p class="footer">Obiettivo: usare il passato prossimo per raccontare una vita, reagire a fatti culturali e poi parlare della propria esperienza.</p>
+</main></body></html>
