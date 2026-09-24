@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Eduard · Dal vivo · raccontare un concerto</title>
+<style>
+:root{
+  --bg:#0e1012;--paper:#f5f0e8;--paper2:#fffaf3;--ink:#202321;--muted:#6e716d;
+  --line:#ddd3c5;--red:#9d3328;--gold:#c89245;--dark:#171a1d;--soft:#eee5d8;--green:#455b4e
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(180deg,#0b0c0d 0,#16191c 520px,#eee8df 520px);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.58}
+.wrap{max-width:1080px;margin:auto;padding:18px 16px 64px}
+.hero{min-height:510px;position:relative;overflow:hidden;border-radius:30px;background:
+linear-gradient(90deg,rgba(7,8,10,.90) 0%,rgba(7,8,10,.56) 52%,rgba(7,8,10,.18) 100%),
+url('https://www.finestresullarte.info/rivista/immagini/2024/2732/concerto-pink-floyd-venezia-2.jpg') center/cover no-repeat;
+box-shadow:0 26px 70px rgba(0,0,0,.38)}
+.hero-inner{position:absolute;left:0;right:0;bottom:0;padding:42px;color:white;max-width:830px}
+.eyebrow{display:inline-block;padding:8px 12px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(255,255,255,.08);font-size:.76rem;letter-spacing:.13em;text-transform:uppercase}
+.hero h1{font-family:Georgia,serif;font-size:clamp(3.1rem,8vw,6.5rem);line-height:.9;margin:16px 0 16px;letter-spacing:-.035em}
+.hero .subtitle{font-size:1.1rem;max-width:680px;color:#eee8e1;margin:0}
+.goals{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.goals span{padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.12);font-size:.84rem}
+.photo-credit{position:absolute;right:16px;bottom:12px;font-size:.7rem;color:rgba(255,255,255,.68)}
+.photo-credit a{color:inherit}
+
+.section{background:var(--paper2);border:1px solid var(--line);border-radius:24px;padding:28px;margin:20px 0;box-shadow:0 12px 30px rgba(30,30,30,.05)}
+.section.dark{background:#181b1e;color:#f6f1ea;border-color:#2c3033}
+.section h2{font-family:Georgia,serif;font-size:2rem;line-height:1.08;margin:0 0 8px}
+.section h3{font-family:Georgia,serif;font-size:1.35rem;margin:22px 0 8px}
+.lead{margin:0 0 20px;color:var(--muted)}
+.dark .lead{color:#b8b9b5}
+.kicker{font-size:.76rem;text-transform:uppercase;letter-spacing:.11em;font-weight:800;color:var(--red);margin-bottom:8px}
+.dark .kicker{color:#e0aa58}
+
+.photos{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:12px}
+.photo-card{position:relative;min-height:330px;border-radius:18px;overflow:hidden;background:#222}
+.photo-card img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.photo-card:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.82))}
+.photo-text{position:absolute;z-index:2;left:16px;right:16px;bottom:14px;color:white}
+.photo-text b{display:block;font-family:Georgia,serif;font-size:1.2rem;margin-bottom:4px}
+.photo-text small{color:#d6d3ce}
+.prompts{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.prompt{background:var(--soft);border-radius:14px;padding:13px 14px;font-size:.94rem}
+
+.lex-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.lex{border:1px solid var(--line);border-radius:16px;padding:16px;background:#fff}
+.lex b{font-size:1.04rem}
+.lex .ru{display:block;color:var(--muted);font-size:.9rem;margin-top:2px}
+.lex em{display:block;margin-top:8px;color:#3d4943;font-size:.92rem}
+.dark .lex{background:#202428;border-color:#343a3e}
+.dark .lex .ru{color:#b2b5b2}
+.dark .lex em{color:#ddd8d0}
+
+.nuance{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
+.nuance>div{background:#f3ece2;border-radius:16px;padding:16px}
+.nuance strong{color:var(--red)}
+.dont{background:#f8e7e3;border-left:4px solid var(--red);padding:15px 17px;border-radius:0 14px 14px 0;margin:18px 0}
+
+.bank{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 18px}
+.bank span{background:#ede2d2;border-radius:999px;padding:7px 11px;font-weight:700;font-size:.89rem}
+.dark .bank span{background:#2d3337}
+
+.exercise{counter-reset:item;margin:0;padding:0;list-style:none}
+.exercise li{counter-increment:item;margin:10px 0;padding:12px 14px 12px 48px;background:#f7f2ea;border-radius:14px;position:relative}
+.exercise li:before{content:counter(item);position:absolute;left:14px;top:12px;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--dark);color:white;font-size:.78rem;font-weight:800}
+.dark .exercise li{background:#22272b}
+.dark .exercise li:before{background:#e0aa58;color:#17191b}
+
+.story{font-family:Georgia,serif;font-size:1.15rem;background:#f1e9dd;padding:22px;border-radius:18px;margin:14px 0}
+.story b{color:var(--red)}
+.timeline{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.time{border-radius:18px;padding:18px}
+.time.imp{background:#ece7dc}
+.time.pp{background:#e6eee9}
+.time h3{margin:0 0 8px}
+.time ul{margin:8px 0 0;padding-left:20px}
+
+.history{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.event{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:white}
+.event img{width:100%;height:190px;object-fit:cover;display:block}
+.event .body{padding:16px}
+.event h3{margin:0 0 7px;font-size:1.25rem}
+.event p{margin:7px 0;font-size:.93rem}
+.fact{font-family:Georgia,serif;font-size:1.55rem;color:var(--red)}
+.source{font-size:.75rem;color:var(--muted)}
+.source a{color:inherit}
+
+.speech{background:#1d2225;color:#fff;border-radius:18px;padding:20px;margin-top:14px}
+.speech h3{margin-top:0}
+.speech-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.chunk{background:#2a3034;border-radius:13px;padding:12px 14px}
+.chunk b{color:#efc077}
+
+.review{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.review>div{padding:16px;border-radius:16px;background:#f3eee6}
+.review b{display:block;margin-bottom:5px}
+.rating{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin:14px 0}
+.rating span{text-align:center;background:#211f1e;color:white;border-radius:12px;padding:10px 5px;font-size:.88rem}
+
+.final{background:linear-gradient(135deg,#75291f,#17191b 70%);color:#fff;border:none}
+.final h2{font-size:2.35rem}
+.final .lead{color:#e2d9d0}
+.final ol{padding-left:22px}
+.final li{margin:9px 0}
+.check{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:16px}
+.check span{background:rgba(255,255,255,.1);padding:9px 11px;border-radius:12px;font-size:.92rem}
+
+details{margin-top:16px;border-top:1px solid var(--line);padding-top:14px}
+summary{cursor:pointer;font-weight:800;color:var(--green)}
+.dark summary{color:#efc077}
+.answers{color:var(--muted);font-size:.94rem}
+.btn{display:inline-flex;align-items:center;gap:8px;margin-top:12px;padding:10px 14px;border-radius:999px;background:var(--red);color:#fff;text-decoration:none;font-weight:800;font-size:.88rem}
+.footer{text-align:center;color:#777;font-size:.82rem;margin:18px 0}
+
+@media(max-width:820px){
+  .hero{min-height:470px}.hero-inner{padding:28px}
+  .photos,.lex-grid,.history{grid-template-columns:1fr}
+  .photo-card{min-height:360px}
+  .prompts,.timeline,.nuance,.review,.speech-grid,.check{grid-template-columns:1fr}
+  .rating{grid-template-columns:1fr 1fr}
+  .section{padding:20px}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+
+<section class="hero">
+  <div class="hero-inner">
+    <span class="eyebrow">Lezione · 24.09.2026</span>
+    <h1>DAL VIVO</h1>
+    <p class="subtitle">Как рассказать о концерте так, чтобы это звучало не как <em>«era bello»</em>: атмосфера, звук, музыканты, публика и история в прошлом.</p>
+    <div class="goals">
+      <span>passato prossimo + imperfetto</span>
+      <span>rock / metal vocabulary</span>
+      <span>studio vs live</span>
+      <span>recensione orale</span>
+    </div>
+  </div>
+  <div class="photo-credit">Pink Floyd, Venezia 1989 · foto: <a href="https://www.finestresullarte.info/en/news-focus/the-concert-of-concerts-pink-floyd-s-35th-anniversary-in-venice" target="_blank">Finestre sull'Arte</a></div>
+</section>
+
+<section class="section">
+  <div class="kicker">01 · Guarda, poi parla</div>
+  <h2>Tre modi di stare sul palco</h2>
+  <p class="lead">Задание: сначала 30 секунд просто рассмотри фотографии. Потом для каждой выбери 3 слова, которые лучше всего передают впечатление, и объясни выбор.</p>
+  <div class="photos">
+    <div class="photo-card">
+      <img src="https://www.finestresullarte.info/rivista/immagini/2024/2732/concerto-pink-floyd-venezia-2.jpg" alt="Pink Floyd a Venezia, 1989">
+      <div class="photo-text"><b>Pink Floyd · Venezia, 1989</b><small>scala · atmosfera · pubblico</small></div>
+    </div>
+    <div class="photo-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/IronMaidenNyon2016.jpg" alt="Iron Maiden live 2016">
+      <div class="photo-text"><b>Iron Maiden · live</b><small>presenza scenica · energia · frontman</small></div>
+    </div>
+    <div class="photo-card">
+      <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Rammstein_in_concert%2C_2005.jpg" alt="Rammstein live 2005">
+      <div class="photo-text"><b>Rammstein · live</b><small>spettacolo · luci · effetti</small></div>
+    </div>
+  </div>
+  <div class="prompts">
+    <div class="prompt"><b>Che atmosfera immagini?</b><br>intima, tesa, euforica, surreale, caotica…</div>
+    <div class="prompt"><b>Chi domina la scena?</b><br>il frontman, la band, il pubblico, gli effetti?</div>
+    <div class="prompt"><b>Che suono ti aspetti?</b><br>pulito, pesante, aggressivo, impastato…</div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="kicker">02 · Lessico preciso</div>
+  <h2>Non dire sempre “bello”</h2>
+  <p class="lead">У хорошей рецензии есть точные слова. Выбери их в зависимости от того, что именно ты оцениваешь: звук, голос, сцену или публику.</p>
+
+  <h3>Il suono</h3>
+  <div class="lex-grid">
+    <div class="lex"><b>potente</b><span class="ru">мощный</span><em>Un suono potente ma non assordante.</em></div>
+    <div class="lex"><b>pesante</b><span class="ru">тяжёлый по звучанию</span><em>Dal vivo il pezzo era ancora più pesante.</em></div>
+    <div class="lex"><b>aggressivo</b><span class="ru">агрессивный, напористый</span><em>Le chitarre avevano un suono molto aggressivo.</em></div>
+    <div class="lex"><b>cupo / oscuro</b><span class="ru">мрачный, тёмный</span><em>L'atmosfera era cupa, quasi inquietante.</em></div>
+    <div class="lex"><b>pulito / nitido</b><span class="ru">чистый / отчётливый</span><em>La voce si sentiva in modo nitido.</em></div>
+    <div class="lex"><b>impastato</b><span class="ru">«кашей», инструменты сливаются</span><em>Il suono era troppo impastato e la chitarra si perdeva.</em></div>
+    <div class="lex"><b>grezzo</b><span class="ru">сырой, нарочито необработанный</span><em>Mi piace quel suono grezzo e diretto.</em></div>
+    <div class="lex"><b>martellante</b><span class="ru">долбящий, неотступный</span><em>La batteria era martellante.</em></div>
+    <div class="lex"><b>trascinante</b><span class="ru">заводной, увлекающий</span><em>Il ritmo era davvero trascinante.</em></div>
+  </div>
+
+  <div class="nuance">
+    <div><strong>potente ≠ rumoroso</strong><br><em>Potente</em> — про силу и воздействие. <em>Rumoroso</em> — просто громкий / шумный.</div>
+    <div><strong>pesante ≠ cupo</strong><br><em>Pesante</em> — про плотность и вес звучания. <em>Cupo</em> — про тёмную атмосферу.</div>
+  </div>
+
+  <h3>La voce e la performance</h3>
+  <div class="lex-grid">
+    <div class="lex"><b>una voce roca</b><span class="ru">хриплый голос</span><em>Dal vivo aveva una voce ancora più roca.</em></div>
+    <div class="lex"><b>una voce gutturale</b><span class="ru">гортанный / экстремальный вокал</span><em>Alternava parti pulite e voce gutturale.</em></div>
+    <div class="lex"><b>reggere bene dal vivo</b><span class="ru">хорошо «вытягивать» концерт</span><em>Il cantante regge benissimo dal vivo.</em></div>
+    <div class="lex"><b>tenere il palco</b><span class="ru">держать сцену</span><em>Sa tenere il palco senza fare troppo.</em></div>
+    <div class="lex"><b>coinvolgere il pubblico</b><span class="ru">вовлекать публику</span><em>La band ha coinvolto il pubblico fin dal primo pezzo.</em></div>
+    <div class="lex"><b>essere affiatati</b><span class="ru">быть сыгранными, чувствовать друг друга</span><em>I musicisti sembravano molto affiatati.</em></div>
+  </div>
+
+  <div class="dont"><b>На сегодня запрещённые слова:</b> <em>bello, brutto, interessante</em>. Если хочется сказать одно из них — найди точнее: <em>travolgente, intenso, memorabile, deludente, monotono, impeccabile, potente, coinvolgente</em>.</div>
+</section>
+
+<section class="section">
+  <div class="kicker">03 · Scegli la parola</div>
+  <h2>Che cosa stai davvero descrivendo?</h2>
+  <p class="lead">Задание: выбери самое точное слово или выражение. Потом объясни по-итальянски, почему остальные варианты хуже подходят.</p>
+  <div class="bank">
+    <span>impastato</span><span>affiatati</span><span>martellante</span><span>coinvolgente</span>
+    <span>roca</span><span>tenere il palco</span><span>nitido</span><span>deludente</span>
+  </div>
+  <ol class="exercise">
+    <li>Si sentivano tutti gli strumenti distintamente: il suono era __________.</li>
+    <li>La batteria non dava tregua per tutto il pezzo: era __________.</li>
+    <li>Voce, chitarre e batteria si confondevano: il suono era troppo __________.</li>
+    <li>Il cantante non aveva bisogno di grandi effetti: sapeva __________.</li>
+    <li>Dopo vent'anni insieme, i musicisti sembravano ancora molto __________.</li>
+    <li>Il cantante aveva una voce bassa, ruvida e leggermente __________.</li>
+    <li>Il pubblico cantava, saltava e rispondeva continuamente: lo show era molto __________.</li>
+    <li>Mi aspettavo molto di più e sono uscito insoddisfatto: il concerto è stato __________.</li>
+  </ol>
+  <details><summary>Проверить</summary><div class="answers">1 nitido · 2 martellante · 3 impastato · 4 tenere il palco · 5 affiatati · 6 roca · 7 coinvolgente · 8 deludente</div></details>
+</section>
+
+<section class="section">
+  <div class="kicker">04 · Raccontare al passato</div>
+  <h2>La scena e quello che è successo</h2>
+  <p class="lead">В рассказе о концерте два времени работают вместе. Не выбирай время по отдельному глаголу: сначала реши, это <b>фон</b> или <b>событие</b>.</p>
+
+  <div class="timeline">
+    <div class="time imp">
+      <h3>IMPERFETTO · la scena</h3>
+      <ul>
+        <li><em>Il locale era pienissimo.</em></li>
+        <li><em>Faceva un caldo assurdo.</em></li>
+        <li><em>La gente aspettava davanti al palco.</em></li>
+        <li><em>La band suonava molto forte.</em></li>
+      </ul>
+    </div>
+    <div class="time pp">
+      <h3>PASSATO PROSSIMO · l'evento</h3>
+      <ul>
+        <li><em>Si sono spente le luci.</em></li>
+        <li><em>La band è salita sul palco.</em></li>
+        <li><em>Il pubblico ha iniziato a urlare.</em></li>
+        <li><em>Il chitarrista ha rotto una corda.</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="story">
+    Il locale <b>era</b> piccolo e <b>c'era</b> già moltissima gente. Tutti <b>aspettavano</b> vicino al palco. A un certo punto <b>si sono spente</b> le luci e la band <b>è entrata</b>. Mentre il cantante <b>parlava</b> con il pubblico, il chitarrista <b>stava cambiando</b> chitarra. Poi <b>hanno attaccato</b> il pezzo più pesante della serata.
+  </div>
+
+  <p><b>Задание:</b> перескажи историю своими словами, не глядя на текст. Затем добавь два события: одно неожиданное и одно удачное.</p>
+</section>
+
+<section class="section">
+  <div class="kicker">05 · Italia · tre concerti entrati nella storia</div>
+  <h2>Non solo musica: quando un concerto diventa un evento</h2>
+  <p class="lead">Прочитай три карточки. Потом выбери одну и объясни: что сделало этот концерт больше, чем просто выступлением?</p>
+
+  <div class="history">
+    <article class="event">
+      <img src="https://www.finestresullarte.info/rivista/immagini/2024/2732/concerto-pink-floyd-venezia-2.jpg" alt="Pink Floyd Venezia 1989">
+      <div class="body">
+        <div class="fact">1989 · Venezia</div>
+        <h3>Pink Floyd davanti a San Marco</h3>
+        <p>Il 15 luglio 1989 i Pink Floyd hanno suonato su una chiatta trasformata in palco davanti a Piazza San Marco. Il concerto era gratuito e la folla è stata stimata in circa 200.000 persone.</p>
+        <p><b>Parole utili:</b> una folla enorme · un palco galleggiante · un'atmosfera surreale · un evento irripetibile</p>
+        <div class="source">Fonte: <a href="https://www.teche.rai.it/2019/07/pink-floyd-venezia-1989/" target="_blank">Rai Teche</a></div>
+        <a class="btn" href="https://www.teche.rai.it/2019/07/pink-floyd-venezia-1989/" target="_blank">Guarda il frammento Rai →</a>
+      </div>
+    </article>
+
+    <article class="event">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/San_Siro_Stadium_-_panoramio.jpg/1280px-San_Siro_Stadium_-_panoramio.jpg" alt="San Siro">
+      <div class="body">
+        <div class="fact">1985 · Milano</div>
+        <h3>Bruce Springsteen a San Siro</h3>
+        <p>Il 21 giugno 1985 Springsteen ha tenuto a San Siro il suo primo concerto in Italia. Circa 65.000 persone lo aspettavano nello stadio: per molti fan è rimasto un punto di riferimento della storia live italiana.</p>
+        <p><b>Parole utili:</b> il debutto italiano · uno stadio pieno · un pubblico travolgente · una serata memorabile</p>
+        <div class="source">Fonte: <a href="https://milano.corriere.it/notizie/cronaca/25_giugno_21/la-notte-magica-del-boss-il-21-giugno-di-40-anni-fa-il-primo-live-italiano-di-bruce-springsteen-a-san-siro-41f04f2f-5bdb-404f-9947-29ea28345xlk.shtml" target="_blank">Corriere della Sera</a></div>
+      </div>
+    </article>
+
+    <article class="event">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Vasco_Rossi_-_Modena_Park_2017.jpg/1280px-Vasco_Rossi_-_Modena_Park_2017.jpg" alt="Vasco Rossi Modena Park 2017">
+      <div class="body">
+        <div class="fact">2017 · Modena</div>
+        <h3>Vasco Rossi · Modena Park</h3>
+        <p>Il concerto ha celebrato quarant'anni di carriera. La cronaca dell'epoca parla di circa 220.000 spettatori paganti e di un record mondiale per un live a pagamento di un singolo artista.</p>
+        <p><b>Parole utili:</b> un evento gigantesco · un mare di persone · un palco monumentale · un concerto da record</p>
+        <div class="source">Fonte: <a href="https://www.repubblica.it/spettacoli/musica/2017/07/01/news/vasco_infiamma_i_220_000_del_modenapark-169709391/" target="_blank">la Repubblica</a></div>
+      </div>
+    </article>
+  </div>
+
+  <h3>Parla</h3>
+  <ol class="exercise">
+    <li>Quale dei tre ti incuriosisce di più? Perché?</li>
+    <li>Quale avresti voluto vedere dal vivo?</li>
+    <li>Secondo te, che cosa trasforma un concerto in un evento storico: la musica, il luogo, il pubblico o il momento?</li>
+    <li>Un concerto enorme è necessariamente migliore di un concerto in un locale piccolo?</li>
+  </ol>
+</section>
+
+<section class="section dark">
+  <div class="kicker">06 · Studio vs live</div>
+  <h2>“Dal vivo rende meglio”</h2>
+  <p class="lead">Задание: выбери группу, которую хорошо знаешь, и сравни запись со сценой. Не обязательно соглашаться с примерами.</p>
+
+  <div class="speech">
+    <div class="speech-grid">
+      <div class="chunk"><b>In studio…</b><br>il suono è più pulito / controllato / preciso.</div>
+      <div class="chunk"><b>Dal vivo…</b><br>il pezzo rende meglio / peggio / in modo diverso.</div>
+      <div class="chunk"><b>Rispetto alla versione in studio…</b><br>era più veloce / pesante / grezza.</div>
+      <div class="chunk"><b>La voce…</b><br>era meno pulita, però molto più intensa.</div>
+      <div class="chunk"><b>L'arrangiamento…</b><br>era diverso / più lungo / più essenziale.</div>
+      <div class="chunk"><b>Quello che mi ha colpito…</b><br>è stata soprattutto la presenza scenica.</div>
+    </div>
+  </div>
+
+  <p><b>Скажи минимум 5 фраз.</b> В двух фразах обязательно используй противопоставление: <em>però, mentre, invece, rispetto a</em>.</p>
+</section>
+
+<section class="section">
+  <div class="kicker">07 · Una recensione vera</div>
+  <h2>Valutare senza fare una classifica</h2>
+  <p class="lead">Представь, что друг спросил тебя утром после концерта: <em>«Allora, com'è stato?»</em> Собери короткий ответ, где есть и сильные стороны, и что-то неидеальное.</p>
+
+  <div class="review">
+    <div><b>La band</b>tecnicamente impeccabile · affiatata · energica · poco spontanea · molto presente</div>
+    <div><b>Il cantante</b>carismatico · intenso · preciso · affaticato · più bravo dal vivo</div>
+    <div><b>Il suono</b>potente · nitido · troppo impastato · equilibrato · eccessivamente forte</div>
+    <div><b>Il pubblico</b>coinvolto · scatenato · rumoroso · caloroso · un po' passivo</div>
+    <div><b>Il locale</b>intimo · enorme · soffocante · ben organizzato · con un'acustica pessima</div>
+    <div><b>Lo show</b>travolgente · memorabile · spettacolare · monotono · deludente</div>
+  </div>
+
+  <div class="rating">
+    <span>band</span><span>voce</span><span>suono</span><span>pubblico</span><span>atmosfera</span>
+  </div>
+
+  <p><b>Задание:</b> выбери по одному слову для каждой категории и свяжи их в рассказ. Не перечисляй: объясняй.</p>
+  <p><em>Esempio:</em> «La band era molto affiatata e tecnicamente quasi impeccabile. Il suono, invece, era un po' impastato, soprattutto all'inizio…»</p>
+</section>
+
+<section class="section">
+  <div class="kicker">08 · Ricostruisci la serata</div>
+  <h2>Un concerto, otto momenti</h2>
+  <p class="lead">Задание: расскажи одну цельную историю. Используй минимум <b>4 imperfetti</b> для фона и <b>6 passati prossimi</b> для событий.</p>
+  <div class="bank">
+    <span>aspettare fuori</span><span>fare caldo</span><span>essere pieno</span><span>spegnersi le luci</span>
+    <span>salire sul palco</span><span>iniziare a urlare</span><span>rompere una corda</span><span>chiedere un bis</span>
+    <span>tornare sul palco</span><span>suonare l'ultimo pezzo</span>
+  </div>
+  <p><b>Связки, которые пригодятся:</b> <em>all'inizio · a un certo punto · mentre · poi · poco dopo · alla fine · quando…</em></p>
+</section>
+
+<section class="section final">
+  <div class="kicker">09 · Finale</div>
+  <h2>Raccontami un concerto che ricordi davvero</h2>
+  <p class="lead">Не выдумывай идеальный текст. Расскажи реальный концерт, фестиваль или выступление, которое осталось в памяти.</p>
+  <ol>
+    <li><b>Prima:</b> dove eri, con chi, che aspettative avevi?</li>
+    <li><b>L'inizio:</b> com'era il posto? che cosa faceva la gente?</li>
+    <li><b>Il momento:</b> che cosa è successo quando è iniziato il concerto?</li>
+    <li><b>La musica:</b> com'erano voce, chitarre, batteria, volume e acustica?</li>
+    <li><b>La band:</b> chi teneva meglio il palco? sembravano affiatati?</li>
+    <li><b>Il pubblico:</b> era coinvolto? c'era pogo? cantavano tutti?</li>
+    <li><b>Il giudizio:</b> che cosa ha funzionato e che cosa no?</li>
+    <li><b>La frase finale:</b> li rivedresti dal vivo? Perché?</li>
+  </ol>
+  <div class="check">
+    <span>✓ almeno 4 imperfetti</span>
+    <span>✓ almeno 6 passati prossimi</span>
+    <span>✓ almeno 6 parole nuove</span>
+    <span>✓ niente “bello” come unica valutazione</span>
+  </div>
+</section>
+
+<p class="footer">DARIA KUZNO · ITALIANO · EDUARD · 24.09.2026</p>
+</main>
+</body>
+</html>
