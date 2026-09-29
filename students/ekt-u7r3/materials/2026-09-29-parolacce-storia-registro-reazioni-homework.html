@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Ekaterina · Parolacce: storia, registro, reazioni · Homework</title>
+<style>
+:root{
+  --bg:#f3eee7;--paper:#fffdf8;--ink:#272b29;--muted:#6d726e;
+  --burg:#813d3a;--terr:#b96650;--gold:#d7a34c;--line:#ded5ca;
+  --sage:#e8f0e8;--cream:#fbf0d9;--blue:#e9eef5;
+  --green:#e4f0e7;--yellow:#f7efce;--orange:#f6dfc6;--red:#f1d3d1;--black:#ddd3d3;
+  --shadow:0 16px 38px rgba(52,44,36,.09)
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(180deg,#e8ddd1 0,#f3eee7 380px);color:var(--ink);
+font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
+.hero{min-height:360px;display:flex;align-items:flex-end;color:white;background:
+linear-gradient(180deg,rgba(22,17,17,.08),rgba(22,17,17,.87)),
+url("https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1800&q=85") center/cover no-repeat}
+.hero-in{width:min(1000px,calc(100% - 28px));margin:auto;padding:54px 0 38px}
+.eyebrow{display:inline-block;padding:7px 11px;border:1px solid rgba(255,255,255,.3);border-radius:999px;
+background:rgba(0,0,0,.18);font-size:.74rem;font-weight:900;letter-spacing:.11em;text-transform:uppercase}
+h1{font:700 clamp(2.6rem,7vw,5.1rem)/.95 Georgia,serif;letter-spacing:-.045em;margin:15px 0 10px}
+.hero p{max-width:780px;margin:0;color:rgba(255,255,255,.93);font-size:1.04rem}
+nav{position:sticky;top:0;z-index:20;background:rgba(243,238,231,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.08)}
+.nav{max-width:1000px;margin:auto;display:flex;gap:7px;overflow:auto;padding:9px 14px}
+.nav a{white-space:nowrap;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);
+border-radius:999px;padding:8px 12px;font-size:.82rem;font-weight:800}
+main{max-width:1000px;margin:auto;padding:27px 14px 75px}
+.card{background:var(--paper);border:1px solid rgba(0,0,0,.07);border-radius:24px;padding:clamp(20px,4vw,34px);box-shadow:var(--shadow);margin-bottom:20px}
+.kicker{font-size:.73rem;font-weight:900;letter-spacing:.11em;text-transform:uppercase;color:var(--burg);margin-bottom:6px}
+h2{font:700 clamp(1.75rem,4vw,2.6rem)/1.08 Georgia,serif;margin:0 0 15px}
+h3{font-size:1.06rem;margin:20px 0 8px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.box,.item,.scenario,.period{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px}
+.item,.scenario{margin:9px 0}
+.note,.warn,.source{padding:13px 15px;border-radius:5px 15px 15px 5px;margin:14px 0;border-left:4px solid}
+.note{background:var(--sage);border-color:#78907c}.warn{background:var(--cream);border-color:var(--gold)}.source{background:var(--blue);border-color:#778ca5}
+.period .date{font-weight:900;color:var(--burg);font-size:.82rem;letter-spacing:.04em;text-transform:uppercase}
+.period .link{font-weight:900;color:var(--burg);margin:6px 0}
+.term{font-weight:900;color:var(--burg)}
+.muted{color:var(--muted);font-size:.87rem}
+.register{display:grid;grid-template-columns:145px 1fr 1fr;gap:0;border:1px solid var(--line);border-radius:17px;overflow:hidden;background:#fff}
+.register>div{padding:13px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.register>div:nth-child(3n){border-right:0}.register>div:nth-last-child(-n+3){border-bottom:0}
+.r1{background:var(--green)}.r2{background:var(--yellow)}.r3{background:var(--orange)}.r4{background:var(--red)}.r5{background:var(--black)}
+.choice-row{display:flex;flex-wrap:wrap;gap:7px;margin-top:8px}
+button.choice,button.btn{cursor:pointer;border-radius:11px;font-weight:850;padding:9px 12px}
+button.choice{border:1px solid var(--line);background:#faf8f4;color:var(--ink)}
+button.choice.selected{background:#efe0d7;border-color:var(--terr)}
+button.choice.correct{background:#e5f3e9;border-color:#6f9979}
+button.choice.wrong{background:#f9dfdc;border-color:#bd685f}
+button.btn{border:0;background:var(--burg);color:white}
+.feedback{font-size:.86rem;color:var(--muted);min-height:1.1em;margin-top:6px}
+.scale{display:flex;gap:6px;flex-wrap:wrap;margin:9px 0}
+.scale span{padding:6px 9px;border-radius:999px;border:1px solid var(--line);font-size:.78rem;font-weight:850}
+.audio{background:linear-gradient(135deg,#f7eee7,#edf2eb);border:1px solid var(--line);border-radius:18px;padding:16px}
+footer{text-align:center;color:var(--muted);font-size:.8rem;margin-top:28px}
+@media(max-width:760px){.grid2,.grid3{grid-template-columns:1fr}.register{grid-template-columns:1fr}.register>div{border-right:0}.register>div:nth-last-child(-n+3){border-bottom:1px solid var(--line)}.register>div:last-child{border-bottom:0}.hero{min-height:330px}}
+@media print{nav,.btn{display:none}.card{box-shadow:none;break-inside:avoid}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="hero-in">
+<span class="eyebrow">Homework · Ekaterina</span>
+<h1>Parolacce:<br>capire prima di usare.</h1>
+<p>Una breve memoria storica, una mappa dei registri e soprattutto reazioni utili quando qualcuno supera il limite.</p>
+</div></header>
+
+<nav><div class="nav">
+<a href="#storia">Storia</a><a href="#registri">Registri</a><a href="#bestemmia">Bestemmia</a><a href="#reazioni">Reazioni</a><a href="#audio">Audio</a>
+</div></nav>
+
+<main>
+
+<section class="card">
+<div class="kicker">Quanto?</div>
+<h2>Questa homework è volutamente breve</h2>
+<div class="grid2">
+<div class="box"><b>Obiettivo 1</b><br>ricordare la logica storica, non tutte le date.</div>
+<div class="box"><b>Obiettivo 2</b><br>capire quanto è forte una parola e se attacca una situazione o una persona.</div>
+<div class="box"><b>Obiettivo 3</b><br>riconoscere che cos’è una <i>bestemmia</i>.</div>
+<div class="box"><b>Obiettivo 4</b><br>avere 5–6 reazioni naturali anche se normalmente non vuoi usare parolacce.</div>
+</div>
+</section>
+
+<section class="card" id="storia">
+<div class="kicker">1 · Memoria storica</div>
+<h2>La storia in sei passaggi — ma con un filo logico</h2>
+
+<div class="grid2">
+<div class="period">
+<div class="date">XI secolo · San Clemente</div>
+<div class="link">Il volgare entra in scena come lingua parlata.</div>
+<p>In un affresco romano Sisinnio urla ai servi <b>«Fili de le pute, traite!»</b>. Il santo parla in latino, i personaggi quotidiani in volgare. Già qui il registro serve a <b>caratterizzare chi parla</b>.</p>
+</div>
+
+<div class="period">
+<div class="date">Dante · Inferno</div>
+<div class="link">Il linguaggio basso diventa anche letteratura alta.</div>
+<p>Dante usa senza paura parole corporee e oscene: <b>merda, puttana, fiche, sterco</b>. Non per “fare scandalo”, ma per creare realismo, disgusto, comicità e degradazione.</p>
+</div>
+
+<div class="period">
+<div class="date">Fascismo · 1931–1944</div>
+<div class="link">La lingua pubblica viene disciplinata.</div>
+<p>Non esiste un semplice decreto “vietato dire parolacce”. Ma la censura teatrale elimina o sostituisce parole considerate volgari: il regime vuole uno spazio pubblico <b>controllato e decoroso</b>.</p>
+</div>
+
+<div class="period">
+<div class="date">Dopoguerra · Neorealismo</div>
+<div class="link">Il cinema torna alla lingua della strada.</div>
+<p>Dialetti, accenti regionali e parlato popolare tornano sullo schermo. La rottura non è “tutti possono dire cazzo”: è il ritorno di una lingua <b>meno artificiale e più reale</b>.</p>
+</div>
+
+<div class="period">
+<div class="date">1960 · La ciociara</div>
+<div class="link">La censura continua anche dopo il fascismo.</div>
+<p>La commissione chiede ancora di eliminare <b>figli di mignotte</b> e <b>stronzo</b> e di sostituire <b>culo</b>. Quindi la società cambia, ma i tabù non spariscono di colpo.</p>
+</div>
+
+<div class="period">
+<div class="date">Anni ’70 → oggi</div>
+<div class="link">Musica, cinema, TV e social abbassano la soglia dello scandalo.</div>
+<p>Guccini, Masini, Faletti, Måneskin: la parolaccia può diventare protesta, realismo, ironia, identità o semplice intensità emotiva.</p>
+</div>
+</div>
+
+<div class="note"><b>Il filo:</b> non è una marcia lineare “prima proibito, oggi permesso”. Cambiano <b>chi parla, dove parla, davanti a quale pubblico e con quale effetto</b>.</div>
+
+<h3>Ricorda il filo, non le date</h3>
+<div class="item">1. Nel Medioevo il volgare serve già a ____________________________________.</div>
+<div class="item">2. Dante dimostra che una parola bassa può _______________________________.</div>
+<div class="item">3. Durante il fascismo il problema non è solo la parolaccia: è anche __________.</div>
+<div class="item"><b>4. Perché il Neorealismo è importante per la lingua anche se la censura non sparisce subito?</b><br>______________________________________________________________</div>
+<div class="item"><b>5. Dagli anni ’70 in poi, secondo te, cambia di più il vocabolario oppure la soglia sociale dello scandalo?</b><br>______________________________________________________________</div>
+</section>
+
+<section class="card" id="registri">
+<div class="kicker">2 · Registro</div>
+<h2>Non tutte le parolacce hanno lo stesso peso</h2>
+
+<div class="register">
+<div class="r1"><b>1 · molto leggero</b></div>
+<div><b>cavolo!</b><br><b>accidenti!</b><br><b>porca miseria!</b></div>
+<div class="muted">Sfogo. Poco rischioso. Adatto anche quando non vuoi davvero “parlare male”.</div>
+
+<div class="r2"><b>2 · colloquiale</b></div>
+<div><b>che palle!</b><br><b>che cazzata!</b><br><b>sono incazzata</b></div>
+<div class="muted">Volgare, ma molto comune tra persone in confidenza. Non necessariamente aggressivo.</div>
+
+<div class="r3"><b>3 · forte</b></div>
+<div><b>cazzo!</b><br><b>ma che cazzo fai?</b><br><b>mi hai rotto le palle</b></div>
+<div class="muted">La situazione e il tono diventano decisivi. Può essere uno sfogo o un vero conflitto.</div>
+
+<div class="r4"><b>4 · molto forte</b></div>
+<div><b>vaffanculo</b><br><b>vai a cagare</b><br><b>stronzo</b><br><b>coglione</b></div>
+<div class="muted">Qui spesso c’è un destinatario preciso. È facile passare dalla volgarità all’attacco.</div>
+
+<div class="r5"><b>5 · attacco pesante</b></div>
+<div><b>testa di cazzo</b><br><b>pezzo di merda</b><br><b>figlio di puttana</b><br><b>troia / puttana</b> rivolto a una donna</div>
+<div class="muted">Insulti personali pesanti. Gli ultimi sono anche sessualizzati e possono risultare particolarmente offensivi.</div>
+</div>
+
+<div class="warn"><b>Regola più importante:</b> la scala non è matematica. <i>Cazzo!</i> gridato da sola perché perdi il treno può essere meno aggressivo di un elegantissimo <i>“Non si permetta mai più di parlarmi così.”</i></div>
+
+<h3>Metti il numero 1–5</h3>
+<div class="grid3">
+<div class="box"><b>Che palle.</b><br>___ / 5</div>
+<div class="box"><b>Cazzo!</b><br>___ / 5</div>
+<div class="box"><b>Ma che cazzo vuoi?</b><br>___ / 5</div>
+<div class="box"><b>Vaffanculo.</b><br>___ / 5</div>
+<div class="box"><b>Sei un coglione.</b><br>___ / 5</div>
+<div class="box"><b>Sei un pezzo di merda.</b><br>___ / 5</div>
+</div>
+<h3>Stessa parola, forza diversa</h3>
+<p>Assegna un numero a entrambe le frasi e spiega che cosa cambia.</p>
+
+<div class="scenario">
+<b>A.</b> “Cazzo! Ho perso il treno.” → ___ / 5<br>
+<b>B.</b> “Che cazzo vuoi da me?” → ___ / 5<br>
+<span class="muted">Perché la seconda può risultare più aggressiva? ________________________________</span>
+</div>
+
+<div class="scenario">
+<b>A.</b> “Che palle, piove di nuovo.” → ___ / 5<br>
+<b>B.</b> “Mi hai rotto le palle.” → ___ / 5<br>
+<span class="muted">Che cosa cambia quando compare un destinatario? ______________________________</span>
+</div>
+
+<div class="scenario">
+<b>A.</b> “Merda, ho sbagliato treno.” → ___ / 5<br>
+<b>B.</b> “Sei un pezzo di merda.” → ___ / 5<br>
+<span class="muted">Stessa parola, funzione completamente diversa: spiega. _________________________</span>
+</div>
+
+<h3>Situazione o persona?</h3>
+<div id="quiz1">
+<div class="scenario" data-answer="situazione"><b>“Merda! Ho perso il treno.”</b><div class="choice-row">
+<button class="choice" data-v="situazione">situazione</button><button class="choice" data-v="persona">persona</button></div><div class="feedback"></div></div>
+<div class="scenario" data-answer="persona"><b>“Sei uno stronzo.”</b><div class="choice-row">
+<button class="choice" data-v="situazione">situazione</button><button class="choice" data-v="persona">persona</button></div><div class="feedback"></div></div>
+<div class="scenario" data-answer="persona"><b>“Ma che cazzo fai?”</b><div class="choice-row">
+<button class="choice" data-v="situazione">solo situazione</button><button class="choice" data-v="persona">azione dell’altra persona</button></div><div class="feedback"></div></div>
+</div>
+<button class="btn" onclick="checkQuiz('quiz1')">Controlla</button>
+</section>
+
+<section class="card" id="bestemmia">
+<div class="kicker">3 · Una categoria diversa</div>
+<h2>Che cos’è una bestemmia?</h2>
+
+<div class="grid2">
+<div class="box"><b>PAROLACCIA</b><br><span class="term">cazzo, merda, che palle</span><br><span class="muted">Volgarità o sfogo.</span></div>
+<div class="box"><b>INSULTO</b><br><span class="term">stronzo, coglione, pezzo di merda</span><br><span class="muted">È diretto contro una persona.</span></div>
+<div class="box"><b>BESTEMMIA</b><br><span class="muted">Espressione offensiva contro Dio, la Madonna, i santi o il sacro.</span></div>
+<div class="box"><b>OBIETTIVO</b><br><span class="muted">Riconoscerla e capire che culturalmente può essere percepita in modo molto più forte di una normale parolaccia.</span></div>
+</div>
+
+<div class="warn">
+<b>Come riconoscerla:</b> spesso combina un nome sacro con un insulto o un animale. Per esempio forme del tipo <b>“D*** + insulto”</b> o <b>“porco D***”</b>. Qui basta riconoscere la struttura: non serve impararla per usarla.
+</div>
+
+<div class="note"><b>Importante:</b> <i>porca miseria!</i> non è una bestemmia. È un’imprecazione molto più leggera perché non attacca il sacro.</div>
+
+<h3>Che categoria è?</h3>
+<div class="item"><b>Che palle!</b> → parolaccia / insulto / bestemmia</div>
+<div class="item"><b>Sei un coglione.</b> → parolaccia / insulto / bestemmia</div>
+<div class="item"><b>porco D***</b> → parolaccia / insulto / bestemmia</div>
+<div class="item"><b>Porca miseria!</b> → parolaccia / insulto / bestemmia</div>
+</section>
+
+<section class="card" id="reazioni">
+<div class="kicker">4 · Reazioni</div>
+<h2>Non devi diventare una persona che impreca</h2>
+
+<p>Se normalmente non usi parolacce, va benissimo. L’obiettivo è avere reazioni naturali quando qualcuno <b>ti irrita, supera un limite o ti manca di rispetto</b>.</p>
+
+<div class="grid3">
+<div class="box"><span class="term">Dai, basta.</span><br><span class="muted">irritazione contenuta</span></div>
+<div class="box"><span class="term">Non esagerare.</span><br><span class="muted">metti un limite</span></div>
+<div class="box"><span class="term">Lascia perdere.</span><br><span class="muted">chiudi il discorso</span></div>
+<div class="box"><span class="term">Non parlarmi così.</span><br><span class="muted">ferma e molto utile</span></div>
+<div class="box"><span class="term">Adesso basta.</span><br><span class="muted">più forte</span></div>
+<div class="box"><span class="term">Non ti permettere.</span><br><span class="muted">limite netto, senza parolacce</span></div>
+</div>
+
+<div class="note"><b>Idea:</b> quando sei davvero arrabbiata, non devi per forza “salire” verso <i>vaffanculo</i>. Puoi salire verso una frase <b>più ferma</b>.</div>
+
+<h3>Scegli una reazione</h3>
+
+<div class="scenario">
+<b>1. Un amico ti prende in giro. All’inizio fa ridere, poi continua troppo.</b>
+<div class="scale"><span>🙂 leggera</span><span>😐 ferma</span><span>😡 molto ferma</span></div>
+<p>La tua frase: ________________________________________________</p>
+</div>
+
+<div class="scenario">
+<b>2. Uno sconosciuto ti passa davanti in fila e fa finta di non vederti.</b>
+<div class="scale"><span>🙂 leggera</span><span>😐 ferma</span><span>😡 molto ferma</span></div>
+<p>La tua frase: ________________________________________________</p>
+</div>
+
+<div class="scenario">
+<b>3. Il partner ti risponde male una volta.</b>
+<p>Prima reazione: ______________________________________________</p>
+</div>
+
+<div class="scenario">
+<b>4. Il partner continua a parlarti male anche dopo che gliel’hai fatto notare.</b>
+<p>Reazione più forte: ___________________________________________</p>
+</div>
+
+<div class="scenario">
+<b>5. Una persona ti insulta direttamente.</b>
+<p>Reazione senza parolacce: _____________________________________</p>
+<p>Se fossi davvero furiosa, quale espressione forte capiresti ma non useresti necessariamente? ______________________</p>
+</div>
+
+<h3>Cosa rispondi se te lo dicono direttamente?</h3>
+<p>Non tradurre. Rispondi come risponderesti davvero.</p>
+<div class="scenario"><b>“Ma che cazzo vuoi?”</b><br>La tua risposta: _____________________________________________</div>
+<div class="scenario"><b>“Sei proprio una stronza.”</b><br>La tua risposta: _____________________________________________</div>
+<div class="scenario"><b>“Vaffanculo.”</b><br>La tua risposta: _____________________________________________</div>
+<div class="scenario"><b>“Non rompere le palle.”</b><br>La tua risposta: _____________________________________________</div>
+
+<div class="note"><b>Obiettivo:</b> puoi rispondere con fermezza senza “fare gara” a chi usa la parolaccia più forte.</div>
+
+<h3>Scala la reazione, non solo la parolaccia</h3>
+<div class="grid2">
+<div class="box"><b>Livello 1</b><br>Dai, basta.</div>
+<div class="box"><b>Livello 2</b><br>Non esagerare.</div>
+<div class="box"><b>Livello 3</b><br>Non parlarmi così.</div>
+<div class="box"><b>Livello 4</b><br>Adesso basta. Non ti permettere.</div>
+</div>
+</section>
+
+<section class="card" id="audio">
+<div class="kicker">5 · Audio finale</div>
+<h2>1 minuto, senza preparare un testo</h2>
+
+<div class="audio">
+<p><b>Rispondi:</b></p>
+<p>1. Qual è la differenza tra una parolaccia, un insulto e una bestemmia?</p>
+<p>2. Quale parola ti sembra oggi molto comune ma non completamente neutra?</p>
+<p>3. Se qualcuno ti fa arrabbiare davvero, quali due frasi useresti per mettere un limite senza insultarlo?</p>
+<p>4. Racconta <b>una situazione concreta</b> in cui diresti <i>“Non parlarmi così”</i> invece di usare una parolaccia.</p>
+</div>
+
+<div class="warn"><b>Non devi usare parolacce nell’audio.</b> L’obiettivo è dimostrare che ora capisci il registro e sai reagire.</div>
+</section>
+
+<section class="card">
+<div class="kicker">Da mandare</div>
+<h2>Cosa mi mandi</h2>
+<div class="item">✓ le 5 frasi della memoria storica</div>
+<div class="item">✓ i numeri 1–5 delle espressioni</div>
+<div class="item">✓ le risposte su parolaccia / insulto / bestemmia</div>
+<div class="item">✓ le reazioni alle situazioni + 4 risposte dirette</div>
+<div class="item">✓ audio di circa 1 minuto</div>
+</section>
+
+<footer>DARIA KUZNO · ITALIANO · Ekaterina · Homework</footer>
+</main>
+
+<script>
+document.querySelectorAll('button.choice').forEach(btn=>{
+ btn.addEventListener('click',()=>{
+   const s=btn.closest('.scenario');
+   s.querySelectorAll('button.choice').forEach(b=>b.classList.remove('selected'));
+   btn.classList.add('selected');
+ });
+});
+function checkQuiz(id){
+ const root=document.getElementById(id);
+ root.querySelectorAll('.scenario').forEach(s=>{
+   const ans=s.dataset.answer,sel=s.querySelector('button.choice.selected'),fb=s.querySelector('.feedback');
+   s.querySelectorAll('button.choice').forEach(b=>b.classList.remove('correct','wrong'));
+   if(!sel){fb.textContent='Scegli una risposta.';return;}
+   if(sel.dataset.v===ans){sel.classList.add('correct');fb.textContent='✓';}
+   else{sel.classList.add('wrong');const r=s.querySelector('button.choice[data-v="'+ans+'"]');if(r)r.classList.add('correct');fb.textContent='Pensa a chi viene colpito.';}
+ });
+}
+</script>
+</body>
+</html>
