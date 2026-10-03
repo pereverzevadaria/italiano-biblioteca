@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Natalia · Homework · Imperativo TU</title>
+<style>
+:root{
+  --bg:#f3efe8;--paper:#fffdf9;--ink:#2b3431;--muted:#6d746f;--line:#ddd4c7;
+  --deep:#263c37;--sage:#dfe8df;--sand:#efe0c9;--terr:#b66a4d;--blue:#e6edf0;
+  --rose:#eee0dc;--gold:#f2e3b7;--shadow:0 18px 44px rgba(37,61,55,.08);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Onest,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;line-height:1.58}
+.wrap{width:min(1040px,calc(100% - 24px));margin:auto;padding:14px 0 60px}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;min-height:480px;background:linear-gradient(135deg,#21352f,#344d45 58%,#8a5d4d);color:#fff;border-radius:30px;overflow:hidden;box-shadow:var(--shadow)}
+.hero-copy{padding:clamp(26px,5vw,50px);display:flex;flex-direction:column;justify-content:flex-end}
+.hero-img{min-height:300px;background:#d2cbc1}
+.hero-img img{width:100%;height:100%;object-fit:cover;display:block}
+.ey{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;font-weight:900;opacity:.82}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:500}
+h1{font-size:clamp(3rem,7vw,5.4rem);line-height:.93;letter-spacing:-.04em;margin:12px 0}
+.hero p{max-width:640px;color:rgba(255,255,255,.88)}
+.card{background:var(--paper);border:1px solid rgba(37,61,55,.08);border-radius:24px;padding:clamp(18px,4vw,30px);margin-top:18px;box-shadow:0 8px 26px rgba(37,61,55,.04)}
+.head{display:grid;grid-template-columns:46px 1fr;gap:13px;align-items:start;margin-bottom:16px}
+.num{width:46px;height:46px;border-radius:15px;background:var(--deep);color:#fff;display:grid;place-items:center;font-weight:900}
+.kicker{font-size:.72rem;text-transform:uppercase;letter-spacing:.11em;font-weight:900;color:#74817c;margin-bottom:3px}
+h2{margin:0;color:var(--deep);font-size:clamp(1.8rem,4vw,2.55rem);line-height:1.08}
+h3{margin:0 0 8px;color:var(--deep)}
+.lead{margin:7px 0 0;color:var(--muted)}
+.instruction{background:var(--sand);border-left:4px solid #b78e46;padding:14px 16px;border-radius:16px;margin:14px 0}
+.note{background:var(--sage);border-left:4px solid #6f8c7e;padding:14px 16px;border-radius:16px;margin-top:14px}
+.note.blue{background:var(--blue);border-left-color:#7493a0}
+.note.rose{background:var(--rose);border-left-color:#b36e57}
+.note.gold{background:var(--gold);border-left-color:#c49744}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.box{background:#fff;border:1px solid var(--line);border-radius:18px;padding:15px}
+.rule{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px}
+.rule .big{font-family:Georgia,serif;font-size:1.7rem;color:var(--deep)}
+.arrow{font-size:1.1rem;color:var(--terr);font-weight:900}
+.table{width:100%;border-collapse:collapse;margin-top:10px}
+.table th,.table td{border-bottom:1px solid var(--line);padding:10px 9px;text-align:left}
+.table th{font-size:.75rem;text-transform:uppercase;letter-spacing:.08em;color:#71807a}
+.exercise{display:grid;gap:8px}
+.ex{background:#fff;border:1px solid var(--line);border-radius:14px;padding:11px 12px}
+.answer{display:none;margin-top:7px;color:#49665d;font-weight:800}
+.ex.show .answer{display:block}
+.btn{appearance:none;border:0;background:#eee7dc;color:var(--deep);padding:8px 11px;border-radius:999px;font-weight:800;cursor:pointer}
+.photo{border-radius:20px;overflow:hidden;background:#ddd;min-height:280px}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.commands{display:flex;flex-wrap:wrap;gap:8px}
+.command{background:#eee9df;border-radius:999px;padding:8px 10px;font-size:.85rem;font-weight:800}
+.checklist{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ck{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px}
+.small{font-size:.78rem;color:var(--muted)}
+@media(max-width:800px){
+ .hero{grid-template-columns:1fr}.hero-img{order:-1}
+ .grid2,.grid3,.checklist{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section class="hero">
+  <div class="hero-copy">
+    <div class="ey">Natalia · Homework · 03.10.2026</div>
+    <h1>Fallo così!</h1>
+    <p>Домашка после сегодняшнего урока: сначала чистая грамматическая памятка по <b>imperativo TU</b>, потом короткая отработка и снова дизайн — реальные советы по интерьеру.</p>
+  </div>
+  <div class="hero-img">
+    <img src="https://czasnawnetrze.pl/i/images/5/5/5/dz0xMjAwJmg9Nzk3_src_31555-film_jestem_miloscia_kadry_z_filmu.jpg" alt="Interno di Villa Necchi Campiglio da Io sono l'amore">
+  </div>
+</section>
+
+<section class="card">
+  <div class="head">
+    <div class="num">1</div>
+    <div><div class="kicker">Grammatica</div><h2>Imperativo TU — памятка</h2><p class="lead">Сегодня работаем только с формой <b>TU</b>: совет / команда / инструкция одному человеку, с которым мы на «ты».</p></div>
+  </div>
+
+  <div class="grid3">
+    <div class="rule">
+      <div class="big">-ARE → -A</div>
+      <p><b>Здесь форма меняется.</b></p>
+      <p><i>spostare → sposta<br>cambiare → cambia<br>provare → prova<br>usare → usa<br>lasciare → lascia</i></p>
+    </div>
+    <div class="rule">
+      <div class="big">-ERE → -I</div>
+      <p><b>Форма такая же, как TU в presente.</b></p>
+      <p><i>mettere → metti<br>scegliere → scegli<br>togliere → togli<br>aggiungere → aggiungi</i></p>
+    </div>
+    <div class="rule">
+      <div class="big">-IRE → -I</div>
+      <p><b>Форма такая же, как TU в presente.</b></p>
+      <p><i>aprire → apri<br>coprire → copri<br>partire → parti</i></p>
+    </div>
+  </div>
+
+  <div class="note gold">
+    <b>Главное визуально:</b><br>
+    PRESENTE: <i>tu spost<b>i</b></i> → IMPERATIVO: <b>sposta!</b><br>
+    PRESENTE: <i>tu mett<b>i</b></i> → IMPERATIVO: <b>metti!</b><br>
+    PRESENTE: <i>tu apr<b>i</b></i> → IMPERATIVO: <b>apri!</b><br><br>
+    То есть именно у обычных <b>-ARE</b> форма imperativo TU отличается от presente TU. У <b>-ERE / -IRE</b> она совпадает с формой TU presente.
+  </div>
+</section>
+
+<section class="card">
+  <div class="head">
+    <div class="num">2</div>
+    <div><div class="kicker">Negativo</div><h2>NON + infinito</h2><p class="lead">Если говорим «не делай», форма становится ещё проще.</p></div>
+  </div>
+
+  <div class="grid2">
+    <div class="box">
+      <h3>✓ Fai così</h3>
+      <p><b>Sposta</b> il tavolo.<br>
+      <b>Metti</b> una lampada.<br>
+      <b>Scegli</b> colori caldi.<br>
+      <b>Apri</b> le tende.</p>
+    </div>
+    <div class="box">
+      <h3>✕ Non fare così</h3>
+      <p><b>Non spostare</b> il tavolo.<br>
+      <b>Non mettere</b> il divano lì.<br>
+      <b>Non scegliere</b> troppi colori.<br>
+      <b>Non aprire</b> quella porta.</p>
+    </div>
+  </div>
+
+  <div class="note rose">
+    <b>Формула:</b> <span class="arrow">NON + INFINITO</span><br>
+    <i>non usare · non mettere · non scegliere · non aprire</i>
+  </div>
+</section>
+
+<section class="card">
+  <div class="head">
+    <div class="num">3</div>
+    <div><div class="kicker">Controllo rapido</div><h2>Presente o imperativo?</h2><p class="lead">Сначала скажи ответ вслух, потом проверь.</p></div>
+  </div>
+
+  <div class="exercise">
+    <div class="ex">1. Tu sposti il tavolo. → “Передвинь стол!” = ______ <button class="btn" onclick="this.parentElement.classList.toggle('show')">Проверить</button><div class="answer">Sposta il tavolo!</div></div>
+    <div class="ex">2. Tu metti una lampada qui. → “Поставь лампу сюда!” = ______ <button class="btn" onclick="this.parentElement.classList.toggle('show')">Проверить</button><div class="answer">Metti una lampada qui!</div></div>
+    <div class="ex">3. Tu scegli un tappeto chiaro. → “Выбери светлый ковёр!” = ______ <button class="btn" onclick="this.parentElement.classList.toggle('show')">Проверить</button><div class="answer">Scegli un tappeto chiaro!</div></div>
+    <div class="ex">4. Tu usi troppo nero. → “Не используй слишком много чёрного!” = ______ <button class="btn" onclick="this.parentElement.classList.toggle('show')">Проверить</button><div class="answer">Non usare troppo nero!</div></div>
+    <div class="ex">5. Tu apri le tende. → “Не открывай шторы!” = ______ <button class="btn" onclick="this.parentElement.classList.toggle('show')">Проверить</button><div class="answer">Non aprire le tende!</div></div>
+  </div>
+</section>
+
+<section class="card">
+  <div class="head">
+    <div class="num">4</div>
+    <div><div class="kicker">Cinema & design</div><h2>Villa Necchi: dai 5 consigli</h2><p class="lead">Возвращаемся к красивым интерьерам.</p></div>
+  </div>
+
+  <div class="grid2">
+    <div class="photo">
+      <img src="https://czasnawnetrze.pl/i/images/5/5/5/dz0xMjAwJmg9Nzk3_src_31555-film_jestem_miloscia_kadry_z_filmu.jpg" alt="Villa Necchi, Io sono l'amore">
+    </div>
+    <div class="box">
+      <h3>Immagina:</h3>
+      <p>Подруга хочет сделать современную комнату, вдохновлённую этим интерьером, но не копировать его.</p>
+      <p>Дай ей <b>5 советов</b>.</p>
+      <div class="commands">
+        <span class="command">usa</span><span class="command">scegli</span><span class="command">metti</span>
+        <span class="command">lascia</span><span class="command">aggiungi</span><span class="command">non usare</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="instruction">
+    <b>Как делать:</b> 3 утвердительных + 2 отрицательных совета. Пиши полные фразы.
+  </div>
+
+  <div class="note blue">
+    <b>Пример только один:</b> <i>Usa materiali naturali, ma non usare troppi colori diversi.</i>
+  </div>
+</section>
+
+<section class="card">
+  <div class="head">
+    <div class="num">5</div>
+    <div><div class="kicker">Correggi</div><h2>Una stanza troppo fredda</h2><p class="lead">Сначала увидь проблему, потом дай команду.</p></div>
+  </div>
+
+  <div class="grid2">
+    <div class="photo">
+      <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=85&w=1400" alt="Interno contemporaneo">
+    </div>
+    <div class="box">
+      <p>La stanza è ordinata, ma la cliente dice:</p>
+      <p><i>“Per me è troppo fredda. Voglio più calore e più personalità, ma non voglio cambiare il divano.”</i></p>
+      <p><b>Che cosa le consigli?</b></p>
+    </div>
+  </div>
+
+  <div class="instruction">
+    <b>Дай 6 советов:</b> используй минимум 4 разных глагола из сегодняшнего урока.
+  </div>
+
+  <div class="commands">
+    <span class="command">sposta</span><span class="command">aggiungi</span><span class="command">scegli</span>
+    <span class="command">metti</span><span class="command">usa</span><span class="command">togli</span>
+    <span class="command">non mettere</span><span class="command">non scegliere</span>
+  </div>
+</section>
+
+<section class="card">
+  <div class="head">
+    <div class="num">6</div>
+    <div><div class="kicker">Parlare</div><h2>60 secondi da designer</h2><p class="lead">Финал — только голос, без полного написанного текста.</p></div>
+  </div>
+
+  <div class="grid2">
+    <div class="photo">
+      <img src="https://cinetecadibologna.it/programmazione/wp-content/uploads/2022/11/emma-villa-necchi7-1.jpg" alt="Io sono l'amore, Villa Necchi">
+    </div>
+    <div class="box">
+      <h3>La cliente dice:</h3>
+      <p><i>“Mi piace questo tipo di eleganza, ma a casa mia voglio qualcosa di più semplice e contemporaneo. Che cosa faccio?”</i></p>
+    </div>
+  </div>
+
+  <div class="instruction">
+    <b>Как делать:</b> подготовка максимум 1 минута. Выпиши только 6–8 ключевых слов. Потом запиши голосовое <b>60 секунд</b>.
+  </div>
+
+  <div class="note gold">
+    В голосовом обязательно:
+    <br>• минимум <b>5 imperativi TU</b>
+    <br>• минимум <b>2 отрицательных</b> с <b>non + infinito</b>
+    <br>• минимум <b>2 предлога места</b>
+    <br>• минимум <b>1 материал</b>
+    <br>• минимум <b>1 оценка</b>: <i>più caldo / più elegante / meno freddo…</i>
+  </div>
+</section>
+
+<section class="card">
+  <div class="head">
+    <div class="num">✓</div>
+    <div><div class="kicker">Checklist</div><h2>Что отправить преподавателю</h2><p class="lead">Всё остальное можно сделать устно для тренировки.</p></div>
+  </div>
+
+  <div class="checklist">
+    <div class="ck">□ 5 советов по Villa Necchi</div>
+    <div class="ck">□ 6 советов для «холодной» комнаты</div>
+    <div class="ck">□ голосовое «60 secondi da designer»</div>
+  </div>
+
+  <div class="note">
+    <b>Сегодня не нужно:</b> <i>spostalo / mettila / toglili</i>. Местоимения с imperativo оставляем на следующий шаг. Сейчас цель — чтобы сама форма <b>sposta / metti / scegli / non usare</b> стала автоматической.
+  </div>
+</section>
+
+<p class="small" style="margin-top:18px">Изображения проверены при подготовке: кадры/интерьеры из материалов о <i>Io sono l’amore</i> и современный интерьер Unsplash.</p>
+
+</div>
+</body>
+</html>
