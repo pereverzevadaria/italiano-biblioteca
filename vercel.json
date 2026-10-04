@@ -2,6 +2,18 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "rewrites": [
     {
+      "source": "/ast-m8q5",
+      "destination": "/students/ast-m8q5/index.html"
+    },
+    {
+      "source": "/ast-m8q5/",
+      "destination": "/students/ast-m8q5/index.html"
+    },
+    {
+      "source": "/ast-m8q5/:path*",
+      "destination": "/students/ast-m8q5/:path*"
+    },
+    {
       "source": "/ans-p7r4",
       "destination": "/students/ans-p7r4/index.html"
     },
