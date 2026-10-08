@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Giulia · CELI 2 · Foto orale · Homework</title>
+<style>
+:root{
+  --bg:#f3f5f3;--paper:#fffdfa;--ink:#26312f;--muted:#69736f;--line:#d8dfdb;
+  --sage:#49695e;--sage2:#2f4b42;--soft:#eaf0ed;--sand:#f6efe5;--shadow:0 14px 34px rgba(36,50,45,.08)
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#fafbf9,#f1f4f2 520px);color:var(--ink);
+font:17px/1.62 Aptos,Inter,"Segoe UI",Arial,sans-serif}
+.wrap,main,footer{width:min(920px,calc(100% - 28px));margin:auto}
+.hero{padding:38px 0 28px;border-top:5px solid var(--sage);border-bottom:1px solid var(--line)}
+.kicker{font-size:.76rem;font-weight:900;letter-spacing:.15em;text-transform:uppercase;color:var(--sage)}
+h1{margin:8px 0 10px;font-size:clamp(2.4rem,6vw,4.5rem);line-height:1;letter-spacing:-.045em}
+.hero p{margin:0;max-width:760px;color:#53615c}
+main{padding:26px 0 64px}.card{margin:15px 0;padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--paper);box-shadow:var(--shadow)}
+.photo{width:100%;display:block;border-radius:15px;border:1px solid var(--line)}
+.credit{font-size:.74rem;color:#7b8581;margin-top:7px}
+.task{margin-top:18px;padding:15px 16px;border-left:5px solid var(--sage);border-radius:11px;background:var(--soft)}
+.task b{color:var(--sage2)}
+.structure{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-top:15px}
+.step{padding:13px 12px;border:1px solid var(--line);border-radius:12px;background:#fff}
+.step b{display:block;color:var(--sage2);margin-bottom:4px}
+.step span{font-size:.92rem;color:#59645f}
+.note{margin-top:15px;padding:13px 15px;border-radius:11px;background:var(--sand);color:#655845}
+.send{margin-top:15px;padding:15px 16px;border-radius:12px;background:var(--sage2);color:#fff;font-weight:800}
+.timerRow{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:16px}.timer{font-variant-numeric:tabular-nums;font-size:1.8rem;font-weight:900;color:var(--sage2);min-width:92px}
+.btn{border:0;border-radius:10px;padding:9px 12px;background:var(--sage);color:#fff;font:inherit;font-weight:800;cursor:pointer}.btn.ghost{background:#fff;color:var(--sage2);border:1px solid #cbd7d1}
+footer{padding:16px 0 30px;border-top:1px solid var(--line);font-size:.84rem;color:#747e7a}
+@media(max-width:700px){body{font-size:16px}.structure{grid-template-columns:1fr 1fr}.card{padding:18px}}
+@media(max-width:440px){.structure{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap">
+<div class="kicker">GIULIA · CELI 2 B1 · HOMEWORK</div>
+<h1>Descrivi la foto</h1>
+<p>Одна фотография, один устный ответ. Формат максимально близкий к заданию CELI 2 на описание изображения.</p>
+</div></header>
+
+<main>
+<section class="card">
+<img class="photo" src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Milan_Vegetable_Market.jpg" alt="Mercato all'aperto a Milano con frutta, verdura, venditori e clienti">
+<div class="credit">Foto: mercato all’aperto a Milano · Wikimedia Commons · CC BY 2.0</div>
+
+<div class="task"><b>Что сделать:</b><br>
+Посмотри на фотографию. Подготовься максимум <b>30 секунд</b>, затем говори <b>60–90 секунд</b>. Не пиши готовый текст: можно выписать только 4–5 ключевых слов.</div>
+
+<div class="structure">
+<div class="step"><b>1 · DOVE / CHI</b><span>Где происходит действие? Кого ты видишь?</span></div>
+<div class="step"><b>2 · CHE COSA SUCCEDE</b><span>Что делают люди? Что происходит на фото?</span></div>
+<div class="step"><b>3 · DETTAGLI + IPOTESI</b><span>Какие детали замечаешь? Что можно предположить?</span></div>
+<div class="step"><b>4 · COMMENTO</b><span>Что ты думаешь об этой ситуации? Есть ли у тебя похожий опыт?</span></div>
+</div>
+
+<div class="note"><b>Чтобы ответ звучал связно:</b> <i>Nella foto vedo… · Sembra che… · Probabilmente… · In primo piano… · Sullo sfondo… · Secondo me… · Personalmente…</i><br><br>
+Не нужно перечислять всё, что есть на фотографии. Выбери несколько деталей и свяжи их в нормальный рассказ.</div>
+
+<div class="timerRow"><div class="timer" id="t1">00:30</div><button class="btn timerBtn" data-target="t1" data-sec="30">30 sec · prepara</button><button class="btn timerBtn" data-target="t1" data-sec="90">90 sec · parla</button><button class="btn ghost stopBtn" data-target="t1">Stop</button></div>
+
+<div class="send">Отправь Дарье в чат одно аудио с описанием фотографии.</div>
+</section>
+</main>
+
+<footer>DARIA KUZNO · ITALIANO · GIULIA · CELI 2 B1 · HOMEWORK · 08.10.2026</footer>
+
+<script>
+(function(){
+const timers={};
+function render(id,s){const e=document.getElementById(id);const m=String(Math.floor(s/60)).padStart(2,"0"),ss=String(s%60).padStart(2,"0");e.textContent=m+":"+ss}
+document.querySelectorAll(".timerBtn").forEach(b=>b.addEventListener("click",()=>{const id=b.dataset.target;let s=Number(b.dataset.sec);clearInterval(timers[id]);render(id,s);timers[id]=setInterval(()=>{s--;render(id,Math.max(0,s));if(s<=0){clearInterval(timers[id]);document.getElementById(id).textContent="TEMPO"}},1000)}));
+document.querySelectorAll(".stopBtn").forEach(b=>b.addEventListener("click",()=>clearInterval(timers[b.dataset.target])));
+})();
+</script>
+</body>
+</html>
