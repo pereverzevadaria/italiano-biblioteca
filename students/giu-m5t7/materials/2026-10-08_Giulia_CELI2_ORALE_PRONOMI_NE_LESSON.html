@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Giulia · CELI 2 · Orale + pronomi</title>
+<style>
+:root{
+  --bg:#f3f5f3;--paper:#fffdfa;--ink:#26312f;--muted:#66716d;--line:#d8dfdb;
+  --sage:#49695e;--sage2:#2f4b42;--sageSoft:#eaf0ed;--sand:#f5ecdf;--blue:#edf2f6;
+  --rose:#f5eceb;--shadow:0 14px 34px rgba(36,50,45,.08)
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#f8faf8,#f1f4f2 520px);color:var(--ink);
+font:17px/1.6 Aptos,Inter,"Segoe UI",Arial,sans-serif}
+.wrap,main,footer{width:min(1040px,calc(100% - 30px));margin:auto}
+.hero{padding:34px 0 28px;border-top:5px solid var(--sage);border-bottom:1px solid var(--line)}
+.heroGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:stretch}
+.heroText{padding:18px 2px}.kicker{font-size:.77rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase;color:var(--sage)}
+h1{margin:7px 0 10px;font-size:clamp(2.4rem,6vw,4.8rem);line-height:.98;letter-spacing:-.05em}
+.hero p{max-width:700px;margin:0;color:#53615c}.heroPhoto{min-height:300px;border-radius:22px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}
+.heroPhoto img{width:100%;height:100%;object-fit:cover;display:block}.plan{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}
+.chip{padding:7px 10px;border-radius:999px;background:#fff;border:1px solid #d4ddd8;font-size:.82rem;font-weight:800;color:var(--sage2)}
+main{padding:27px 0 70px}.sectionTitle{margin:32px 0 10px}.sectionTitle small{display:block;color:var(--sage);font-weight:900;letter-spacing:.12em;text-transform:uppercase}.sectionTitle h2{margin:4px 0;font-size:clamp(1.7rem,3vw,2.4rem);letter-spacing:-.035em}
+.card{margin:14px 0;padding:22px 23px;border:1px solid var(--line);border-radius:18px;background:var(--paper);box-shadow:var(--shadow)}
+.head{display:flex;align-items:center;gap:11px;flex-wrap:wrap}.num{display:grid;place-items:center;width:36px;height:36px;border-radius:11px;background:var(--sage);color:#fff;font-weight:900}
+.card h3{margin:0;font-size:1.32rem;letter-spacing:-.02em}.instruction{margin:14px 0;padding:13px 15px;border-left:5px solid var(--sage);border-radius:10px;background:var(--sageSoft)}
+.instruction b{color:var(--sage2)}.prompt{padding:13px 0;border-bottom:1px solid var(--line)}.prompt:last-child{border-bottom:0}
+.structure{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:13px 0}.step{padding:11px;border-radius:11px;background:#f3f6f4;border:1px solid #dce4df;text-align:center;font-size:.9rem}.step b{display:block;color:var(--sage2)}
+.timerRow{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:13px}.timer{font-variant-numeric:tabular-nums;font-size:1.8rem;font-weight:900;color:var(--sage2);min-width:92px}
+.btn{border:0;border-radius:10px;padding:9px 12px;background:var(--sage);color:#fff;font:inherit;font-weight:800;cursor:pointer}.btn.ghost{background:#fff;color:var(--sage2);border:1px solid #cbd7d1}
+.photoGrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start}.examPhoto{width:100%;display:block;border-radius:15px;border:1px solid var(--line)}
+.note{margin:13px 0;padding:13px 15px;border-radius:11px;background:var(--blue);color:#405a63}.warning{background:var(--sand);color:#665844}.exam{background:#f1f5f3;border:1px solid #d6e0db;border-radius:13px;padding:15px;margin-top:13px}
+.exam b{color:var(--sage2)}.cue{padding:11px 12px;margin:8px 0;background:#fff;border:1px solid var(--line);border-radius:10px}
+.ruleGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}.rule{padding:15px;border-radius:13px;border:1px solid var(--line);background:#fff}.rule h4{margin:0 0 5px;color:var(--sage2)}.rule p{margin:0;font-size:.94rem}
+.example{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#f4f6f5;border-radius:8px;padding:4px 7px;display:inline-block;margin:2px}
+.exercise{counter-reset:item}.q{padding:13px 0;border-bottom:1px solid var(--line)}.q:last-child{border-bottom:0}.q b{color:var(--sage2)}
+input.blank{width:88px;border:0;border-bottom:2px solid #8ca398;background:transparent;font:inherit;text-align:center;outline:none}
+.answer{display:none;margin-top:7px;padding:8px 10px;border-radius:9px;background:#eaf2ed;color:#2e5b47;font-weight:800}.answer.show{display:block}
+.showBtn{margin-top:8px;border:1px solid #cbd7d1;border-radius:8px;padding:6px 9px;background:#fff;color:var(--sage2);font-weight:800;cursor:pointer}
+details{margin:11px 0;border:1px solid var(--line);border-radius:11px;background:#fff;padding:10px 12px}summary{cursor:pointer;font-weight:850;color:var(--sage2)}
+.speed{display:grid;grid-template-columns:1fr 1fr;gap:9px}.speed .cue{margin:0}
+.final{background:linear-gradient(135deg,#f7faf8,#eaf0ed);border-color:#cfdcd6}.score{display:inline-block;margin-top:8px;padding:7px 10px;border-radius:999px;background:var(--sage2);color:#fff;font-weight:900}
+.credit{font-size:.76rem;color:#7b8581;margin-top:6px}footer{padding:16px 0 30px;border-top:1px solid var(--line);font-size:.84rem;color:#747e7a}
+@media(max-width:760px){body{font-size:16px}.heroGrid,.photoGrid{grid-template-columns:1fr}.heroPhoto{min-height:230px}.structure,.ruleGrid,.speed{grid-template-columns:1fr 1fr}.card{padding:18px}}
+@media(max-width:480px){.structure,.ruleGrid,.speed{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap"><div class="heroGrid">
+<div class="heroText">
+<div class="kicker">GIULIA · CELI 2 B1 · LEZIONE</div>
+<h1>Parlare bene.<br>Rispondere preciso.</h1>
+<p>Allenamento mirato per il prossimo CELI 2: prima la produzione orale in formato d’esame, poi pronomi diretti, indiretti e <b>NE</b> con esercizi tipo A.5.</p>
+<div class="plan"><span class="chip">25–30 min · ORALE</span><span class="chip">30 min · PRONOMI + NE</span><span class="chip">5–10 min · MINI TEST</span></div>
+</div>
+<div class="heroPhoto"><img src="https://www.visitpiemonte.com/core/storage/images/3804/GIO02193.jpg" alt="Donna al tavolo con un computer, situazione quotidiana"></div>
+</div></div></header>
+
+<main>
+<div class="sectionTitle"><small>PARTE 1 · PRODUZIONE ORALE</small><h2>Parla come all’esame</h2></div>
+
+<section class="card">
+<div class="head"><span class="num">1</span><h3>Intervista · risposta completa</h3></div>
+<div class="instruction"><b>Задача:</b> отвечай 45–60 секунд. Не пиши текст заранее. На подготовку — максимум 10 секунд. Каждый ответ должен иметь начало, причину, пример и короткое завершение.</div>
+<div class="structure">
+<div class="step"><b>1 · RISPOSTA</b>Secondo me… / Preferisco…</div>
+<div class="step"><b>2 · MOTIVO</b>perché… / il motivo è che…</div>
+<div class="step"><b>3 · ESEMPIO</b>per esempio… / nel mio caso…</div>
+<div class="step"><b>4 · CHIUSURA</b>quindi… / per questo…</div>
+</div>
+<div class="prompt"><b>A.</b> Perché stai studiando italiano e in quali situazioni ti serve davvero?</div>
+<div class="prompt"><b>B.</b> Se avessi una settimana completamente libera, dove andresti? Perché?</div>
+<div class="prompt"><b>C.</b> Preferisci organizzare tutto in anticipo o decidere all’ultimo momento quando viaggi?</div>
+<div class="prompt"><b>D.</b> C’è qualcosa nella tua routine che vorresti cambiare? Che cosa faresti diversamente?</div>
+<div class="timerRow"><div class="timer" id="t1">00:10</div><button class="btn timerBtn" data-target="t1" data-sec="10">10 sec · pensa</button><button class="btn timerBtn" data-target="t1" data-sec="60">60 sec · parla</button><button class="btn ghost stopBtn" data-target="t1">Stop</button></div>
+<div class="note"><b>Controllo CELI:</b> la risposta non deve essere “perfetta”. Deve essere chiara, collegata e abbastanza sviluppata da non costringere l’esaminatore a tirarti fuori ogni informazione con altre domande.</div>
+</section>
+
+<section class="card">
+<div class="head"><span class="num">2</span><h3>Foto · descrivi + commenta</h3></div>
+<div class="instruction"><b>Задача:</b> 20 секунд на подготовку, затем 90 секунд речи. Сначала опиши то, что действительно видишь; потом добавь гипотезу и короткий личный комментарий.</div>
+<div class="photoGrid">
+<div><img class="examPhoto" src="https://cdn.getyourguide.com/img/tour/601bdf60860e8.jpeg/155.jpg" alt="Due viaggiatori con valigia su un binario"><div class="credit">Foto usata come stimolo didattico · GetYourGuide</div></div>
+<div>
+<div class="exam"><b>1 · DESCRIVI</b><br>Chi vedi? Dove sono? Che cosa stanno facendo? Quali dettagli noti?</div>
+<div class="exam"><b>2 · FAI UN’IPOTESI</b><br>Secondo te, dove stanno andando? È l’inizio o la fine del viaggio? Perché?</div>
+<div class="exam"><b>3 · COMMENTA</b><br>Come ti senti di solito prima di un viaggio? Preferisci treno, macchina o aereo?</div>
+<div class="note warning"><b>Non fare la lista:</b> “vedo una donna, vedo un uomo, vedo una valigia…”. Collega: <i>Nella foto ci sono due persone che… / Mi sembra una situazione… / Probabilmente…</i></div>
+<div class="timerRow"><div class="timer" id="t2">00:20</div><button class="btn timerBtn" data-target="t2" data-sec="20">20 sec · prepara</button><button class="btn timerBtn" data-target="t2" data-sec="90">90 sec · parla</button><button class="btn ghost stopBtn" data-target="t2">Stop</button></div>
+</div></div>
+</section>
+
+<section class="card">
+<div class="head"><span class="num">3</span><h3>Role play · problema con una prenotazione</h3></div>
+<div class="instruction"><b>Задача:</b> ты звонишь в гостиницу. У тебя есть бронь на две ночи, но пришло сообщение, что номер на первую ночь недоступен. Нужно не произнести монолог, а <b>вести разговор</b>: объяснить проблему → спросить решение → отреагировать → уточнить детали.</div>
+<div class="exam">
+<b>LA SITUAZIONE</b><br>
+Hai prenotato una camera per venerdì e sabato. L’hotel ti ha scritto che venerdì non ha più camere disponibili. Tu hai già comprato i biglietti e non vuoi cambiare il viaggio.
+</div>
+<div class="cue"><b>Devi:</b> spiegare perché non puoi cambiare le date; chiedere una soluzione; chiedere se cambia il prezzo; chiedere che cosa succede con la colazione già pagata.</div>
+<details><summary>Esaminatore · risposta 1</summary>“Possiamo offrirLe una camera in un altro hotel per la prima notte.”</details>
+<details><summary>Esaminatore · risposta 2</summary>“Il prezzo sarebbe leggermente più alto, circa 20 euro in più.”</details>
+<details><summary>Esaminatore · risposta 3</summary>“La colazione è inclusa anche nell’altra struttura.”</details>
+<div class="note"><b>Frasi utili:</b> <i>Capisco, però… · Sarebbe possibile…? · Preferirei… · Quindi, se ho capito bene… · In questo caso…</i></div>
+<div class="timerRow"><div class="timer" id="t3">00:30</div><button class="btn timerBtn" data-target="t3" data-sec="30">30 sec · prepara</button><button class="btn timerBtn" data-target="t3" data-sec="120">2 min · dialogo</button><button class="btn ghost stopBtn" data-target="t3">Stop</button></div>
+</section>
+
+<div class="sectionTitle"><small>PARTE 2 · GRAMMATICA CELI</small><h2>Pronomi + NE senza pensarci troppo</h2></div>
+
+<section class="card">
+<div class="head"><span class="num">4</span><h3>Promemoria minimo</h3></div>
+<div class="instruction"><b>Задача:</b> не учим новую теорию. Быстро вспоминаем, <i>что именно заменяет</i> местоимение, и сразу применяем.</div>
+<div class="ruleGrid">
+<div class="rule"><h4>LO · LA · LI · LE</h4><p>Sostituiscono <b>chi? che cosa?</b><br><span class="example">Compro i biglietti → li compro</span></p></div>
+<div class="rule"><h4>GLI · LE</h4><p>Sostituiscono <b>a chi?</b><br><span class="example">Scrivo a Marco → gli scrivo</span></p></div>
+<div class="rule"><h4>NE</h4><p>Sostituisce <b>di… / una quantità</b><br><span class="example">Parlo di questo → ne parlo</span><br><span class="example">Tre caffè → ne prendo tre</span></p></div>
+</div>
+<div class="note warning"><b>Passato prossimo:</b> con <b>lo / la / li / le</b> il participio concorda: <i>Le valigie? Le ho preparate.</i> Con <b>ne + quantità</b> è molto frequente la concordanza: <i>Quante mail? Ne ho scritte cinque.</i></div>
+</section>
+
+<section class="card">
+<div class="head"><span class="num">5</span><h3>Trasforma la risposta</h3></div>
+<div class="instruction"><b>Задача:</b> ответь полной фразой, заменяя выделенную часть местоимением. Сначала вслух, потом открой ответ.</div>
+<div class="exercise">
+<div class="q">1. Hai comprato <b>i biglietti</b>? → Sì, <input class="blank"> ho comprati.<button class="showBtn">Ответ</button><div class="answer">Sì, <b>li</b> ho comprati.</div></div>
+<div class="q">2. Hai chiamato <b>Marta</b>? → Sì, <input class="blank"> ho chiamata ieri.<button class="showBtn">Ответ</button><div class="answer">Sì, <b>l’</b>ho chiamata ieri.</div></div>
+<div class="q">3. Hai scritto <b>a Paolo</b>? → Sì, <input class="blank"> ho scritto stamattina.<button class="showBtn">Ответ</button><div class="answer">Sì, <b>gli</b> ho scritto stamattina.</div></div>
+<div class="q">4. Hai dato le informazioni <b>a Giulia</b>? → Sì, <input class="blank"> ho dato tutte le informazioni.<button class="showBtn">Ответ</button><div class="answer">Sì, <b>le</b> ho dato tutte le informazioni.</div></div>
+<div class="q">5. Quanti libri hai letto quest’estate? → <input class="blank"> ho letti tre.<button class="showBtn">Ответ</button><div class="answer"><b>Ne</b> ho letti tre.</div></div>
+<div class="q">6. Parli spesso <b>del tuo lavoro</b>? → Sì, <input class="blank"> parlo spesso.<button class="showBtn">Ответ</button><div class="answer">Sì, <b>ne</b> parlo spesso.</div></div>
+<div class="q">7. Hai bisogno <b>di aiuto</b>? → No, non <input class="blank"> ho bisogno.<button class="showBtn">Ответ</button><div class="answer">No, non <b>ne</b> ho bisogno.</div></div>
+<div class="q">8. Vuoi <b>del caffè</b>? → Sì, <input class="blank"> vorrei un po’.<button class="showBtn">Ответ</button><div class="answer">Sì, <b>ne</b> vorrei un po’.</div></div>
+</div>
+</section>
+
+<section class="card">
+<div class="head"><span class="num">6</span><h3>A.5 · nessuna scelta</h3></div>
+<div class="instruction"><b>Задача:</b> как в экзаменационном задании: никаких вариантов. Вставь <b>одно</b> подходящее местоимение. Сначала реши весь блок, потом проверь.</div>
+<div class="exercise">
+<div class="q">1. Il documento? Non <input class="blank"> trovo più.</div>
+<div class="q">2. Le chiavi? <input class="blank"> ho messe nella borsa.</div>
+<div class="q">3. A Sara <input class="blank"> ho telefonato ieri sera.</div>
+<div class="q">4. Di quel problema non <input class="blank"> voglio parlare adesso.</div>
+<div class="q">5. Quante email hai scritto? <input class="blank"> ho scritte cinque.</div>
+<div class="q">6. I biglietti? Non <input class="blank"> ho ancora prenotati.</div>
+<div class="q">7. A Marco <input class="blank"> hai già spiegato la situazione?</div>
+<div class="q">8. Del viaggio in California <input class="blank"> parliamo dopo.</div>
+<div class="q">9. Hai visto Anna? Sì, <input class="blank"> ho incontrata in centro.</div>
+<div class="q">10. Quante foto hai fatto? <input class="blank"> ho fatte tantissime.</div>
+</div>
+<details><summary>Soluzioni A.5</summary><b>1 lo · 2 le · 3 le · 4 ne · 5 ne · 6 li · 7 gli · 8 ne · 9 l’ · 10 ne</b></details>
+</section>
+
+<section class="card">
+<div class="head"><span class="num">7</span><h3>Bonus CELI · pronomi combinati</h3></div>
+<div class="instruction"><b>Задача:</b> соединяем два дополнения. Не заучивай таблицу целиком — считай: <i>a chi?</i> + <i>che cosa?/di che cosa?</i></div>
+<div class="speed">
+<div class="cue"><b>1.</b> Dai il passaporto a me. → __________</div>
+<div class="cue"><b>2.</b> Spieghi la situazione a Marco. → __________</div>
+<div class="cue"><b>3.</b> Porti i documenti a noi. → __________</div>
+<div class="cue"><b>4.</b> Racconti il problema a lei. → __________</div>
+<div class="cue"><b>5.</b> Parli di questo a me. → __________</div>
+<div class="cue"><b>6.</b> Hai dato due copie a Marco. → __________</div>
+</div>
+<details><summary>Soluzioni</summary>
+1. <b>Me lo dai.</b><br>
+2. <b>Gliela spieghi.</b><br>
+3. <b>Ce li porti.</b><br>
+4. <b>Glielo racconti.</b><br>
+5. <b>Me ne parli.</b><br>
+6. <b>Gliene hai date due.</b>
+</details>
+</section>
+
+<section class="card">
+<div class="head"><span class="num">8</span><h3>Risposta automatica · 30 secondi</h3></div>
+<div class="instruction"><b>Задача:</b> отвечай сразу, не повторяя существительное. Здесь нужна автоматизация, а не длинный рассказ.</div>
+<div class="prompt">1. Compri spesso i biglietti online?</div>
+<div class="prompt">2. Quante recensioni leggi prima di prenotare un hotel?</div>
+<div class="prompt">3. Telefoni spesso ai tuoi amici?</div>
+<div class="prompt">4. Hai già preparato i documenti per un viaggio?</div>
+<div class="prompt">5. Parli volentieri dei tuoi programmi futuri?</div>
+<div class="prompt">6. Quanti caffè bevi in una giornata normale?</div>
+<div class="note">Obiettivo: <i>Sì, li compro… / Ne leggo… / Sì, gli telefono… / Li ho già preparati… / Ne parlo… / Ne bevo…</i></div>
+</section>
+
+<section class="card final">
+<div class="head"><span class="num">9</span><h3>Mini-test finale · 6 minuti</h3></div>
+<div class="instruction"><b>Задача:</b> без подсказок. 3 минуты на местоимения + 3 минуты на устную ситуацию.</div>
+<div class="exam"><b>A · PRONOMI</b><br>
+1. Le foto? ___ ho già mandate.<br>
+2. Quanti giorni resti? ___ resto quattro. <span style="font-size:.85rem">(attenzione: qui pensa bene!)</span><br>
+3. A Luca ___ ho spiegato tutto.<br>
+4. Di questa storia non ___ so niente.<br>
+5. Il messaggio? Non ___ ho ancora letto.</div>
+<div class="exam"><b>B · ORALE</b><br>
+Sei in un negozio. Hai comprato una giacca due giorni fa, ma a casa hai scoperto che la taglia è sbagliata. Non hai più lo scontrino cartaceo, ma hai la conferma del pagamento sul telefono. Chiedi di cambiarla e reagisci alle domande del commesso.</div>
+<div class="timerRow"><div class="timer" id="t4">03:00</div><button class="btn timerBtn" data-target="t4" data-sec="180">3 min</button><button class="btn ghost stopBtn" data-target="t4">Stop</button></div>
+<details><summary>Chiave per l'insegnante</summary>
+A: 1 <b>le</b> · 2 <b>ci</b> (restare <i>in un posto</i>, non quantità sostituita da NE) · 3 <b>gli</b> · 4 <b>ne</b> · 5 <b>l’</b>.<br><br>
+Per l’orale controllare: spiega il problema / formula una richiesta / reagisce / fa almeno una domanda / mantiene il registro adeguato.
+</details>
+<div class="score">OBIETTIVO: chiarezza + automatismo, non perfezione</div>
+</section>
+</main>
+
+<footer>DARIA KUZNO · ITALIANO · GIULIA · CELI 2 B1 · LEZIONE · 08.10.2026</footer>
+<script>
+(function(){
+const timers={};
+function render(id,s){const e=document.getElementById(id);if(!e)return;const m=String(Math.floor(s/60)).padStart(2,"0"),ss=String(s%60).padStart(2,"0");e.textContent=m+":"+ss}
+document.querySelectorAll(".timerBtn").forEach(b=>b.addEventListener("click",()=>{const id=b.dataset.target;let s=Number(b.dataset.sec);clearInterval(timers[id]);render(id,s);timers[id]=setInterval(()=>{s--;render(id,Math.max(s,0));if(s<=0){clearInterval(timers[id]);document.getElementById(id).textContent="TEMPO"}},1000)}));
+document.querySelectorAll(".stopBtn").forEach(b=>b.addEventListener("click",()=>clearInterval(timers[b.dataset.target])));
+document.querySelectorAll(".showBtn").forEach(b=>b.addEventListener("click",()=>{const a=b.nextElementSibling;if(a)a.classList.toggle("show")}));
+})();
+</script>
+</body>
+</html>
