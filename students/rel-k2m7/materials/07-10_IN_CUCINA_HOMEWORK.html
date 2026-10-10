@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>07.10 · In cucina · Homework</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600;700&family=Onest:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4efe7;--paper:#fffdf8;--ink:#2d322f;--muted:#74766f;--line:#ddd4c6;--green:#58705f;--green2:#e7eee8;--brick:#b76148;--sand:#efe0b8;--cream:#fff7df;--good:#dfeee3;--bad:#f5dfda}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Onest',sans-serif;line-height:1.58}
+.wrap{width:min(980px,calc(100% - 24px));margin:auto;padding:24px 0 56px}
+.hero{min-height:360px;border-radius:30px;padding:clamp(26px,6vw,52px);display:flex;flex-direction:column;justify-content:flex-end;color:#fff;background:linear-gradient(135deg,#2a3b32,#637867 58%,#9f6850)}
+.eyebrow{font-size:.76rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;opacity:.85}
+h1,h2,h3{font-family:'Lora',serif}
+h1{font-size:clamp(3rem,7vw,5rem);line-height:.95;margin:11px 0}
+h2{font-size:clamp(1.85rem,4vw,2.55rem);line-height:1.08;margin:0 0 8px}
+h3{margin:22px 0 8px}
+.hero p{max-width:760px;color:rgba(255,255,255,.9)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:17px}
+.tags span{background:#f1dfb8;color:#493d31;padding:7px 10px;border-radius:999px;font-weight:800;font-size:.82rem}
+section{margin-top:18px;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:24px}
+.kicker{color:var(--brick);font-size:.76rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;margin-bottom:7px}
+.lead{color:var(--muted)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.card,.question{border:1px solid var(--line);border-radius:16px;background:#fff;padding:15px}
+.note,.instruction{padding:14px 16px;border-radius:15px;margin:15px 0}
+.note{background:var(--cream);border:1px solid #e7d6a6}
+.instruction{background:var(--green2);border:1px solid #cad8cc}
+.wordbank{display:flex;gap:7px;flex-wrap:wrap;margin:13px 0}
+.wordbank span{background:var(--sand);padding:6px 9px;border-radius:999px;font-weight:800;font-size:.84rem}
+.reveal{width:100%;text-align:left;font:inherit;color:inherit;border:1px solid var(--line);background:#fff;border-radius:14px;padding:14px;cursor:pointer}
+.answer{display:none;margin-top:9px;padding-top:9px;border-top:1px dashed var(--line);color:var(--green);font-weight:700}
+.reveal.open .answer{display:block}
+.options{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.option{font:inherit;border:1px solid var(--line);background:#fff;border-radius:11px;padding:9px 12px;cursor:pointer;min-height:44px}
+.option.correct{background:var(--good);border-color:#a8c9ad}
+.option.wrong{background:var(--bad);border-color:#d9aaa2}
+.feedback{min-height:23px;margin-top:8px;font-weight:700}
+.voice{background:linear-gradient(135deg,#34483c,#647966);color:#fff}
+.voice .card,.voice .instruction{color:var(--ink)}
+.voice .instruction{background:#fff}
+@media(max-width:700px){.grid2,.grid3{grid-template-columns:1fr}section{padding:19px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+<div class="eyebrow">Ruslan & Elena · Homework · 07.10</div>
+<h1>In cucina.</h1>
+<p>Закрепляем первый кухонный урок: <b>продукт → действие → порядок → короткий рассказ</b>. Никакой новой грамматики.</p>
+<div class="tags"><span>tagliare</span><span>friggere</span><span>scolare</span><span>mescolare</span><span>prima / poi / dopo</span><span>audio</span></div>
+</header>
+
+<section>
+<div class="kicker">0 · Памятка</div>
+<h2>Главные глаголы.</h2>
+<div class="grid2">
+<div class="card"><b>tagliare</b> — резать<br><b>mettere</b> — класть<br><b>aggiungere</b> — добавлять<br><b>cuocere</b> — готовить / варить</div>
+<div class="card"><b>friggere</b> — жарить<br><b>scolare</b> — сливать воду<br><b>mescolare</b> — перемешивать</div>
+</div>
+<div class="note"><b>Связки:</b> <i>prima → poi → nel frattempo → dopo → alla fine</i></div>
+</section>
+
+<section>
+<div class="kicker">1 · Verbo giusto</div>
+<h2>Выберите действие.</h2>
+<div class="grid2">
+<div class="question" data-answer="tagliare"><b>Le melanzane sono intere.</b><div class="options"><button class="option">tagliare</button><button class="option">scolare</button><button class="option">mescolare</button></div><div class="feedback"></div></div>
+<div class="question" data-answer="friggere"><b>Le melanzane vanno in padella con l'olio.</b><div class="options"><button class="option">friggere</button><button class="option">lavare</button><button class="option">scolare</button></div><div class="feedback"></div></div>
+<div class="question" data-answer="scolare"><b>La pasta è pronta ed è ancora nell'acqua.</b><div class="options"><button class="option">scolare</button><button class="option">tagliare</button><button class="option">aggiungere</button></div><div class="feedback"></div></div>
+<div class="question" data-answer="mescolare"><b>La pasta e il sugo sono pronti.</b><div class="options"><button class="option">mescolare</button><button class="option">friggere</button><button class="option">sbucciare</button></div><div class="feedback"></div></div>
+<div class="question" data-answer="aggiungere"><b>Manca la ricotta salata.</b><div class="options"><button class="option">aggiungere</button><button class="option">scolare</button><button class="option">tagliare</button></div><div class="feedback"></div></div>
+<div class="question" data-answer="mettere"><b>L'acqua deve andare nella pentola.</b><div class="options"><button class="option">mettere</button><button class="option">friggere</button><button class="option">mescolare</button></div><div class="feedback"></div></div>
+</div>
+</section>
+
+<section>
+<div class="kicker">2 · Ricetta</div>
+<h2>Pasta alla Norma: восстановите порядок.</h2>
+<div class="wordbank">
+<span>lavare e tagliare le melanzane</span>
+<span>friggere le melanzane</span>
+<span>preparare il sugo</span>
+<span>cuocere la pasta</span>
+<span>scolare la pasta</span>
+<span>mescolare pasta e sugo</span>
+<span>aggiungere ricotta e basilico</span>
+</div>
+<div class="instruction"><b>Сначала вслух без подсказки.</b> Потом откройте ответ.</div>
+<button class="reveal"><b>Проверить возможный порядок</b><span class="answer">Prima laviamo e tagliamo le melanzane. Poi friggiamo le melanzane. Dopo prepariamo il sugo. Nel frattempo cuociamo la pasta. Poi scoliamo la pasta e mescoliamo la pasta con il sugo. Alla fine aggiungiamo le melanzane, il basilico e la ricotta salata.</span></button>
+
+<h3>Что можно делать одновременно?</h3>
+<div class="grid2">
+<button class="reveal"><b>Le melanzane sono in padella. Nel frattempo...</b><span class="answer">Nel frattempo possiamo preparare il sugo.</span></button>
+<button class="reveal"><b>Il sugo cuoce. Nel frattempo...</b><span class="answer">Nel frattempo possiamo cuocere la pasta.</span></button>
+</div>
+</section>
+
+<section>
+<div class="kicker">3 · Chi viene a cena?</div>
+<h2>Один гость — одно решение.</h2>
+<p class="lead">Выберите любого гостя и скажите минимум 4 фразы.</p>
+
+<div class="grid2">
+<div class="card"><b>🥬 Il vegano</b><br>Non mangia formaggio, carne, pesce o uova.<br><br><b>Che cosa possiamo preparare?</b></div>
+<div class="card"><b>👴 Il nonno difficile</b><br>Non vuole aglio. Non gli piacciono le melanzane.<br><br><b>Che cosa dobbiamo cambiare?</b></div>
+<div class="card"><b>🌊 Gli amici da Vladivostok</b><br>Hanno molta fame e vogliono una cena molto italiana.<br><br><b>Che cosa prepariamo?</b></div>
+<div class="card"><b>🚪 Il vicino</b><br>Dice che non mangia. Poi mangia metà della cena.<br><br><b>Che cosa dobbiamo preparare in più?</b></div>
+</div>
+
+<div class="wordbank"><span>Dobbiamo...</span><span>Possiamo...</span><span>Non possiamo...</span><span>Io posso...</span><span>Tu puoi...</span></div>
+</section>
+
+<section>
+<div class="kicker">4 · Problema</div>
+<h2>До гостей 30 минут.</h2>
+<div class="card">
+Non abbiamo ricotta salata.<br>
+Il pane è poco.<br>
+Le melanzane non sono ancora pronte.<br><br>
+<b>Che cosa facciamo?</b>
+</div>
+<div class="instruction">Скажите 4–5 фраз. Не переводите слово в слово: используйте <i>Dobbiamo... / Possiamo... / Io posso... / Tu puoi...</i>.</div>
+<div class="grid2">
+<button class="reveal"><b>Вариант 1</b><span class="answer">Dobbiamo comprare la ricotta salata. Possiamo fare meno bruschette. Io posso friggere le melanzane. Tu puoi preparare il sugo.</span></button>
+<button class="reveal"><b>Вариант 2</b><span class="answer">Possiamo fare la Norma senza ricotta salata. Dobbiamo usare più pomodori. Io posso preparare il sugo. Tu puoi finire le melanzane.</span></button>
+</div>
+</section>
+
+<section>
+<div class="kicker">5 · Mini passato prossimo</div>
+<h2>Что сделали вчера?</h2>
+<p class="lead">Только короткое повторение.</p>
+<div class="grid2">
+<button class="reveal"><b>Oggi tagliamo le melanzane. → ieri</b><span class="answer">Ieri abbiamo tagliato le melanzane.</span></button>
+<button class="reveal"><b>Oggi friggiamo le melanzane. → ieri</b><span class="answer">Ieri abbiamo fritto le melanzane.</span></button>
+<button class="reveal"><b>Oggi facciamo la pasta. → ieri</b><span class="answer">Ieri abbiamo fatto la pasta.</span></button>
+<button class="reveal"><b>Oggi prendiamo il pane. → ieri</b><span class="answer">Ieri abbiamo preso il pane.</span></button>
+</div>
+<div class="note"><b>Запомнить:</b> <i>friggere → fritto · fare → fatto · prendere → preso</i>.</div>
+</section>
+
+<section class="voice">
+<div class="kicker" style="color:#f1dfb8">6 · Audio per Daria</div>
+<h2>Расскажите рецепт без текста.</h2>
+<div class="grid2">
+<div class="card"><b>Ruslan</b><br><br><b>Pasta alla Norma</b><br>45–60 секунд.<br><br>Минимум 5 глаголов и 4 связки: <i>prima, poi, nel frattempo, alla fine</i>.</div>
+<div class="card"><b>Elena</b><br><br><b>Bruschette al pomodoro</b><br>45–60 секунд.<br><br>Минимум 5 действий и один вариант: что делать, если хлеба мало.</div>
+</div>
+<div class="instruction"><b>Важно:</b> не читать готовый рецепт. Можно посмотреть только на список слов.</div>
+</section>
+
+</div>
+<script>
+document.querySelectorAll('.reveal').forEach(b=>b.addEventListener('click',()=>b.classList.toggle('open')));
+document.querySelectorAll('.question').forEach(q=>{
+  const answer=(q.dataset.answer||'').trim();
+  q.querySelectorAll('.option').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      q.querySelectorAll('.option').forEach(x=>x.classList.remove('correct','wrong'));
+      const ok=btn.textContent.trim()===answer;
+      btn.classList.add(ok?'correct':'wrong');
+      q.querySelector('.feedback').textContent=ok?'✓ Правильно':'✗ Попробуйте ещё раз';
+    });
+  });
+});
+</script>
+</body>
+</html>
