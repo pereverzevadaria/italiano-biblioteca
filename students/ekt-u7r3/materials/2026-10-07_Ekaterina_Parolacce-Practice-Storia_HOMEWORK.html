@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Ekaterina · Parolacce: pratica + storia · Homework</title>
+<style>
+:root{
+  --bg:#f4efe8;--paper:#fffdf9;--ink:#252a28;--muted:#6b716d;--line:#ded5ca;
+  --wine:#7b3b39;--rust:#b9634f;--gold:#d4a04b;--sage:#e5eee5;--cream:#f9efd5;
+  --blue:#e8eef5;--rose:#f3dfda;--shadow:0 16px 38px rgba(50,42,36,.085)
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:linear-gradient(180deg,#e9dfd5 0,#f4efe8 500px);color:var(--ink);
+font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.58}
+.hero{min-height:390px;display:flex;align-items:flex-end;color:#fff;background:
+linear-gradient(180deg,rgba(20,18,18,.12),rgba(20,18,18,.84)),
+url("https://images.unsplash.com/photo-1762329854982-9bb811c3be64?auto=format&fit=crop&fm=jpg&q=82&w=1800") center/cover no-repeat}
+.hero-in{width:min(1040px,calc(100% - 28px));margin:auto;padding:58px 0 42px}
+.eyebrow{display:inline-block;border:1px solid rgba(255,255,255,.3);background:rgba(0,0,0,.18);
+border-radius:999px;padding:7px 11px;font-size:.72rem;font-weight:900;letter-spacing:.11em;text-transform:uppercase}
+h1{font:700 clamp(2.8rem,7vw,5.5rem)/.95 Georgia,serif;letter-spacing:-.04em;margin:15px 0 11px}
+.hero p{max-width:780px;margin:0;color:rgba(255,255,255,.94);font-size:1.05rem}
+main{max-width:1040px;margin:auto;padding:27px 14px 80px}
+.card{background:var(--paper);border:1px solid rgba(0,0,0,.065);border-radius:25px;padding:clamp(20px,4vw,34px);
+box-shadow:var(--shadow);margin-bottom:20px}
+.kicker{font-size:.72rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--wine);margin-bottom:6px}
+h2{font:700 clamp(1.8rem,4vw,2.7rem)/1.08 Georgia,serif;margin:0 0 15px}
+h3{font-size:1.07rem;margin:19px 0 8px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}
+.box,.scene,.source{background:#fff;border:1px solid var(--line);border-radius:17px;padding:15px}
+.note,.warn{padding:13px 15px;border-radius:5px 15px 15px 5px;margin:14px 0;border-left:4px solid}
+.note{background:var(--sage);border-color:#78907c}.warn{background:var(--cream);border-color:var(--gold)}
+.label{display:inline-block;border-radius:999px;padding:5px 9px;font-size:.69rem;font-weight:900;letter-spacing:.05em;text-transform:uppercase;
+background:#f5efe8;border:1px solid var(--line);margin-bottom:8px}
+.pill{display:inline-block;border-radius:999px;padding:6px 10px;margin:3px 4px 3px 0;font-size:.8rem;font-weight:850;background:#f7f3ee;border:1px solid var(--line)}
+.big{font:700 1.3rem/1.2 Georgia,serif;color:var(--wine)}
+.muted{color:var(--muted);font-size:.87rem}.task{font-weight:850;color:var(--wine)}
+.table{width:100%;border-collapse:separate;border-spacing:0;border:1px solid var(--line);border-radius:17px;overflow:hidden;background:#fff}
+.table th,.table td{padding:11px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);vertical-align:top;overflow-wrap:anywhere}
+.table th:last-child,.table td:last-child{border-right:0}.table tr:last-child td{border-bottom:0}.table th{background:#f5f1eb;text-align:left}
+.reading{font-family:Georgia,serif;font-size:1.06rem;line-height:1.72}
+.reading p{margin:0 0 15px}.dropcap:first-letter{float:left;font-size:3.8rem;line-height:.8;padding-right:8px;color:var(--wine);font-weight:700}
+.timeline{display:grid;grid-template-columns:120px 1fr;gap:10px;align-items:start;margin:10px 0}
+.year{font-weight:900;color:var(--wine);background:#f4e9e5;border:1px solid var(--line);border-radius:12px;padding:8px 10px;text-align:center}
+.line{display:block;border-bottom:1px solid #aaa;height:25px}
+.quiz{display:grid;gap:9px}
+.q{border:1px solid var(--line);border-radius:15px;padding:13px;background:#fff}
+.opt{display:inline-block;margin:5px 6px 0 0;padding:6px 9px;border:1px solid var(--line);border-radius:999px;background:#faf7f2;font-size:.82rem}
+.audio{background:linear-gradient(135deg,#f8eee7,#edf2eb);border:1px solid var(--line);border-radius:18px;padding:16px}
+.sources a{color:var(--wine);font-weight:750}
+footer{text-align:center;color:var(--muted);font-size:.8rem;margin-top:28px}
+@media(max-width:760px){.grid2,.grid3{grid-template-columns:1fr}.timeline{grid-template-columns:1fr}.hero{min-height:350px}}
+</style>
+</head>
+<body>
+<header class="hero"><div class="hero-in">
+<span class="eyebrow">Homework · Ekaterina</span>
+<h1>Parolacce:<br>allenare l’orecchio.</h1>
+<p>Un po’ di pratica, un po’ di storia. Obiettivo: riconoscere il registro, scegliere la reazione giusta e capire come certe parole regionali sono diventate “italiane”.</p>
+</div></header>
+<main>
+<section class="card"><div class="kicker">1 · Riscaldamento</div><h2>Abbassa o alza il volume</h2><p>Trasforma la frase senza cambiare il messaggio.</p>
+<div class="grid2">
+<div class="scene"><b>Che cazzo fai?</b><br>Più morbido: __________________________</div>
+<div class="scene"><b>Dove cavolo sei?</b><br>Più volgare: __________________________</div>
+<div class="scene"><b>Mi hai rotto le palle.</b><br>Più morbido: __________________________</div>
+<div class="scene"><b>Vai a quel paese.</b><br>Più forte: __________________________</div>
+<div class="scene"><b>Non capisco un cazzo.</b><br>Più morbido: __________________________</div>
+<div class="scene"><b>Che cavolata.</b><br>Più forte: __________________________</div>
+<div class="scene"><b>Porca miseria, ho perso il treno.</b><br>Più volgare: __________________________</div>
+<div class="scene"><b>Col cazzo che ci vado.</b><br>Più morbido: __________________________</div>
+</div><div class="note"><b>Parole-ponte utili:</b> cavolo · scatole · accidenti · porca miseria · vai a quel paese · mizzica.</div></section>
+
+<section class="card"><div class="kicker">2 · CAZZO family</div><h2>Scegli la forma giusta</h2>
+<p>Completa con: <b>cazzata · incazzata · cazzeggiare · cazzuta · col cazzo che · un cazzo</b>.</p>
+<div class="grid2">
+<div class="scene">1. Non ho capito __________.</div><div class="scene">2. Ieri ho __________ tutto il pomeriggio.</div>
+<div class="scene">3. È una donna davvero __________: non si lascia intimidire.</div><div class="scene">4. Ho detto una __________ enorme.</div>
+<div class="scene">5. Sono ancora __________ con lui.</div><div class="scene">6. “Vai anche tu alla riunione alle 7 di domenica?” — __________!</div>
+</div>
+<h3>Adesso scegli tu il contesto</h3><div class="grid3">
+<div class="box"><span class="big">grazie al cazzo</span><br><span class="muted">Scrivi una frase ovvia a cui potresti rispondere così.</span><span class="line"></span></div>
+<div class="box"><span class="big">che cazzata</span><br><span class="muted">Inventati una “grande idea” assurda.</span><span class="line"></span></div>
+<div class="box"><span class="big">cazzeggiare</span><br><span class="muted">Quando lo fai di solito?</span><span class="line"></span></div>
+</div></section>
+
+<section class="card"><div class="kicker">3 · Nord / Sud</div><h2>FIGA, MINCHIA, MIZZICA</h2>
+<div class="quiz">
+<div class="q"><b>1. Vedi un panorama spettacolare a Palermo.</b><br><span class="opt">Minchia, che bello!</span><span class="opt">Che sfiga!</span><span class="opt">Mi hai rotto le palle.</span><br>Scelta: ______</div>
+<div class="q"><b>2. A Milano un’amica ti mostra un locale bellissimo.</b><br><span class="opt">Che figata!</span><span class="opt">Vaffanculo!</span><span class="opt">Che stronzata!</span><br>Scelta: ______</div>
+<div class="q"><b>3. Vuoi la stessa sorpresa di “Minchia!”, ma più attenuata.</b><br><span class="opt">Mizzica!</span><span class="opt">Pezzo di merda!</span><span class="opt">Col cazzo!</span><br>Scelta: ______</div>
+<div class="q"><b>4. Il trekking viene cancellato proprio oggi.</b><br><span class="opt">Che figata!</span><span class="opt">Che sfiga!</span><span class="opt">Cazzuta!</span><br>Scelta: ______</div>
+</div></section>
+
+<section class="card"><div class="kicker">4 · Lettura storica</div><h2>Quando le parolacce sono entrate nel salotto</h2>
+<div class="reading">
+<p class="dropcap">Oggi sentire <i>cazzo</i>, <i>minchia</i> o <i>che palle</i> in una serie italiana non sorprende quasi nessuno. Ma per molti decenni il linguaggio dei media italiani era molto più controllato. La radio e soprattutto la televisione pubblica del dopoguerra avevano anche una funzione educativa: dovevano informare, divertire e insegnare un italiano comune a un Paese in cui moltissime persone parlavano ancora soprattutto dialetto.</p>
+<p>Tra gli anni Cinquanta e Settanta, il modello televisivo era quindi piuttosto sorvegliato e “perbene”. Il parlato spontaneo, gli accenti molto marcati e naturalmente le parolacce entravano con difficoltà nello spazio pubblico. Per capire quanto fosse diversa la sensibilità, basta un episodio: nel 1976 lo scrittore e sceneggiatore <b>Cesare Zavattini</b>, ormai anziano, pronunciò <i>cazzo</i> in diretta radiofonica. Oggi potrebbe sembrare irrilevante; all’epoca provocò scalpore proprio perché una parola della conversazione privata era entrata senza filtro in un mezzo nazionale.</p>
+<p>Pochi anni dopo il sistema cambiò rapidamente. La crescita delle emittenti private, la televisione commerciale degli anni Ottanta e un generale avvicinamento dei media alla lingua quotidiana portarono sullo schermo un italiano più informale. La parolaccia cominciò a funzionare anche come segnale di spontaneità: non solo rabbia, ma autenticità, comicità, provocazione.</p>
+<p>Il cinema aveva già fatto una parte di questo lavoro. Nei film italiani il turpiloquio restava spesso <b>regionale</b>: a Roma potevano comparire <i>ammazza!</i> e <i>mortacci!</i>; dal Sud arrivava <i>minchia!</i>; al Nord <i>figa</i> invece di <i>fica</i>. Con il cinema, la televisione e poi Internet alcune parole hanno cominciato a viaggiare. <i>Minchia</i>, per esempio, nasce come voce meridionale ma oggi è perfettamente riconoscibile anche a Milano o Torino. E <i>figa</i>, nata come variante settentrionale, è ormai compresa ben oltre il Nord.</p>
+<p>C’è poi un fenomeno curioso: il <b>doppiaggio</b>. I film americani tradotti in italiano hanno spesso usato un repertorio più “nazionale”, perché un personaggio hollywoodiano non può improvvisamente parlare come un romano, un siciliano o un milanese. Così il doppiaggio ha contribuito a diffondere certe formule condivise, mentre il cinema italiano ha conservato più facilmente il colore regionale.</p>
+<p>La storia delle parolacce racconta quindi qualcosa di più grande del turpiloquio: racconta come gli italiani siano passati da molte lingue locali a un italiano comune, senza perdere del tutto le differenze regionali. Anche le parolacce hanno fatto il viaggio dal dialetto, alla strada, allo schermo — e infine nel vocabolario di tutti.</p>
+</div><div class="note"><b>Idea da ricordare:</b> una parola può avere un’origine regionale e, con il tempo, diventare comprensibile e usabile in tutta Italia.</div></section>
+
+<section class="card"><div class="kicker">5 · Dopo la lettura</div><h2>Hai capito il filo?</h2>
+<h3>Vero o falso?</h3><table class="table">
+<tr><th>Frase</th><th>V / F</th></tr>
+<tr><td>1. La televisione italiana del dopoguerra cercava anche di diffondere un italiano comune.</td><td>___</td></tr>
+<tr><td>2. Negli anni Cinquanta le parolacce erano già normali nei programmi pubblici.</td><td>___</td></tr>
+<tr><td>3. Nel 1976 una semplice parola volgare pronunciata in radio poteva ancora creare scandalo.</td><td>___</td></tr>
+<tr><td>4. Il cinema italiano ha spesso conservato parolacce e interiezioni regionali.</td><td>___</td></tr>
+<tr><td>5. Oggi “minchia” può essere capita anche fuori dalla Sicilia.</td><td>___</td></tr>
+</table>
+<h3>Rispondi con 1–2 frasi</h3>
+<div class="scene"><b>1. Perché la televisione dei primi decenni preferiva un italiano controllato?</b><br><span class="line"></span><span class="line"></span></div>
+<div class="scene"><b>2. Che cosa cambia negli anni Ottanta?</b><br><span class="line"></span><span class="line"></span></div>
+<div class="scene"><b>3. Perché il doppiaggio tende ad avere meno colore regionale?</b><br><span class="line"></span><span class="line"></span></div>
+<div class="scene"><b>4. Quale parola del testo ti sembra aver “viaggiato” di più?</b><br><span class="line"></span><span class="line"></span></div>
+<h3>Una domanda vera</h3><div class="warn"><b>Secondo te, quando una parolaccia passa dalla strada alla TV perde forza oppure diventa solo più normale?</b><br><br>Scrivi 3–4 frasi. Non esiste una risposta giusta.</div></section>
+
+<section class="card"><div class="kicker">6 · Reazioni</div><h2>Usa la lingua, non la lista</h2><p>Per ogni situazione scrivi <b>due reazioni</b>: una più pulita e una più volgare.</p>
+<div class="grid2">
+<div class="scene"><b>Hai dimenticato il portafoglio a casa.</b><br>Pulita: __________<br>Volgare: __________</div>
+<div class="scene"><b>Una tua amica ti mostra un vestito stupendo.</b><br>Pulita: __________<br>Volgare: __________</div>
+<div class="scene"><b>Qualcuno ti propone di lavorare gratis “per fare esperienza”.</b><br>Pulita: __________<br>Volgare: __________</div>
+<div class="scene"><b>Una persona ripete la stessa stupidaggine per la terza volta.</b><br>Pulita: __________<br>Volgare: __________</div>
+<div class="scene"><b>Un amico ti chiama alle 3 di notte per niente.</b><br>Pulita: __________<br>Volgare: __________</div>
+<div class="scene"><b>Trovi una trattoria incredibile e spendi 12 euro.</b><br>Pulita: __________<br>Volgare: __________</div>
+</div></section>
+
+<section class="card"><div class="kicker">7 · Audio</div><h2>60–90 secondi</h2>
+<div class="audio">
+<p>Racconta:</p>
+<p><b>1.</b> una cosa che ti ha colpito nella storia delle parolacce nei media italiani;</p>
+<p><b>2.</b> una parola regionale che oggi senti come “nazionale”;</p>
+<p><b>3.</b> tre reazioni tue: una di entusiasmo, una di fastidio, una di rifiuto.</p>
+<p>Puoi usare parolacce, ma solo quelle che useresti davvero.</p>
+</div></section>
+
+<section class="card sources"><div class="kicker">Per approfondire</div><h2>Da dove viene il testo storico</h2>
+<div class="source"><b>Treccani · Parole oscene</b><br><a href="https://www.treccani.it/enciclopedia/parole-oscene_%28Enciclopedia-dell%27Italiano%29/" target="_blank">Apri →</a></div>
+<div class="source"><b>Treccani · Le parolacce nell’italiano doppiato al cinema</b><br><a href="https://www.treccani.it/magazine/lingua_italiana/speciali/traduttese/Ferrario.html" target="_blank">Apri →</a></div>
+<div class="source"><b>Treccani · Sclerosi verbale: la degenerazione del teleturpiloquio</b><br><a href="https://www.treccani.it/magazine/lingua_italiana/speciali/eloquio/ravesi.html" target="_blank">Apri →</a></div>
+</section>
+
+<section class="card"><div class="kicker">Da mandare</div><h2>Cosa mi mandi</h2><div class="grid2">
+<div class="box">✓ esercizi 1–3</div><div class="box">✓ vero/falso + 4 risposte</div><div class="box">✓ 6 coppie di reazioni</div><div class="box">✓ audio 60–90 secondi</div>
+</div></section>
+<footer>DARIA KUZNO · ITALIANO · Ekaterina · Homework</footer>
+</main></body></html>
