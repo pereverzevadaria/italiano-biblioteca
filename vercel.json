@@ -216,6 +216,18 @@
     {
       "source": "/ekt-u7r3/:path*",
       "destination": "/students/ekt-u7r3/:path*"
+    },
+    {
+      "source": "/evg-v8k3",
+      "destination": "/students/evg-v8k3/index.html"
+    },
+    {
+      "source": "/evg-v8k3/",
+      "destination": "/students/evg-v8k3/index.html"
+    },
+    {
+      "source": "/evg-v8k3/:path*",
+      "destination": "/students/evg-v8k3/:path*"
     }
   ]
 }
