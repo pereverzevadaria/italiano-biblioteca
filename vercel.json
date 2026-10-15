@@ -228,6 +228,18 @@
     {
       "source": "/evg-v8k3/:path*",
       "destination": "/students/evg-v8k3/:path*"
+    },
+    {
+      "source": "/elg-v4k8",
+      "destination": "/students/elg-v4k8/index.html"
+    },
+    {
+      "source": "/elg-v4k8/",
+      "destination": "/students/elg-v4k8/index.html"
+    },
+    {
+      "source": "/elg-v4k8/:path*",
+      "destination": "/students/elg-v4k8/:path*"
     }
   ]
 }
