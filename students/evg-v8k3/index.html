@@ -36,6 +36,17 @@ footer{padding:26px 2px 0;display:flex;justify-content:space-between;gap:16px;fl
 @media(max-width:560px){.wrap{width:calc(100% - 24px);padding-top:12px}.hero{min-height:270px;padding:28px 23px;border-radius:23px}.brand{font-size:.7rem}.section{border-radius:20px;margin-top:14px}.section-head{align-items:start}.empty{align-items:flex-start;gap:15px;padding-top:28px}.icon{flex-basis:48px;width:48px;height:48px;border-radius:13px}.icon svg{width:23px;height:23px}.empty h3{font-size:1.25rem}.lead{font-size:.95rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>
+<style>
+.material-row{display:grid;grid-template-columns:74px minmax(0,1fr) auto;gap:18px;align-items:center;padding:24px 0 5px}
+.material-date{background:#f3eadc;border-radius:14px;text-align:center;padding:12px 8px;display:grid}
+.material-date strong{font:500 1.85rem Georgia,serif;color:#345c4b;line-height:1}
+.material-date span{font-size:.7rem;letter-spacing:.12em;color:#69726b}
+.material-type{font-size:.72rem;font-weight:700;letter-spacing:.1em;color:#b87652}
+.material-copy h3{font:500 1.45rem Georgia,serif;margin:6px 0}
+.material-copy p{color:#69726b;margin:0;font-size:.89rem}
+.material-link{display:inline-flex;background:#345c4b;color:#fff;text-decoration:none;border-radius:999px;font-weight:700;padding:11px 17px;white-space:nowrap}
+@media(max-width:760px){.material-row{grid-template-columns:55px 1fr;gap:13px}.material-link{grid-column:1 / -1;justify-content:center}}
+</style>
 </head>
 <body>
 <main class="wrap">
@@ -46,11 +57,11 @@ footer{padding:26px 2px 0;display:flex;justify-content:space-between;gap:16px;fl
 <p class="lead">Здесь будут появляться домашние задания и материалы для самостоятельной работы. Ссылка всегда остаётся одной и той же — библиотека пополняется после занятий.</p>
 </div></header>
 <section class="section" aria-labelledby="month-heading">
-<div class="section-head"><h2 id="month-heading">Октябрь 2026</h2><span class="count">0 материалов</span></div>
-<div class="empty">
-<div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/><path d="M9 7h7M9 11h5"/></svg></div>
-<div><h3>La storia comincia qui.</h3><p>Первое домашнее задание появится здесь после занятия. Все материалы будут доступны по этой ссылке.</p></div>
-</div>
+<div class="section-head"><h2 id="month-heading">Октябрь 2026</h2><span class="count">1 материал</span></div>
+<article class="material-row"><div class="material-date"><strong>19</strong><span>OCT</span></div>
+<div class="material-copy"><span class="material-type">HOMEWORK · A2</span><h3>Lo stile di una volta</h3>
+<p>Глаголы одежды · 3 кинокадра · описание стиля · 18 устных фраз · глоссарий</p></div>
+<a class="material-link" href="/students/evg-v8k3/materials/2026-10-19_Evgenij_Lo-stile-di-una-volta_HOMEWORK.html">Открыть домашку →</a></article>
 </section>
 <p class="note">Материалы добавляются по мере прохождения тем — ничего искать в переписке не потребуется.</p>
 <footer><span>DARIA KUZNO · ITALIANO</span><span>Monza · Italia · 2026</span></footer>
