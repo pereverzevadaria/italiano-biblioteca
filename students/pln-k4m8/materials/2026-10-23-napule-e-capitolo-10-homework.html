@@ -16,10 +16,10 @@ section{margin:18px 0;padding:clamp(22px,4.5vw,38px);background:var(--paper);bor
 .textbox{font-family:Georgia,serif;font-size:1.06rem;background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .card{padding:15px 16px;border:1px solid var(--line);border-radius:15px;background:#fff}.card strong{display:block;color:var(--olive);margin-bottom:5px}
-.q{padding:14px 0;border-bottom:1px solid var(--line)}.q:last-child{border-bottom:0}.q-title{font-weight:800;margin-bottom:8px}.opts{display:grid;gap:7px}.opt{padding:8px 10px;border:1px solid var(--line);border-radius:11px;background:#fff}
+.q{padding:14px 0;border-bottom:1px solid var(--line)}.q:last-child{border-bottom:0}.q-title{font-weight:800;margin-bottom:8px}.opts{display:grid;gap:7px}.opt{display:flex;align-items:center;gap:9px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:#fff;cursor:pointer;transition:.15s}.opt:hover{border-color:#b8aa99;background:#fcfaf6}.opt.correct{background:#e8f3ea;border-color:#8fb39a}.opt.wrong{background:#f8e8e3;border-color:#d4a08f}.feedback{margin-top:9px;font-weight:800}.feedback.ok{color:#3e6d4c}.feedback.no{color:#9a4d39}.checkbtn{margin-top:12px;border:none;background:var(--olive);color:#fff;padding:10px 14px;border-radius:999px;font-weight:850;cursor:pointer}.mini{font-size:.88rem;color:var(--muted)}
 input[type=text],textarea{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:11px;background:#fff;font:inherit}textarea{min-height:120px;resize:vertical}
 .rule{padding:14px 16px;border-radius:14px;background:var(--olive2)}.note{padding:14px 16px;border-left:4px solid var(--gold);background:#fff4d9;border-radius:0 12px 12px 0}
-.table{width:100%;border-collapse:collapse;margin-top:10px}.table th,.table td{border:1px solid var(--line);padding:9px 10px;text-align:left}.table th{background:var(--olive2)}
+.table{width:100%;border-collapse:collapse;margin-top:10px}.table th,.table td{border:1px solid var(--line);padding:9px 10px;text-align:left}.table th{background:var(--olive2)}select{width:100%;padding:9px 10px;border:1px solid var(--line);border-radius:10px;background:#fff;font:inherit}.antselect.correct{background:#e8f3ea;border-color:#8fb39a}.antselect.wrong{background:#f8e8e3;border-color:#d4a08f}
 .pills{display:flex;flex-wrap:wrap;gap:7px}.pill{padding:6px 9px;border-radius:999px;background:#f1ece5;border:1px solid var(--line);font-weight:750}
 footer{text-align:center;color:var(--muted);font-size:.83rem;padding:14px 0 42px}
 @media(max-width:760px){.grid2,.grid3{grid-template-columns:1fr}.table{font-size:.9rem}}
@@ -53,19 +53,19 @@ Ma ora che il treno si è fermato, uscendo dalla stazione, è bene sentire l’o
 <section>
 <p class="kicker">2 · Comprensione</p>
 <h2>Scegli la risposta corretta</h2>
-<div class="q"><div class="q-title">1. Napoli è la città...</div><div class="opts"><label class="opt"><input type="radio" name="q1"> della luna più romantica del mondo.</label><label class="opt"><input type="radio" name="q1"> del sole più famoso del mondo.</label></div></div>
-<div class="q"><div class="q-title">2. A Napoli fu costruita...</div><div class="opts"><label class="opt"><input type="radio" name="q2"> la prima ferrovia d’Italia.</label><label class="opt"><input type="radio" name="q2"> la prima strada asfaltata d’Italia.</label></div></div>
-<div class="q"><div class="q-title">3. Il 1839 è la data...</div><div class="opts"><label class="opt"><input type="radio" name="q3"> dell’unità d’Italia.</label><label class="opt"><input type="radio" name="q3"> della costruzione della ferrovia Napoli-Portici.</label></div></div>
-<div class="q"><div class="q-title">4. La canzone napoletana è nata...</div><div class="opts"><label class="opt"><input type="radio" name="q4"> dopo quella italiana.</label><label class="opt"><input type="radio" name="q4"> prima di quella italiana.</label></div></div>
-<div class="q"><div class="q-title">5. Il dialetto napoletano è usato...</div><div class="opts"><label class="opt"><input type="radio" name="q5"> solo nella musica.</label><label class="opt"><input type="radio" name="q5"> nella musica, nel teatro e nel cinema.</label></div></div>
-<div class="q"><div class="q-title">6. Al porto di Napoli arrivano...</div><div class="opts"><label class="opt"><input type="radio" name="q6"> solo merci legali.</label><label class="opt"><input type="radio" name="q6"> merci legali e illegali.</label></div></div>
-<div class="q"><div class="q-title">7. I giornali spesso parlano di Napoli...</div><div class="opts"><label class="opt"><input type="radio" name="q7"> per i suoi difetti.</label><label class="opt"><input type="radio" name="q7"> per i suoi pregi.</label></div></div>
-<div class="q"><div class="q-title">8. Napoli è una città...</div><div class="opts"><label class="opt"><input type="radio" name="q8"> di arte, storia e cultura.</label><label class="opt"><input type="radio" name="q8"> moderna e senza storia.</label></div></div>
-<div class="q"><div class="q-title">9. A Napoli si preparano...</div><div class="opts"><label class="opt"><input type="radio" name="q9"> amaretti, panettoni e pizza.</label><label class="opt"><input type="radio" name="q9"> babà, sfogliatelle, pastiera e pizza.</label></div></div>
-<div class="q"><div class="q-title">10. I napoletani...</div><div class="opts"><label class="opt"><input type="radio" name="q10"> sono superstiziosi.</label><label class="opt"><input type="radio" name="q10"> non sono superstiziosi.</label></div></div>
-<div class="q"><div class="q-title">11. I napoletani venerano i calciatori...</div><div class="opts"><label class="opt"><input type="radio" name="q11"> come eroi.</label><label class="opt"><input type="radio" name="q11"> come santi.</label></div></div>
-<div class="q"><div class="q-title">12. Pino Daniele è stato...</div><div class="opts"><label class="opt"><input type="radio" name="q12"> un grande cantautore.</label><label class="opt"><input type="radio" name="q12"> un grande attore.</label></div></div>
-</section>
+<div class="q"><div class="q-title">1. Napoli è la città...</div><div class="opts"><label class="opt"><input type="radio" name="q1" value="A"> della luna più romantica del mondo.</label><label class="opt"><input type="radio" name="q1" value="B"> del sole più famoso del mondo.</label></div></div>
+<div class="q"><div class="q-title">2. A Napoli fu costruita...</div><div class="opts"><label class="opt"><input type="radio" name="q2" value="A"> la prima ferrovia d’Italia.</label><label class="opt"><input type="radio" name="q2" value="B"> la prima strada asfaltata d’Italia.</label></div></div>
+<div class="q"><div class="q-title">3. Il 1839 è la data...</div><div class="opts"><label class="opt"><input type="radio" name="q3" value="A"> dell’unità d’Italia.</label><label class="opt"><input type="radio" name="q3" value="B"> della costruzione della ferrovia Napoli-Portici.</label></div></div>
+<div class="q"><div class="q-title">4. La canzone napoletana è nata...</div><div class="opts"><label class="opt"><input type="radio" name="q4" value="A"> dopo quella italiana.</label><label class="opt"><input type="radio" name="q4" value="B"> prima di quella italiana.</label></div></div>
+<div class="q"><div class="q-title">5. Il dialetto napoletano è usato...</div><div class="opts"><label class="opt"><input type="radio" name="q5" value="A"> solo nella musica.</label><label class="opt"><input type="radio" name="q5" value="B"> nella musica, nel teatro e nel cinema.</label></div></div>
+<div class="q"><div class="q-title">6. Al porto di Napoli arrivano...</div><div class="opts"><label class="opt"><input type="radio" name="q6" value="A"> solo merci legali.</label><label class="opt"><input type="radio" name="q6" value="B"> merci legali e illegali.</label></div></div>
+<div class="q"><div class="q-title">7. I giornali spesso parlano di Napoli...</div><div class="opts"><label class="opt"><input type="radio" name="q7" value="A"> per i suoi difetti.</label><label class="opt"><input type="radio" name="q7" value="B"> per i suoi pregi.</label></div></div>
+<div class="q"><div class="q-title">8. Napoli è una città...</div><div class="opts"><label class="opt"><input type="radio" name="q8" value="A"> di arte, storia e cultura.</label><label class="opt"><input type="radio" name="q8" value="B"> moderna e senza storia.</label></div></div>
+<div class="q"><div class="q-title">9. A Napoli si preparano...</div><div class="opts"><label class="opt"><input type="radio" name="q9" value="A"> amaretti, panettoni e pizza.</label><label class="opt"><input type="radio" name="q9" value="B"> babà, sfogliatelle, pastiera e pizza.</label></div></div>
+<div class="q"><div class="q-title">10. I napoletani...</div><div class="opts"><label class="opt"><input type="radio" name="q10" value="A"> sono superstiziosi.</label><label class="opt"><input type="radio" name="q10" value="B"> non sono superstiziosi.</label></div></div>
+<div class="q"><div class="q-title">11. I napoletani venerano i calciatori...</div><div class="opts"><label class="opt"><input type="radio" name="q11" value="A"> come eroi.</label><label class="opt"><input type="radio" name="q11" value="B"> come santi.</label></div></div>
+<div class="q"><div class="q-title">12. Pino Daniele è stato...</div><div class="opts"><label class="opt"><input type="radio" name="q12" value="A"> un grande cantautore.</label><label class="opt"><input type="radio" name="q12" value="B"> un grande attore.</label></div></div>
+<button type="button" class="checkbtn" onclick="checkComprensione()">Controlla le risposte</button><div id="comp-feedback" class="feedback"></div></section>
 
 <section>
 <p class="kicker">3 · Lessico</p>
@@ -73,49 +73,49 @@ Ma ora che il treno si è fermato, uscendo dalla stazione, è bene sentire l’o
 <p class="instruction">Соедини пары. Запиши только антоним.</p>
 <table class="table">
 <tr><th>Aggettivo</th><th>Contrario</th></tr>
-<tr><td>legale</td><td><input type="text"></td></tr>
-<tr><td>dolce</td><td><input type="text"></td></tr>
-<tr><td>bello</td><td><input type="text"></td></tr>
-<tr><td>buono</td><td><input type="text"></td></tr>
-<tr><td>chiaro</td><td><input type="text"></td></tr>
-<tr><td>silenzioso</td><td><input type="text"></td></tr>
-<tr><td>primo</td><td><input type="text"></td></tr>
-<tr><td>caro</td><td><input type="text"></td></tr>
-<tr><td>antico</td><td><input type="text"></td></tr>
-<tr><td>famoso</td><td><input type="text"></td></tr>
-<tr><td>vecchio</td><td><input type="text"></td></tr>
-<tr><td>giovane</td><td><input type="text"></td></tr>
-<tr><td>pulito</td><td><input type="text"></td></tr>
-<tr><td>umido</td><td><input type="text"></td></tr>
-<tr><td>caldo</td><td><input type="text"></td></tr>
-<tr><td>facile</td><td><input type="text"></td></tr>
-<tr><td>corto</td><td><input type="text"></td></tr>
-<tr><td>semplice</td><td><input type="text"></td></tr>
-<tr><td>gentile</td><td><input type="text"></td></tr>
-<tr><td>interessante</td><td><input type="text"></td></tr>
+<tr><td>legale</td><td><select id="a1" class="antselect"><option value="">— scegli —</option><option value="illegale">illegale</option><option value="rumoroso">rumoroso</option><option value="freddo">freddo</option><option value="ultimo">ultimo</option></select></td></tr>
+<tr><td>dolce</td><td><select id="a2" class="antselect"><option value="">— scegli —</option><option value="amaro">amaro</option><option value="sporco">sporco</option><option value="economico">economico</option><option value="scuro">scuro</option></select></td></tr>
+<tr><td>bello</td><td><select id="a3" class="antselect"><option value="">— scegli —</option><option value="brutto">brutto</option><option value="cattivo">cattivo</option><option value="noioso">noioso</option><option value="vecchio">vecchio</option></select></td></tr>
+<tr><td>buono</td><td><select id="a4" class="antselect"><option value="">— scegli —</option><option value="cattivo">cattivo</option><option value="brutto">brutto</option><option value="difficile">difficile</option><option value="secco">secco</option></select></td></tr>
+<tr><td>chiaro</td><td><select id="a5" class="antselect"><option value="">— scegli —</option><option value="scuro">scuro</option><option value="sporco">sporco</option><option value="rumoroso">rumoroso</option><option value="amaro">amaro</option></select></td></tr>
+<tr><td>silenzioso</td><td><select id="a6" class="antselect"><option value="">— scegli —</option><option value="rumoroso">rumoroso</option><option value="scortese">scortese</option><option value="complicato">complicato</option><option value="freddo">freddo</option></select></td></tr>
+<tr><td>primo</td><td><select id="a7" class="antselect"><option value="">— scegli —</option><option value="ultimo">ultimo</option><option value="nuovo">nuovo</option><option value="anziano">anziano</option><option value="lungo">lungo</option></select></td></tr>
+<tr><td>caro</td><td><select id="a8" class="antselect"><option value="">— scegli —</option><option value="economico">economico</option><option value="brutto">brutto</option><option value="secco">secco</option><option value="difficile">difficile</option></select></td></tr>
+<tr><td>antico</td><td><select id="a9" class="antselect"><option value="">— scegli —</option><option value="moderno">moderno</option><option value="nuovo">nuovo</option><option value="giovane">giovane</option><option value="ultimo">ultimo</option></select></td></tr>
+<tr><td>famoso</td><td><select id="a10" class="antselect"><option value="">— scegli —</option><option value="sconosciuto">sconosciuto</option><option value="noioso">noioso</option><option value="scortese">scortese</option><option value="brutto">brutto</option></select></td></tr>
+<tr><td>vecchio</td><td><select id="a11" class="antselect"><option value="">— scegli —</option><option value="nuovo">nuovo</option><option value="giovane">giovane</option><option value="moderno">moderno</option><option value="ultimo">ultimo</option></select></td></tr>
+<tr><td>giovane</td><td><select id="a12" class="antselect"><option value="">— scegli —</option><option value="anziano">anziano</option><option value="vecchio">vecchio</option><option value="cattivo">cattivo</option><option value="sporco">sporco</option></select></td></tr>
+<tr><td>pulito</td><td><select id="a13" class="antselect"><option value="">— scegli —</option><option value="sporco">sporco</option><option value="scuro">scuro</option><option value="umido">umido</option><option value="noioso">noioso</option></select></td></tr>
+<tr><td>umido</td><td><select id="a14" class="antselect"><option value="">— scegli —</option><option value="secco">secco</option><option value="caldo">caldo</option><option value="freddo">freddo</option><option value="sporco">sporco</option></select></td></tr>
+<tr><td>caldo</td><td><select id="a15" class="antselect"><option value="">— scegli —</option><option value="freddo">freddo</option><option value="secco">secco</option><option value="umido">umido</option><option value="scuro">scuro</option></select></td></tr>
+<tr><td>facile</td><td><select id="a16" class="antselect"><option value="">— scegli —</option><option value="difficile">difficile</option><option value="complicato">complicato</option><option value="scortese">scortese</option><option value="noioso">noioso</option></select></td></tr>
+<tr><td>corto</td><td><select id="a17" class="antselect"><option value="">— scegli —</option><option value="lungo">lungo</option><option value="ultimo">ultimo</option><option value="moderno">moderno</option><option value="vecchio">vecchio</option></select></td></tr>
+<tr><td>semplice</td><td><select id="a18" class="antselect"><option value="">— scegli —</option><option value="complicato">complicato</option><option value="difficile">difficile</option><option value="rumoroso">rumoroso</option><option value="scuro">scuro</option></select></td></tr>
+<tr><td>gentile</td><td><select id="a19" class="antselect"><option value="">— scegli —</option><option value="scortese">scortese</option><option value="cattivo">cattivo</option><option value="noioso">noioso</option><option value="sporco">sporco</option></select></td></tr>
+<tr><td>interessante</td><td><select id="a20" class="antselect"><option value="">— scegli —</option><option value="noioso">noioso</option><option value="sconosciuto">sconosciuto</option><option value="brutto">brutto</option><option value="difficile">difficile</option></select></td></tr>
 </table>
 <div class="pills" style="margin-top:14px">
 <span class="pill">cattivo</span><span class="pill">ultimo</span><span class="pill">rumoroso</span><span class="pill">moderno</span><span class="pill">amaro</span><span class="pill">economico</span><span class="pill">sconosciuto</span><span class="pill">brutto</span><span class="pill">scuro</span><span class="pill">illegale</span><span class="pill">freddo</span><span class="pill">complicato</span><span class="pill">difficile</span><span class="pill">scortese</span><span class="pill">nuovo</span><span class="pill">sporco</span><span class="pill">noioso</span><span class="pill">anziano</span><span class="pill">lungo</span><span class="pill">secco</span>
-</div>
+</div><button type="button" class="checkbtn" onclick="checkAntonyms()">Controlla gli antonimi</button><div id="ant-feedback" class="feedback"></div>
 </section>
 
 <section>
 <p class="kicker">4 · E / O / MA</p>
 <h2>Completa le frasi</h2>
 <div class="drill">
-<div>1. È un bel film <input type="text" style="width:80px"> un po’ lungo.</div>
-<div>2. Capisce <input type="text" style="width:80px"> parla bene l’italiano.</div>
-<div>3. È suo fratello <input type="text" style="width:80px"> non gli somiglia affatto.</div>
-<div>4. La casa è grande <input type="text" style="width:80px"> molto luminosa.</div>
-<div>5. Ha cinquant’anni, <input type="text" style="width:80px"> non li dimostra.</div>
-<div>6. Giorgio studia all’università <input type="text" style="width:80px"> lavora in un bar la sera.</div>
-<div>7. Ho comprato questo vestito <input type="text" style="width:80px"> non lo metto mai.</div>
-<div>8. Abbiamo la macchina <input type="text" style="width:80px"> andiamo al lavoro in metro.</div>
-<div>9. Lavoro troppo <input type="text" style="width:80px"> non ho tempo di vedere gli amici.</div>
-<div>10. Studia abbastanza <input type="text" style="width:80px"> non riesce mai ad avere buoni voti.</div>
-<div>11. Devi metterti a dieta <input type="text" style="width:80px"> fare più sport.</div>
+<div>1. È un bel film <select id="eom1" style="width:105px"><option value="">—</option><option value="e">e</option><option value="o">o</option><option value="ma">ma</option></select> un po’ lungo.</div>
+<div>2. Capisce <select id="eom2" style="width:105px"><option value="">—</option><option value="e">e</option><option value="o">o</option><option value="ma">ma</option></select> parla bene l’italiano.</div>
+<div>3. È suo fratello <select id="eom3" style="width:105px"><option value="">—</option><option value="e">e</option><option value="o">o</option><option value="ma">ma</option></select> non gli somiglia affatto.</div>
+<div>4. La casa è grande <select id="eom4" style="width:105px"><option value="">—</option><option value="e">e</option><option value="o">o</option><option value="ma">ma</option></select> molto luminosa.</div>
+<div>5. Ha cinquant’anni, <select id="eom5" style="width:105px"><option value="">—</option><option value="e">e</option><option value="o">o</option><option value="ma">ma</option></select> non li dimostra.</div>
+<div>6. Giorgio studia all’università <select id="eom6" style="width:105px"><option value="">—</option><option value="e">e</option><option value="o">o</option><option value="ma">ma</option></select> lavora in un bar la sera.</div>
+<div>7. Ho comprato questo vestito <select id="eom7" style="width:105px"><option value="">—</option><option value="e">e</option><option value="o">o</option><option value="ma">ma</option></select> non lo metto mai.</div>
+<div>8. Abbiamo la macchina <select id="eom8" style="width:105px"><option value="">—</option><option value="e">e</option><option value="o">o</option><option value="ma">ma</option></select> andiamo al lavoro in metro.</div>
+<div>9. Lavoro troppo <select id="eom9" style="width:105px"><option value="">—</option><option value="e">e</option><option value="o">o</option><option value="ma">ma</option></select> non ho tempo di vedere gli amici.</div>
+<div>10. Studia abbastanza <select id="eom10" style="width:105px"><option value="">—</option><option value="e">e</option><option value="o">o</option><option value="ma">ma</option></select> non riesce mai ad avere buoni voti.</div>
+<div>11. Devi metterti a dieta <select id="eom11" style="width:105px"><option value="">—</option><option value="e">e</option><option value="o">o</option><option value="ma">ma</option></select> fare più sport.</div>
 </div>
-<div class="rule" style="margin-top:14px"><strong>e</strong> = aggiunge · <strong>o</strong> = alternativa · <strong>ma</strong> = contrasto.</div>
+<div class="rule" style="margin-top:14px"><strong>e</strong> = aggiunge · <strong>o</strong> = alternativa · <strong>ma</strong> = contrasto.</div><button type="button" class="checkbtn" onclick="checkEOM()">Controlla</button><div id="eom-feedback" class="feedback"></div>
 </section>
 
 <section>
@@ -124,13 +124,13 @@ Ma ora che il treno si è fermato, uscendo dalla stazione, è bene sentire l’o
 <p class="instruction">Соедини части и перепиши полные предложения.</p>
 <div class="grid2">
 <div class="card"><strong>A</strong>
-1. Non solo la trama...<br>
-2. Non solo la borsa...<br>
-3. Non solo la cucina...<br>
-4. Non solo il regista...<br>
-5. Non solo è caldo...<br>
-6. Non solo il babà...<br>
-7. Non solo a Napoli...<br>
+1. Non solo la trama... <select id="ns1" style="width:76px"><option value="">—</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select><br>
+2. Non solo la borsa... <select id="ns2" style="width:76px"><option value="">—</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select><br>
+3. Non solo la cucina... <select id="ns3" style="width:76px"><option value="">—</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select><br>
+4. Non solo il regista... <select id="ns4" style="width:76px"><option value="">—</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select><br>
+5. Non solo è caldo... <select id="ns5" style="width:76px"><option value="">—</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select><br>
+6. Non solo il babà... <select id="ns6" style="width:76px"><option value="">—</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select><br>
+7. Non solo a Napoli... <select id="ns7" style="width:76px"><option value="">—</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select><br>
 8. Non solo a Milano...
 </div>
 <div class="card"><strong>B</strong>
@@ -144,7 +144,7 @@ G. ...molto umido.<br>
 H. ...la fotografia è eccezionale.
 </div>
 </div>
-<textarea style="margin-top:14px;min-height:180px" placeholder="1. Non solo..., ma anche..."></textarea>
+<button type="button" class="checkbtn" onclick="checkNonSolo()">Controlla gli abbinamenti</button><div id="ns-feedback" class="feedback"></div><h3>Ora riscrivi 3 frasi complete</h3><textarea style="margin-top:8px;min-height:150px" placeholder="Non solo..., ma anche..."></textarea>
 </section>
 
 <section>
@@ -164,4 +164,41 @@ H. ...la fotografia è eccezionale.
 
 </main>
 <footer class="wrap">DARIA KUZNO · NUOVO GIORNO IN ITALIA A2 · CAPITOLO 10</footer>
+
+<script>
+function markRadio(name, correct){
+  const radios=[...document.querySelectorAll('input[name="'+name+'"]')];
+  radios.forEach(r=>{r.closest('.opt').classList.remove('correct','wrong')});
+  const chosen=radios.find(r=>r.checked);
+  if(!chosen) return false;
+  if(chosen.value===correct){chosen.closest('.opt').classList.add('correct');return true}
+  chosen.closest('.opt').classList.add('wrong');
+  const right=radios.find(r=>r.value===correct); if(right) right.closest('.opt').classList.add('correct');
+  return false;
+}
+function checkComprensione(){
+ const ans={q1:"B",q2:"A",q3:"B",q4:"B",q5:"B",q6:"B",q7:"A",q8:"A",q9:"B",q10:"A",q11:"B",q12:"A"};
+ let ok=0, done=0;
+ for(const [q,a] of Object.entries(ans)){const ch=document.querySelector('input[name="'+q+'"]:checked');if(ch){done++;if(markRadio(q,a))ok++;}}
+ const f=document.getElementById('comp-feedback');f.className='feedback '+(ok===12?'ok':'no');f.textContent=`${ok}/12 corrette · completate ${done}/12`;
+}
+function checkAntonyms(){
+ const ans={'a1': 'illegale', 'a2': 'amaro', 'a3': 'brutto', 'a4': 'cattivo', 'a5': 'scuro', 'a6': 'rumoroso', 'a7': 'ultimo', 'a8': 'economico', 'a9': 'moderno', 'a10': 'sconosciuto', 'a11': 'nuovo', 'a12': 'anziano', 'a13': 'sporco', 'a14': 'secco', 'a15': 'freddo', 'a16': 'difficile', 'a17': 'lungo', 'a18': 'complicato', 'a19': 'scortese', 'a20': 'noioso'};
+ let ok=0;
+ Object.entries(ans).forEach(([id,a])=>{const e=document.getElementById(id);e.classList.remove('correct','wrong');if(e.value===a){e.classList.add('correct');ok++}else if(e.value){e.classList.add('wrong')}});
+ const f=document.getElementById('ant-feedback');f.className='feedback '+(ok===20?'ok':'no');f.textContent=`${ok}/20 corrette`;
+}
+function checkEOM(){
+ const ans=['ma', 'e', 'ma', 'e', 'ma', 'e', 'ma', 'ma', 'e', 'ma', 'e'];
+ let ok=0;
+ ans.forEach((a,i)=>{const e=document.getElementById('eom'+(i+1));e.classList.remove('correct','wrong');if(e.value===a){e.classList.add('correct');ok++}else if(e.value){e.classList.add('wrong')}});
+ const f=document.getElementById('eom-feedback');f.className='feedback '+(ok===11?'ok':'no');f.textContent=`${ok}/11 corrette`;
+}
+function checkNonSolo(){
+ const ans=['H', 'E', 'B', 'F', 'G', 'A', 'C', 'D'];
+ let ok=0;
+ ans.forEach((a,i)=>{const e=document.getElementById('ns'+(i+1));e.classList.remove('correct','wrong');if(e.value===a){e.classList.add('correct');ok++}else if(e.value){e.classList.add('wrong')}});
+ const f=document.getElementById('ns-feedback');f.className='feedback '+(ok===8?'ok':'no');f.textContent=`${ok}/8 corrette`;
+}
+</script>
 </body></html>
