@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Anastasia · Al bar, per due · HOMEWORK</title>
+<style>
+:root{--bg:#f5f0e8;--paper:#fffefa;--ink:#282e2a;--muted:#6b736f;--green:#315d4e;--terracotta:#b15a3f;--pale:#edf3ee;--sand:#f7ede1;--border:#e1dbd0;--wrong:#b44736;--right:#28734e}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+main{max-width:980px;margin:0 auto;padding:18px 17px 60px}
+h1,h2,h3,.serif{font-family:Georgia,"Times New Roman",serif;font-weight:500}
+h1{font-size:clamp(43px,7vw,76px);line-height:1.02;margin:12px 0 12px}
+h2{font-size:31px;line-height:1.18;margin:0}
+h3{font-size:23px;line-height:1.25;margin:0 0 10px}
+p{margin:10px 0}
+.hero{position:relative;overflow:hidden;background:linear-gradient(112deg,#18392d,#376a55 62%,#a56d4b);color:white;border-radius:26px;padding:32px 38px 37px;min-height:310px;display:flex;flex-direction:column;justify-content:end}
+.hero:before{content:"";position:absolute;right:-70px;top:-160px;width:360px;height:360px;border:1px solid #ffffff47;border-radius:50%;box-shadow:0 0 0 65px #ffffff0c,0 0 0 130px #ffffff08;pointer-events:none}
+.hero>*{position:relative}
+.eyebrow{color:#e6e5d9;font-weight:800;font-size:12px;letter-spacing:.15em;text-transform:uppercase}
+.hero p{font-size:18px;max-width:720px;color:#f1f4ee;margin:3px 0 0}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin:20px 0 0}
+.chips span{border:1px solid #ffffff7a;border-radius:22px;font-size:12px;letter-spacing:.07em;padding:4px 12px}
+section{border:1px solid var(--border);background:var(--paper);border-radius:22px;padding:28px 30px;margin-top:17px;box-shadow:0 9px 26px rgba(50,41,29,.04)}
+.head{display:flex;align-items:center;gap:14px;margin:0 0 11px}
+.num{background:var(--green);color:white;display:grid;place-items:center;border-radius:50%;width:42px;height:42px;flex:none;font-weight:800}
+.sub{color:var(--muted);margin:0 0 15px}
+.lesson-note{background:var(--pale);border-left:5px solid var(--green);padding:15px 18px;border-radius:0 13px 13px 0;margin:17px 0}
+.lesson-note.warm{background:var(--sand);border-left-color:var(--terracotta)}
+.lesson-note p{margin:4px 0}
+.soft{background:#f6f4ef;border:1px solid var(--border);border-radius:14px;padding:15px 17px}
+.caps{font-size:12px;color:#678072;font-weight:850;text-transform:uppercase;letter-spacing:.1em}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.tile{padding:15px;background:#faf5ec;border:1px solid #e8ddd0;border-radius:14px}
+.tile .big{font:23px/1.4 Georgia,serif;color:#345647;margin:5px 0}
+table{width:100%;border-collapse:collapse;margin:15px 0 8px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+th{background:#f5f4ee;font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:#596a60}
+tr:last-child td{border-bottom:none}
+.end{color:#b45c39;font-weight:850}
+.task{border-top:1px solid var(--border);padding-top:21px;margin-top:22px}
+.task:first-of-type{border-top:0;padding-top:4px}
+.instruction{background:#f6eee3;padding:11px 15px;border-radius:12px;margin:10px 0 12px}
+ol{padding-left:26px;margin:10px 0}
+li{padding-left:4px;margin:9px 0}
+.two-cols{columns:2;column-gap:34px}
+.two-cols li{break-inside:avoid}
+.blank{display:inline-block;min-width:85px;border-bottom:1px solid #7d8e84}
+.answer{margin-top:13px;border:1px solid #ccddd0;border-radius:12px;background:#f0f6f1;overflow:hidden}
+.answer summary{cursor:pointer;list-style:auto;padding:12px 15px;color:#28523c;font-weight:750}
+.answer[open] summary{border-bottom:1px solid #d2e1d6}
+.answer .body{padding:12px 15px}
+.answer .body p{margin:6px 0}
+.cardline{padding:10px 14px;background:#f5f2eb;border-radius:10px;margin:7px 0}
+.dialogue{border:1px solid var(--border);background:#fbf9f4;padding:15px 17px;border-radius:15px;margin:12px 0}
+.dialogue p{margin:7px 0;padding:8px 11px;border-radius:10px;background:#eff3ee}
+.dialogue p:nth-child(2n){background:#f8eee2}
+.activity{border:1px solid #d7e2d7;background:#f6faf6;border-radius:15px;padding:16px;margin:15px 0}
+.write-row{display:flex;gap:9px;align-items:center;margin:9px 0}
+.write-row label{flex:1;min-width:0}
+.write-row input{min-width:0;width:min(230px,46%);padding:9px 10px;font:inherit;border-radius:9px;border:1px solid #bacabd;background:white;color:var(--ink)}
+input.correct{border:2px solid var(--right);background:#eff8ef}
+input.wrong{border:2px solid var(--wrong);background:#fff3ef}
+.actions{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-top:14px}
+button{font:inherit;font-weight:750;border:0;border-radius:999px;background:var(--green);color:white;padding:10px 17px;cursor:pointer}
+button.secondary{background:#ede7dc;color:#384d3d}
+button:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #e8aa79;outline-offset:3px}
+.feedback{font-size:14px;color:#2b6748;min-height:21px}
+.small{font-size:13px;color:var(--muted)}
+.wordbox{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0}
+.wordbox span{background:#e9efeb;padding:5px 10px;border-radius:20px;font-size:14px;font-weight:650}
+.story{font:21px/1.8 Georgia,serif;padding:17px 21px;border-radius:14px;border:1px solid #e4dbcf;background:#f8f4ed}
+textarea{width:100%;min-height:180px;resize:vertical;font:16px/1.6 inherit;background:white;border:1px solid #bacabd;border-radius:12px;padding:15px;color:var(--ink)}
+.optional{border-style:dashed;border-color:#ccbcaa;background:#fffcf7}
+.optlabel{display:inline-flex;gap:6px;align-items:center;background:#f1e8de;border-radius:20px;color:#9b5735;padding:4px 10px;font-size:12px;font-weight:850;letter-spacing:.04em;text-transform:uppercase;margin-bottom:12px}
+.checklist{list-style:none;padding:0}
+.checklist li{margin:6px 0;padding-left:0}
+.checklist li:before{content:"□";color:var(--green);font-weight:850;font-size:19px;padding-right:9px}
+.footer{font-size:12px;color:var(--muted);text-align:center;letter-spacing:.08em;padding:27px 10px}
+@media(max-width:720px){main{padding:10px 10px 40px}.hero{padding:27px 22px;min-height:280px}.hero p{font-size:16px}section{padding:20px 17px;border-radius:17px}h2{font-size:26px}.grid2,.grid3{grid-template-columns:1fr}.two-cols{columns:1}th,td{padding:9px 6px}.write-row{align-items:stretch;flex-direction:column;gap:3px}.write-row input{width:100%}.story{font-size:18px;padding:15px}}
+@media print{body{background:white}main{padding:0}.hero{border-radius:0;min-height:160px}.hero h1{font-size:46px}section{box-shadow:none;break-inside:avoid}.answer{display:none}.activity input,textarea{border:0;border-bottom:1px solid #555}}
+</style>
+</head>
+<body>
+<main>
+<header class="hero">
+<div class="eyebrow">DARIA KUZNO · ITALIANO · HOMEWORK · 24.10.2026</div>
+<h1>Al bar, per due.</h1>
+<p>Как заказать на двоих: новые глаголы на <strong>-ERE</strong>, единственное и множественное число, а также артикли в живой ситуации.</p>
+<div class="chips"><span>NUOVO ESPRESSO 1 · LEZIONE 3</span><span>PRENDERE</span><span>SINGOLARE → PLURALE</span></div>
+</header>
+
+<section id="start">
+<div class="head"><div class="num">01</div><h2>Prima: quello che sai già</h2></div>
+<p class="sub">Сначала возвращаемся к знакомому: предпочтения и неопределённые артикли.</p>
+<div class="grid2">
+<div class="tile"><div class="caps">Как сказать «мне нравится»</div><div class="big">Mi piace il cinema.</div><p><strong>Ti piace il cinema?</strong> — Тебе нравится кино?<br><strong>E a te?</strong> — А тебе?<br><strong>Non mi piace.</strong> — Мне не нравится.</p></div>
+<div class="tile"><div class="caps">Что уже знаем об артиклях</div><div class="big">un · uno · una · un’</div><p><strong>un</strong> panino · <strong>uno</strong> spritz<br><strong>una</strong> pizza · <strong>un’</strong>aranciata</p></div>
+</div>
+<div class="task">
+<h3>1. Un piccolo ripasso</h3>
+<div class="instruction">Вставь подходящие слова или выражения. В пунктах 1–4 нужны артикли, в пунктах 5–6 — реплики. Ответы открой после выполнения.</div>
+<ol>
+<li>______ panino</li><li>______ spritz</li><li>______ pizzetta</li><li>______ aranciata</li>
+<li>A: Ti piace il caffè? — B: Sì, ______.</li>
+<li>A: Mi piace la pizza. — B: Anche a me! — A: ______?</li>
+</ol>
+<details class="answer"><summary>Проверить разогрев</summary><div class="body">
+1. un · 2. uno · 3. una · 4. un’ · 5. mi piace · 6. E a te?
+<p class="small">В пункте 6 «E a te?» естественно звучит, когда вопрос возвращает тот, кто только что сказал о своём отношении. Допустим и другой мини-диалог с тем же выражением.</p>
+</div></details>
+</div>
+</section>
+
+<section id="ere">
+<div class="head"><div class="num">02</div><h2>Prendere · новая группа -ERE</h2></div>
+<p class="sub">Вспоминаем реплики из бара: «Io prendo un cappuccino» и «Cosa prendete?».</p>
+<div class="lesson-note"><p><strong>PRENDERE</strong> — «брать», а при заказе в кафе — «брать / заказывать».</p>
+<p><strong>Как образовать форму:</strong> берём <strong>prend-ere</strong>, убираем <strong>-ere</strong> и добавляем личное окончание к основе <strong>prend-</strong>.</p>
+<p>Форма меняется по <strong>лицу</strong> (кто делает действие), не по мужскому или женскому роду: <strong>Marco prende</strong> и <strong>Giulia prende</strong>.</p></div>
+<table>
+<thead><tr><th>Кто?</th><th>Уже знакомое: PARLARE</th><th>Новое: PRENDERE</th></tr></thead>
+<tbody>
+<tr><td>io</td><td>parl<span class="end">o</span></td><td>prend<span class="end">o</span></td></tr>
+<tr><td>tu</td><td>parl<span class="end">i</span></td><td>prend<span class="end">i</span></td></tr>
+<tr><td>lui / lei</td><td>parl<span class="end">a</span></td><td>prend<span class="end">e</span></td></tr>
+<tr><td>noi</td><td>parl<span class="end">iamo</span></td><td>prend<span class="end">iamo</span></td></tr>
+<tr><td>voi</td><td>parl<span class="end">ate</span></td><td>prend<span class="end">ete</span></td></tr>
+<tr><td>loro</td><td>parl<span class="end">ano</span></td><td>prend<span class="end">ono</span></td></tr>
+</tbody>
+</table>
+<div class="lesson-note warm"><p><strong>Сравнение:</strong> у глаголов на <strong>-ARE</strong> и <strong>-ERE</strong> одинаковые окончания для <strong>io, tu, noi</strong>. Отличаются <strong>lui / lei, voi, loro</strong>.</p><p><strong>CHIEDERE</strong> — «спрашивать / просить» — ещё один правильный глагол на -ERE: <strong>chiedo, chiedi, chiede, chiediamo, chiedete, chiedono</strong>.</p><p><strong>Не смешиваем:</strong> <em>bere</em> («пить») — неправильный глагол; его спряжение здесь не требуется. <strong>Vorrei un caffè</strong> — готовая вежливая фраза, а не новая таблица.</p></div>
+
+<div class="task">
+<h3>2. Coniuga: le forme al bar</h3>
+<div class="instruction">Впиши только нужную форму глагола. Используй указанное лицо. После ввода нажми «Проверить»: верные формы будут выделены зелёным, ошибки — красным.</div>
+<div class="activity" data-check="ere">
+<div class="write-row"><label for="ere1">1. Io ______ un cappuccino. (prendere)</label><input id="ere1" data-answer="prendo" autocomplete="off"></div>
+<div class="write-row"><label for="ere2">2. Tu ______ una spremuta? (prendere)</label><input id="ere2" data-answer="prendi" autocomplete="off"></div>
+<div class="write-row"><label for="ere3">3. Lei ______ un panino. (prendere)</label><input id="ere3" data-answer="prende" autocomplete="off"></div>
+<div class="write-row"><label for="ere4">4. Noi ______ due cornetti. (prendere)</label><input id="ere4" data-answer="prendiamo" autocomplete="off"></div>
+<div class="write-row"><label for="ere5">5. Voi ______ due caffè? (prendere)</label><input id="ere5" data-answer="prendete" autocomplete="off"></div>
+<div class="write-row"><label for="ere6">6. Loro ______ la pizza. (prendere)</label><input id="ere6" data-answer="prendono" autocomplete="off"></div>
+<div class="write-row"><label for="ere7">7. Io ______ un’informazione. (chiedere)</label><input id="ere7" data-answer="chiedo" autocomplete="off"></div>
+<div class="write-row"><label for="ere8">8. Marco ______ il conto. (chiedere)</label><input id="ere8" data-answer="chiede" autocomplete="off"></div>
+<div class="actions"><button type="button" data-action="check">Проверить формы</button><button type="button" class="secondary" data-action="reset">Очистить</button><span class="feedback" aria-live="polite"></span></div>
+</div>
+<details class="answer"><summary>Открыть все ответы</summary><div class="body">1. prendo · 2. prendi · 3. prende · 4. prendiamo · 5. prendete · 6. prendono · 7. chiedo · 8. chiede.</div></details>
+</div>
+<div class="task">
+<h3>3. Cambia persona</h3>
+<div class="instruction">Преобразуй четыре предложения: меняется человек, значит, меняется форма глагола. Пиши целое предложение, а не только окончание.</div>
+<ol>
+<li>Io prendo un caffè. → <strong>Tu…</strong></li>
+<li>Tu chiedi il conto. → <strong>Lei…</strong></li>
+<li>Noi prendiamo due panini. → <strong>Voi…</strong></li>
+<li>Giulia prende un cornetto. → <strong>Io…</strong></li>
+</ol>
+<details class="answer"><summary>Проверить предложения</summary><div class="body">1. Tu prendi un caffè.<br>2. Lei chiede il conto.<br>3. Voi prendete due panini.<br>4. Io prendo un cornetto.</div></details>
+</div>
+</section>
+
+<section id="plurale">
+<div class="head"><div class="num">03</div><h2>Un panino → due panini</h2></div>
+<p class="sub">Теперь мы умеем сказать, <em>кто</em> заказывает. Учимся менять заказ с одного предмета на два.</p>
+<div class="grid3">
+<div class="tile"><div class="caps">Окончание -O</div><div class="big">-o → -i</div><strong>un panino → due panini</strong><p>un cornetto → due cornetti</p></div>
+<div class="tile"><div class="caps">Окончание -A</div><div class="big">-a → -e</div><strong>una pizza → due pizze</strong><p>una pizzetta → due pizzette</p></div>
+<div class="tile"><div class="caps">Окончание -E</div><div class="big">-e → -i</div><strong>un bicchiere → due bicchieri</strong><p>una stazione → due stazioni</p></div>
+</div>
+<div class="lesson-note"><p><strong>Три шага:</strong> 1) найди существительное в единственном числе; 2) измени его окончание; 3) перед числом <strong>due</strong> убери неопределённый артикль.</p>
+<p>Правильно: <strong>un panino → due panini</strong>. Неправильно: <s>due un panino</s>.</p>
+<p><strong>Напоминание о роде:</strong> слова на <strong>-zione</strong> обычно женского рода: <strong>una stazione → due stazioni</strong>, <strong>una lezione → due lezioni</strong>. У существительных на <strong>-e</strong> множественное <strong>-i</strong> независимо от рода.</p></div>
+<div class="task">
+<h3>4. Dal singolare al plurale</h3>
+<div class="instruction">В каждом пункте впиши <strong>только существительное во множественном числе</strong> после слова <em>due</em>. Все слова из пройденных моделей.</div>
+<div class="activity" data-check="plural">
+<div class="write-row"><label for="pl1">1. un panino → due…</label><input id="pl1" data-answer="panini" autocomplete="off"></div>
+<div class="write-row"><label for="pl2">2. una pizza → due…</label><input id="pl2" data-answer="pizze" autocomplete="off"></div>
+<div class="write-row"><label for="pl3">3. un cornetto → due…</label><input id="pl3" data-answer="cornetti" autocomplete="off"></div>
+<div class="write-row"><label for="pl4">4. una pizzetta → due…</label><input id="pl4" data-answer="pizzette" autocomplete="off"></div>
+<div class="write-row"><label for="pl5">5. un bicchiere → due…</label><input id="pl5" data-answer="bicchieri" autocomplete="off"></div>
+<div class="write-row"><label for="pl6">6. una stazione → due…</label><input id="pl6" data-answer="stazioni" autocomplete="off"></div>
+<div class="write-row"><label for="pl7">7. una spremuta → due…</label><input id="pl7" data-answer="spremute" autocomplete="off"></div>
+<div class="write-row"><label for="pl8">8. una lezione → due…</label><input id="pl8" data-answer="lezioni" autocomplete="off"></div>
+<div class="write-row"><label for="pl9">9. un ristorante → due…</label><input id="pl9" data-answer="ristoranti" autocomplete="off"></div>
+<div class="actions"><button type="button" data-action="check">Проверить число</button><button type="button" class="secondary" data-action="reset">Очистить</button><span class="feedback" aria-live="polite"></span></div>
+</div>
+<details class="answer"><summary>Открыть ответы</summary><div class="body">1. panini · 2. pizze · 3. cornetti · 4. pizzette · 5. bicchieri · 6. stazioni · 7. spremute · 8. lezioni · 9. ristoranti.</div></details>
+</div>
+<div class="task">
+<h3>5. Cambia l’ordine</h3>
+<div class="instruction">Измени весь заказ согласно новой ситуации. Меняй <strong>и глагол, и число</strong> там, где это необходимо. Составь четыре полных предложения.</div>
+<ol>
+<li>Io prendo <strong>un panino</strong>. → Noi / <strong>due panini</strong>.</li>
+<li>Marco prende <strong>una pizzetta</strong>. → Marco e Giulia / <strong>due pizzette</strong>.</li>
+<li>Tu prendi <strong>un cornetto</strong>. → Voi / <strong>due cornetti</strong>.</li>
+<li>Io chiedo <strong>una spremuta</strong>. → Noi / <strong>due spremute</strong>.</li>
+</ol>
+<details class="answer"><summary>Проверить преобразования</summary><div class="body">
+1. Noi prendiamo due panini.<br>
+2. Marco e Giulia prendono due pizzette.<br>
+3. Voi prendete due cornetti.<br>
+4. Noi chiediamo due spremute.
+<p class="small">Сразу два изменения: лицо глагола и число существительного. Это и есть цель упражнения.</p>
+</div></details>
+</div>
+</section>
+
+<section id="storia">
+<div class="head"><div class="num">04</div><h2>Una mattina al bar</h2></div>
+<p class="sub">Небольшая история объединяет формы глаголов, еду, предпочтения и множественное число.</p>
+<div class="soft"><div class="caps">Слова из урока</div>
+<div class="wordbox">
+<span>il barista — бариста</span><span>per me — для меня</span><span>da bere — из напитков</span><span>da mangiare — из еды</span><span>va bene — хорошо</span><span>per favore — пожалуйста</span>
+</div></div>
+<div class="task">
+<h3>6. Completa la storia</h3>
+<div class="instruction">Восстанови историю, используя слова из рамки. Каждое слово нужно ровно один раз. Сначала прочитай историю целиком и пойми, кто что делает.</div>
+<div class="wordbox"><span>prendiamo</span><span>prendo</span><span>prende</span><span>panini</span><span>chiede</span><span>piace</span></div>
+<div class="story">
+È sabato. Giulia e Marco sono al bar.<br>
+Il barista (1) ______: «Buongiorno! Cosa prendete?»<br>
+Giulia: «Noi (2) ______ due cappuccini. Io (3) ______ anche un cornetto.»<br>
+Marco (4) ______ due (5) ______.<br>
+Giulia: «Ti (6) ______ la colazione italiana?»<br>
+Marco: «Sì, mi piace! E a te?»
+</div>
+<details class="answer"><summary>Открыть восстановленный текст</summary><div class="body">
+1. chiede · 2. prendiamo · 3. prendo · 4. prende · 5. panini · 6. piace.
+</div></details>
+</div>
+<div class="task">
+<h3>7. Hai capito?</h3>
+<div class="instruction">Ответь на четыре вопроса по истории <strong>полными короткими предложениями</strong>. Допускается опираться на текст; затем попробуй ответить без него.</div>
+<ol>
+<li>Dove sono Giulia e Marco?</li>
+<li>Cosa prendono insieme?</li>
+<li>Cosa prende Giulia da mangiare?</li>
+<li>Quanti panini prende Marco?</li>
+</ol>
+<details class="answer"><summary>Открыть примеры ответов</summary><div class="body">
+1. Sono al bar.<br>2. Prendono due cappuccini.<br>3. Giulia prende un cornetto.<br>4. Marco prende due panini.
+</div></details>
+</div>
+</section>
+
+<section class="optional" id="articoli">
+<span class="optlabel">Если на уроке успели пройти il / lo / la / l’</span>
+<div class="head"><div class="num">05</div><h2>Un cornetto → il cornetto</h2></div>
+<p class="sub">Этот блок выполняем, если определённые артикли уже разбирали. Если до него на занятии не дошли, оставляем на следующий раз.</p>
+<div class="lesson-note warm"><p><strong>Неопределённый артикль</strong> (un / uno / una / un’) часто вводит новый или ещё не выделенный предмет: <strong>Prendo un cornetto.</strong> — Закажу корнетто.</p>
+<p><strong>Определённый артикль</strong> часто указывает на уже известный предмет: <strong>Il cornetto è caldo.</strong> — Этот корнетто горячий.</p>
+<p>Но это не механический перевод «un = какой-то», «il = этот»: например, <strong>Mi piace il caffè</strong> — мне нравится кофе вообще.</p></div>
+<table>
+<thead><tr><th>Существительное</th><th>Неопределённый</th><th>Определённый</th></tr></thead>
+<tbody>
+<tr><td>panino · муж., согласная</td><td><strong>un</strong> panino</td><td><strong>il</strong> panino</td></tr>
+<tr><td>spritz · муж., s + согласная</td><td><strong>uno</strong> spritz</td><td><strong>lo</strong> spritz</td></tr>
+<tr><td>aperitivo · муж., гласная</td><td><strong>un</strong> aperitivo</td><td><strong>l’</strong>aperitivo</td></tr>
+<tr><td>pizza · жен., согласная</td><td><strong>una</strong> pizza</td><td><strong>la</strong> pizza</td></tr>
+<tr><td>aranciata · жен., гласная</td><td><strong>un’</strong>aranciata</td><td><strong>l’</strong>aranciata</td></tr>
+</tbody>
+</table>
+<div class="lesson-note"><p><strong>Главная разница с прошлого урока:</strong> <strong>un amico</strong> — без апострофа, потому что мужской род; <strong>un’amica</strong> — с апострофом, потому что женский. Но определённый артикль перед гласной — <strong>l’</strong> для обоих родов: <strong>l’amico / l’amica</strong>.</p>
+<p>Сейчас тренируем только <strong>единственное число</strong>. Определённые артикли во множественном числе <strong>i / gli / le</strong> — отдельная следующая тема.</p></div>
+<div class="task">
+<h3>8. Un articolo diverso</h3>
+<div class="instruction">Замени неопределённый артикль на соответствующий определённый. Перепиши <strong>всё словосочетание</strong>, сохранив существительное в единственном числе.</div>
+<ol class="two-cols">
+<li>un panino → ______</li>
+<li>uno spritz → ______</li>
+<li>una pizza → ______</li>
+<li>un aperitivo → ______</li>
+<li>un’aranciata → ______</li>
+<li>una stazione → ______</li>
+<li>un cornetto → ______</li>
+<li>un’amica → ______</li>
+</ol>
+<details class="answer"><summary>Проверить артикли</summary><div class="body">
+1. il panino · 2. lo spritz · 3. la pizza · 4. l’aperitivo · 5. l’aranciata · 6. la stazione · 7. il cornetto · 8. l’amica.
+</div></details>
+</div>
+</section>
+
+<section id="finale">
+<div class="head"><div class="num">★</div><h2>Adesso tocca a te</h2></div>
+<p class="sub">Финальная задача: самостоятельно оформить заказ на двух человек так, чтобы все новые правила работали вместе.</p>
+<div class="grid2">
+<div class="tile"><div class="caps">Il menu · da bere</div><div class="big">un caffè · un cappuccino</div><p>una spremuta · un tè</p></div>
+<div class="tile"><div class="caps">Il menu · da mangiare</div><div class="big">un panino · un cornetto</div><p>una pizzetta · una pizza</p></div>
+</div>
+<div class="task">
+<h3>9. Scrivi il tuo mini-dialogo</h3>
+<div class="instruction">Составь <strong>диалог из 6–8 реплик</strong> между бариста и двумя посетителями. В диалоге должны быть: приветствие, вопрос <strong>Cosa prendete?</strong>, заказ на двоих, минимум <strong>одно слово во множественном числе</strong> после due, минимум <strong>две разные формы -ERE</strong> и короткий вопрос о предпочтениях <strong>Ti piace…? / E a te?</strong>. Можно выбрать любые продукты из меню.</div>
+<div class="dialogue">
+<p><strong>Barista:</strong> Buongiorno! Cosa prendete?</p>
+<p><strong>Cliente 1:</strong> Io prendo…</p>
+<p><strong>Cliente 2:</strong> Per me…</p>
+<p><strong>Barista:</strong> E da bere?</p>
+<p><strong>Cliente 1:</strong> Noi prendiamo…</p>
+<p><strong>Cliente 2:</strong> Ti piace…?</p>
+</div>
+<div class="activity">
+<label for="final-dialogue" class="caps">Il mio dialogo</label>
+<textarea id="final-dialogue" placeholder="Barista: Buongiorno!&#10;Cliente 1: ...&#10;Cliente 2: ..."></textarea>
+<div class="actions"><button type="button" id="copy-dialogue">Скопировать свой диалог</button><span id="copy-status" class="feedback" aria-live="polite"></span></div>
+</div>
+<details class="answer"><summary>Открыть образец после своего варианта</summary><div class="body">
+<div class="dialogue">
+<p><strong>Barista:</strong> Buongiorno! Cosa prendete?</p>
+<p><strong>Giulia:</strong> Io prendo un cappuccino e un cornetto.</p>
+<p><strong>Marco:</strong> Per me una spremuta, per favore.</p>
+<p><strong>Barista:</strong> E da mangiare?</p>
+<p><strong>Marco:</strong> Noi prendiamo anche due pizzette.</p>
+<p><strong>Giulia:</strong> Ti piace la pizza, Marco?</p>
+<p><strong>Marco:</strong> Sì, mi piace. E a te?</p>
+<p><strong>Giulia:</strong> Sì, mi piace! Grazie!</p>
+</div>
+</div></details>
+</div>
+<div class="task">
+<h3>10. Trova e correggi</h3>
+<div class="instruction">Последняя самопроверка: найди <strong>одну ошибку</strong> в каждом предложении и исправь <strong>всю фразу</strong>. Эти ошибки повторяют материал сегодняшнего урока.</div>
+<ol>
+<li>Noi prende due panini.</li>
+<li>Marco prendi un cappuccino.</li>
+<li>Io prendo due pizza.</li>
+<li>Voi prendiamo un caffè?</li>
+<li>Giulia chiedo il conto.</li>
+<li>Loro prendono due cornetto.</li>
+</ol>
+<details class="answer"><summary>Открыть исправления</summary><div class="body">
+1. Noi <strong>prendiamo</strong> due panini.<br>
+2. Marco <strong>prende</strong> un cappuccino.<br>
+3. Io prendo due <strong>pizze</strong>.<br>
+4. Voi <strong>prendete</strong> un caffè?<br>
+5. Giulia <strong>chiede</strong> il conto.<br>
+6. Loro prendono due <strong>cornetti</strong>.
+</div></details>
+</div>
+<h3>Controllo finale</h3>
+<ul class="checklist">
+<li>Я умею образовать <strong>prendo / prendi / prende / prendiamo / prendete / prendono</strong>.</li>
+<li>Не путаю <strong>parla</strong> и <strong>prende</strong>, <strong>parlate</strong> и <strong>prendete</strong>.</li>
+<li>Могу изменить заказ: <strong>un panino → due panini</strong>, <strong>una pizza → due pizze</strong>.</li>
+<li>Помню, что после <strong>due</strong> не ставим <strong>un / una</strong>.</li>
+<li>Могу заказать еду для двух человек и использовать <strong>Ti piace…? E a te?</strong>.</li>
+</ul>
+</section>
+<p class="footer">DARIA KUZNO · ITALIANO · ANASTASIA · HOMEWORK · 24 OTTOBRE 2026</p>
+</main>
+<script>
+(function(){
+'use strict';
+function normalized(s){return s.normalize('NFC').trim().toLocaleLowerCase('it-IT').replace(/\s+/g,' ');}
+document.querySelectorAll('[data-check]').forEach(function(group){
+ var inputs=Array.from(group.querySelectorAll('input[data-answer]'));
+ var feedback=group.querySelector('.feedback');
+ group.querySelector('[data-action="check"]').addEventListener('click',function(){
+  var right=0;
+  inputs.forEach(function(input){
+   var ok=normalized(input.value)===normalized(input.dataset.answer);
+   input.classList.toggle('correct',ok);
+   input.classList.toggle('wrong',!ok);
+   input.setAttribute('aria-invalid',String(!ok));
+   if(ok)right++;
+  });
+  feedback.textContent='Верных ответов: '+right+' из '+inputs.length+'. Исправь красные поля и проверь ещё раз.';
+ });
+ group.querySelector('[data-action="reset"]').addEventListener('click',function(){
+  inputs.forEach(function(input){input.value='';input.classList.remove('correct','wrong');input.removeAttribute('aria-invalid');});
+  feedback.textContent='';
+ });
+});
+var copy=document.getElementById('copy-dialogue'), box=document.getElementById('final-dialogue'), status=document.getElementById('copy-status');
+copy.addEventListener('click',function(){
+ if(!box.value.trim()){status.textContent='Сначала составь диалог.';return;}
+ if(navigator.clipboard&&navigator.clipboard.writeText){
+  navigator.clipboard.writeText(box.value).then(function(){status.textContent='Диалог скопирован.';},function(){status.textContent='Выдели текст и скопируй его.';});
+ }else{box.focus();box.select();status.textContent='Выдели текст и скопируй его.';}
+});
+})();
+</script>
+</body>
+</html>
