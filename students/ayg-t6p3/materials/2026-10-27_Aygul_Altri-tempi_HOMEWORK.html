@@ -125,11 +125,11 @@ selected.forEach(function(n,i){var b=document.createElement('button');b.classNam
 document.getElementById('counter').textContent=selected.length+'/20';
 }
 document.getElementById('checkOrder').onclick=function(){
-var fb=document.getElementById('orderFeedback'),correct=selected.filter(function(n,i){return n===i+1}).length;
+var fb=document.getElementById('orderFeedback'),correct=selected.filter(function(n,i){return n===[1,2,3,4,5,6,8,7,9,10,11,12,13,14,15,16,17,18,19,20][i]}).length;
 if(selected.length!==20){fb.textContent='Сначала выбери все 20 фрагментов (сейчас '+selected.length+').';fb.className='feedback bad';return}
 fb.textContent=correct===20?'Отлично! Все 20 фрагментов в правильном порядке. Теперь восстанови предложения вслух.':'Верно расположено: '+correct+' из 20. Верни нужные карточки и попробуй ещё раз.';
 fb.className='feedback '+(correct===20?'good':'bad');
-document.querySelectorAll('#sequence .chip').forEach(function(el,i){el.classList.toggle('wrong',selected[i]!==i+1)});
+document.querySelectorAll('#sequence .chip').forEach(function(el,i){el.classList.toggle('wrong',selected[i]!==[1,2,3,4,5,6,8,7,9,10,11,12,13,14,15,16,17,18,19,20][i])});
 };
 document.getElementById('undo').onclick=function(){selected.pop();save('-order',selected);document.getElementById('orderFeedback').textContent='';renderOrder()};
 document.getElementById('resetOrder').onclick=function(){selected=[];save('-order',selected);document.getElementById('orderFeedback').textContent='';renderOrder()};renderOrder();
