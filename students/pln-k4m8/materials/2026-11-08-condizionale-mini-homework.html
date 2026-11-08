@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Polina · Mini homework · Condizionale</title>
+<style>
+:root{--bg:#f4f0e8;--paper:#fffdf8;--ink:#29312f;--muted:#6d726e;--line:#ddd4c6;--olive:#667353;--olive2:#edf0e7;--terr:#b76749;--gold:#d3a33d;--ok:#e7f2e8;--bad:#f8e7e2}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,sans-serif;line-height:1.55}
+.wrap{max-width:900px;margin:auto;padding:20px 16px 56px}.hero{background:linear-gradient(135deg,#202925,#667353 62%,#9a6d57);color:#fff;border-radius:26px;padding:29px;margin-bottom:18px}.hero h1{font-family:Georgia,serif;font-size:clamp(2rem,7vw,3.7rem);margin:5px 0}.hero p{margin:5px 0;color:#f1eee8}
+section{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:22px;margin:16px 0}.kicker{margin:0 0 4px;color:var(--terr);font-size:.78rem;font-weight:850;letter-spacing:.1em;text-transform:uppercase}h2{font-family:Georgia,serif;margin:0 0 12px}.instruction{padding:13px 15px;background:var(--olive2);border-radius:14px}.rule{padding:14px 16px;border-left:4px solid var(--gold);background:#fff5d9;border-radius:0 14px 14px 0}.drill{display:grid;gap:9px}.row{padding:11px 12px;background:#fff;border:1px solid var(--line);border-radius:12px}.big{font-family:Georgia,serif;font-size:1.08rem}.note{font-size:.9rem;color:var(--muted)}
+select,input[type=text]{font:inherit;border:1px solid var(--line);border-radius:10px;padding:8px 10px;background:#fff}.wide{width:100%}.check{margin-top:13px;border:0;background:var(--olive);color:#fff;border-radius:999px;padding:10px 15px;font-weight:850;cursor:pointer}.correct{background:var(--ok)!important;border-color:#8fb39a!important}.wrong{background:var(--bad)!important;border-color:#d49a88!important}.feedback{font-weight:800;margin-top:9px}.feedback.ok{color:#477454}.feedback.no{color:#9b4b39}
+</style></head>
+<body><main class="wrap">
+<header class="hero"><p>MINI HOMEWORK · 08.11.2026</p><h1>Condizionale: ancora un po’</h1><p>Коротко: почувствовать разницу между «я бы сделала» и «я бы сделала тогда, но уже поздно».</p></header>
+
+<section>
+<p class="kicker">Promemoria</p>
+<h2>Adesso o troppo tardi?</h2>
+<div class="rule"><span class="big"><strong>Lo farei.</strong></span> → ещё можно.<br><span class="big"><strong>L’avrei fatto.</strong></span> → возможность уже прошла.</div>
+</section>
+
+<section>
+<p class="kicker">1 · Scegli</p>
+<h2>Condizionale presente o composto?</h2>
+<p class="instruction">Выбери по смыслу. Не пытайся вспоминать всю таблицу.</p>
+<div class="drill">
+<div class="row">1. Questo weekend <select id="q1"><option value="andrei">andrei</option><option value="sarei andata">sarei andata</option></select> a Firenze.</div><div class="row">2. Ieri <select id="q2"><option value="verrei">verrei</option><option value="sarei venuta">sarei venuta</option></select> con voi, ma lavoravo.</div><div class="row">3. Al posto tuo, gli <select id="q3"><option value="parlerei">parlerei</option><option value="avrei parlato">avrei parlato</option></select>.</div><div class="row">4. Gli <select id="q4"><option value="scriverei">scriverei</option><option value="avrei scritto">avrei scritto</option></select> ieri, ma non avevo il suo numero.</div><div class="row">5. Quella giacca è bella. La <select id="q5"><option value="comprerei">comprerei</option><option value="avrei comprata">avrei comprata</option></select>.</div><div class="row">6. La <select id="q6"><option value="comprerei">comprerei</option><option value="avrei comprata">avrei comprata</option></select>, ma non c'era la mia taglia.</div>
+</div>
+<button class="check" onclick="checkQ()">Controlla</button><div id="qf" class="feedback"></div>
+</section>
+
+<section>
+<p class="kicker">2 · Tre frasi utili</p>
+<h2>Completa</h2>
+<p class="instruction">Напиши по одной короткой фразе. Можно брать реальные ситуации.</p>
+<div class="drill">
+<div class="row"><strong>Avrei dovuto...</strong><br><input class="wide" type="text" placeholder="Avrei dovuto dire di no..."></div>
+<div class="row"><strong>Avrei potuto...</strong><br><input class="wide" type="text" placeholder="Avrei potuto rispondere..."></div>
+<div class="row"><strong>Sarei andata / venuta..., ma...</strong><br><input class="wide" type="text"></div>
+</div>
+</section>
+
+<section>
+<p class="kicker">3 · Vita vera</p>
+<h2>Una situazione al lavoro</h2>
+<p class="instruction">Вспомни одну ситуацию с шефом. Напиши всего <strong>2 предложения</strong>: что ты сказала бы сейчас и что стоило / можно было сказать тогда.</p>
+<div class="drill">
+<div class="row"><strong>Adesso direi...</strong><br><input class="wide" type="text"></div>
+<div class="row"><strong>Avrei dovuto / avrei potuto dire...</strong><br><input class="wide" type="text"></div>
+</div>
+<p class="note">На следующий урок ничего отправлять заранее не нужно: просто сохрани ответы в кабинете и будь готова сказать их вслух.</p>
+</section>
+
+<script>
+function checkQ(){const a=['andrei','sarei venuta','parlerei','avrei scritto','comprerei','avrei comprata'];let ok=0;a.forEach((x,i)=>{const e=document.getElementById('q'+(i+1));e.classList.remove('correct','wrong');if(e.value===x){e.classList.add('correct');ok++}else e.classList.add('wrong')});const f=document.getElementById('qf');f.className='feedback '+(ok===a.length?'ok':'no');f.textContent=ok+'/'+a.length+' corrette'}
+</script>
+</main></body></html>
