@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Anastasia — Al ristorante · Manca, serve, basta — HOMEWORK</title>
+<style>
+:root{--bg:#f4f1eb;--paper:#fffdfa;--ink:#263c35;--quiet:#6a7770;--line:#dddcd4;--dark:#284a3c;--green:#416b57;--pale:#eaf2e9;--warm:#f7ebdc;--orange:#af6347;--correct:#26764a;--incorrect:#bc503e}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--bg);font:16px/1.57 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}main{width:min(100%,990px);margin:auto;padding:14px 18px 65px}
+h1,h2,h3,.serif{font-family:Georgia,"Times New Roman",serif;font-weight:500}h1{font-size:clamp(40px,7vw,74px);line-height:1.05;margin:9px 0 12px}h2{font-size:30px;line-height:1.2;margin:0}h3{font-size:22px;line-height:1.3;margin:0 0 10px}p{margin:9px 0}
+.hero{position:relative;overflow:hidden;background:linear-gradient(115deg,#213d32,#3f6452 66%,#a87955);border-radius:27px;color:#fff;padding:32px 37px 35px;min-height:285px;display:flex;flex-direction:column;justify-content:end}.hero::after{content:"";pointer-events:none;position:absolute;right:-60px;top:-105px;width:350px;height:350px;border:1px solid #fff6;border-radius:50%;box-shadow:0 0 0 55px #ffffff0b,0 0 0 118px #ffffff08}.hero>*{position:relative;z-index:1}.eyebrow{font-size:12px;color:#e4e7dd;font-weight:850;letter-spacing:.16em;text-transform:uppercase}.hero p{max-width:730px;font-size:18px;color:#f2f4ee}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}.tags span{font-size:12px;color:white;border:1px solid #ffffff78;border-radius:30px;padding:4px 10px}
+section{background:var(--paper);border:1px solid var(--line);border-radius:22px;margin-top:17px;padding:27px 30px;box-shadow:0 6px 25px #47382607}.sectionhead{display:flex;align-items:center;gap:13px;margin-bottom:12px}.num{display:grid;place-items:center;border-radius:50%;background:var(--dark);color:white;flex:none;width:41px;height:41px;font-weight:850}.subtitle{color:var(--quiet);margin:0 0 12px}.note{border-radius:14px;padding:14px 17px;background:var(--pale);margin:16px 0}.note.warm{background:var(--warm)}.small{font-size:13px;color:var(--quiet)}.caps{color:#66816d;text-transform:uppercase;font-size:12px;letter-spacing:.12em;font-weight:850}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.tile{background:#f9f6ef;border:1px solid #e5ded2;border-radius:15px;padding:15px}.tile .large{font:23px/1.35 Georgia,serif;color:var(--dark);margin:6px 0}.tile p{margin:5px 0}.split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.task{background:#f8eee1;padding:11px 14px;border-radius:12px;font-weight:550;margin:12px 0}.exercise{margin-top:20px;padding-top:20px;border-top:1px solid var(--line)}.exercise:first-child{padding-top:0;border-top:0}table{width:100%;border-collapse:collapse;margin:13px 0}td,th{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}th{font-size:12px;color:#586d60;text-transform:uppercase;letter-spacing:.06em;background:#f6f2eb}tr:last-child td{border-bottom:0}
+.arrow{font-weight:900;color:var(--orange)}.answer{border:1px solid #cbdcca;background:#f1f6ef;border-radius:13px;overflow:hidden;margin-top:12px}.answer summary{font-weight:750;color:var(--dark);padding:11px 14px;cursor:pointer}.answer .inner{padding:12px 15px;border-top:1px solid #d4e3d3}.answer .inner p{margin:6px 0}.answer[open] summary{background:#e6f0e5}
+.recall-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.recall-card{padding:16px;border-radius:14px;border:1px solid #d8dfd4;background:#f8faf6}.recall-card p{min-height:43px}.recall-result{font-family:Georgia,serif;color:#276146;font-size:18px;padding:8px 0}.recall-result[hidden]{display:none}
+button{font:inherit;cursor:pointer;border:0}.btn{background:var(--dark);color:white;border-radius:100px;padding:10px 17px;font-weight:750}.btn.secondary{background:#ece9e0;color:var(--dark)}.btn.mini{font-size:13px;padding:7px 11px}.btn:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #bf9975;outline-offset:2px}.actions{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:13px}.status{color:#2c6e4b;font-size:14px;min-height:20px}.field-row{display:grid;grid-template-columns:minmax(0,1fr) 160px;gap:12px;align-items:center;border-bottom:1px dashed #e2e1da;padding:8px 0}.field-row:last-child{border-bottom:0}.field-row label{font-size:15px}.field-row input{background:white;border:1px solid #bac9be;border-radius:9px;padding:9px 11px;color:var(--ink);width:100%;min-width:0;font:inherit}.field-row input.good{border:2px solid var(--correct);background:#ecf9ee}.field-row input.bad{border:2px solid var(--incorrect);background:#fff1ed}
+.choice-question{border:1px solid #dadfd7;padding:14px 15px;border-radius:13px;margin:9px 0;background:#fbfbf7}.choice-question .situation{font-weight:650;margin-bottom:9px}.choice-grid{display:flex;flex-wrap:wrap;gap:8px}.choice{border:1px solid #bdcabc;background:white;color:#314d40;border-radius:25px;padding:8px 12px;font-weight:750;font-size:14px}.choice.selected{border:2px solid #526959;background:#e9f2e9}.choice.correct{border:2px solid var(--correct);background:#e4f3e7}.choice.incorrect{border:2px solid var(--incorrect);background:#fff0ed}.choice-feedback{font-size:13px;margin-top:7px;color:#355747;min-height:0}
+.step{font-weight:850;color:var(--orange);letter-spacing:.07em;font-size:12px;text-transform:uppercase}.homework{border:2px solid #ccb89d;background:#fffaf2}.submission{border:1px solid #d6d7c9;border-radius:14px;background:#f8f5ed;padding:15px 18px;margin:16px 0}ol{padding-left:25px}li{padding-left:2px;margin:8px 0}.textboxes{margin:12px 0}textarea{font:inherit;color:var(--ink);padding:13px;width:100%;min-height:165px;border-radius:12px;border:1px solid #b9c7b9;background:#fff;resize:vertical}.vocab{display:flex;flex-wrap:wrap;gap:7px}.vocab span{font-size:13px;border:1px solid #dbe3d8;border-radius:20px;padding:5px 10px;background:#f3f7f1}.checklist{list-style:none;padding:0}.checklist li{margin:5px 0}.checklist li:before{content:"□";font-size:19px;color:var(--green);font-weight:900;margin-right:8px}
+.footer{font-size:12px;color:var(--quiet);text-align:center;letter-spacing:.08em;padding:25px 0}
+@media(max-width:680px){main{padding:10px 10px 50px}.hero{padding:29px 23px;min-height:270px}.hero p{font-size:16px}section{padding:21px 16px;border-radius:18px}.grid2,.grid3,.split,.recall-grid{grid-template-columns:1fr}.field-row{grid-template-columns:1fr;gap:4px}h2{font-size:26px}.recall-card p{min-height:0}td,th{padding:8px 6px;font-size:13px;overflow-wrap:anywhere}table{table-layout:fixed;width:100%}}
+@media print{body{background:white}main{padding:0}.hero{min-height:200px;border-radius:0}section{box-shadow:none;break-inside:avoid}.btn,.choice{display:none}.answer{display:none}textarea{border:none;border-bottom:1px solid #555}}
+</style>
+</head>
+<body><main>
+<header class="hero"><div class="eyebrow">DARIA KUZNO · ITALIANO · HOMEWORK · 8 NOVEMBRE 2026</div><h1>Scusi, manca qualcosa!</h1><p>Три коротких подхода вместо одной большой домашки. Вспоминаем по памяти, закрепляем грамматику и учимся говорить о том, что нужно за столом.</p><div class="tags"><span>NUOVO ESPRESSO 1 · LEZIONE 3</span><span>MANCA · SERVE · BASTA</span><span>ARTICOLI · VOLERE · PREFERIRE</span></div></header>
+
+<section class="homework" id="submit">
+<div class="sectionhead"><span class="num">✓</span><h2>Как выполнить и что прислать</h2></div>
+<p>Занимайся <strong>понемногу, в разные дни</strong>. Не нужно выполнять всё сразу. Перед проверкой попробуй вспомнить ответ самостоятельно, даже если ошибаешься.</p>
+<div class="grid3"><div class="tile"><div class="step">Подход 1 · 10 минут</div><strong>Сегодня или завтра</strong><p>Вспомнить формы без подсказки → разобрать памятку → выполнить задания 1–2.</p></div><div class="tile"><div class="step">Подход 2 · 10 минут</div><strong>Через 2–3 дня</strong><p>Повторить без памятки → артикли и два знакомых глагола → задания 3–4.</p></div><div class="tile"><div class="step">Подход 3 · 10 минут</div><strong>Перед уроком</strong><p>Самостоятельно написать 6 фраз и записать короткое голосовое: задания 5–6.</p></div></div>
+<div class="submission"><strong>Обязательно пришли преподавателю до следующего урока:</strong>
+<ol><li><strong>Фото или текст шести своих предложений из задания 5.</strong> Можно написать от руки и сфотографировать.</li><li><strong>Голосовое сообщение 30–45 секунд из задания 6.</strong> Постарайся говорить без чтения готового текста.</li></ol><p class="small">Пришли их в том чате, где обычно общаешься с преподавателем. Этот сайт позволяет тренироваться и проверять ответы, но <strong>не отправляет выполненную работу автоматически</strong>.</p></div>
+</section>
+
+<section id="retrieval"><div class="sectionhead"><span class="num">1</span><h2>Сначала вспомни, потом посмотри</h2></div><p class="subtitle">Не открывай памятку сразу. Попробуй произнести перевод на итальянском и только затем нажми «Открыть ответ».</p>
+<div class="recall-grid" id="recall">
+<div class="recall-card"><div class="caps">01 · один предмет</div><p>Не хватает одной вилки.</p><button class="btn secondary mini" type="button">Открыть ответ</button><div class="recall-result" hidden>Manca una forchetta.</div></div>
+<div class="recall-card"><div class="caps">02 · несколько</div><p>Не хватает двух вилок.</p><button class="btn secondary mini" type="button">Открыть ответ</button><div class="recall-result" hidden>Mancano due forchette.</div></div>
+<div class="recall-card"><div class="caps">03 · что нужно</div><p>Нужны два стакана.</p><button class="btn secondary mini" type="button">Открыть ответ</button><div class="recall-result" hidden>Servono due bicchieri.</div></div>
+<div class="recall-card"><div class="caps">04 · чего достаточно</div><p>Одной бутылки достаточно.</p><button class="btn secondary mini" type="button">Открыть ответ</button><div class="recall-result" hidden>Basta una bottiglia.</div></div>
+</div>
+<div class="note warm"><strong>После первого круга:</strong> снова прочитай русские фразы, <strong>не подглядывая</strong> в ответы. Если ошиблась — это полезная информация: именно эту фразу стоит повторить через день.</div>
+</section>
+
+<section id="promemoria"><div class="sectionhead"><span class="num">2</span><h2>Promemoria · грамматическая памятка</h2></div><p class="subtitle">Здесь собраны правила именно из нашего занятия. Прочитай их внимательно перед тренировкой; на следующем подходе попробуй восстановить по памяти.</p>
+<h3>1. Три разных значения</h3>
+<div class="grid3">
+<div class="tile"><div class="caps">MANCARE</div><div class="large">manca / mancano</div><p><strong>Отсутствует, не хватает.</strong></p><p><strong>Manca</strong> una forchetta.<br><strong>Mancano</strong> due forchette.</p></div>
+<div class="tile"><div class="caps">SERVIRE</div><div class="large">serve / servono</div><p><strong>Нужно, необходимо.</strong></p><p><strong>Serve</strong> un bicchiere.<br><strong>Servono</strong> due bicchieri.</p></div>
+<div class="tile"><div class="caps">BASTARE</div><div class="large">basta / bastano</div><p><strong>Достаточно, хватает.</strong></p><p><strong>Basta</strong> una bottiglia.<br><strong>Bastano</strong> due bottiglie.</p></div>
+</div>
+<div class="note"><strong>Это НЕ взаимозаменяемые слова.</strong><p><em>Mancano due bicchieri</em> — двух стаканов нет, их не хватает. <em>Servono due bicchieri</em> — нужны два стакана. <em>Bastano due bicchieri</em> — двух стаканов достаточно. Значение выбираем по ситуации, а форму глагола — по количеству предметов.</p></div>
+<h3>2. Почему окончание меняется?</h3>
+<table><thead><tr><th>Один предмет / singolare</th><th>Несколько / plurale</th></tr></thead><tbody>
+<tr><td>Mi <strong>piace</strong> il risotto.</td><td>Mi <strong>piacciono</strong> gli spaghetti.</td></tr>
+<tr><td><strong>Manca</strong> una forchetta.</td><td><strong>Mancano</strong> due forchette.</td></tr>
+<tr><td><strong>Serve</strong> un bicchiere.</td><td><strong>Servono</strong> due bicchieri.</td></tr>
+<tr><td><strong>Basta</strong> una bottiglia.</td><td><strong>Bastano</strong> due bottiglie.</td></tr>
+</tbody></table>
+<div class="note"><strong>Точное правило:</strong> глагол согласуется с тем, <strong>что нравится / чего не хватает / что нужно / чего достаточно</strong>. Это грамматическое подлежащее, которое часто стоит <em>после</em> глагола. Один предмет → третье лицо единственного числа. Несколько → третье лицо множественного числа.<br>
+Например, <em>Mi piacciono gli spaghetti</em>: <strong>mi</strong> означает «мне», но форму <strong>piacciono</strong> определяет <strong>gli spaghetti</strong> (множественное число), а не <strong>mi</strong>.</div>
+<div class="note warm"><strong>Не путай:</strong> <strong>Basta così, grazie!</strong> — «Достаточно / больше ничего не нужно, спасибо!» Это готовая разговорная формула, а не предложение с существительным во множественном числе. Также <strong>basta + инфинитив</strong> возможно в других конструкциях, но сегодня это не тренируем.</div>
+<h3>3. Что происходит с существительным и артиклем?</h3>
+<table><thead><tr><th>Единственное число</th><th>Множественное число</th><th>Почему?</th></tr></thead><tbody>
+<tr><td>il piatto</td><td><strong>i piatti</strong></td><td>муж. род, обычная согласная: il → i; -o → -i</td></tr>
+<tr><td>lo spaghetto</td><td><strong>gli spaghetti</strong></td><td>муж. род, s + согласная: lo → gli; -o → -i</td></tr>
+<tr><td>l’antipasto</td><td><strong>gli antipasti</strong></td><td>муж. род, гласная: l’ → gli; -o → -i</td></tr>
+<tr><td>la forchetta</td><td><strong>le forchette</strong></td><td>жен. род: la → le; -a → -e</td></tr>
+<tr><td>l’insalata</td><td><strong>le insalate</strong></td><td>жен. род, гласная: l’ → le; -a → -e</td></tr>
+</tbody></table>
+<div class="note"><strong>Алгоритм:</strong> сначала определяем <strong>род</strong>, затем <strong>число</strong> и начало слова. <strong>I</strong> — обычные мужские слова во множественном числе; <strong>gli</strong> — мужские слова на гласную, z, s + согласная и некоторые другие сочетания; <strong>le</strong> — женский род во множественном числе. <em>Le</em> не сокращается перед гласной: <strong>le insalate</strong>.</div>
+<h3>4. Volere и preferire — повторение</h3>
+<div class="split"><div><table><thead><tr><th>Кто?</th><th>VOLERE · хотеть</th></tr></thead><tbody><tr><td>io</td><td><strong>voglio</strong></td></tr><tr><td>tu</td><td><strong>vuoi</strong></td></tr><tr><td>lui / lei</td><td><strong>vuole</strong></td></tr><tr><td>noi</td><td>vogliamo</td></tr><tr><td>voi</td><td>volete</td></tr><tr><td>loro</td><td>vogliono</td></tr></tbody></table></div><div><table><thead><tr><th>Кто?</th><th>PREFERIRE · предпочитать</th></tr></thead><tbody><tr><td>io</td><td><strong>preferisco</strong></td></tr><tr><td>tu</td><td><strong>preferisci</strong></td></tr><tr><td>lui / lei</td><td><strong>preferisce</strong></td></tr><tr><td>noi</td><td>preferiamo</td></tr><tr><td>voi</td><td>preferite</td></tr><tr><td>loro</td><td>preferiscono</td></tr></tbody></table></div></div>
+<div class="note warm"><strong>Обязательно различай:</strong> <strong>Vuoi gli spaghetti?</strong> — «Хочешь спагетти?» <strong>No, preferisco le tagliatelle.</strong> — «Нет, предпочитаю тальятелле». <strong>Vorrei un risotto, per favore</strong> — вежливый заказ: «Я бы хотела ризотто, пожалуйста». <strong>Vorrei</strong> — не форма presente глагола <em>volere</em>; пока запоминаем как готовую вежливую конструкцию.</div>
+<div class="vocab"><span>la forchetta — вилка</span><span>il bicchiere — стакан / бокал</span><span>il piatto — тарелка</span><span>il tovagliolo — салфетка</span><span>la bottiglia — бутылка</span><span>il conto — счёт</span></div>
+</section>
+
+<section id="day1"><div class="sectionhead"><span class="num">3</span><h2>Подход 1 · понимаю и выбираю</h2></div><p class="subtitle">Сегодня или завтра · 10 минут. После памятки закрой её и попробуй решать без подсказок.</p>
+<div class="exercise"><h3>Задание 1. Che cosa significa?</h3><div class="task">Прочитай русскую ситуацию. Выбери итальянскую фразу, которая передаёт <strong>именно этот смысл</strong>. После выбора увидишь объяснение.</div>
+<div class="choice-question" data-choice="0"><div class="situation">1. Сообщи, что <strong>одной вилки нет</strong>, её не хватает.</div><div class="choice-grid"><button type="button" class="choice">Manca una forchetta.</button><button type="button" class="choice">Serve una forchetta.</button><button type="button" class="choice">Basta una forchetta.</button></div><div class="choice-feedback" aria-live="polite"></div></div>
+<div class="choice-question" data-choice="1"><div class="situation">2. Скажи, что для гостей <strong>нужны два стакана</strong>.</div><div class="choice-grid"><button type="button" class="choice">Bastano due bicchieri.</button><button type="button" class="choice">Servono due bicchieri.</button><button type="button" class="choice">Mancano due bicchieri.</button></div><div class="choice-feedback" aria-live="polite"></div></div>
+<div class="choice-question" data-choice="2"><div class="situation">3. Скажи, что <strong>одной бутылки достаточно</strong>.</div><div class="choice-grid"><button type="button" class="choice">Serve una bottiglia.</button><button type="button" class="choice">Manca una bottiglia.</button><button type="button" class="choice">Basta una bottiglia.</button></div><div class="choice-feedback" aria-live="polite"></div></div>
+<div class="choice-question" data-choice="0"><div class="situation">4. На столе <strong>не хватает двух салфеток</strong>.</div><div class="choice-grid"><button type="button" class="choice">Mancano due tovaglioli.</button><button type="button" class="choice">Bastano due tovaglioli.</button><button type="button" class="choice">Servono due tovaglioli.</button></div><div class="choice-feedback" aria-live="polite"></div></div>
+</div>
+<div class="exercise"><h3>Задание 2. Una o due?</h3><div class="task">Впиши только глагол в нужной форме. Смысл дан в скобках, а единственное или множественное число видно по существительному. В конце <strong>проверь себя</strong>.</div>
+<div class="quiz" data-quiz="number">
+<div class="field-row"><label for="n1">1. ______ una forchetta. (не хватает)</label><input id="n1" data-answer="manca" autocomplete="off"></div>
+<div class="field-row"><label for="n2">2. ______ due forchette. (не хватает)</label><input id="n2" data-answer="mancano" autocomplete="off"></div>
+<div class="field-row"><label for="n3">3. ______ un bicchiere. (нужен)</label><input id="n3" data-answer="serve" autocomplete="off"></div>
+<div class="field-row"><label for="n4">4. ______ due bicchieri. (нужны)</label><input id="n4" data-answer="servono" autocomplete="off"></div>
+<div class="field-row"><label for="n5">5. ______ una bottiglia per due persone. (достаточно)</label><input id="n5" data-answer="basta" autocomplete="off"></div>
+<div class="field-row"><label for="n6">6. ______ due bottiglie per quattro persone. (достаточно)</label><input id="n6" data-answer="bastano" autocomplete="off"></div>
+<div class="field-row"><label for="n7">7. Mi ______ il risotto. (нравится)</label><input id="n7" data-answer="piace" autocomplete="off"></div>
+<div class="field-row"><label for="n8">8. Mi ______ gli spaghetti. (нравятся)</label><input id="n8" data-answer="piacciono" autocomplete="off"></div>
+<div class="actions"><button class="btn check" type="button">Проверить 8 форм</button><button class="btn secondary reset" type="button">Начать заново</button><span class="status" aria-live="polite"></span></div></div>
+<details class="answer"><summary>Открыть готовые формы после проверки</summary><div class="inner">1. manca · 2. mancano · 3. serve · 4. servono · 5. basta · 6. bastano · 7. piace · 8. piacciono.</div></details>
+</div></section>
+
+<section id="day3"><div class="sectionhead"><span class="num">4</span><h2>Подход 2 · повторяем спустя время</h2></div><p class="subtitle">Через 2–3 дня · 10 минут. Перед началом устно назови все три пары: «не хватает», «нужно», «достаточно», в единственном и множественном числе.</p>
+<div class="exercise"><h3>Задание 3. I, gli o le?</h3><div class="task">Восстанови <strong>определённый артикль</strong>. Сначала определи род и число. Не подглядывай в памятку до первой попытки.</div>
+<div class="quiz" data-quiz="articles">
+<div class="field-row"><label for="a1">1. ______ piatti</label><input id="a1" data-answer="i" autocomplete="off"></div>
+<div class="field-row"><label for="a2">2. ______ spaghetti</label><input id="a2" data-answer="gli" autocomplete="off"></div>
+<div class="field-row"><label for="a3">3. ______ forchette</label><input id="a3" data-answer="le" autocomplete="off"></div>
+<div class="field-row"><label for="a4">4. ______ antipasti</label><input id="a4" data-answer="gli" autocomplete="off"></div>
+<div class="field-row"><label for="a5">5. ______ tagliatelle</label><input id="a5" data-answer="le" autocomplete="off"></div>
+<div class="field-row"><label for="a6">6. ______ panini</label><input id="a6" data-answer="i" autocomplete="off"></div>
+<div class="actions"><button class="btn check" type="button">Проверить артикли</button><button class="btn secondary reset" type="button">Очистить</button><span class="status" aria-live="polite"></span></div></div>
+</div>
+<div class="exercise"><h3>Задание 4. Vuoi o preferisci?</h3><div class="task">Впиши форму глагола в скобках. Формы уже знакомые: мы только возвращаемся к ним. В последнем пункте нужна вежливая фраза.</div>
+<div class="quiz" data-quiz="verbs">
+<div class="field-row"><label for="v1">1. Tu ______ gli spaghetti? (volere)</label><input id="v1" data-answer="vuoi" autocomplete="off"></div>
+<div class="field-row"><label for="v2">2. No, io ______ le tagliatelle. (preferire)</label><input id="v2" data-answer="preferisco" autocomplete="off"></div>
+<div class="field-row"><label for="v3">3. Marco ______ un risotto. (volere)</label><input id="v3" data-answer="vuole" autocomplete="off"></div>
+<div class="field-row"><label for="v4">4. Tu ______ il pesce o la carne? (preferire)</label><input id="v4" data-answer="preferisci" autocomplete="off"></div>
+<div class="field-row"><label for="v5">5. Noi ______ due panini. (volere)</label><input id="v5" data-answer="vogliamo" autocomplete="off"></div>
+<div class="field-row"><label for="v6">6. Io ______ una spremuta, per favore. (вежливая просьба)</label><input id="v6" data-answer="vorrei" autocomplete="off"></div>
+<div class="actions"><button class="btn check" type="button">Проверить глаголы</button><button class="btn secondary reset" type="button">Очистить</button><span class="status" aria-live="polite"></span></div></div>
+</div>
+<div class="note warm"><strong>Мини-повторение:</strong> после проверки закрой ответы и произнеси вслух три фразы без подсказки: «Не хватает двух вилок», «Нужен стакан», «Двух бутылок достаточно». Повтори эти же фразы через день.</div>
+</section>
+
+<section id="independent"><div class="sectionhead"><span class="num">5</span><h2>Подход 3 · самостоятельно и на отправку</h2></div><p class="subtitle">Перед следующим уроком · около 10 минут. Здесь важны <strong>твои собственные попытки</strong>, даже если в них есть ошибки.</p>
+<div class="exercise"><h3>Задание 5. Sei frasi senza aiuto</h3><div class="task"><strong>Напиши 6 предложений на итальянском без памятки.</strong> Не переписывай образцы выше. Можно писать в тетради или в поле ниже. <strong>Именно эти предложения пришли преподавателю</strong> — фотографией или текстом.</div>
+<ol><li>На столе не хватает одной вилки.</li><li>На столе не хватает двух салфеток.</li><li>Нужны два стакана.</li><li>Одной бутылки достаточно.</li><li>Мне нравятся спагетти, но я предпочитаю тальятелле.</li><li>Я бы хотела ризотто, пожалуйста.</li></ol>
+<div class="textboxes"><label for="own-sentences"><strong>Le mie sei frasi</strong> <span class="small">· если предпочитаешь печатать</span></label><textarea id="own-sentences" placeholder="1. ...&#10;2. ...&#10;3. ...&#10;4. ...&#10;5. ...&#10;6. ..."></textarea><div class="actions"><button class="btn" id="copy-phrases" type="button">Скопировать свои предложения</button><span class="status" id="copy-result" aria-live="polite"></span></div></div>
+<p class="small">Не открывай образцы до отправки работы: по твоим самостоятельным вариантам преподаватель увидит, что уже получается и что стоит ещё потренировать.</p>
+</div>
+<div class="exercise"><h3>Задание 6. Una cena per due · голосовое</h3><div class="task">Запиши <strong>30–45 секунд</strong> голосового сообщения без чтения готового текста. Представь, что ты в ресторане с подругой. Расскажи, что заказываешь, чего не хватает на столе и чего достаточно.</div>
+<div class="split"><div class="tile"><div class="caps">Ситуация</div><p>Вы вдвоём в ресторане. Выберите два блюда. На столе <strong>нет одной вилки и двух салфеток</strong>. Вам нужны <strong>два стакана</strong>. <strong>Одной бутылки воды достаточно</strong>. В конце попроси счёт.</p></div><div class="tile"><div class="caps">Можно использовать</div><p><strong>Buonasera.</strong><br><strong>Vorrei…</strong><br><strong>Per la mia amica…</strong><br><strong>Scusi, …</strong><br><strong>Il conto, per favore.</strong></p><p class="small">Это только опорные начала реплик, а не готовый диалог.</p></div></div>
+<div class="note"><strong>Две попытки:</strong> первая — с опорами, вторая — не глядя на страницу. Присылай вторую. Если запнулась, не нужно начинать запись заново десять раз: нам важна настоящая речь, а не идеальное выступление.</div>
+</div>
+<div class="submission"><strong>Перед отправкой проверь:</strong><ul class="checklist"><li>Я не подглядывала в памятку при написании шести предложений.</li><li>У меня есть фото или текст шести фраз.</li><li>У меня есть короткое голосовое сообщение.</li><li>Я отправила обе части преподавателю в обычный чат.</li></ul></div>
+</section>
+<div class="footer">DARIA KUZNO · ITALIANO DALL’INTERNO · ANASTASIA · HOMEWORK · 08.11.2026</div>
+</main>
+<script>
+(function(){'use strict';
+const norm=s=>s.normalize('NFC').trim().toLocaleLowerCase('it-IT').replace(/\s+/g,' ').replace(/[’]/g,"'");
+document.querySelectorAll('.recall-card').forEach(card=>{let btn=card.querySelector('button'),res=card.querySelector('.recall-result');btn.addEventListener('click',()=>{res.hidden=!res.hidden;btn.textContent=res.hidden?'Открыть ответ':'Скрыть ответ';});});
+document.querySelectorAll('.choice-question').forEach(block=>{const correctIndex=Number(block.dataset.choice),buttons=[...block.querySelectorAll('.choice')],note=block.querySelector('.choice-feedback');buttons.forEach((b,i)=>b.addEventListener('click',()=>{buttons.forEach(x=>x.classList.remove('selected','correct','incorrect'));b.classList.add('selected',i===correctIndex?'correct':'incorrect');note.textContent=i===correctIndex?'Верно: это передаёт нужный смысл.':'Пока нет. Сравни смысл: не хватает / нужно / достаточно.';}));});
+document.querySelectorAll('.quiz').forEach(quiz=>{const ins=[...quiz.querySelectorAll('input[data-answer]')],status=quiz.querySelector('.status');quiz.querySelector('.check').addEventListener('click',()=>{let count=0;ins.forEach(i=>{const right=norm(i.value)===norm(i.dataset.answer);i.classList.toggle('good',right);i.classList.toggle('bad',!right);i.setAttribute('aria-invalid',String(!right));if(right)count++;});status.textContent='Верно: '+count+' из '+ins.length+(count===ins.length?'. Все ответы правильные.':'. Исправь выделенные поля и повтори проверку.');});quiz.querySelector('.reset').addEventListener('click',()=>{ins.forEach(i=>{i.value='';i.classList.remove('good','bad');i.removeAttribute('aria-invalid');});status.textContent='';});});
+const copy=document.getElementById('copy-phrases'),entry=document.getElementById('own-sentences'),info=document.getElementById('copy-result');copy.addEventListener('click',()=>{if(!entry.value.trim()){info.textContent='Сначала напиши предложения.';return;}if(navigator.clipboard?.writeText){navigator.clipboard.writeText(entry.value).then(()=>{info.textContent='Скопировано. Теперь отправь текст преподавателю в чат.';},()=>{entry.focus();entry.select();info.textContent='Текст выделен. Скопируй его вручную.';});}else{entry.focus();entry.select();info.textContent='Текст выделен. Скопируй его вручную.';}});
+})();
+</script>
+</body></html>
