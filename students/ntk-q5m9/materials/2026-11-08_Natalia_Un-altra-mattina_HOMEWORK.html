@@ -31,7 +31,29 @@
 <p id="g-status" role="status" aria-live="polite">Пробный доступ. Для подключения нужен код от Дарьи.</p><small>До окончания: <span id="g-time">5:00</span></small>
 <details><summary>Текст разговора</summary><div id="g-transcript" style="max-height:300px;overflow:auto"></div></details>
 </section>
-<script type="module" src="/assets/gemini-natalia.js"></script>
+<script>
+(()=>{
+const root=document.getElementById('gemini-practice');
+if(!root)return;
+const status=root.querySelector('#g-status');
+const start=root.querySelector('#g-start');
+const access=root.querySelector('#g-code');
+const consent=root.querySelector('#g-consent');
+const loading='Кнопка работает. Загружаем голосовой разговор…';
+start.addEventListener('click',()=>{
+ if(!consent.checked){status.textContent='Сначала отметь согласие на передачу голоса Google Gemini.';return;}
+ if(!access.value.trim()){status.textContent='Введи код пробного доступа в поле над кнопкой.';access.focus();return;}
+ status.textContent=loading;
+ setTimeout(()=>{if(status.textContent===loading)status.textContent='Голосовой модуль не запустился. Обнови страницу с Ctrl+Shift+R (на Mac: Cmd+Shift+R) и попробуй снова.';},7000);
+},true);
+window.addEventListener('error',e=>{
+ if(String(e.filename||'').includes('gemini-natalia.js')){
+  status.textContent='Ошибка загрузки голосового помощника. Обнови страницу и попробуй ещё раз.';
+ }
+});
+})();
+</script>
+<script type="module" src="/assets/gemini-natalia.js?v=20261112-2" onerror="document.getElementById('g-status').textContent='Не удалось загрузить голосовой модуль. Проверь соединение и обнови страницу.'"></script>
 <section class="card"><h2>Что прислать Дарье</h2><p>Ответы к заданиям <b>2–3</b> и <b>голосовое</b> из задания 4. Письменные ответы отправь текстом, фото тетради или скриншотами.</p><button id="copy">Скопировать письменные ответы</button><p id="copystatus" aria-live="polite"></p><textarea id="export" hidden readonly aria-label="Ответы для отправки"></textarea><small>Отправь ответы сама: эта страница не отправляет их преподавателю. Записи сохраняются в этом браузере, если доступно локальное хранилище.</small></section><footer>Продолжение к рассказу Tommaso Bueno «Gonna o pantaloni?». Авторские задания для Натальи.<br>Фото: Unsplash.</footer></main><script>
 const fields=[...document.querySelectorAll('input[data-answer],textarea:not(#export)')],key='ntk-homework-20261108-v2';
 const norm=s=>s.toLowerCase().trim().replace(/’/g,"'").replace(/\s+/g,' ').replace(/[.!]$/,'');
