@@ -53,7 +53,7 @@ window.addEventListener('error',e=>{
 });
 })();
 </script>
-<script type="module" src="/assets/gemini-natalia.js?v=20261112-2" onerror="document.getElementById('g-status').textContent='Не удалось загрузить голосовой модуль. Проверь соединение и обнови страницу.'"></script>
+<script type="module" src="/assets/gemini-natalia.js?v=20261113-3" onerror="document.getElementById('g-status').textContent='Не удалось загрузить голосовой модуль. Проверь соединение и обнови страницу.'"></script>
 <section class="card"><h2>Что прислать Дарье</h2><p>Ответы к заданиям <b>2–3</b> и <b>голосовое</b> из задания 4. Письменные ответы отправь текстом, фото тетради или скриншотами.</p><button id="copy">Скопировать письменные ответы</button><p id="copystatus" aria-live="polite"></p><textarea id="export" hidden readonly aria-label="Ответы для отправки"></textarea><small>Отправь ответы сама: эта страница не отправляет их преподавателю. Записи сохраняются в этом браузере, если доступно локальное хранилище.</small></section><footer>Продолжение к рассказу Tommaso Bueno «Gonna o pantaloni?». Авторские задания для Натальи.<br>Фото: Unsplash.</footer></main><script>
 const fields=[...document.querySelectorAll('input[data-answer],textarea:not(#export)')],key='ntk-homework-20261108-v2';
 const norm=s=>s.toLowerCase().trim().replace(/’/g,"'").replace(/\s+/g,' ').replace(/[.!]$/,'');
