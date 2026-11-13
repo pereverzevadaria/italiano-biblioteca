@@ -21,7 +21,12 @@
 <p>Это дополнительная тренировка перед твоим голосовым Дарье. Можно пропустить её и выполнить домашку как обычно.</p>
 <ol><li>Нажми «Начать разговор» и разреши микрофон.</li><li>Послушай Анну. Нажми <b>«Ответить голосом»</b>, скажи ответ, затем <b>«Я закончила»</b>. Так у тебя будет время подумать.</li><li>В конце нажми «Что улучшить?» и повтори полезную фразу. «Завершить» выключает микрофон.</li></ol>
 <details><summary>Опоры, если трудно</summary><p><i>Di solito mi sveglio… Stamattina mi sono svegliata… Mi sono messa… Io e Anna ci siamo… Abbiamo fatto…</i></p></details>
-<label for="g-code">Код пробного доступа от Дарьи</label><br><input id="g-code" type="password" autocomplete="off" style="width:100%;max-width:320px">
+<label for="g-code">Код пробного доступа от Дарьи</label><br>
+<div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px">
+<input id="g-code" type="password" autocomplete="new-password" autocapitalize="off" autocorrect="off" spellcheck="false" style="width:100%;max-width:320px" aria-describedby="g-code-help">
+<button type="button" class="secondary" id="g-show-code" aria-pressed="false">Показать код</button>
+</div>
+<small id="g-code-help">Введите текущее значение GEMINI_PILOT_CODE из Vercel. Буквы, цифры и регистр должны совпадать; проверьте раскладку клавиатуры. Не отправляйте код в чат.</small>
 <label style="display:block;margin-top:14px"><input id="g-consent" type="checkbox" style="width:auto"> Разрешаю передавать голос Google Gemini для этого разговора.</label>
 <p><small>Сайт не сохраняет аудиозапись. Расшифровка показана только здесь и может содержать ошибки; она исчезнет при обновлении страницы. Обработка Google регулируется <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">условиями Gemini API</a>. AI может ошибаться — спорные исправления обсуди с Дарьей.</small></p>
 <button id="g-start" type="button">Начать разговор</button>
@@ -38,6 +43,13 @@ if(!root)return;
 const status=root.querySelector('#g-status');
 const start=root.querySelector('#g-start');
 const access=root.querySelector('#g-code');
+const show=root.querySelector('#g-show-code');
+show.addEventListener('click',()=>{
+ const visible=access.type==='password';
+ access.type=visible?'text':'password';
+ show.textContent=visible?'Скрыть код':'Показать код';
+ show.setAttribute('aria-pressed',String(visible));
+});
 const consent=root.querySelector('#g-consent');
 const loading='Кнопка работает. Загружаем голосовой разговор…';
 start.addEventListener('click',()=>{
