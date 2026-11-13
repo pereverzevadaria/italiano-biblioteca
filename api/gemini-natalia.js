@@ -8,7 +8,7 @@ module.exports=async(req,res)=>{
  const expected=process.env.GEMINI_PILOT_CODE, key=process.env.GEMINI_API_KEY;
  if(!key||!expected)return res.status(503).json({error:'not_configured'});
  const supplied=typeof req.body?.code==='string'?req.body.code:'';
- const a=Buffer.from(supplied),b=Buffer.from(expected);
+ const a=Buffer.from(supplied.trim()),b=Buffer.from(expected.trim());
  if(a.length!==b.length||!timingSafeEqual(a,b))return res.status(403).json({error:'code'});
  try{
  const config={responseModalities:['AUDIO'],systemInstruction:{parts:[{text:instruction}]},inputAudioTranscription:{},outputAudioTranscription:{},realtimeInputConfig:{automaticActivityDetection:{disabled:true}}};
