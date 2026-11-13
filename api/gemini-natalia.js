@@ -12,8 +12,15 @@ module.exports=async(req,res)=>{
  if(a.length!==b.length||!timingSafeEqual(a,b))return res.status(403).json({error:'code'});
  try{
  const config={responseModalities:['AUDIO'],systemInstruction:{parts:[{text:instruction}]},inputAudioTranscription:{},outputAudioTranscription:{},realtimeInputConfig:{automaticActivityDetection:{disabled:true}}};
- const response=await fetch('https://generativelanguage.googleapis.com/v1beta/auth_tokens',{method:'POST',headers:{'x-goog-api-key':key,'Content-Type':'application/json'},body:JSON.stringify({uses:1,expireTime:new Date(Date.now()+300000).toISOString(),newSessionExpireTime:new Date(Date.now()+60000).toISOString(),liveConnectConstraints:{model:'models/'+MODEL,config}}),signal:AbortSignal.timeout(12000)});
- if(!response.ok)return res.status(response.status===429?429:502).json({error:response.status===429?'quota':'provider'});
+ const response=await fetch('https://generativelanguage.googleapis.com/v1alpha/auth_tokens',{method:'POST',headers:{'x-goog-api-key':key,'Content-Type':'application/json'},body:JSON.stringify({uses:1,expireTime:new Date(Date.now()+300000).toISOString(),newSessionExpireTime:new Date(Date.now()+60000).toISOString(),liveConnectConstraints:{model:'models/'+MODEL,config}}),signal:AbortSignal.timeout(12000)});
+ if(!response.ok){
+   const status=response.status;
+   let upstreamStatus='UNKNOWN';
+   try{const failure=await response.json();upstreamStatus=String(failure?.error?.status||'UNKNOWN').slice(0,64);}catch{}
+   console.error('[gemini-natalia] ephemeral-token upstream failure',{status,upstreamStatus});
+   const error=status===429?'quota':status===400?'google_request':status===401||status===403?'google_auth':status===404?'google_endpoint':status>=500?'google_unavailable':'provider';
+   return res.status(status===429?429:502).json({error});
+ }
  const token=await response.json();
  if(!token.name)return res.status(502).json({error:'provider'});
  return res.status(200).json({token:token.name,model:MODEL,config,maxSeconds:300});
