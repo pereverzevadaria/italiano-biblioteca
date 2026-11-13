@@ -1,4 +1,3 @@
-const {timingSafeEqual}=require('node:crypto');
 const MODEL='gemini-3.8-live';
 const instruction=`Sei Anna, un'interlocutrice AI per Polina, una studentessa adulta di italiano A1-A2 molto colta e capace di analizzare temi complessi. Fate una conversazione breve di massimo 5 minuti per ripassare la lezione su Girolamo Savonarola, la Predica del arte del bene morire, i connettivi e la differenza tra "ti voglio bene" e "ti amo". Parla italiano naturale ma chiaro, con frasi non troppo lunghe. Fai UNA sola domanda per turno e aspetta la risposta.
 
@@ -17,11 +16,8 @@ module.exports=async(req,res)=>{
  res.setHeader('Cache-Control','no-store');
  if(req.method!=='POST'){res.setHeader('Allow','POST');return res.status(405).json({error:'method'});}
  if(req.headers.origin!=='https://study.dariakuzno.it')return res.status(403).json({error:'origin'});
- const expected=process.env.GEMINI_PILOT_CODE, key=process.env.GEMINI_API_KEY;
- if(!key||!expected)return res.status(503).json({error:'not_configured'});
- const supplied=typeof req.body?.code==='string'?req.body.code:'';
- const a=Buffer.from(supplied.trim()),b=Buffer.from(expected.trim());
- if(a.length!==b.length||!timingSafeEqual(a,b))return res.status(403).json({error:'code'});
+ const key=process.env.GEMINI_API_KEY;
+ if(!key)return res.status(503).json({error:'not_configured'});
  try{
  const config={responseModalities:['AUDIO'],systemInstruction:{parts:[{text:instruction}]},inputAudioTranscription:{},outputAudioTranscription:{},realtimeInputConfig:{automaticActivityDetection:{disabled:true}}};
  const response=await fetch('https://generativelanguage.googleapis.com/v1alpha/auth_tokens',{method:'POST',headers:{'x-goog-api-key':key,'Content-Type':'application/json'},body:JSON.stringify({
