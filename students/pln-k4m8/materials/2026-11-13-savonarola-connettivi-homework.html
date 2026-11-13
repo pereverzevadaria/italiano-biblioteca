@@ -174,17 +174,13 @@ section{background:var(--paper);border:1px solid var(--line);border-radius:22px;
 <h2>Proviamo la conversazione vocale</h2>
 <p>Это экспериментальная голосовая отработка на 4–5 минут. Сначала поговорите о <strong>ti voglio bene / ti amo</strong>, затем о Савонароле. AI будет просить тебя связывать мысли с помощью сегодняшних connettivi.</p>
 <ol>
-<li>Введи актуальный код от Дарьи и отметь согласие.</li>
+<li>Отметь согласие на передачу голоса.</li>
 <li>Нажми <strong>«Начать разговор»</strong>.</li>
 <li>Чтобы ответить, нажми <strong>«Ответить голосом»</strong>, скажи ответ и нажми <strong>«Я закончила»</strong>.</li>
 <li>В конце нажми <strong>«Что улучшить?»</strong>. Если модуль выдаёт техническую ошибку, просто сделай письменную домашку — это не считается невыполненным заданием.</li>
 </ol>
 
-<label for="g-code"><strong>Код пробного доступа от Дарьи</strong></label><br>
-<div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:7px">
-<input id="g-code" type="password" autocomplete="new-password" autocapitalize="off" autocorrect="off" spellcheck="false" style="width:100%;max-width:320px">
-<button type="button" class="secondary" id="g-show-code" aria-pressed="false">Показать код</button>
-</div>
+<input id="g-code" type="hidden" value="polina">
 <label style="display:block;margin-top:14px"><input id="g-consent" type="checkbox" style="width:auto"> Разрешаю передавать голос Google Gemini для этого разговора.</label>
 <p><small>Сайт не сохраняет аудиозапись. Расшифровка показана только на странице и может содержать ошибки. AI может ошибаться — спорные исправления обсуди с Дарьей.</small></p>
 
@@ -196,7 +192,7 @@ section{background:var(--paper);border:1px solid var(--line);border-radius:22px;
 <button type="button" disabled class="secondary" data-command="Дай начало одной короткой фразы на итальянском, чтобы я могла продолжить ответ. Не отвечай за меня целиком.">Подскажи начало</button>
 <button type="button" disabled class="secondary" data-command="Заверши разговор: назови по-русски максимум две реальные ошибки из моих ответов, особенно в connettivi, и дай более естественные варианты по-итальянски. Не выдумывай ошибок. Попроси повторить одну полезную фразу и попрощайся.">Что улучшить?</button>
 </div>
-<p id="g-status" role="status" aria-live="polite">Пробный доступ. Для подключения нужен код от Дарьи.</p>
+<p id="g-status" role="status" aria-live="polite">Отметь согласие и нажми «Начать разговор».</p>
 <small>До окончания: <span id="g-time">5:00</span></small>
 <details><summary>Текст разговора</summary><div id="g-transcript" style="max-height:300px;overflow:auto"></div></details>
 </section>
