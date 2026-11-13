@@ -27,9 +27,13 @@ module.exports=async(req,res)=>{
  }),signal:AbortSignal.timeout(12000)});
  if(!response.ok){
    const status=response.status;
-   let upstreamStatus='UNKNOWN';
-   try{const failure=await response.json();upstreamStatus=String(failure?.error?.status||'UNKNOWN').slice(0,64);}catch{}
-   console.error('[gemini-natalia] ephemeral-token upstream failure',{status,upstreamStatus});
+   let upstreamStatus='UNKNOWN', upstreamMessage='';
+   try{
+     const failure=await response.json();
+     upstreamStatus=String(failure?.error?.status||'UNKNOWN').slice(0,64);
+     upstreamMessage=String(failure?.error?.message||'').split('\\n')[0].slice(0,350).replaceAll(key,'[REDACTED]');
+   }catch{}
+   console.error('[gemini-natalia] ephemeral-token upstream failure',{status,upstreamStatus,upstreamMessage});
    const error=status===429?'quota':status===400?'google_request':status===401||status===403?'google_auth':status===404?'google_endpoint':status>=500?'google_unavailable':'provider';
    return res.status(status===429?429:502).json({error});
  }
