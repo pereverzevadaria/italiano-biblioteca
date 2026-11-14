@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#25443a">
+<title>Natalia · Cambiamo programma! · Lezione 14.11</title>
+<style>
+:root{--bg:#f5f2eb;--paper:#fffdf9;--ink:#26352f;--mute:#68736d;--green:#294a3f;--light:#e9efe8;--terr:#b05b40;--sun:#edc67e;--edge:#dfddd3;--blue:#e7eef3;--radius:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+h1,h2,h3,p{margin-top:0}h1,h2,.serif{font-family:Georgia,"Times New Roman",serif}h2{font-size:clamp(1.55rem,3vw,2.15rem);line-height:1.18;letter-spacing:-.025em}h3{font-size:1.1rem}a{color:inherit}button,input,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.55}button:focus-visible,a:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid #d7a45c;outline-offset:3px}
+.wrap{width:min(1080px,calc(100% - 36px));margin:auto}.topbar{display:flex;justify-content:space-between;align-items:center;padding:20px 0;font-size:.8rem;font-weight:800;letter-spacing:.11em;text-transform:uppercase}.topbar a{text-decoration:none;color:var(--terr);letter-spacing:0;font-size:.85rem}.hero{background:var(--green);color:#fff9ef;border-radius:32px;overflow:hidden;position:relative;display:grid;grid-template-columns:1.1fr .9fr;box-shadow:0 24px 55px #263e3620}.hero:before{content:"";position:absolute;width:440px;height:440px;background:radial-gradient(circle,#b77a4f6c,transparent 69%);right:-150px;top:-230px;pointer-events:none}
+.hero-copy{padding:54px 48px 50px;position:relative;z-index:1}.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.13em;color:#f3dcac}.dot{display:inline-block;width:7px;height:7px;background:#edbf73;border-radius:50%}
+.hero h1{font-size:clamp(3rem,7vw,5.2rem);line-height:.98;letter-spacing:-.055em;margin:20px 0 18px;font-weight:500}.hero h1 em{color:#e9c487;font-weight:400}.hero p{font-size:1.08rem;line-height:1.65;color:#f7f0e4;max-width:480px}.hero-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:30px}.tag{border-radius:99px;padding:7px 12px;border:1px solid #ffffff4c;font-size:.78rem;font-weight:650;color:#fffbf3}
+.hero-art{min-height:390px;display:grid;place-items:center;padding:45px 36px;position:relative;z-index:1;background:linear-gradient(145deg,#ffffff13,transparent)}
+.phone{width:290px;max-width:100%;background:#fffcf6;border-radius:26px;padding:15px 16px;color:#243a31;transform:rotate(3deg);box-shadow:0 25px 35px #102a2280;border:6px solid #f9f1e5}
+.phone-head{display:flex;align-items:center;gap:10px;border-bottom:1px solid #e4e5d9;padding:3px 0 12px}.avatar{width:35px;height:35px;border-radius:50%;display:grid;place-items:center;background:#dfeade;color:#315445;font-family:Georgia,serif;font-weight:700}.phone-head small{font-size:.75rem;color:#69776f;display:block}.bubble{width:max-content;max-width:91%;border-radius:14px;padding:9px 12px;margin:12px 0;font-size:.86rem;line-height:1.35}.bubble.in{background:#eff0ec;border-top-left-radius:3px}.bubble.out{background:#cfe5d4;border-top-right-radius:3px;margin-left:auto}.badge-time{position:absolute;bottom:34px;left:8px;transform:rotate(-7deg);background:var(--sun);color:#563920;border-radius:12px;padding:10px 14px;font-size:.86rem;font-weight:800;box-shadow:0 8px 20px #15271e44}
+.track{margin:20px 0 26px;background:var(--paper);border:1px solid var(--edge);border-radius:18px;padding:17px 20px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:20px}.track p{font-size:.83rem;color:var(--mute);margin:0 0 5px}.progress{height:7px;background:#e9e6de;border-radius:8px;overflow:hidden}.progress i{display:block;height:100%;width:0;background:var(--terr);border-radius:8px;transition:width .35s}.percent{font-size:.9rem;font-weight:800;color:var(--green)}
+.nav{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 24px}.nav a{text-decoration:none;border:1px solid var(--edge);padding:8px 12px;border-radius:99px;font-size:.78rem;font-weight:700;background:#fffdf9}.nav a:hover{border-color:#ad876c}
+.lesson{background:var(--paper);border:1px solid var(--edge);border-radius:26px;padding:32px 34px;margin:20px 0;box-shadow:0 8px 26px #493a1c08}.section-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:15px}.overline{text-transform:uppercase;letter-spacing:.14em;color:var(--terr);font-size:.76rem;font-weight:900}.minutes{border:1px solid #ddd5c6;border-radius:99px;padding:6px 10px;font-size:.78rem;white-space:nowrap;color:var(--mute);font-weight:800}.intro{color:var(--mute);max-width:780px;margin-bottom:21px}.task{background:#f4f1e8;padding:16px 18px;border-radius:14px;border-left:4px solid var(--terr);margin:17px 0 22px}.task strong{color:var(--green)}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.mini{background:#f8f7f2;border:1px solid #e7e4dc;border-radius:16px;padding:19px}.mini h3{margin:0 0 7px}.mini p{margin-bottom:8px}.italian{font-weight:750;color:#244739}.ru{color:var(--mute);font-size:.9rem}.ital{font-style:italic}
+.kicker{display:block;color:var(--terr);font-weight:850;letter-spacing:.08em;text-transform:uppercase;font-size:.72rem;margin-bottom:6px}.line{height:1px;background:var(--edge);margin:21px 0}.small{font-size:.84rem;color:var(--mute)}
+.btn,.option,.flip button,.done,.chat-option{border:1px solid #b3c1b6;border-radius:12px;background:#fff;color:var(--green);padding:10px 14px;font-weight:750;transition:background .15s,border-color .15s,transform .12s}.btn:hover,.option:hover,.flip button:hover,.done:hover,.chat-option:hover{background:#edf3ee;border-color:#729984}.btn:active,.option:active,.flip button:active,.chat-option:active{transform:scale(.99)}.btn.primary{background:var(--green);color:#fff;border-color:var(--green)}.btn.primary:hover{background:#366054}.btn.warm{background:#f7e8d3;border-color:#dfcbae;color:#874d34}.btn.warm:hover{background:#f1ddbd}
+.done{font-size:.81rem;padding:8px 12px;margin-top:20px}.done.active{background:#d9e7d9;border-color:#8cad93}.done.active:before{content:"✓ ";font-weight:900}
+.flip{background:#fcfaf6;border:1px solid #e7dfd2;border-radius:16px;padding:18px;min-height:161px}.flip .italian{margin:10px 0 6px}.flip button{font-size:.78rem;padding:7px 11px;margin-top:8px}.flip .hidden-line{display:none}.flip.revealed .hidden-line{display:block}.flip .ru{margin:0}.flip.revealed{background:#edf3ec;border-color:#c4d5c4}
+.note{background:#eaf0eb;border:1px solid #cfddcf;border-radius:16px;padding:17px 20px;margin:18px 0}.note strong{color:#25483a}
+.chatwrap{border:1px solid #dce6da;border-radius:19px;overflow:hidden;background:#edf4ee}.chatheader{background:#2f5044;color:#fff;display:flex;align-items:center;gap:12px;padding:13px 17px;font-weight:800}.chatheader small{display:block;font-weight:400;color:#e3efe6;font-size:.75rem}.chatbody{padding:16px 18px;display:grid;gap:12px}.chatrow{max-width:86%;padding:12px 15px;border-radius:14px;font-size:.95rem;line-height:1.45}.chatrow.from{background:#fff;border-bottom-left-radius:4px}.chatrow.me{margin-left:auto;background:#d3e6d3;border-bottom-right-radius:4px}.chatrow small{display:block;text-align:right;font-size:.68rem;color:#738276;margin-top:4px}
+.exercise{border:1px solid #e1dfd4;border-radius:15px;padding:18px;margin:13px 0;background:#fff}.exercise .prompt{font-size:1.02rem;font-weight:800;color:#29493b;margin:0 0 8px}.options{display:grid;gap:8px;margin-top:13px}.option{text-align:left;font-weight:650}.option.selected.good{background:#e1f0df;border-color:#6eaa71}.option.selected.bad{background:#f9e6de;border-color:#ce8c76}.feedback{min-height:24px;margin:10px 0 0;font-size:.88rem;font-weight:700;color:#99523e}.feedback.good{color:#2c6f44}
+.dual{display:grid;grid-template-columns:.88fr 1.12fr;gap:16px}.context{background:#f5eadd;border:1px solid #ead6c0;padding:20px;border-radius:18px}.context .mini-label{text-transform:uppercase;letter-spacing:.1em;color:#995a40;font-size:.73rem;font-weight:900}.context strong{font-size:1.1rem;display:block;margin:9px 0}.respond{background:#f8f8f3;border:1px solid var(--edge);padding:18px;border-radius:18px}textarea{width:100%;min-height:85px;resize:vertical;border:1px solid #c9cfc8;border-radius:12px;padding:12px;background:#fff;color:#26352f}.respond textarea{margin:6px 0}.solution{margin-top:8px;border-top:1px solid #ddd9d0;padding-top:10px;font-size:.89rem}.solution summary{font-weight:800;cursor:pointer;color:var(--terr)}.solution p{margin:9px 0 0;color:var(--green)}
+.sim{display:grid;grid-template-columns:1.05fr .95fr;border:1px solid #ddd6c9;border-radius:22px;overflow:hidden;background:#fff}.sim .chatbody{min-height:260px;align-content:start;background:#eaf1ea}.sim-actions{padding:22px;background:#fff}.sim-actions h3{font-family:Georgia,serif;font-size:1.37rem;margin:0 0 7px}.chat-option{display:block;width:100%;text-align:left;font-size:.89rem;margin:8px 0;background:#f8f8f5}.stepcount{font-size:.75rem;font-weight:850;color:var(--terr);text-transform:uppercase;letter-spacing:.07em}
+.sim .feedback{margin-bottom:8px}.sim-finish{display:none;padding:14px;background:#e7f0e6;border-radius:13px;font-size:.9rem}.sim-finish.visible{display:block}
+.role{border-radius:21px;background:#f1f0e7;border:1px solid #e0d9c8;padding:24px}.role .situation{font:1.33rem/1.38 Georgia,serif;max-width:670px;margin:12px 0}.role .spoken{border-radius:13px;background:#fff;padding:15px 18px;font-weight:750;color:#345749}.role-buttons{display:flex;gap:9px;flex-wrap:wrap;margin:12px 0 16px}.scene-selector.active{background:var(--green);color:#fff;border-color:var(--green)}.obstacle{display:none;padding:16px 18px;background:#fff8e9;border:1px solid #e8d2a3;border-radius:14px;margin-top:14px}.obstacle.visible{display:block}.obstacle p{margin:0;font-weight:800}
+.checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.checks label{display:flex;gap:11px;align-items:flex-start;background:#f8f8f3;border:1px solid var(--edge);border-radius:12px;padding:11px 13px;cursor:pointer}.checks input{accent-color:#315a46;margin-top:5px;width:18px;height:18px;flex-shrink:0}
+.footer{padding:34px 0 50px;text-align:center;color:var(--mute);font-size:.85rem}.footer strong{color:var(--green)}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.hero-copy{padding:36px 30px 18px}.hero-art{min-height:270px;padding:18px}.phone{transform:rotate(1deg)}.badge-time{bottom:15px;left:23px}.grid3{grid-template-columns:1fr}.dual,.sim{grid-template-columns:1fr}}
+@media(max-width:600px){.wrap{width:min(100% - 22px,1080px)}.lesson{padding:23px 18px;border-radius:19px}.hero{border-radius:22px}.hero-copy{padding:31px 23px 15px}.hero h1{font-size:3.3rem}.grid2,.checks{grid-template-columns:1fr}.track{padding:14px}.nav{gap:6px}.nav a{font-size:.71rem;padding:6px 9px}.phone{max-width:260px}.context,.respond,.role{padding:17px}.chatrow{max-width:96%}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+@media print{body{background:#fff}.hero{background:#fff!important;color:#000;box-shadow:none}.hero p,.hero .tag,.hero .eyebrow{color:#222}.hero-art,.nav,.done,.flip button,.sim-actions button,.role-buttons{display:none!important}.lesson{break-inside:avoid;border-color:#aaa;box-shadow:none}.flip .hidden-line,.obstacle{display:block!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="topbar"><span>DARIA KUZNO · ITALIANO DALL’INTERNO</span><a href="/ntk-q5m9/">← В библиотеку</a></div>
+<header class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow"><i class="dot"></i> Natalia · A1 · 14 novembre 2026</span>
+    <h1>Cambiamo<br><em>programma!</em></h1>
+    <p>Как перенести встречу, отказаться, уточнить детали и договориться — даже когда планы меняются.</p>
+    <div class="hero-tags"><span class="tag">Lezione · 60 minuti</span><span class="tag">Parliamo davvero</span><span class="tag">Situazioni reali</span></div>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <div class="phone">
+      <div class="phone-head"><span class="avatar">G</span><span><b>Giulia</b><small>online</small></span></div>
+      <div class="bubble in">Ci vediamo alle cinque?<small>14:08</small></div>
+      <div class="bubble out">Alle cinque non posso. Alle sei?<small>14:09 ✓✓</small></div>
+      <div class="bubble in">Perfetto! A dopo.<small>14:09</small></div>
+    </div>
+    <div class="badge-time">17:00 → 18:00</div>
+  </div>
+</header>
+
+<div class="track" aria-live="polite"><div><p>Твой маршрут · отмечай пройденные этапы</p><div class="progress"><i id="progress-bar"></i></div></div><span id="progress-number" class="percent">0 / 6</span></div>
+<nav class="nav" aria-label="Разделы урока">
+<a href="#warm">01 · Разогрев</a><a href="#phrases">02 · Реплики</a><a href="#read">03 · Диалог</a><a href="#repair">04 · Проблемы</a><a href="#simulator">05 · Переписка</a><a href="#roleplay">06 · Разговор</a>
+</nav>
+
+<main>
+<section class="lesson" id="warm">
+ <div class="section-top"><span class="overline">01 / Partiamo da te</span><span class="minutes">8 минут</span></div>
+ <h2>Un piccolo riscaldamento</h2>
+ <p class="intro">Сначала вспомним привычное утро и одно недавнее событие. Новых правил здесь нет.</p>
+ <div class="task"><strong>Задание:</strong> ответь устно на вопросы. Сначала коротко, затем добавь одну подробность. Не записывай полный текст.</div>
+ <div class="grid3">
+  <div class="mini"><span class="kicker">Di solito</span><h3>A che ora ti svegli?</h3><p class="small">Обычное утро: настоящее время.</p><p class="italian">Di solito mi sveglio...</p></div>
+  <div class="mini"><span class="kicker">Stamattina</span><h3>Come ti sei preparata?</h3><p class="small">Сегодня утром: passato prossimo.</p><p class="italian">Mi sono... Poi ho...</p></div>
+  <div class="mini"><span class="kicker">Un imprevisto</span><h3>Sei mai arrivata in ritardo?</h3><p class="small">Случай, когда планы изменились.</p><p class="italian">Una volta sono arrivata...</p></div>
+ </div>
+ <div class="note"><strong>Мостик к новой теме.</strong> Ieri mi sono svegliata tardi → <strong>Sono arrivata in ritardo.</strong><br>Вчера я поздно проснулась → Я опоздала. А как сказать об этом человеку, который тебя ждёт?</div>
+ <button class="done" data-done="warm" type="button" aria-pressed="false">Этап пройден</button>
+</section>
+
+<section class="lesson" id="phrases">
+ <div class="section-top"><span class="overline">02 / Le frasi che servono</span><span class="minutes">12 минут</span></div>
+ <h2>Восемь реплик, которые спасают разговор</h2>
+ <div class="task"><strong>Задание:</strong> посмотри на ситуацию по-русски, попробуй сказать её по-итальянски и только потом нажми «Открыть фразу». Прочитай вслух дважды.</div>
+ <div class="grid2">
+  <div class="flip"><span class="kicker">01 · Объяснить проблему</span><p class="ru">Я опаздываю на десять минут.</p><p class="hidden-line italian">Sono in ritardo di dieci minuti.</p><button type="button" data-flip aria-expanded="false">Открыть фразу</button></div>
+  <div class="flip"><span class="kicker">02 · Отказаться</span><p class="ru">В шесть я не могу.</p><p class="hidden-line italian">Alle sei non posso.</p><button type="button" data-flip aria-expanded="false">Открыть фразу</button></div>
+  <div class="flip"><span class="kicker">03 · Предложить</span><p class="ru">Можем встретиться в семь?</p><p class="hidden-line italian">Possiamo vederci alle sette?</p><button type="button" data-flip aria-expanded="false">Открыть фразу</button></div>
+  <div class="flip"><span class="kicker">04 · Согласовать</span><p class="ru">Тебе подходит в семь?</p><p class="hidden-line italian">Ti va bene alle sette?</p><button type="button" data-flip aria-expanded="false">Открыть фразу</button></div>
+  <div class="flip"><span class="kicker">05 · Договориться</span><p class="ru">Хорошо, договорились!</p><p class="hidden-line italian">Va bene, d’accordo!</p><button type="button" data-flip aria-expanded="false">Открыть фразу</button></div>
+  <div class="flip"><span class="kicker">06 · Переспросить</span><p class="ru">Прости, можешь повторить медленнее?</p><p class="hidden-line italian">Scusa, puoi ripetere più lentamente?</p><button type="button" data-flip aria-expanded="false">Открыть фразу</button></div>
+  <div class="flip"><span class="kicker">07 · Уточнить</span><p class="ru">А где именно?</p><p class="hidden-line italian">Dove esattamente?</p><button type="button" data-flip aria-expanded="false">Открыть фразу</button></div>
+  <div class="flip"><span class="kicker">08 · Объяснить</span><p class="ru">У меня проблема. Можем перенести встречу?</p><p class="hidden-line italian">Ho un problema. Possiamo spostare l’appuntamento?</p><button type="button" data-flip aria-expanded="false">Открыть фразу</button></div>
+ </div>
+ <div class="note"><strong>Мини-правило: potere + инфинитив.</strong> <em>Posso</em> arrivare alle sei. · <em>Puoi</em> ripetere? · <em>Possiamo</em> vederci domani?<br><span class="small">Для договорённостей о ближайшем будущем в разговорном итальянском часто достаточно presente: Ci vediamo domani alle sei.</span></div>
+ <button class="done" data-done="phrases" type="button" aria-pressed="false">Этап пройден</button>
+</section>
+
+<section class="lesson" id="read">
+ <div class="section-top"><span class="overline">03 / Un messaggio di Giulia</span><span class="minutes">10 минут</span></div>
+ <h2>Un appuntamento al museo</h2>
+ <div class="task"><strong>Задание:</strong> прочитай переписку. Затем выбери естественный ответ для каждой ситуации. Если ошибёшься, попробуй ещё раз: важно понять логику разговора.</div>
+ <div class="chatwrap">
+  <div class="chatheader"><span class="avatar">G</span><span>Giulia<small>Sabato · Milano</small></span></div>
+  <div class="chatbody">
+   <div class="chatrow from">Ciao! Ci vediamo sabato alle cinque davanti al museo?<small>15:08</small></div>
+   <div class="chatrow me">Alle cinque non posso. Possiamo vederci alle sei?<small>15:09 ✓✓</small></div>
+   <div class="chatrow from">Alle sei va bene! Ma non davanti al museo: ci vediamo al bar vicino alla fermata del tram.<small>15:10</small></div>
+   <div class="chatrow me">Scusa, non ho capito. Quale bar?<small>15:11 ✓✓</small></div>
+   <div class="chatrow from">Il Bar Verde, in via Dante. Davanti all’entrata.<small>15:12</small></div>
+   <div class="chatrow me">Perfetto, a sabato!<small>15:12 ✓✓</small></div>
+  </div>
+ </div>
+ <div class="line"></div>
+ <div class="exercise quiz" data-answer="b" data-explain="Когда время не подходит, откажись и предложи другое.">
+  <span class="kicker">1 · Выбери ответ</span><p class="prompt">— Ci vediamo alle cinque?</p>
+  <div class="options"><button class="option" type="button" data-choice="a">A. Sì, sono in ritardo ieri.</button><button class="option" type="button" data-choice="b">B. Alle cinque non posso. Alle sei va bene?</button><button class="option" type="button" data-choice="c">C. Non ho la cinque.</button></div><p class="feedback" aria-live="polite"></p>
+ </div>
+ <div class="exercise quiz" data-answer="a" data-explain="Уточняй место, прежде чем соглашаться.">
+  <span class="kicker">2 · Выбери ответ</span><p class="prompt">— Ci vediamo al bar vicino alla fermata.</p>
+  <div class="options"><button class="option" type="button" data-choice="a">A. Scusa, quale bar esattamente?</button><button class="option" type="button" data-choice="b">B. Ho fatto colazione ieri.</button><button class="option" type="button" data-choice="c">C. Il mio bar sono.</button></div><p class="feedback" aria-live="polite"></p>
+ </div>
+ <div class="exercise quiz" data-answer="c" data-explain="Переспросить — нормально. Это лучше, чем делать вид, что поняла.">
+  <span class="kicker">3 · Выбери ответ</span><p class="prompt">— Scusa, puoi ripetere? Non ho capito.</p>
+  <div class="options"><button class="option" type="button" data-choice="a">A. Non abbiamo ripetere.</button><button class="option" type="button" data-choice="b">B. Io mi sono messa la borsa.</button><button class="option" type="button" data-choice="c">C. Certo! Ci vediamo alle sei davanti al bar.</button></div><p class="feedback" aria-live="polite"></p>
+ </div>
+ <details class="solution"><summary>Проверка понимания: где и когда они встретятся?</summary><p>Суббота, 18:00. У входа в Bar Verde на via Dante, рядом с трамвайной остановкой. Не перед музеем.</p></details>
+ <button class="done" data-done="read" type="button" aria-pressed="false">Этап пройден</button>
+</section>
+
+<section class="lesson" id="repair">
+ <div class="section-top"><span class="overline">04 / Una soluzione, per favore!</span><span class="minutes">10 минут</span></div>
+ <h2>Не просто «нет» — предложи решение</h2>
+ <p class="intro">В реальном разговоре важна цепочка: <strong>объяснить → предложить → уточнить → договориться</strong>.</p>
+ <div class="task"><strong>Задание:</strong> в каждой ситуации составь 1–2 короткие реплики по-итальянски. Сначала скажи вслух, потом при желании запиши. Пример открывай только после ответа.</div>
+ <div class="dual" style="margin-bottom:14px">
+  <div class="context"><span class="mini-label">Caso 01 · Orario</span><strong>Подруга ждёт тебя в 17:00.</strong><p>Но ты работаешь до 17:30. Откажись от предложенного времени и предложи 18:00.</p></div>
+  <div class="respond"><label for="r1" class="small"><strong>Что скажешь?</strong></label><textarea id="r1" data-save="r1" placeholder="Alle cinque non posso..."></textarea><details class="solution"><summary>Посмотреть один возможный ответ</summary><p>Alle cinque non posso: lavoro. Possiamo vederci alle sei?</p></details></div>
+ </div>
+ <div class="dual" style="margin-bottom:14px">
+  <div class="context"><span class="mini-label">Caso 02 · Ritardo</span><strong>Ты опаздываешь на 10 минут.</strong><p>Подруга уже на месте. Извинись, объясни и скажи, что скоро придёшь.</p></div>
+  <div class="respond"><label for="r2" class="small"><strong>Что скажешь?</strong></label><textarea id="r2" data-save="r2" placeholder="Scusa, sono in ritardo..."></textarea><details class="solution"><summary>Посмотреть один возможный ответ</summary><p>Scusa, sono in ritardo di dieci minuti. Sto arrivando!</p></details></div>
+ </div>
+ <div class="dual" style="margin-bottom:14px">
+  <div class="context"><span class="mini-label">Caso 03 · Luogo</span><strong>Ты не поняла, где встреча.</strong><p>Собеседник назвал место слишком быстро. Переспроси и уточни адрес.</p></div>
+  <div class="respond"><label for="r3" class="small"><strong>Что скажешь?</strong></label><textarea id="r3" data-save="r3" placeholder="Scusa, non ho capito..."></textarea><details class="solution"><summary>Посмотреть один возможный ответ</summary><p>Scusa, non ho capito. Puoi ripetere più lentamente? Qual è l’indirizzo?</p></details></div>
+ </div>
+ <div class="dual">
+  <div class="context"><span class="mini-label">Caso 04 · Un altro giorno</span><strong>Тебя зовут в музей завтра.</strong><p>Завтра ты занята. Вежливо откажись и предложи субботу.</p></div>
+  <div class="respond"><label for="r4" class="small"><strong>Что скажешь?</strong></label><textarea id="r4" data-save="r4" placeholder="Domani non posso..."></textarea><details class="solution"><summary>Посмотреть один возможный ответ</summary><p>Domani non posso, mi dispiace. Ti va bene sabato?</p></details></div>
+ </div>
+ <div class="note"><strong>Типичные ловушки:</strong> <em>alle cinque</em> (не <s>a cinque</s>); <em>sono in ritardo</em> (не <s>sono ritardata</s>); <em>possiamo vederci</em> (не <s>possiamo ci vediamo</s>).<br><span class="small">Не нужно использовать длинные предложения. Две короткие, ясные реплики отлично работают.</span></div>
+ <button class="done" data-done="repair" type="button" aria-pressed="false">Этап пройден</button>
+</section>
+
+<section class="lesson" id="simulator">
+ <div class="section-top"><span class="overline">05 / WhatsApp interattivo</span><span class="minutes">10 минут</span></div>
+ <h2>Договорись о встрече</h2>
+ <div class="task"><strong>Задание:</strong> прочитай сообщение Джулии и выбери реплику, которая поможет продолжить разговор. Собеседница будет отвечать по ходу переписки. После завершения перескажи диалог своими словами без подсказок.</div>
+ <div class="sim">
+  <div class="chatwrap" style="border:0;border-radius:0">
+   <div class="chatheader"><span class="avatar">G</span><span>Giulia<small>Conversazione · prova</small></span></div>
+   <div id="sim-log" class="chatbody" role="log" aria-label="Переписка с Джулией"></div>
+  </div>
+  <div class="sim-actions">
+   <p class="stepcount" id="sim-step">Messaggio 1 di 3</p>
+   <h3 id="sim-title">Как ответишь?</h3>
+   <p class="small">Нажимай не самый длинный, а самый подходящий ответ.</p>
+   <div id="sim-options"></div>
+   <p id="sim-feedback" class="feedback" aria-live="polite"></p>
+   <div class="sim-finish" id="sim-finish"><strong>Согласовано!</strong> Теперь перескажи разговор от своего лица: когда, где и почему изменили планы.</div>
+   <button class="btn warm" id="sim-reset" type="button" style="margin-top:16px">Начать заново</button>
+  </div>
+ </div>
+ <button class="done" data-done="simulator" type="button" aria-pressed="false">Этап пройден</button>
+</section>
+
+<section class="lesson" id="roleplay">
+ <div class="section-top"><span class="overline">06 / Adesso parli tu</span><span class="minutes">10 минут</span></div>
+ <h2>Разговор без готового сценария</h2>
+ <p class="intro">Теперь ты должна добиться результата сама. Ты говоришь с собеседницей, а преподаватель неожиданно меняет обстоятельства.</p>
+ <div class="task"><strong>Задание:</strong> выбери ситуацию. Ответь устно на первую реплику. Преподаватель нажимает «Неожиданное изменение», и тебе нужно договориться заново. Подсказки можно открыть только после попытки.</div>
+ <div class="role">
+  <span class="kicker">Scegli una situazione</span>
+  <div class="role-buttons"><button type="button" class="btn scene-selector active" data-scene="0" aria-pressed="true">01 · Un caffè</button><button type="button" class="btn scene-selector" data-scene="1" aria-pressed="false">02 · Una mostra</button><button type="button" class="btn scene-selector" data-scene="2" aria-pressed="false">03 · In stazione</button></div>
+  <span class="overline" id="role-label">Una situazione vera</span>
+  <p class="situation" id="role-situation">Подруга предлагает встретиться в кафе в 16:00, но ты можешь только после 17:00.</p>
+  <p class="spoken" id="role-line">«Ciao, Natalia! Ci vediamo alle quattro al Bar Centrale?»</p>
+  <button type="button" class="btn primary" id="change-scene">Неожиданное изменение</button>
+  <button type="button" class="btn" id="reset-scene">Сначала</button>
+  <div class="obstacle" id="obstacle" aria-live="polite"><span class="kicker">La situazione cambia!</span><p id="obstacle-line"></p></div>
+  <details class="solution" style="margin-top:16px"><summary>Нужны короткие фразы?</summary><p><em>Mi dispiace, alle quattro non posso. · Possiamo vederci più tardi? · Ti va bene alle cinque e mezza? · Scusa, dove esattamente? · Va bene, a dopo!</em></p></details>
+ </div>
+ <div class="line"></div>
+ <h3>Последняя проверка: получилось ли?</h3>
+ <div class="checks" id="skill-checks">
+  <label><input type="checkbox"> Я смогла вежливо отказаться.</label>
+  <label><input type="checkbox"> Я предложила другое время или место.</label>
+  <label><input type="checkbox"> Я спросила, удобно ли собеседнице.</label>
+  <label><input type="checkbox"> Я переспросила или уточнила детали.</label>
+  <label><input type="checkbox"> Я смогла объяснить небольшую проблему.</label>
+  <label><input type="checkbox"> Я завершила разговор договорённостью.</label>
+ </div>
+ <p class="small" id="skill-count" aria-live="polite" style="margin:12px 0">0 из 6 речевых действий.</p>
+ <button class="done" data-done="roleplay" type="button" aria-pressed="false">Этап пройден</button>
+</section>
+
+<section class="lesson" id="homework">
+ <div class="section-top"><span class="overline">Da portare con te</span><span class="minutes">5–8 минут дома</span></div>
+ <h2>Promemoria & Homework</h2>
+ <div class="grid2">
+  <div class="mini"><span class="kicker">Ricorda</span><p><strong>Problema:</strong> Sono in ritardo.</p><p><strong>Rifiuto:</strong> Alle cinque non posso.</p><p><strong>Proposta:</strong> Possiamo vederci alle sei?</p><p><strong>Conferma:</strong> Va bene, a dopo!</p></div>
+  <div class="mini"><span class="kicker">Piccolo compito</span><p><strong>Задание:</strong> напиши три сообщения подруге, которая предлагает встречу завтра в 17:00:</p><p>1. Объясни, почему это время не подходит.<br>2. Предложи другое время.<br>3. Уточни место встречи.</p><p class="small">После этого запиши голосовое на 30–45 секунд: объясни, почему вчера ты опоздала и как изменила планы. Используй хотя бы одно предложение с passato prossimo.</p></div>
+ </div>
+ <details class="solution"><summary>Для преподавателя · методические акценты</summary>
+ <p>Последовательность: воспроизведение знакомых форм → retrieval коротких речевых блоков → распознавание коммуникативного намерения → самостоятельный ответ → контролируемая переписка → устная импровизация. Не вводить futuro/condizionale как новую тему. При первом role-play не исправлять каждую морфологическую ошибку: приоритет — внятный отказ, предложение альтернативы и получение согласия. После финальной попытки выбрать 2 повторяющиеся ошибки и перепровести мини-диалог.</p>
+ <p>Ключевые риски: <em>alle cinque</em> с артиклем, <em>possiamo + infinito</em>, <em>sono in ritardo</em>, различать <em>ti va bene?</em> и <em>va bene</em>. Passato prossimo — только небольшой перенос из предыдущего урока. Если первые два блока идут быстрее, дать новые неожиданные реплики вместо дополнительной письменной работы.</p>
+ </details>
+</section>
+</main>
+<footer class="footer"><strong>DARIA KUZNO · ITALIANO DALL’INTERNO</strong><br>Natalia · Cambiamo programma! · A1 · Lezione · 14.11.2026</footer>
+</div>
+<script>
+(function(){
+"use strict";
+var STORAGE="natalia-kaluga-2026-11-14-cambiamo";
+function read(key,fallback){try{var val=localStorage.getItem(STORAGE+":"+key);return val===null?fallback:JSON.parse(val);}catch(e){return fallback;}}
+function save(key,value){try{localStorage.setItem(STORAGE+":"+key,JSON.stringify(value));}catch(e){}}
+var stages=["warm","phrases","read","repair","simulator","roleplay"];
+var completed=read("done",{});
+function progress(){
+ var total=stages.filter(function(id){return !!completed[id];}).length;
+ document.getElementById("progress-number").textContent=total+" / 6";
+ document.getElementById("progress-bar").style.width=(total/6*100)+"%";
+ document.querySelectorAll("[data-done]").forEach(function(btn){var active=!!completed[btn.getAttribute("data-done")];btn.classList.toggle("active",active);btn.setAttribute("aria-pressed",String(active));btn.textContent=active?"Готово · повторить этап":"Этап пройден";});
+}
+document.querySelectorAll("[data-done]").forEach(function(btn){btn.addEventListener("click",function(){var id=btn.getAttribute("data-done");completed[id]=!completed[id];save("done",completed);progress();});});
+progress();
+document.querySelectorAll("[data-flip]").forEach(function(btn){btn.addEventListener("click",function(){var card=btn.closest(".flip"),open=card.classList.toggle("revealed");btn.textContent=open?"Скрыть фразу":"Открыть фразу";btn.setAttribute("aria-expanded",String(open));});});
+document.querySelectorAll(".quiz").forEach(function(quiz){
+ quiz.querySelectorAll(".option").forEach(function(btn){btn.addEventListener("click",function(){
+  quiz.querySelectorAll(".option").forEach(function(other){other.classList.remove("selected","good","bad");});
+  var ok=btn.dataset.choice===quiz.dataset.answer;btn.classList.add("selected",ok?"good":"bad");
+  var feedback=quiz.querySelector(".feedback");feedback.classList.toggle("good",ok);
+  feedback.textContent=ok?"Верно. "+quiz.dataset.explain:"Пока нет. Подумай: что собеседник должен узнать из ответа?";
+ });});
+});
+document.querySelectorAll("textarea[data-save]").forEach(function(field){field.value=read(field.dataset.save,"");field.addEventListener("input",function(){save(field.dataset.save,field.value);});});
+var turns=[
+ {incoming:"Ciao! Ci vediamo oggi alle cinque davanti al cinema?",title:"В пять ты занята. Что ответить?",choices:[
+  "Alle cinque non posso. Possiamo vederci alle sei?",
+  "Non sono le cinque arrivata.",
+  "Sì, mi sono svegliata alle cinque."
+ ],correct:0,reply:"Alle sei va bene! Ma io sono vicino alla stazione. Ci vediamo lì?"},
+ {title:"Место изменилось. Уточни, где именно.",choices:[
+  "Alla stazione sono mia.",
+  "Scusa, dove esattamente ci vediamo?",
+  "Mi metto il caffè."
+ ],correct:1,reply:"Davanti all’entrata principale della stazione."},
+ {title:"Вы договорились. Закрой разговор.",choices:[
+  "Perfetto, a dopo!",
+  "Non posso ieri.",
+  "Al mio stazione è."
+ ],correct:0,reply:null}
+];
+var index=0;
+var log=document.getElementById("sim-log"),choices=document.getElementById("sim-options"),feedback=document.getElementById("sim-feedback");
+function msg(text,person){var row=document.createElement("div");row.className="chatrow "+(person==="me"?"me":"from");row.textContent=text;log.appendChild(row);}
+function renderStep(){
+ choices.innerHTML="";feedback.textContent="";
+ if(index>=turns.length){document.getElementById("sim-step").textContent="Fine!";document.getElementById("sim-title").textContent="Ottimo, ci vediamo!";document.getElementById("sim-finish").classList.add("visible");return;}
+ var t=turns[index];document.getElementById("sim-step").textContent="Messaggio "+(index+1)+" di 3";document.getElementById("sim-title").textContent=t.title;
+ t.choices.forEach(function(choice,i){var b=document.createElement("button");b.type="button";b.className="chat-option";b.textContent=String.fromCharCode(65+i)+". "+choice;b.addEventListener("click",function(){
+  if(i!==t.correct){feedback.className="feedback";feedback.textContent="Попробуй ещё раз: какая реплика помогает договориться?";return;}
+  feedback.className="feedback good";msg(choice,"me");index++;
+  if(t.reply){msg(t.reply,"from");}
+  renderStep();
+ });choices.appendChild(b);});
+}
+function initSim(){index=0;log.innerHTML="";document.getElementById("sim-finish").classList.remove("visible");msg(turns[0].incoming,"from");renderStep();}
+document.getElementById("sim-reset").addEventListener("click",initSim);
+initSim();
+var scenes=[
+ {name:"Una situazione vera",situation:"Подруга предлагает встретиться в кафе в 16:00, но ты можешь только после 17:00.",line:"«Ciao, Natalia! Ci vediamo alle quattro al Bar Centrale?»",obstacles:["«Alle cinque non posso. Facciamo alle cinque e mezza?»","«Scusa, il bar è chiuso. Possiamo andare al Bar Verde?»"]},
+ {name:"Una mostra di design",situation:"Вы собирались на выставку дизайна завтра в 11:00. Но ты занята утром и предлагаешь 15:00.",line:"«Domani andiamo alla mostra alle undici?»",obstacles:["«Alle tre va bene. Ma dove ci incontriamo?»","«Non ho capito, puoi ripetere l’orario?»"]},
+ {name:"Un viaggio in treno",situation:"Ты едешь на встречу на поезде. Поезд задерживается, нужно предупредить о возможном опоздании на 20 минут.",line:"«Ciao Natalia, sei già in stazione? Ti aspetto alle dieci!»",obstacles:["«Va bene, ma a che ora arrivi esattamente?»","«Io alle dieci e mezza devo andare via. Possiamo vederci domani?»"]}
+];
+var activeScene=0,obstacleNo=0;
+function setScene(n){activeScene=n;obstacleNo=0;var s=scenes[n];document.getElementById("role-label").textContent=s.name;document.getElementById("role-situation").textContent=s.situation;document.getElementById("role-line").textContent=s.line;document.getElementById("obstacle").classList.remove("visible");document.querySelectorAll("[data-scene]").forEach(function(btn){var on=Number(btn.dataset.scene)===n;btn.classList.toggle("active",on);btn.setAttribute("aria-pressed",String(on));});}
+document.querySelectorAll("[data-scene]").forEach(function(btn){btn.addEventListener("click",function(){setScene(Number(btn.dataset.scene));});});
+document.getElementById("change-scene").addEventListener("click",function(){var messages=scenes[activeScene].obstacles;document.getElementById("obstacle-line").textContent=messages[obstacleNo%messages.length];document.getElementById("obstacle").classList.add("visible");obstacleNo++;});
+document.getElementById("reset-scene").addEventListener("click",function(){setScene(activeScene);});
+var skillInputs=Array.from(document.querySelectorAll("#skill-checks input"));
+var skillState=read("skills",[]);
+skillInputs.forEach(function(inp,i){inp.checked=!!skillState[i];inp.addEventListener("change",function(){var data=skillInputs.map(function(x){return x.checked;});save("skills",data);updateSkills();});});
+function updateSkills(){var cnt=skillInputs.filter(function(x){return x.checked;}).length;document.getElementById("skill-count").textContent=cnt+" из 6 речевых действий.";}
+updateSkills();
+})();
+</script>
+</body>
+</html>
