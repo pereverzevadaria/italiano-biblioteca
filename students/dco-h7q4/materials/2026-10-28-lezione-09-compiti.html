@@ -1,0 +1,25 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Дмитрий · Compiti · Conosciamoci meglio</title><style>
+:root{--bg:#f3eee6;--paper:#fffdf9;--ink:#28312d;--muted:#737a74;--sage:#5f786f;--sage2:#e6efea;--gold:#b98a50;--gold2:#f5e9d8;--blue:#5d7f9b;--blue2:#e9f1f6;--line:#ddd5ca;--shadow:0 14px 34px rgba(35,45,41,.08)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,sans-serif;line-height:1.58}main{max-width:900px;margin:auto;padding:18px 14px 60px}
+h1,h2{font-family:Georgia,serif;margin-top:0}h1{font-size:clamp(40px,7vw,58px);line-height:1}.hero{min-height:300px;border-radius:28px;padding:30px;display:flex;align-items:flex-end;color:white;background:linear-gradient(135deg,#17231f,#3b5048 55%,#7a8375);box-shadow:var(--shadow)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:22px;margin:16px 0;box-shadow:var(--shadow)}.badge{display:inline-block;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:700;background:var(--sage2);color:var(--sage);margin-bottom:10px}
+.note{background:var(--sage2);border-left:5px solid var(--sage);border-radius:14px;padding:14px 16px;margin:12px 0}.exercise{background:#fbfbf8;border:1px solid var(--line);border-radius:18px;padding:17px;margin:12px 0}.blue{background:var(--blue2);border-radius:14px;padding:13px 15px;margin:12px 0}
+button{border:0;border-radius:999px;padding:9px 14px;background:var(--sage);color:#fff;font-weight:700;cursor:pointer}.answer{display:none;background:var(--blue2);padding:12px;border-radius:12px;margin-top:10px}.voice{background:linear-gradient(145deg,#eaf3ed,#fffdf9);border:2px solid #afc6bb;border-radius:20px;padding:18px}.muted{color:var(--muted);font-size:14px}
+@media(max-width:650px){.hero,.card{padding:18px}}</style></head><body><main>
+<section class="hero"><div><div class="badge">28.10.2026 · Compiti · 10–15 minuti</div><h1>Conosciamoci meglio</h1><p>Ничего нового. Только немного повторения, чтобы знакомые вопросы вспоминались быстрее.</p></div></section>
+
+<section class="card"><h2>1. Скажи по-итальянски</h2><div class="note"><b>Сначала устно и без подсказки.</b> Только потом нажми «Проверить».</div><div class="exercise"><ol>
+<li>Где ты живёшь?</li><li>Где ты работаешь?</li><li>Кем ты работаешь?</li><li>На каких языках ты говоришь?</li><li>Где он / она живёт?</li><li>Кем он / она работает?</li><li>На каких языках он / она говорит?</li>
+</ol><button onclick="toggle('a1')">Проверить</button><div class="answer" id="a1">Dove abiti? · Dove lavori? · Che lavoro fai? · Che lingue parli? · Dove abita? · Che lavoro fa? · Che lingue parla?</div></div></section>
+
+<section class="card"><h2>2. TU → LUI / LEI</h2><div class="note">Сначала скажи форму вслух, потом проверь.</div><div class="exercise">
+<p>Dove <b>abiti</b>? → Dove ______ Marco?</p><p>Dove <b>lavori</b>? → Dove ______ Anna?</p><p>Che lavoro <b>fai</b>? → Che lavoro ______ Marco?</p><p>Che lingue <b>parli</b>? → Che lingue ______ Anna?</p>
+<button onclick="toggle('a2')">Проверить</button><div class="answer" id="a2">abita · lavora · fa · parla</div></div></section>
+
+<section class="card"><h2>3. Прочитай → закрой → расскажи</h2><div class="blue"><b>Luca abita a Como. Lavora a Milano. Fa l’informatico. Parla italiano e inglese. Va al lavoro in treno. Nel weekend va in montagna.</b></div><div class="exercise"><p>Прочитай текст 2 раза. Потом <b>закрой его</b> и попробуй рассказать о Luca 4–5 фразами. Не нужно повторять слово в слово.</p></div></section>
+
+<section class="card"><h2>4. Голосовое</h2><div class="voice"><p>Выбери одного реального человека: друга, коллегу или родственника.</p><p>Запиши <b>30–40 секунд</b> и скажи 4–5 простых фраз:</p><p><b>Si chiama… · Abita… · Lavora… · Fa il / la… · Parla…</b></p><p><b>Полный текст заранее не писать.</b> Можно выписать максимум 5 отдельных слов.</p></div></section>
+
+<section class="card"><h2>Что отправить преподавателю</h2><p><b>Только голосовое из задания 4.</b></p><p class="muted">Остальное можно просто сделать устно дома.</p></section>
+<script>function toggle(id){const e=document.getElementById(id);e.style.display=e.style.display==="block"?"none":"block";}</script>
+</main></body></html>
