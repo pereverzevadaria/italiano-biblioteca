@@ -240,6 +240,18 @@
     {
       "source": "/elg-v4k8/:path*",
       "destination": "/students/elg-v4k8/:path*"
+    },
+    {
+      "source": "/ana-j6r5",
+      "destination": "/students/ana-j6r5/index.html"
+    },
+    {
+      "source": "/ana-j6r5/",
+      "destination": "/students/ana-j6r5/index.html"
+    },
+    {
+      "source": "/ana-j6r5/:path*",
+      "destination": "/students/ana-j6r5/:path*"
     }
   ]
 }
