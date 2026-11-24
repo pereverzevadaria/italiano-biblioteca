@@ -17,27 +17,37 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,sans-serif
 .top h1{font-family:Georgia,serif;font-size:clamp(2.3rem,8vw,4.8rem);line-height:.98;margin:0}
 .top p{max-width:640px;margin:16px 0 0;color:#f1eee8}
 .library-label{font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;opacity:.78}
-.empty{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:30px;text-align:center}
-.empty h2{font-family:Georgia,serif;margin:0 0 8px;font-size:1.55rem}
-.empty p{margin:0;color:var(--muted)}
+.month{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:28px;margin-bottom:16px}
+.month-head{display:flex;align-items:end;justify-content:space-between;gap:16px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.month h2{font-family:Georgia,serif;margin:0;font-size:1.65rem}.count{font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.items{display:grid;gap:12px;padding-top:18px}.item{display:flex;justify-content:space-between;gap:18px;align-items:center;padding:18px;border:1px solid var(--line);border-radius:18px;background:#fff}
+.item h3{font-family:Georgia,serif;margin:3px 0 6px;font-size:1.18rem}.item p{margin:0;color:var(--muted)}.item-date{font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.item a{white-space:nowrap;text-decoration:none;color:#fff;background:var(--accent);padding:9px 13px;border-radius:999px;font-weight:700}
 .foot{margin-top:18px;text-align:center;color:var(--muted);font-size:.85rem}
-@media(max-width:760px){.wrap{padding:12px 12px 40px}.top{padding:22px}.empty{padding:22px}}
+@media(max-width:760px){.wrap{padding:12px 12px 40px}.top{padding:22px}.month{padding:18px}.month-head{align-items:start}.item{align-items:flex-start;flex-direction:column}.item a{margin-top:5px}}
 </style>
 </head>
 <body>
 <main class="wrap">
-<section class="top">
-<div class="top-inner">
+<section class="top"><div class="top-inner">
 <p class="eyebrow">DARIA KUZNO · ITALIANO</p>
 <h1>Ciao, Anna.</h1>
 <p class="library-label">Личная библиотека</p>
-<p>Здесь будут собираться домашние задания и материалы после занятий. Ссылка остаётся одной и той же — библиотека просто пополняется.</p>
-</div>
-</section>
+<p>Здесь собраны домашние задания и материалы после занятий. Ссылка остаётся одной и той же — библиотека просто пополняется.</p>
+</div></section>
 
-<section class="empty">
-<h2>Пока здесь пусто</h2>
-<p>Первый материал появится после занятия.</p>
+<section class="month">
+<div class="month-head"><h2>Ноябрь 2026</h2><span class="count">1 материал</span></div>
+<div class="items">
+<div class="item">
+<div>
+<div class="item-date">24 ноября 2026</div>
+<h3>Un balcone di Natale · passato prossimo e imperfetto</h3>
+<p>Повтор двух прошедших времён через рождественский балкон: balaustra, campanelline, dorato, lucine, ghirlanda и устный рассказ.</p>
+</div>
+<a href="materials/2026-11-24_Anna_Passato-Prossimo-Imperfetto_Balcone-Natale_HOMEWORK.html">Открыть →</a>
+</div>
+</div>
 </section>
 
 <p class="foot">DARIA KUZNO · ITALIANO</p>
